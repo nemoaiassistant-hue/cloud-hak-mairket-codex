@@ -497,6 +497,11 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   position: relative;
 }
 .service-card:hover { background: var(--paper); }
+.service-card h3 a::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+}
 .service-num {
   font-family: var(--font-mono);
   font-size: 11px;
