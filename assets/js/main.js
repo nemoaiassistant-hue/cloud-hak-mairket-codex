@@ -2,6 +2,9 @@
 (function () {
   'use strict';
 
+  // Cloud Hak Worker endpoint (handles chat + form submissions)
+  const WORKER_URL = 'https://cloudhak-chatbot.airwayclinicproxy.workers.dev/form';
+
   const header = document.getElementById('site-header');
   const onScroll = () => {
     if (!header) return;
@@ -29,7 +32,7 @@
   const form = document.getElementById('intake-form');
   const status = document.getElementById('form-status');
   if (form && status) {
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('submit', async (event) => {
       event.preventDefault();
 
       const hp = form.elements.namedItem('website_url_hp');
@@ -51,13 +54,56 @@
         return;
       }
 
-      status.textContent = "Thanks — your brief was received. We'll respond within one business day.";
-      status.className = 'form-status success';
-      form.reset();
-      window.scrollTo({
-        top: status.getBoundingClientRect().top + window.scrollY - 200,
-        behavior: 'smooth'
-      });
+      // Collect form data
+      const data = {
+        firstName: form.elements.namedItem('first_name').value.trim(),
+        lastName: form.elements.namedItem('last_name').value.trim(),
+        email: form.elements.namedItem('email').value.trim(),
+        phone: (form.elements.namedItem('phone').value || '').trim(),
+        company: form.elements.namedItem('company').value.trim(),
+        website: (form.elements.namedItem('website').value || '').trim(),
+        services: Array.from(services).map(s => s.value),
+        projectBrief: form.elements.namedItem('project_brief').value.trim(),
+        budgetRange: form.elements.namedItem('budget_range').value,
+        timeline: form.elements.namedItem('timeline').value,
+        source: (form.elements.namedItem('source').value || '').trim(),
+      };
+
+      // Disable submit button
+      const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+
+      try {
+        const res = await fetch(WORKER_URL, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(data),
+        });
+
+        const result = await res.json();
+
+        if (!res.ok || result.error) {
+          console.error('Form submission failed:', result);
+          throw new Error(result.error || 'Submission failed');
+        }
+
+        status.textContent = "Thanks — your brief was received. We'll respond within one business day.";
+        status.className = 'form-status success';
+        form.reset();
+        window.scrollTo({
+          top: status.getBoundingClientRect().top + window.scrollY - 200,
+          behavior: 'smooth'
+        });
+      } catch (err) {
+        console.error('Form submission error:', err);
+        status.textContent = 'Something went wrong. Please email us directly at info@cloud-hak.online.';
+        status.className = 'form-status error';
+      } finally {
+        btn.disabled = false;
+        btn.textContent = originalText;
+      }
     });
   }
 
