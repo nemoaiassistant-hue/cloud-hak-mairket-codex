@@ -1,607 +1,1128 @@
 <!doctype html>
-<html lang="en-GB">
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AI Workforce — Your Team of AI Workers | Cloud Hak</title>
-  <meta name="description" content="Build a team of AI workers that run your business 24/7 — content, follow-ups, reviews, reports and customer chats. Done for you by Cloud Hak.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Workforce | Cloud Hak — Your team of AI workers, running 24/7</title>
+  <meta name="description" content="Build a team of AI workers that run your business 24/7 — lead capture, follow-ups, content, reviews, reports and pipeline management. Done for you from £397/mo." />
+  <meta property="og:title" content="AI Workforce | Cloud Hak — Your team of AI workers, running 24/7" />
+  <meta property="og:description" content="Build a team of AI workers that run your business 24/7 — lead capture, follow-ups, content, reviews, reports and pipeline management. Done for you from £397/mo." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.online/ai-workforce/" />
+  <meta property="og:image" content="https://cloud-hak.online/hero.png" />
+  <link rel="canonical" href="https://cloud-hak.online/ai-workforce/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="../assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "Cloud Hak AI Workforce",
+    "url": "https://cloud-hak.online/ai-workforce/",
+    "description": "Build a team of AI workers that run your business 24/7 — lead capture, follow-ups, content, reviews, reports and pipeline management.",
+    "provider": {
+      "@type": "LocalBusiness",
+      "name": "Cloud Hak",
+      "url": "https://cloud-hak.online/",
+      "telephone": "+44 7888873694",
+      "email": "info@cloud-hak.online",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brighton & Hove",
+        "addressRegion": "East Sussex",
+        "addressCountry": "GB"
+      }
+    },
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "Essential Plan",
+        "price": "397",
+        "priceCurrency": "GBP",
+        "description": "3 AI workers: Responder, Follow-Up Agent, Writer"
+      },
+      {
+        "@type": "Offer",
+        "name": "Growth Plan",
+        "price": "697",
+        "priceCurrency": "GBP",
+        "description": "5 AI workers: Responder, Follow-Up Agent, Writer, Review Agent, Reporter"
+      },
+      {
+        "@type": "Offer",
+        "name": "Scale Plan",
+        "price": "1297",
+        "priceCurrency": "GBP",
+        "description": "8 AI workers: All 6 specialists plus 2 custom agents"
+      }
+    ]
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "What is an AI worker?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An AI worker is a specialised AI agent trained on your business data, connected to your tools, and set up to handle specific tasks — like answering customer questions, sending follow-up messages, writing content, or managing reviews. Unlike generic chatbots, each worker is purpose-built for one job and works as part of a coordinated team."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long until my AI team is live?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Most teams are live within 7–14 days. Simpler setups (1–3 workers) can be running in under a week. The timeline depends on how many workers you need and how much business data we need to train on."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need any technical skills?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "None. Cloud Hak handles everything — setup, training, connecting your tools, and ongoing monitoring. You just review the weekly reports and tell us if anything needs adjusting."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can the AI handle negative reviews safely?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. The Review Agent has a manual approval option for critical tasks — including negative review responses. You stay in control of sensitive interactions while the AI handles the routine ones automatically."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from a chatbot?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "A chatbot is one tool. AI Workforce is a coordinated team of 6–8 agents working together. Your Responder captures a lead, the Follow-Up Agent nurtures it, the Writer produces content, the Review Agent manages reputation, the Reporter tracks KPIs, and the Pipeline Manager pushes deals forward — all connected to your CRM."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Can I add or change workers later?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes. Start with 3 workers on the Essential plan and scale up as your business grows. Additional workers are £100–£150/month each. You can swap workers out or add custom agents at any time."
+        }
+      }
+    ]
+  }
+  </script>
+
   <style>
-:root{--cream:#f6f3ed;--cream-2:#efeae1;--cream-3:#e6e0d4;--paper:#fbf9f4;--ink:#0a1a3a;--ink-2:#1a2a4d;--ink-3:#2a3a5d;--muted:#5a6378;--muted-2:#8a91a3;--copper:#c08552;--copper-2:#a06a3a;--champagne:#d9b97a;--rule:rgba(10,26,58,.10);--rule-strong:rgba(10,26,58,.18);--live:#2d8a4a;--live-soft:rgba(45,138,74,.18);--font-display:'Fraunces','Cormorant Garamond',Georgia,serif;--font-body:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;--font-mono:'JetBrains Mono','SF Mono',Menlo,Consolas,monospace;--s-1:4px;--s-2:8px;--s-3:12px;--s-4:16px;--s-5:24px;--s-6:32px;--s-7:48px;--s-8:64px;--s-9:96px;--s-10:128px;--max:1280px;--gutter:clamp(20px,4vw,56px);--ease:cubic-bezier(.2,.7,.2,1);--r-sm:4px;--r:8px;--r-lg:14px}
-*{box-sizing:border-box}
-body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;text-rendering:optimizelegibility}
-a{color:inherit;text-decoration:none;transition:color 200ms var(--ease)}
-a:focus-visible,button:focus-visible{outline:2px solid var(--copper);outline-offset:3px;border-radius:2px}
-::selection{background:var(--ink);color:var(--cream)}
-.container{width:100%;max-width:var(--max);margin-inline:auto;padding-inline:var(--gutter)}
-.eyebrow{font-family:var(--font-mono);font-size:11px;font-weight:500;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 var(--s-4);display:inline-flex;align-items:center;gap:8px}
-.eyebrow::before{content:"//";color:var(--muted-2);font-weight:400}
-.section-title{font-family:var(--font-display);color:var(--ink);font-weight:400;letter-spacing:-.02em;margin:0;font-size:clamp(30px,4.2vw,52px);line-height:1.08}
-.lede{font-size:clamp(17px,1.4vw,20px);line-height:1.55;color:var(--muted);max-width:62ch;margin:var(--s-5) 0 0}
-.reveal{opacity:0;transform:translateY(12px);transition:opacity .8s var(--ease),transform .8s var(--ease)}
-.reveal.is-in{opacity:1;transform:none}
+    /* ---------- AGENTS GRID ---------- */
+    .section-agents { background: var(--cream-2); }
+    .agents-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-5);
+    }
+    .agent-card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--s-7) var(--s-6) var(--s-6);
+      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+    }
+    .agent-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px -22px rgba(10,26,58,0.16);
+    }
+    .agent-icon {
+      width: 48px;
+      height: 48px;
+      background: var(--ink);
+      border: 1.5px solid var(--champagne);
+      border-radius: var(--r);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--s-5);
+    }
+    .agent-icon svg {
+      width: 22px;
+      height: 22px;
+      stroke: var(--champagne);
+      fill: none;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+    }
+    .agent-label {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+      margin-bottom: var(--s-3);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .agent-label .live-dot-sm {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--live);
+      box-shadow: 0 0 0 0 rgba(45,138,74,0.5);
+      animation: pulse 2.2s var(--ease) infinite;
+    }
+    .agent-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin: 0 0 var(--s-3);
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .agent-card > p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 var(--s-5);
+    }
+    .agent-pills {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .agent-pills li {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border: 1px solid var(--rule-strong);
+      border-radius: 999px;
+      color: var(--ink-2);
+      background: var(--cream);
+    }
 
-/* Announce bar */
-.announce{background:var(--ink);color:var(--cream);border-bottom:1px solid rgba(255,255,255,.06);font-family:var(--font-mono);font-size:11px;letter-spacing:.08em}
-.announce-row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);padding:10px 0;flex-wrap:wrap}
-.announce .k{color:rgba(255,255,255,.5);text-transform:uppercase}
-.announce .v{color:var(--cream);text-transform:uppercase;letter-spacing:.1em}
-.announce .dot{width:8px;height:8px;border-radius:50%;background:#6fdc8c;box-shadow:0 0 0 0 rgba(111,220,140,.55);animation:pulse 2.2s var(--ease) infinite;flex-shrink:0}
-@keyframes pulse{0%{box-shadow:0 0 0 0 rgba(111,220,140,.55)}70%{box-shadow:0 0 0 8px rgba(111,220,140,0)}100%{box-shadow:0 0 0 0 rgba(111,220,140,0)}}
-@keyframes blink{50%{opacity:0}}
+    /* ---------- COMPARISON TABLE ---------- */
+    .section-compare { background: var(--cream); }
+    .compare-table-wrap {
+      overflow-x: auto;
+      margin-top: var(--s-7);
+    }
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 15px;
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      overflow: hidden;
+    }
+    .compare-table thead {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .compare-table th {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: var(--s-5) var(--s-6);
+      text-align: left;
+      color: var(--cream);
+    }
+    .compare-table th:not(:first-child) {
+      text-align: center;
+    }
+    .compare-table td {
+      padding: var(--s-5) var(--s-6);
+      border-bottom: 1px solid var(--rule);
+      color: var(--ink-2);
+    }
+    .compare-table td:first-child {
+      font-family: var(--font-display);
+      font-weight: 500;
+      color: var(--ink);
+      font-size: 15px;
+    }
+    .compare-table td:not(:first-child) {
+      text-align: center;
+      font-family: var(--font-body);
+    }
+    .compare-table tbody tr:last-child td {
+      border-bottom: 0;
+    }
+    .compare-table .highlight-green {
+      color: var(--live);
+      font-weight: 600;
+    }
 
-/* Header */
-.site-header{position:sticky;top:0;z-index:50;background:rgba(246,243,237,.92);backdrop-filter:saturate(140%) blur(14px);border-bottom:1px solid var(--rule)}
-.header-row{display:flex;align-items:center;justify-content:space-between;gap:var(--s-5);padding:18px 0}
-.brand{display:inline-flex;align-items:center;gap:10px;color:var(--ink)}
-.brand-word{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.01em}
-.brand-mark{display:inline-flex;align-items:center;justify-content:center;width:32px;height:32px;background:var(--ink);color:var(--cream);border-radius:var(--r-sm);font-family:var(--font-mono);font-size:13px;font-weight:500;letter-spacing:-.02em}
-.primary-nav{display:flex;align-items:center;gap:var(--s-6)}
-.primary-nav a{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
-.primary-nav a:hover{color:var(--ink)}
-.header-phone{font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;color:var(--ink);border-bottom:1px dashed var(--rule-strong);padding-bottom:2px}
-.header-phone:hover{color:var(--copper);border-color:var(--copper)}
+    /* Mobile card collapse for comparison */
+    .compare-card-label {
+      display: none;
+    }
 
-/* Buttons */
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font-family:var(--font-mono);font-size:12px;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:12px 22px;border-radius:var(--r);border:1px solid transparent;transition:all 200ms var(--ease);white-space:nowrap;cursor:pointer}
-.btn::after{content:"→";font-family:var(--font-mono);transition:transform 200ms var(--ease)}
-.btn:hover::after{transform:translateX(3px)}
-.btn-lg{padding:16px 28px;font-size:13px}
-.btn-primary{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.btn-primary:hover{background:var(--ink-2);border-color:var(--ink-2)}
-.btn-ghost{background:transparent;color:var(--ink);border-color:var(--rule-strong)}
-.btn-ghost:hover{border-color:var(--ink);background:var(--cream-2)}
+    @media (max-width: 720px) {
+      .agents-grid { grid-template-columns: 1fr; }
+      .compare-table,
+      .compare-table thead,
+      .compare-table tbody,
+      .compare-table th,
+      .compare-table td,
+      .compare-table tr {
+        display: block;
+      }
+      .compare-table thead {
+        display: none;
+      }
+      .compare-table tr {
+        border: 1px solid var(--rule);
+        border-radius: var(--r);
+        margin-bottom: var(--s-4);
+        background: var(--paper);
+      }
+      .compare-table td {
+        text-align: left !important;
+        padding: var(--s-3) var(--s-5);
+        border-bottom: 1px solid var(--rule);
+        position: relative;
+        padding-left: 50%;
+      }
+      .compare-table td::before {
+        content: attr(data-label);
+        position: absolute;
+        left: var(--s-5);
+        top: var(--s-3);
+        width: 40%;
+        font-family: var(--font-mono);
+        font-size: 10px;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        color: var(--muted-2);
+        white-space: nowrap;
+      }
+      .compare-table td:first-child {
+        font-family: var(--font-display);
+        font-weight: 500;
+        background: var(--cream-2);
+        padding-left: var(--s-5);
+        border-bottom: 1px solid var(--rule);
+      }
+      .compare-table td:first-child::before {
+        display: none;
+      }
+      .compare-table td:last-child {
+        border-bottom: 0;
+      }
+    }
 
-/* Section base */
-.section{padding:clamp(64px,9vw,128px) 0;border-top:1px solid var(--rule)}
-.section-dark{background:var(--ink);color:var(--cream);border-top:1px solid rgba(255,255,255,.06)}
-.section-dark .section-title{color:var(--cream)}
-.section-dark .lede{color:rgba(255,255,255,.6)}
-.section-dark .eyebrow{color:var(--champagne)}
-.section-dark .eyebrow::before{color:rgba(255,255,255,.3)}
+    /* ---------- PRICING ---------- */
+    .section-pricing { background: var(--cream-2); }
+    .pricing-grid {
+      list-style: none;
+      padding: 0;
+      margin: var(--s-7) 0 0;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-5);
+      align-items: start;
+    }
+    .price-card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r-lg);
+      padding: var(--s-7) var(--s-6);
+      display: flex;
+      flex-direction: column;
+      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease);
+    }
+    .price-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px -22px rgba(10,26,58,0.16);
+    }
+    .price-card.featured {
+      background: var(--ink);
+      border-color: rgba(255,255,255,0.08);
+      color: var(--cream);
+      transform: scale(1.03);
+      box-shadow: 0 24px 56px -24px rgba(10,26,58,0.4);
+      position: relative;
+    }
+    .price-card.featured:hover {
+      transform: scale(1.03) translateY(-3px);
+    }
+    .price-card.featured h3,
+    .price-card.featured .price-period,
+    .price-card.featured .price-note {
+      color: var(--cream);
+    }
+    .price-card.featured .price-amount {
+      color: var(--cream);
+    }
+    .price-card.featured .price-features li {
+      color: rgba(255,255,255,0.7);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .price-card.featured .btn-primary {
+      background: var(--copper);
+      border-color: var(--copper);
+      color: var(--ink);
+    }
+    .price-card.featured .btn-primary:hover {
+      background: var(--copper-2);
+      border-color: var(--copper-2);
+    }
+    .price-badge {
+      position: absolute;
+      top: -1px;
+      right: var(--s-6);
+      transform: translateY(-50%);
+      font-family: var(--font-mono);
+      font-size: 9px;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--ink);
+      background: var(--copper);
+      padding: 4px 12px;
+      border-radius: 0 0 var(--r) var(--r);
+    }
+    .price-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 24px;
+      letter-spacing: -0.01em;
+      margin: 0 0 var(--s-3);
+      color: var(--ink);
+    }
+    .price-row {
+      margin-bottom: var(--s-5);
+    }
+    .price-amount {
+      font-family: var(--font-display);
+      font-size: 44px;
+      font-weight: 400;
+      letter-spacing: -0.03em;
+      color: var(--ink);
+      line-height: 1;
+    }
+    .price-period {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted-2);
+    }
+    .price-note {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: var(--s-5);
+      line-height: 1.55;
+    }
+    .price-card.featured .price-note {
+      color: rgba(255,255,255,0.55);
+    }
+    .price-features {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 var(--s-6);
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+    .price-features li {
+      font-size: 14px;
+      color: var(--ink-2);
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--rule);
+    }
+    .price-features li:last-child {
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+    .price-features li::before {
+      content: "→";
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--copper);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .pricing-note {
+      text-align: center;
+      margin-top: var(--s-6);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted-2);
+      letter-spacing: 0.02em;
+    }
 
-/* Hero */
-.hero{padding:clamp(56px,7vw,96px) 0 clamp(48px,6vw,80px)}
-.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:clamp(40px,5vw,72px);align-items:center}
-.hero-title{font-family:var(--font-display);color:var(--ink);font-weight:400;letter-spacing:-.02em;margin:0;font-size:clamp(36px,5vw,72px);line-height:1.05}
-.hero-title em{font-style:italic;font-weight:400;color:var(--copper)}
-.hero-lede{font-size:clamp(17px,1.35vw,19px);line-height:1.6;color:var(--muted);max-width:56ch;margin:var(--s-6) 0 0}
-.hero-actions{display:flex;gap:var(--s-4);margin:var(--s-7) 0 var(--s-7);flex-wrap:wrap}
-.caret::after{content:"▌";display:inline-block;margin-left:4px;color:var(--copper);animation:1.05s steps(1) 0s infinite blink}
+    @media (max-width: 1024px) {
+      .pricing-grid { grid-template-columns: 1fr; max-width: 480px; margin-inline: auto; margin-top: var(--s-7); }
+      .price-card.featured { transform: scale(1); }
+      .price-card.featured:hover { transform: translateY(-3px); }
+    }
 
-/* Terminal card */
-.hero-terminal{background:var(--paper);border:1px solid var(--rule-strong);border-radius:var(--r);box-shadow:0 1px 0 rgba(255,255,255,.6) inset,0 24px 48px -28px rgba(10,26,58,.18);overflow:hidden;font-family:var(--font-mono);font-size:13px;line-height:1.6}
-.term-bar{display:flex;align-items:center;justify-content:space-between;padding:10px 14px;background:var(--cream-2);border-bottom:1px solid var(--rule);font-size:11px;letter-spacing:.06em;color:var(--muted);text-transform:uppercase}
-.term-bar-dots{display:flex;gap:6px}
-.term-bar-dots i{width:10px;height:10px;border-radius:50%;background:var(--cream-3);border:1px solid var(--rule);display:block}
-.term-body{padding:18px 20px 22px;color:var(--ink-2)}
-.term-prompt{color:var(--copper);margin-right:8px}
-.term-cmd{color:var(--ink)}
-.term-out{color:var(--muted);padding-left:18px;display:block}
-.term-out b{color:var(--ink);font-weight:500}
-.term-ok{color:var(--live)}
-.term-ok::before{content:"●";margin-right:6px}
-.term-status{margin-top:14px;padding-top:12px;border-top:1px dashed var(--rule-strong);display:grid;grid-template-columns:auto 1fr;gap:4px 14px;font-size:12px}
-.term-status .lbl{color:var(--muted-2);text-transform:uppercase;letter-spacing:.1em;font-size:10px}
-.term-status .val{color:var(--ink);font-weight:500}
-.term-status .val.accent{color:var(--copper)}
+    /* ---------- FAQ ACCORDION ---------- */
+    .section-faq { background: var(--cream); }
+    .faq-list {
+      max-width: 760px;
+      margin: var(--s-7) auto 0;
+    }
+    .faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: 0;
+    }
+    .faq-item:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .faq-item dt {
+      font-family: var(--font-display);
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0;
+      padding: var(--s-5) 0;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+      transition: color 200ms var(--ease);
+    }
+    .faq-item dt:hover {
+      color: var(--copper);
+    }
+    .faq-item dt::after {
+      content: "+";
+      font-family: var(--font-mono);
+      font-size: 18px;
+      font-weight: 400;
+      color: var(--muted-2);
+      transition: transform 300ms var(--ease);
+      flex-shrink: 0;
+      margin-left: var(--s-4);
+    }
+    .faq-item.open dt::after {
+      content: "−";
+    }
+    .faq-item dd {
+      font-size: 0.95rem;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 400ms var(--ease), padding 300ms var(--ease);
+      padding: 0 0 0 0;
+    }
+    .faq-item.open dd {
+      max-height: 300px;
+      padding: 0 0 var(--s-5);
+    }
 
-/* Worker grid */
-.workers-grid{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule)}
-.worker-card{border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);background:var(--cream);transition:background 240ms var(--ease);position:relative}
-.worker-card:hover{background:var(--paper)}
-.worker-card-inner{padding:var(--s-7) var(--s-5) var(--s-6)}
-.worker-num{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;color:var(--copper);margin-bottom:var(--s-5)}
-.worker-icon{font-size:32px;margin-bottom:var(--s-4);line-height:1}
-.worker-card h3{font-family:var(--font-display);font-weight:500;font-size:22px;letter-spacing:-.01em;margin:0 0 var(--s-3);color:var(--ink);line-height:1.2}
-.worker-card p{font-size:14.5px;line-height:1.6;color:var(--muted);margin:0 0 var(--s-5)}
-.worker-pills{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:6px}
-.worker-pills li{font-family:var(--font-mono);font-size:10.5px;letter-spacing:.06em;text-transform:uppercase;padding:4px 10px;border:1px solid var(--rule-strong);border-radius:999px;color:var(--ink-2);background:var(--paper)}
-
-/* Manager diagram */
-.manager-diagram{display:flex;flex-direction:column;align-items:center;gap:var(--s-5);font-family:var(--font-mono);font-size:13px}
-.manager-node{background:var(--cream-2);border:1px solid var(--rule-strong);border-radius:var(--r);padding:var(--s-4) var(--s-6);text-align:center}
-.manager-node.top{background:var(--ink);color:var(--cream);border-color:var(--ink)}
-.manager-node.top .manager-label{color:var(--champagne)}
-.manager-label{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);margin-bottom:4px}
-.manager-name{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--ink)}
-.manager-node.top .manager-name{color:var(--cream)}
-.manager-arrows{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);width:100%;max-width:600px}
-.manager-arrow{text-align:center;color:var(--muted-2);font-size:11px;letter-spacing:.08em}
-.manager-workers{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3);width:100%;max-width:600px}
-.manager-worker{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r-sm);padding:var(--s-3) var(--s-4);text-align:center;font-size:12px;color:var(--ink-2)}
-.manager-worker .worker-emoji{font-size:20px;display:block;margin-bottom:4px}
-
-/* Pricing */
-.pricing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-5);margin-top:var(--s-7)}
-.pricing-card{background:var(--paper);border:1px solid var(--rule);border-radius:var(--r);padding:var(--s-7) var(--s-6) var(--s-6);position:relative;transition:transform 240ms var(--ease),box-shadow 240ms var(--ease)}
-.pricing-card:hover{transform:translateY(-2px);box-shadow:0 18px 36px -22px rgba(10,26,58,.18)}
-.pricing-card.recommended{border-color:var(--copper);border-width:1.5px}
-.pricing-badge{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--copper);color:var(--cream);font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;padding:4px 14px;border-radius:999px}
-.pricing-name{font-family:var(--font-mono);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--copper);margin:0 0 var(--s-3)}
-.pricing-title{font-family:var(--font-display);font-size:24px;font-weight:500;color:var(--ink);margin:0 0 var(--s-4)}
-.pricing-price{font-family:var(--font-display);font-size:44px;font-weight:400;color:var(--ink);margin:0 0 var(--s-2);letter-spacing:-.02em}
-.pricing-price small{font-size:16px;font-family:var(--font-body);color:var(--muted);font-weight:400}
-.pricing-desc{font-size:14.5px;color:var(--muted);margin:0 0 var(--s-5);padding-bottom:var(--s-5);border-bottom:1px solid var(--rule)}
-.pricing-features{list-style:none;padding:0;margin:0 0 var(--s-6)}
-.pricing-features li{font-size:14.5px;color:var(--ink-2);padding:8px 0;display:flex;gap:10px;align-items:start}
-.pricing-features li::before{content:"→";color:var(--copper);font-family:var(--font-mono);font-size:12px;flex-shrink:0;padding-top:2px}
-.pricing-features li.muted{color:var(--muted-2)}
-.pricing-features li.muted::before{color:var(--cream-3)}
-.pricing-card .btn{width:100%}
-.pricing-setup{text-align:center;margin-top:var(--s-6);font-family:var(--font-mono);font-size:12px;color:var(--muted)}
-
-/* Comparison */
-.compare-table{width:100%;border-collapse:collapse;margin-top:var(--s-7);font-size:15px}
-.compare-table th,.compare-table td{padding:var(--s-4) var(--s-5);text-align:left;border-bottom:1px solid var(--rule)}
-.compare-table th{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);font-weight:500;border-bottom:1px solid var(--rule-strong)}
-.compare-table th:nth-child(2){color:var(--copper)}
-.compare-table td:first-child{font-weight:500;color:var(--ink)}
-.compare-table td:nth-child(2){color:var(--ink-2)}
-.compare-table td:nth-child(3){color:var(--muted);text-decoration:line-through}
-.compare-table tr:last-child td{border-bottom:0;font-weight:600}
-.compare-table tr:last-child td:nth-child(2){color:var(--copper);font-size:18px}
-
-/* FAQ */
-.faq-list{margin-top:var(--s-7);border-top:1px solid var(--rule)}
-.faq-list details{border-bottom:1px solid var(--rule);padding:var(--s-5) 0;cursor:pointer}
-.faq-list summary{font-family:var(--font-display);font-size:20px;font-weight:500;color:var(--ink);list-style:none;display:flex;justify-content:space-between;align-items:center;gap:var(--s-4)}
-.faq-list summary::-webkit-details-marker{display:none}
-.faq-list summary::after{content:"+";font-family:var(--font-mono);font-size:20px;color:var(--copper);transition:transform 200ms var(--ease)}
-.faq-list details[open] summary::after{transform:rotate(45deg)}
-.faq-list p{font-size:15px;color:var(--muted);margin:var(--s-4) 0 0;max-width:72ch}
-
-/* CTA */
-.cta-section{text-align:center}
-.cta-section .hero-actions{justify-content:center}
-.cta-phone{font-family:var(--font-mono);font-size:14px;color:var(--muted);margin-top:var(--s-5)}
-.cta-phone a{color:var(--ink);border-bottom:1px dashed var(--rule-strong)}
-
-/* Footer */
-.site-footer{background:var(--ink);color:var(--muted);font-size:14px;border-top:1px solid rgba(255,255,255,.06)}
-.footer-status{display:flex;justify-content:space-between;gap:var(--s-5);padding:12px 0;border-bottom:1px solid rgba(255,255,255,.06);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.5)}
-.footer-status .live{color:var(--live);display:flex;align-items:center;gap:6px}
-.footer-status .live::before{content:"●";color:#6fdc8c}
-.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:var(--s-7);padding:var(--s-8) 0 var(--s-7)}
-.footer-grid .brand{color:var(--cream)}
-.footer-grid .brand-word{color:var(--cream)}
-.footer-grid h4{font-family:var(--font-mono);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.5);margin:0 0 var(--s-4)}
-.footer-grid ul{list-style:none;padding:0;margin:0}
-.footer-grid li{margin:8px 0}
-.footer-grid a{color:var(--muted)}
-.footer-grid a:hover{color:var(--cream)}
-.footer-grid p{color:rgba(255,255,255,.5);margin:var(--s-4) 0 0;font-size:13.5px;max-width:32ch}
-.footer-bottom{display:flex;justify-content:space-between;gap:var(--s-4);padding:16px 0;border-top:1px solid rgba(255,255,255,.06);font-family:var(--font-mono);font-size:10.5px;letter-spacing:.08em;color:rgba(255,255,255,.4)}
-
-/* Approach list (dark section) */
-.approach-list{list-style:none;padding:0;margin:var(--s-7) 0 0;font-family:var(--font-mono);font-size:13px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);border-radius:var(--r);overflow:hidden}
-.approach-list>li{display:grid;grid-template-columns:auto 1fr auto;gap:var(--s-5);padding:var(--s-5);border-bottom:1px solid rgba(255,255,255,.06);align-items:start}
-.approach-list>li:last-child{border-bottom:0}
-.approach-num{font-family:var(--font-mono);font-size:12px;color:var(--champagne);letter-spacing:.08em;padding-top:4px;min-width:90px}
-.approach-num::before{content:"$ ";color:rgba(255,255,255,.4)}
-.approach-list h3{font-family:var(--font-display);font-weight:500;font-size:20px;color:var(--cream);margin:0 0 6px;letter-spacing:-.01em}
-.approach-list p{font-family:var(--font-body);font-size:14.5px;line-height:1.6;color:rgba(255,255,255,.65);margin:0}
-.approach-tag{font-family:var(--font-mono);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:rgba(255,255,255,.4);padding-top:6px;white-space:nowrap}
-
-/* Responsive */
-@media(max-width:900px){
-  .hero-grid{grid-template-columns:1fr;gap:var(--s-6)}
-  .workers-grid{grid-template-columns:repeat(2,1fr)}
-  .pricing-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr 1fr;gap:var(--s-6)}
-  .manager-arrows,.manager-workers{grid-template-columns:repeat(2,1fr)}
-  .primary-nav{display:none}
-}
-@media(max-width:600px){
-  .workers-grid{grid-template-columns:1fr}
-  .footer-grid{grid-template-columns:1fr}
-  .hero-title{font-size:42px}
-  .compare-table{font-size:13px}
-  .compare-table th,.compare-table td{padding:var(--s-3)}
-  .footer-bottom{flex-direction:column;gap:8px}
-  .hero-actions{flex-direction:column}
-  .hero-actions .btn{width:100%}
-}
+    /* ---------- SECTION HEAD FOR LIGHT SECTIONS ---------- */
+    .section-agents .section-head,
+    .section-pricing .section-head,
+    .section-compare .section-head,
+    .section-faq .section-head {
+      max-width: 740px;
+      margin: 0 auto var(--s-9);
+      text-align: center;
+    }
+    .section-agents .section-head .eyebrow,
+    .section-pricing .section-head .eyebrow,
+    .section-compare .section-head .eyebrow,
+    .section-faq .section-head .eyebrow {
+      justify-content: center;
+    }
+    .section-pricing .section-head .lede,
+    .section-faq .section-head .lede {
+      margin-top: var(--s-5);
+      margin-inline: auto;
+      text-align: center;
+    }
   </style>
 </head>
 <body>
 
-<!-- Announce bar -->
-<div class="announce">
-  <div class="container">
-    <div class="announce-row">
-      <span><span class="dot" style="display:inline-block;width:8px;height:8px;border-radius:50%;background:#6fdc8c;vertical-align:middle;margin-right:8px"></span><span class="v" style="color:var(--cream)">New service</span> · <span class="k">AI Workforce — now available</span></span>
-      <span><span class="k">BASE</span> <span class="v">BRIGHTON & HOVE</span> · <span class="k">FROM</span> <span class="v">£397/mo</span></span>
+  <!-- ===== ANNOUNCE ===== -->
+  <div class="announce">
+    <div class="container announce-row">
+      <div class="announce-left">
+        <span class="dot" aria-hidden="true"></span>
+        <span>AI Workforce · Accepting new clients</span>
+      </div>
+      <div class="announce-right">
+        <span><span class="k">Setup</span> <span class="v">7–14 days</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">From</span> <span class="v">£397/mo</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">Cancel</span> <span class="v">30 days</span></span>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- Header -->
-<header class="site-header">
-  <div class="container">
-    <div class="header-row">
-      <a class="brand" href="../"><span class="brand-mark">CH</span><span class="brand-word">Cloud Hak</span></a>
-      <nav class="primary-nav">
-        <a href="../#services">Services</a>
-        <a href="../#approach">Approach</a>
-        <a href="../#contact">Contact</a>
+  <!-- ===== HEADER ===== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Cloud Hak home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-word">Cloud Hak</span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="/">Services</a>
+        <a href="#agents">AI Workers</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
       </nav>
-      <a class="header-phone" href="tel:+441273000000">07888 873694</a>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+447888873694">07888 873694</a>
+      </div>
     </div>
-  </div>
-</header>
+  </header>
 
-<main>
+  <main id="top">
 
-<!-- Hero -->
-<section class="hero">
-  <div class="container">
-    <div class="hero-grid">
-      <div>
-        <p class="eyebrow">AI Workforce · New for 2026</p>
-        <h1 class="hero-title">Build a team of <em>AI workers</em> that run your business 24/7.<span class="caret"></span></h1>
-        <p class="hero-lede">Your AI team handles content, follow-ups, reviews, reports and customer chats — while you focus on growing. Done for you. No tech skills needed.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary btn-lg" href="#pricing">See Packages</a>
-          <a class="btn btn-ghost btn-lg" href="#how-it-works">How It Works</a>
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">AI Workforce · Cloud Hak</p>
+          <h1 class="hero-title reveal">
+            Your team of <em>AI workers</em><br />
+            runs 24/7.
+          </h1>
+          <p class="hero-lede reveal">Build a team of AI agents trained on your business, connected to your CRM, and running around the clock — capturing leads, following up, writing content, and managing your pipeline. Done for you.</p>
+          <div class="hero-actions reveal">
+            <a href="#intake" class="btn btn-primary btn-lg">Build my AI team</a>
+            <a href="#agents" class="btn btn-ghost btn-lg">Meet the workers</a>
+          </div>
+          <ul class="hero-meta reveal" role="list">
+            <li><span class="meta-k">Workers</span><span class="meta-v">6 specialised</span></li>
+            <li><span class="meta-k">Setup</span><span class="meta-v">7–14 days</span></li>
+            <li><span class="meta-k">From</span><span class="meta-v">£397/mo</span></li>
+          </ul>
         </div>
+
+        <aside class="hero-terminal reveal" aria-label="AI workforce status">
+          <div class="term-bar">
+            <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>cloud-hak — team.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">team --list</span></div>
+            <span class="term-out"><b>01</b>&nbsp;&nbsp;responder&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <span class="term-out"><b>02</b>&nbsp;&nbsp;follow-up&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <span class="term-out"><b>03</b>&nbsp;&nbsp;writer&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <span class="term-out"><b>04</b>&nbsp;&nbsp;review-agent&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <span class="term-out"><b>05</b>&nbsp;&nbsp;reporter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <span class="term-out"><b>06</b>&nbsp;&nbsp;pipeline-mgr&nbsp;&nbsp;&nbsp; <span class="term-ok">● active</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">team --status</span></div>
+            <div class="term-status">
+              <span class="lbl">Mode</span><span class="val">24/7</span>
+              <span class="lbl">Response</span><span class="val">&lt;60 sec</span>
+              <span class="lbl">Brand</span><span class="val">Trained</span>
+              <span class="lbl">CRM</span><span class="val accent">Connected</span>
+            </div>
+          </div>
+        </aside>
       </div>
 
-      <!-- Terminal card -->
-      <aside class="hero-terminal" role="complementary" aria-label="AI Workforce capabilities">
-        <div class="term-bar">
-          <div class="term-bar-dots"><i></i><i></i><i></i></div>
-          <span>CLOUD-HAK — WORKFORCE.SH</span>
+      <div class="container hero-marquee" aria-label="AI workforce capabilities">
+        <span>Lead Capture</span><span aria-hidden="true">·</span>
+        <span>Follow-Ups</span><span aria-hidden="true">·</span>
+        <span>Content</span><span aria-hidden="true">·</span>
+        <span>Reviews</span><span aria-hidden="true">·</span>
+        <span>Reports</span><span aria-hidden="true">·</span>
+        <span>Pipeline</span><span aria-hidden="true">·</span>
+        <span style="color:var(--copper);font-weight:500">✦ GHL Integrated</span>
+      </div>
+    </section>
+
+    <!-- ===== POSITIONING ===== -->
+    <section class="section section-positioning">
+      <div class="container two-col">
+        <div class="col-label">
+          <p class="eyebrow">The concept</p>
         </div>
-        <div class="term-body">
-          <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">ls workforce/</span></div>
-          <span class="term-out"><b>01</b> the-responder <span class="term-ok">ready</span></span>
-          <span class="term-out"><b>02</b> the-followup-agent <span class="term-ok">ready</span></span>
-          <span class="term-out"><b>03</b> the-writer <span class="term-ok">ready</span></span>
-          <span class="term-out"><b>04</b> the-review-agent <span class="term-ok">ready</span></span>
-          <span class="term-out"><b>05</b> the-reporter <span class="term-ok">ready</span></span>
-          <span class="term-out"><b>06</b> the-pipeline-manager <span class="term-ok">ready</span></span>
-          <div class="term-line" style="margin-top:14px"><span class="term-prompt">$</span><span class="term-cmd">workforce --status</span></div>
-          <div class="term-status">
-            <span class="lbl">Manager</span><span class="val">Cloud Hak AI Manager</span>
-            <span class="lbl">Workers</span><span class="val accent">3 — 8 per client</span>
-            <span class="lbl">Uptime</span><span class="val">24 / 7</span>
-            <span class="lbl">Setup</span><span class="val">7 — 14 days</span>
-            <span class="lbl">From</span><span class="val accent">£397 / mo</span>
+        <div class="col-body">
+          <h2 class="display-title reveal">One team of AI agents. Your entire front-office automated.</h2>
+          <p class="lede reveal">Each AI worker is trained on your business data, connected to your CRM, and set up to handle one job exceptionally well. Together they form a coordinated workforce that captures leads, nurtures prospects, manages your reputation, and reports back — all while you focus on running your business.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== AGENTS ===== -->
+    <section class="section section-agents" id="agents">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">AI Workers</p>
+          <h2 class="section-title reveal">Six specialists. One team.</h2>
+        </div>
+
+        <ul class="agents-grid" role="list">
+
+          <!-- 01 Responder -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 01</p>
+            <h3>The Responder</h3>
+            <p>Your 24/7 website and WhatsApp assistant. Answers customer questions, qualifies leads, and books appointments — even while you sleep.</p>
+            <ul class="agent-pills" role="list">
+              <li>Website chat</li>
+              <li>WhatsApp</li>
+              <li>Lead qualification</li>
+              <li>Appointment booking</li>
+            </ul>
+          </li>
+
+          <!-- 02 Follow-Up Agent -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+                <polyline points="22 4 12 13 2 4" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 02</p>
+            <h3>The Follow-Up Agent</h3>
+            <p>Automated SMS and email sequences that re-engage dead pipeline deals and keep prospects warm until they're ready to buy.</p>
+            <ul class="agent-pills" role="list">
+              <li>SMS sequences</li>
+              <li>Email campaigns</li>
+              <li>Smart scheduling</li>
+              <li>Pipeline re-engagement</li>
+            </ul>
+          </li>
+
+          <!-- 03 Writer -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 20h9" />
+                <path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 03</p>
+            <h3>The Writer</h3>
+            <p>Creates social media posts, blog articles, and newsletters in your brand voice. Consistent content without the consistent effort.</p>
+            <ul class="agent-pills" role="list">
+              <li>Social media</li>
+              <li>Blog posts</li>
+              <li>Newsletters</li>
+              <li>Brand-matched tone</li>
+            </ul>
+          </li>
+
+          <!-- 04 Review Agent -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M14 9V5a3 3 0 0 0-3-3l-4 9v11h11.28a2 2 0 0 0 2-1.7l1.38-9a2 2 0 0 0-2-2.3H14z" />
+                <line x1="7" y1="22" x2="7" y2="11" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 04</p>
+            <h3>The Review Agent</h3>
+            <p>Manages your Google Reviews — responds automatically, detects negative sentiment, and escalates when needed.</p>
+            <ul class="agent-pills" role="list">
+              <li>Google Reviews</li>
+              <li>Auto-response</li>
+              <li>Sentiment detection</li>
+              <li>Manual approval option</li>
+            </ul>
+          </li>
+
+          <!-- 05 Reporter -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="12" width="4" height="9" rx="1" />
+                <rect x="10" y="7" width="4" height="14" rx="1" />
+                <rect x="17" y="3" width="4" height="18" rx="1" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 05</p>
+            <h3>The Reporter</h3>
+            <p>Weekly KPI summaries delivered straight to your inbox. Leads, revenue, pipeline health — the numbers that matter, clearly presented.</p>
+            <ul class="agent-pills" role="list">
+              <li>Weekly digest</li>
+              <li>KPI tracking</li>
+              <li>Lead reporting</li>
+              <li>Revenue metrics</li>
+            </ul>
+          </li>
+
+          <!-- 06 Pipeline Manager -->
+          <li class="agent-card reveal">
+            <div class="agent-icon">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+              </svg>
+            </div>
+            <p class="agent-label"><span class="live-dot-sm" aria-hidden="true"></span>Worker 06</p>
+            <h3>The Pipeline Manager</h3>
+            <p>Tracks deals through your pipeline, automates stage transitions, and alerts you when deals go cold so nothing slips through.</p>
+            <ul class="agent-pills" role="list">
+              <li>Deal tracking</li>
+              <li>Stage automation</li>
+              <li>Stuck deal alerts</li>
+              <li>Action reminders</li>
+            </ul>
+          </li>
+
+        </ul>
+      </div>
+    </section>
+
+    <!-- ===== HOW IT WORKS ===== -->
+    <section class="section section-approach" id="how-it-works">
+      <div class="container approach-grid">
+        <div>
+          <figure class="approach-figure reveal">
+            <img src="../assets/img/process_still.png" alt="Quiet workspace still life suggesting careful, considered digital work" />
+          </figure>
+          <div class="approach-meta-bar">
+            <span>Setup <b>7–14 days</b></span>
+            <span>Support <b>UK-based</b></span>
+            <span>Cancel <b>30 days</b></span>
           </div>
         </div>
-      </aside>
-    </div>
-  </div>
-</section>
+        <div class="approach-copy">
+          <p class="eyebrow reveal">How it works</p>
+          <h2 class="section-title reveal">Four steps to a fully automated front-office.</h2>
+          <p class="lede reveal">No technical skills needed. We handle the entire process — from understanding your business to monitoring your AI team after launch.</p>
+          <ol class="approach-list reveal" role="list">
+            <li><span class="approach-num">01_assess</span><div><h3>Free 15-minute chat</h3><p>We learn about your business, your customers, and where you're losing them — then recommend the right team size.</p></div><span class="approach-tag">~15 min call</span></li>
+            <li><span class="approach-num">02_plan</span><div><h3>Written proposal ≤ 3 biz days</h3><p>Scope, worker selection, timeline, and fixed monthly price. No surprises.</p></div><span class="approach-tag">≤ 3 biz days</span></li>
+            <li><span class="approach-num">03_build</span><div><h3>Build and train</h3><p>Set up agents, connect your tools, and train each worker on your business data and brand voice.</p></div><span class="approach-tag">7–14 days</span></li>
+            <li><span class="approach-num">04_launch</span><div><h3>Go live and monitor</h3><p>Monitor your AI team for the first two weeks, then hand you a dashboard to track performance.</p></div><span class="approach-tag">ongoing support</span></li>
+          </ol>
+        </div>
+      </div>
+    </section>
 
-<!-- Meet your AI team -->
-<section class="section" id="workers">
-  <div class="container">
-    <p class="eyebrow">Your AI Team</p>
-    <h2 class="section-title">Meet your AI workers</h2>
-    <p class="lede">Each worker is a specialised AI agent that handles one job — perfectly. Pick the ones your business needs. Add more as you grow.</p>
+    <!-- ===== COMPARISON TABLE ===== -->
+    <section class="section section-compare">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">AI vs Human</p>
+          <h2 class="section-title reveal">Why businesses are switching to AI workers</h2>
+        </div>
 
-    <ul class="workers-grid" style="margin-top:var(--s-8)">
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">01 — AI Worker</div>
-          <div class="worker-icon">💬</div>
-          <h3>The Responder</h3>
-          <p>A 24/7 assistant on your website and WhatsApp that answers questions, qualifies leads and books appointments — in under 60 seconds.</p>
-          <ul class="worker-pills"><li>Website chat</li><li>WhatsApp</li><li>FAQ trained</li></ul>
+        <div class="compare-table-wrap reveal">
+          <table class="compare-table">
+            <thead>
+              <tr>
+                <th>Metric</th>
+                <th>AI Team</th>
+                <th>Human Employee</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Monthly Cost</td>
+                <td class="highlight-green">From £397/mo</td>
+                <td>£2,000–3,500+/mo</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Availability</td>
+                <td data-label="AI Team">24/7, 365 days</td>
+                <td data-label="Human Employee">Mon–Fri, 9–5</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Time Off</td>
+                <td data-label="AI Team">None</td>
+                <td data-label="Human Employee">25–33 days/year</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Response Time</td>
+                <td data-label="AI Team">Under 60 seconds</td>
+                <td data-label="Human Employee">Hours–days</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Capacity</td>
+                <td data-label="AI Team">3–8 specialised tasks</td>
+                <td data-label="Human Employee">1 role</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Onboarding</td>
+                <td data-label="AI Team">7–14 days</td>
+                <td data-label="Human Employee">4–12 weeks</td>
+              </tr>
+              <tr>
+                <td data-label="Metric">Annual Cost (5 workers)</td>
+                <td class="highlight-green" data-label="AI Team">~£8,364/year</td>
+                <td data-label="Human Employee">~£30,000+/year</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
-      </li>
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">02 — AI Worker</div>
-          <div class="worker-icon">📞</div>
-          <h3>The Follow-Up Agent</h3>
-          <p>Chases cold leads via SMS and email on an intelligent schedule. Re-engages dead pipeline deals and turns them into bookings.</p>
-          <ul class="worker-pills"><li>SMS</li><li>Email</li><li>Auto-schedule</li></ul>
-        </div>
-      </li>
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">03 — AI Worker</div>
-          <div class="worker-icon">✍️</div>
-          <h3>The Writer</h3>
-          <p>Drafts social media posts, blog articles and newsletters in your brand voice. You review, approve and publish — or let it post automatically.</p>
-          <ul class="worker-pills"><li>Social posts</li><li>Blog content</li><li>Brand voice</li></ul>
-        </div>
-      </li>
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">04 — AI Worker</div>
-          <div class="worker-icon">⭐</div>
-          <h3>The Review Agent</h3>
-          <p>Responds to every Google review within hours — positive and negative. Professional, on-brand responses that protect your reputation.</p>
-          <ul class="worker-pills"><li>Google reviews</li><li>Trustpilot</li><li>Tone-matched</li></ul>
-        </div>
-      </li>
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">05 — AI Worker</div>
-          <div class="worker-icon">📊</div>
-          <h3>The Reporter</h3>
-          <p>Pulls your key numbers into a clean weekly summary — leads, bookings, revenue, response times. Sent straight to your inbox or phone.</p>
-          <ul class="worker-pills"><li>Weekly KPIs</li><li>Revenue tracking</li><li>Trend analysis</li></ul>
-        </div>
-      </li>
-      <li class="worker-card reveal">
-        <div class="worker-card-inner">
-          <div class="worker-num">06 — AI Worker</div>
-          <div class="worker-icon">🎯</div>
-          <h3>The Pipeline Manager</h3>
-          <p>Monitors every deal in your pipeline. Flags stuck deals, auto-moves stages based on activity, and reminds you when action is needed.</p>
-          <ul class="worker-pills"><li>Deal tracking</li><li>Stage automation</li><li>Stuck-deal alerts</li></ul>
-        </div>
-      </li>
-    </ul>
-  </div>
-</section>
+      </div>
+    </section>
 
-<!-- How it works (dark section) -->
-<section class="section section-dark" id="how-it-works">
-  <div class="container">
-    <p class="eyebrow">How It Works</p>
-    <h2 class="section-title">Your AI Manager runs the team</h2>
-    <p class="lede">Think of the AI Manager as your team leader. You tell it what your business needs — it delegates the right tasks to the right workers and delivers results back to you.</p>
+    <!-- ===== PRICING ===== -->
+    <section class="section section-pricing" id="pricing">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">Pricing</p>
+          <h2 class="section-title reveal">Pick your team size.</h2>
+          <p class="lede centered reveal">All plans include £497 one-time setup. Cancel anytime with 30 days' notice.</p>
+        </div>
 
-    <ol class="approach-list reveal">
-      <li>
-        <span class="approach-num">01_discover</span>
+        <ul class="pricing-grid" role="list">
+
+          <!-- Essential -->
+          <li class="price-card reveal">
+            <h3>Essential</h3>
+            <div class="price-row">
+              <span class="price-amount">£397</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="price-note">Best for small businesses needing lead capture and basic follow-up.</p>
+            <ul class="price-features">
+              <li>3 AI workers</li>
+              <li>The Responder</li>
+              <li>The Follow-Up Agent</li>
+              <li>The Writer</li>
+              <li>CRM connected</li>
+              <li>Weekly reporting</li>
+              <li>UK-based support</li>
+            </ul>
+            <a href="#intake" class="btn btn-primary">Start essential</a>
+          </li>
+
+          <!-- Growth (Featured) -->
+          <li class="price-card featured reveal">
+            <span class="price-badge">Most Popular</span>
+            <h3>Growth</h3>
+            <div class="price-row">
+              <span class="price-amount">£697</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="price-note">Best for automating marketing, reputation, and performance reporting.</p>
+            <ul class="price-features">
+              <li>5 AI workers</li>
+              <li>The Responder</li>
+              <li>The Follow-Up Agent</li>
+              <li>The Writer</li>
+              <li>The Review Agent</li>
+              <li>The Reporter</li>
+              <li>CRM connected</li>
+              <li>Weekly reporting</li>
+              <li>UK-based support</li>
+            </ul>
+            <a href="#intake" class="btn btn-primary">Start growth</a>
+          </li>
+
+          <!-- Scale -->
+          <li class="price-card reveal">
+            <h3>Scale</h3>
+            <div class="price-row">
+              <span class="price-amount">£1,297</span>
+              <span class="price-period">/mo</span>
+            </div>
+            <p class="price-note">Best for multi-location or fast-growing businesses with complex needs.</p>
+            <ul class="price-features">
+              <li>8 AI workers</li>
+              <li>All 6 specialists</li>
+              <li>+ 2 custom agents</li>
+              <li>CRM connected</li>
+              <li>Weekly reporting</li>
+              <li>Priority support</li>
+              <li>Dedicated account manager</li>
+            </ul>
+            <a href="#intake" class="btn btn-primary">Start scale</a>
+          </li>
+
+        </ul>
+
+        <p class="pricing-note">Additional workers: £100–£150/month each. All prices exclude VAT.</p>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section-faq" id="faq">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">FAQ</p>
+          <h2 class="section-title reveal">Common questions</h2>
+        </div>
+        <dl class="faq-list reveal">
+          <div class="faq-item">
+            <dt>What is an AI worker?</dt>
+            <dd>An AI worker is a specialised AI agent trained on your business data, connected to your tools, and set up to handle specific tasks — like answering customer questions, sending follow-up messages, writing content, or managing reviews. Unlike generic chatbots, each worker is purpose-built for one job and works as part of a coordinated team.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>How long until my AI team is live?</dt>
+            <dd>Most teams are live within 7–14 days. Simpler setups (1–3 workers) can be running in under a week. The timeline depends on how many workers you need and how much business data we need to train on.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Do I need any technical skills?</dt>
+            <dd>None. Cloud Hak handles everything — setup, training, connecting your tools, and ongoing monitoring. You just review the weekly reports and tell us if anything needs adjusting.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Can the AI handle negative reviews safely?</dt>
+            <dd>Yes. The Review Agent has a manual approval option for critical tasks — including negative review responses. You stay in control of sensitive interactions while the AI handles the routine ones automatically.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>How is this different from a chatbot?</dt>
+            <dd>A chatbot is one tool. AI Workforce is a coordinated team of 6–8 agents working together. Your Responder captures a lead, the Follow-Up Agent nurtures it, the Writer produces content, the Review Agent manages reputation, the Reporter tracks KPIs, and the Pipeline Manager pushes deals forward — all connected to your CRM.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>Can I add or change workers later?</dt>
+            <dd>Yes. Start with 3 workers on the Essential plan and scale up as your business grows. Additional workers are £100–£150/month each. You can swap workers out or add custom agents at any time.</dd>
+          </div>
+        </dl>
+      </div>
+    </section>
+
+    <!-- ===== INTAKE / CONTACT FORM ===== -->
+    <section class="section section-intake" id="intake">
+      <div class="container intake-wrap">
+        <div class="intake-head">
+          <p class="eyebrow reveal">Start a project</p>
+          <h2 class="section-title reveal">Build your AI team</h2>
+          <p class="lede centered reveal">Fill in the form and we'll respond within one business day with a clear plan.</p>
+        </div>
+
+        <div class="ghl-form-wrap reveal">
+          <iframe
+            src="https://api.leadconnectorhq.com/widget/form/JqG4vKatJkTVuyNQAD4z"
+            style="width:100%;height:1020px;border:none;border-radius:8px"
+            id="inline-JqG4vKatJkTVuyNQAD4z"
+            data-layout="{'id':'INLINE'}"
+            data-trigger-type="alwaysShow"
+            data-trigger-value=""
+            data-activation-type="alwaysActivated"
+            data-activation-value=""
+            data-deactivation-type="neverDeactivate"
+            data-deactivation-value=""
+            data-form-name="Form 6"
+            data-height="1020"
+            data-layout-iframe-id="inline-JqG4vKatJkTVuyNQAD4z"
+            data-form-id="JqG4vKatJkTVuyNQAD4z"
+            title="Contact Form"
+          ></iframe>
+          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== SKIP-THE-FORM CONTACT ===== -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-row">
         <div>
-          <h3>Free 15-minute chat</h3>
-          <p>We learn about your business, your customers, and which tasks eat up your time. We recommend exactly which AI workers you need — no fluff.</p>
+          <p class="eyebrow eyebrow-light reveal">Prefer to skip the form?</p>
+          <h2 class="contact-title reveal">Let's talk about your AI team.</h2>
         </div>
-        <span class="approach-tag">~15 min call</span>
-      </li>
-      <li>
-        <span class="approach-num">02_propose</span>
-        <div>
-          <h3>Written proposal ≤ 3 biz days</h3>
-          <p>Fixed monthly price. Clear scope. We list every worker, what it does, and how it integrates with your existing tools.</p>
+        <ul class="contact-list reveal" role="list">
+          <li><span class="contact-k">Phone</span><a href="tel:+447888873694" class="contact-v">07888 873694</a></li>
+          <li><span class="contact-k">Email</span><a href="mailto:info@cloud-hak.online" class="contact-v">info@cloud-hak.online</a></li>
+          <li><span class="contact-k">Hours</span><span class="contact-v">Mon–Fri · 9a–6p BST</span></li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ops">
+        <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
+        <span>Last deploy: Jun 2026</span>
+        <span>Build v1.0</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Cloud Hak home">
+            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <span class="brand-word">Cloud Hak</span>
+          </a>
+          <p class="footer-tag">AI-powered growth for local businesses in Brighton, Hove, and across the UK.</p>
         </div>
-        <span class="approach-tag">≤ 3 biz days</span>
-      </li>
-      <li>
-        <span class="approach-num">03_build</span>
-        <div>
-          <h3>We build your AI team</h3>
-          <p>Our team sets up each AI worker, connects them to your CRM, website and tools, and trains them on your business data — policies, FAQs, brand voice, products.</p>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/">Web Design &amp; Development</a></li>
+            <li><a href="/">AI Chatbots</a></li>
+            <li><a href="/">AI Voice Agents</a></li>
+            <li><a href="/">SEO</a></li>
+            <li><a href="/">AEO</a></li>
+            <li><a href="/">Google &amp; Social Ads</a></li>
+            <li><a href="/">Automation</a></li>
+            <li><a href="/">CRM Setup &amp; Management</a></li>
+          </ul>
         </div>
-        <span class="approach-tag">7 — 14 days</span>
-      </li>
-      <li>
-        <span class="approach-num">04_deploy</span>
-        <div>
-          <h3>Launch and monitor</h3>
-          <p>Your AI workers go live. We monitor everything for the first two weeks, fine-tune responses, and make sure each worker is performing. You get a dedicated dashboard.</p>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">About</a></li>
+            <li><a href="#how-it-works">Approach</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
         </div>
-        <span class="approach-tag">live · monitored</span>
-      </li>
-      <li>
-        <span class="approach-num">05_grow</span>
-        <div>
-          <h3>Add workers as you grow</h3>
-          <p>Start with 3 workers. Add more anytime. Every worker pays for itself in time saved or revenue recovered. Scale your team without hiring.</p>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+447888873694">Phone</a></li>
+            <li><a href="mailto:info@cloud-hak.online">Email</a></li>
+            <li><a href="https://wa.me/447888873694">WhatsApp</a></li>
+          </ul>
         </div>
-        <span class="approach-tag">flexible · scalable</span>
-      </li>
-    </ol>
-  </div>
-</section>
-
-<!-- Pricing -->
-<section class="section" id="pricing">
-  <div class="container">
-    <p class="eyebrow">Pricing</p>
-    <h2 class="section-title">Choose your team size</h2>
-    <p class="lede">Three packages. Pick the workers your business needs today. Add more as you grow. All plans include a £497 one-time setup fee.</p>
-
-    <div class="pricing-grid">
-      <!-- Essential -->
-      <div class="pricing-card reveal">
-        <p class="pricing-name">01 — Essential</p>
-        <h3 class="pricing-title">Essential Team</h3>
-        <p class="pricing-price">£397<small>/month</small></p>
-        <p class="pricing-desc">3 AI workers. Perfect for small businesses that need to capture and convert more leads without lifting a finger.</p>
-        <ul class="pricing-features">
-          <li>The Responder (website + WhatsApp chat)</li>
-          <li>The Follow-Up Agent (automated lead chase)</li>
-          <li>Monthly performance report</li>
-          <li class="muted">Email support</li>
-          <li class="muted">Cancel anytime</li>
-        </ul>
-        <a class="btn btn-ghost" href="#contact">Get Started</a>
       </div>
-
-      <!-- Growth (recommended) -->
-      <div class="pricing-card recommended reveal">
-        <div class="pricing-badge">Recommended</div>
-        <p class="pricing-name">02 — Growth</p>
-        <h3 class="pricing-title">Growth Team</h3>
-        <p class="pricing-price">£697<small>/month</small></p>
-        <p class="pricing-desc">5 AI workers. For businesses ready to automate marketing, reputation and customer communication — not just leads.</p>
-        <ul class="pricing-features">
-          <li>Everything in Essential</li>
-          <li>The Writer (social posts + blog content)</li>
-          <li>The Review Agent (Google review responses)</li>
-          <li>Bi-weekly strategy check-in call</li>
-          <li>Priority support (≤ 4 hr response)</li>
-        </ul>
-        <a class="btn btn-primary" href="#contact">Get Started</a>
-      </div>
-
-      <!-- Scale -->
-      <div class="pricing-card reveal">
-        <p class="pricing-name">03 — Scale</p>
-        <h3 class="pricing-title">Scale Team</h3>
-        <p class="pricing-price">£1,297<small>/month</small></p>
-        <p class="pricing-desc">8 AI workers. Full automation across sales, marketing, reputation, reporting and pipeline — for multi-location or fast-growing businesses.</p>
-        <ul class="pricing-features">
-          <li>Everything in Growth</li>
-          <li>The Reporter (weekly KPI dashboard)</li>
-          <li>The Pipeline Manager (deal tracking + alerts)</li>
-          <li>The Scheduler (appointment reminders)</li>
-          <li>Weekly strategy call + dedicated account manager</li>
-        </ul>
-        <a class="btn btn-ghost" href="#contact">Get Started</a>
+      <div class="footer-foot">
+        <p>© 2026 Cloud Hak</p>
+        <p>// Built with AI, delivered by humans.</p>
       </div>
     </div>
+  </footer>
 
-    <p class="pricing-setup">All plans: £497 one-time setup fee · Cancel anytime · UK-based support</p>
-  </div>
-</section>
-
-<!-- AI vs Human comparison -->
-<section class="section" style="background:var(--cream-2)">
-  <div class="container" style="max-width:900px">
-    <p class="eyebrow">Why AI Workforce</p>
-    <h2 class="section-title">AI workforce vs. hiring humans</h2>
-    <p class="lede">The maths is simple. A single full-time employee costs £2,000-3,500/month. An entire AI team costs from £397/month — and works 24/7.</p>
-
-    <table class="compare-table">
-      <thead>
-        <tr><th></th><th>Cloud Hak AI Team</th><th>Human Employee</th></tr>
-      </thead>
-      <tbody>
-        <tr><td>Monthly cost</td><td>From £397/mo</td><td>£2,000–3,500+/mo</td></tr>
-        <tr><td>Working hours</td><td>24/7, 365 days</td><td>Mon–Fri, 9–5</td></tr>
-        <tr><td>Sick days & holidays</td><td>None</td><td>25–33 days/year</td></tr>
-        <tr><td>Response time</td><td>Under 60 seconds</td><td>Hours–days</td></tr>
-        <tr><td>Tasks handled</td><td>3–8 specialised</td><td>1 role</td></tr>
-        <tr><td>Onboarding</td><td>7–14 days</td><td>4–12 weeks</td></tr>
-        <tr><td>Annual cost (5 workers)</td><td>~£8,364/year</td><td>~£30,000+/year</td></tr>
-      </tbody>
-    </table>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section class="section" id="faq">
-  <div class="container" style="max-width:800px">
-    <p class="eyebrow">FAQ</p>
-    <h2 class="section-title">Common questions</h2>
-
-    <div class="faq-list">
-      <details>
-        <summary>What exactly is an "AI worker"?</summary>
-        <p>An AI worker is a specialised AI agent that handles one specific task — like answering website chats, following up with leads, or responding to Google reviews. Each worker runs 24/7 and is trained on your business data. Think of them as digital employees that never sleep, never take holidays, and cost a fraction of a human hire.</p>
-      </details>
-      <details>
-        <summary>Do I need any technical knowledge?</summary>
-        <p>None. We handle everything — setup, configuration, training, monitoring and maintenance. You just tell us what your business needs, and we build the right AI workers for you. If you can send a WhatsApp message, you can work with your AI team.</p>
-      </details>
-      <details>
-        <summary>How long does setup take?</summary>
-        <p>Most teams are up and running in 7–14 days. We start with a 15-minute call to understand your business, then build and configure each worker. The first two weeks after launch are closely monitored to fine-tune responses.</p>
-      </details>
-      <details>
-        <summary>Will the AI sound robotic or fake?</summary>
-        <p>No. Each worker is trained on your brand voice, tone, policies and FAQs. We programme the exact responses you'd want. The Writer matches your style. The Review Agent sounds professional and human. The Responder is indistinguishable from a well-trained receptionist.</p>
-      </details>
-      <details>
-        <summary>What if a worker gets something wrong?</summary>
-        <p>We monitor all workers continuously. For the first two weeks after launch, we review every interaction and fine-tune as needed. You also get a dashboard to flag any response you don't like — we adjust immediately. Critical tasks (like review responses to negative reviews) can be set to require your approval before publishing.</p>
-      </details>
-      <details>
-        <summary>Can I cancel anytime?</summary>
-        <p>Yes. No long contracts. Cancel with 30 days' notice. The setup fee covers onboarding and is non-refundable, but there are no exit fees or penalties.</p>
-      </details>
-      <details>
-        <summary>Can I add or remove workers later?</summary>
-        <p>Absolutely. Start with 3 workers on Essential. Add The Writer when you're ready for content. Add The Pipeline Manager when deal volume grows. Each additional worker is £100-150/month on top of your base plan.</p>
-      </details>
-      <details>
-        <summary>What tools does it integrate with?</summary>
-        <p>Your AI workers connect to GoHighLevel (CRM), your website, WhatsApp Business, Google Business Profile, email, calendars and more. If you're already using GHL, setup is even faster — we plug straight in.</p>
-      </details>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section-dark cta-section" id="contact">
-  <div class="container">
-    <p class="eyebrow">Start a project</p>
-    <h2 class="section-title">Ready to build your AI team?</h2>
-    <p class="lede" style="margin-inline:auto">Book a free 15-minute chat. We'll listen to what your business needs and recommend the right AI workers. No hard sell, no jargon.</p>
-    <div class="hero-actions">
-      <a class="btn btn-primary btn-lg" href="tel:+441273000000">Book Free Consultation</a>
-      <a class="btn btn-ghost btn-lg" href="mailto:info@cloud-hak.online" style="color:var(--cream);border-color:rgba(255,255,255,.2)">Email Us</a>
-    </div>
-    <p class="cta-phone">Or call <a href="tel:+441273000000">07888 873694</a> · Mon–Fri 9a–6p BST</p>
-  </div>
-</section>
-
-</main>
-
-<!-- Footer -->
-<footer class="site-footer">
-  <div class="container">
-    <div class="footer-status">
-      <span class="live">All systems operational</span>
-      <span>Last deploy: Jun 2026</span>
-      <span>Build V1.0</span>
-    </div>
-    <div class="footer-grid">
-      <div>
-        <a class="brand" href="../"><span class="brand-mark">CH</span><span class="brand-word">Cloud Hak</span></a>
-        <p>AI-powered growth for local businesses in Brighton, Hove, and across the UK.</p>
-      </div>
-      <div>
-        <h4>Services</h4>
-        <ul>
-          <li><a href="../#services">Web Design</a></li>
-          <li><a href="../#services">AI Chatbots</a></li>
-          <li><a href="../#services">AI Voice Agents</a></li>
-          <li><a href="./">AI Workforce</a></li>
-          <li><a href="../#services">SEO</a></li>
-          <li><a href="../#services">Automation</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="../#approach">About</a></li>
-          <li><a href="../#approach">Approach</a></li>
-          <li><a href="../#contact">Contact</a></li>
-          <li><a href="#">Privacy</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Connect</h4>
-        <ul>
-          <li><a href="tel:+441273000000">Phone</a></li>
-          <li><a href="mailto:info@cloud-hak.online">Email</a></li>
-          <li><a href="#">WhatsApp</a></li>
-        </ul>
-      </div>
-    </div>
-    <div class="footer-bottom">
-      <span>© 2026 Cloud Hak</span>
-      <span>// Built with AI, delivered by humans.</span>
-    </div>
-  </div>
-</footer>
-
-<script>
-// Reveal on scroll
-document.querySelectorAll('.reveal').forEach((el) => {
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-in');
-        obs.unobserve(entry.target);
-      }
+  <script src="../assets/js/main.js" defer></script>
+  <script>
+    document.querySelectorAll('.faq-item dt').forEach(dt => {
+      dt.addEventListener('click', () => {
+        const item = dt.parentElement;
+        const wasOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        if (!wasOpen) item.classList.add('open');
+      });
     });
-  }, { threshold: 0.12 });
-  obs.observe(el);
-});
-</script>
+  </script>
 </body>
 </html>
