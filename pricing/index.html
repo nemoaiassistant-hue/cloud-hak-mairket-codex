@@ -174,16 +174,19 @@
           <svg class="brand-mark" width="28" height="28" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="currentColor"/><path d="M8 9h4v10H8V9zm6 3h4v7h-4v-7z" fill="#f6f3ed" opacity=".9"/><circle cx="22" cy="9" r="2.5" fill="#c08552"/></svg>
           <span class="brand-word">Cloud Hak</span>
         </a>
-        <nav class="primary-nav" aria-label="Primary navigation">
-          <a href="/services/">SERVICES</a>
-          <a href="/pricing/" style="color:var(--ink)">PRICING</a>
-          <a href="/#approach">APPROACH</a>
-          <a href="/#contact">CONTACT</a>
-        </nav>
-        <div class="header-actions">
-          <a href="tel:+447888873694" class="header-phone">07888 873694</a>
-          <a href="/#contact" class="btn btn-primary">START A PROJECT</a>
-        </div>
+        <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+            <a href="/services/">SERVICES</a>
+            <a href="/pricing/" style="color:var(--ink)">PRICING</a>
+            <a href="/#approach">APPROACH</a>
+            <a href="/#contact">CONTACT</a>
+          </nav>
+          <div class="header-actions">
+            <a href="tel:+447****3694" class="header-phone">07888 873694</a>
+            <a href="/#contact" class="btn btn-primary">START A PROJECT</a>
+            <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+              <span></span><span></span><span></span>
+            </button>
+          </div>
       </div>
     </div>
   </header>

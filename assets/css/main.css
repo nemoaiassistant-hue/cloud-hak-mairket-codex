@@ -1001,6 +1001,34 @@ a.contact-v:hover { color: var(--champagne); }
   .approach-list > li { grid-template-columns: 1fr; gap: var(--s-3); }
   .approach-num { padding-top: 0; }
   .approach-tag { display: none; }
+  .burger { display: flex; }
+}
+
+/* ---------- BURGER MENU ---------- */
+.burger {
+  display: none; flex-direction: column; justify-content: center; align-items: center;
+  gap: 5px; width: 36px; height: 36px; background: none; border: 1px solid var(--rule-strong);
+  border-radius: var(--r-sm); cursor: pointer; padding: 0; flex-shrink: 0;
+}
+.burger span {
+  display: block; width: 18px; height: 2px; background: var(--ink);
+  transition: transform 200ms var(--ease), opacity 200ms var(--ease);
+}
+.burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.open span:nth-child(2) { opacity: 0; }
+.burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+.burger.open { border-color: var(--ink); }
+
+@media (max-width: 720px) {
+  .primary-nav {
+    display: none; position: absolute; top: 100%; left: 0; right: 0;
+    background: var(--cream); border-bottom: 1px solid var(--rule-strong);
+    padding: var(--s-5) var(--gutter); flex-direction: column; gap: var(--s-4);
+    box-shadow: 0 8px 24px rgba(10,26,58,.06);
+  }
+  .primary-nav.open { display: flex; }
+  .primary-nav a { font-size: 14px; letter-spacing: 0.06em; }
+  .primary-nav a:hover { color: var(--copper); }
 }
 
 /* ---------- TESTIMONIALS ---------- */

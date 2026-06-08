@@ -198,14 +198,17 @@
         </svg>
         <span class="brand-word">Cloud Hak</span>
       </a>
-      <nav class="primary-nav" aria-label="Primary navigation">
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
         <a href="#services">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
       </nav>
       <div class="header-actions">
-        <a class="header-phone" href="tel:+447888873694">07888 873694</a>
+        <a class="header-phone" href="tel:+447****3694">07888 873694</a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
   </header>
