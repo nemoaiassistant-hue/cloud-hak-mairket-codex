@@ -1001,12 +1001,11 @@ a.contact-v:hover { color: var(--champagne); }
   .approach-list > li { grid-template-columns: 1fr; gap: var(--s-3); }
   .approach-num { padding-top: 0; }
   .approach-tag { display: none; }
-  .burger { display: flex; }
 }
 
 /* ---------- BURGER MENU ---------- */
 .burger {
-  display: none; flex-direction: column; justify-content: center; align-items: center;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
   gap: 5px; width: 36px; height: 36px; background: none; border: 1px solid var(--rule-strong);
   border-radius: var(--r-sm); cursor: pointer; padding: 0; flex-shrink: 0;
 }
@@ -1018,6 +1017,10 @@ a.contact-v:hover { color: var(--champagne); }
 .burger.open span:nth-child(2) { opacity: 0; }
 .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 .burger.open { border-color: var(--ink); }
+
+@media (min-width: 721px) {
+  .burger { display: none; }
+}
 
 @media (max-width: 720px) {
   .primary-nav {
