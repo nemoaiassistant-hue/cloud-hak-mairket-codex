@@ -208,13 +208,18 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(246, 243, 237, 0.92);
-  backdrop-filter: saturate(140%) blur(14px);
-  -webkit-backdrop-filter: saturate(140%) blur(14px);
-  border-bottom: 1px solid var(--rule);
+  background: var(--ink);
+  border-bottom: 1px solid rgba(246, 243, 237, 0.1);
 }
+.site-header .brand-word { color: #f6f3ed; }
+.site-header .brand-mark { color: #f6f3ed; }
+.site-header .primary-nav a { color: rgba(246,243,237,.6); }
+.site-header .primary-nav a:hover { color: #f6f3ed; }
+.site-header .header-phone { color: rgba(246,243,237,.7); }
+.site-header .header-phone:hover { color: #f6f3ed; }
+.site-header .burger span { background: #f6f3ed; }
 .site-header.is-scrolled {
-  box-shadow: 0 16px 36px -30px rgba(10,26,58,0.35);
+  box-shadow: 0 16px 36px -30px rgba(10,26,58,0.5);
 }
 .header-row {
   display: flex;
@@ -1016,7 +1021,7 @@ a.contact-v:hover { color: var(--champagne); }
 .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger.open span:nth-child(2) { opacity: 0; }
 .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-.burger.open { border-color: var(--ink); }
+.burger.open { border-color: rgba(246,243,237,.3); }
 
 @media (min-width: 721px) {
   .burger { display: none; }
@@ -1025,13 +1030,13 @@ a.contact-v:hover { color: var(--champagne); }
 @media (max-width: 720px) {
   .primary-nav {
     display: none; position: absolute; top: 100%; left: 0; right: 0;
-    background: var(--cream); border-bottom: 1px solid var(--rule-strong);
+    background: var(--ink); border-bottom: 1px solid rgba(246,243,237,.1);
     padding: var(--s-5) var(--gutter); flex-direction: column; gap: var(--s-4);
-    box-shadow: 0 8px 24px rgba(10,26,58,.06);
+    box-shadow: 0 8px 24px rgba(0,0,0,.2);
   }
   .primary-nav.open { display: flex; }
-  .primary-nav a { font-size: 14px; letter-spacing: 0.06em; }
-  .primary-nav a:hover { color: var(--copper); }
+  .primary-nav a { font-size: 14px; letter-spacing: 0.06em; color: rgba(246,243,237,.7); }
+  .primary-nav a:hover { color: #f6f3ed; }
 }
 
 /* ---------- TESTIMONIALS ---------- */
