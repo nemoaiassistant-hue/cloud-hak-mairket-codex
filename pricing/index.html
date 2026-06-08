@@ -22,6 +22,17 @@
     .pricing-hero .section-title { margin-bottom: var(--s-4); }
     .pricing-hero .lede { margin: 0 auto; }
 
+    /* Dark header overrides */
+    .site-header .brand-word { color: #f6f3ed; }
+    .site-header .brand-mark { color: #f6f3ed; }
+    .site-header .primary-nav a { color: rgba(246,243,237,.6); }
+    .site-header .primary-nav a:hover { color: #f6f3ed; }
+    .site-header .header-phone { color: #f6f3ed; }
+    .site-header .burger span { background: #f6f3ed; }
+    .site-header .mobile-nav { background: var(--ink); }
+    .site-header .mobile-nav a { color: rgba(246,243,237,.7); }
+    .site-header .mobile-nav a:hover { color: #f6f3ed; }
+
     /* Toggle */
     .pricing-toggle {
       display: flex; align-items: center; justify-content: center; gap: var(--s-4);
@@ -167,7 +178,7 @@
 </head>
 <body>
   <!-- Header -->
-  <header class="site-header">
+  <header class="site-header" style="background:var(--ink);color:#f6f3ed">
     <div class="container header-row">
       <a class="brand" href="/" aria-label="Cloud Hak home">
         <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
