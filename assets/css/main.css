@@ -221,7 +221,7 @@ a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible
   align-items: center;
   justify-content: space-between;
   gap: var(--s-5);
-  padding: 18px 0;
+  padding-block: 18px;
 }
 .brand {
   display: inline-flex;
