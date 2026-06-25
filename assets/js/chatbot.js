@@ -280,9 +280,10 @@
   function renderMd(text) {
     var html = text
       .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener" style="color:#0a1a3a;text-decoration:underline">$1</a>')
+      .replace(/(^|\s)(https?:\/\/[^\s<]+)/g, '$1<a href="$2" target="_blank" rel="noopener" style="color:#0a1a3a;text-decoration:underline">$2</a>')
       .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
       .replace(/\*(.+?)\*/g, '<em>$1</em>')
-      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" style="color:#0a1a3a;text-decoration:underline">$1</a>')
       .replace(/^- (.+)$/gm, '<span style="display:block;padding-left:12px">• $1</span>')
       .replace(/\n/g, '<br>');
     return html;
