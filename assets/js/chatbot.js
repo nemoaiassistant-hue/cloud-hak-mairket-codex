@@ -12,9 +12,9 @@
 
   var API = 'https://app.cloud-hak.com/api/demo';
   var WF_ID = 23;
-  var runId = null;
   var sending = false;
-  var sessionStarted = false;
+  var messages = []; // Client-side message history
+  var streamingEl = null;
 
   // ===== Shadow DOM container =====
   var host = document.createElement('div');
@@ -244,13 +244,9 @@
     bubble.classList.add('hidden');
     panel.classList.add('active');
     document.body.style.overflow = 'hidden';
-    // Hide notif permanently
     var notif = bubble.querySelector('.notif');
     if (notif) notif.style.display = 'none';
-    if (!sessionStarted) {
-      sessionStarted = true;
-      startSession();
-    }
+    if (!quickShown) setTimeout(showQuick, 300);
     setTimeout(function() { input.focus(); }, 300);
   }
 
@@ -287,6 +283,7 @@
     div.textContent = text;
     chat.appendChild(div);
     chat.scrollTop = chat.scrollHeight;
+    return div;
   }
 
   function showTyping() {
@@ -301,18 +298,6 @@
   function hideTyping() {
     var el = root.getElementById('typing-indicator');
     if (el) el.remove();
-  }
-
-  function renderMessages(messages) {
-    // Remove all msgs and quick replies but keep welcome
-    var existing = chat.querySelectorAll('.msg, .quick-row, .typing');
-    existing.forEach(function(el) { el.remove(); });
-    for (var i = 0; i < messages.length; i++) {
-      var m = messages[i];
-      if (m.content && m.content.trim()) {
-        addMsg(m.role === 'user' ? 'user' : 'bot', m.content);
-      }
-    }
   }
 
   function showQuick() {
@@ -340,31 +325,11 @@
     quickShown = false;
   }
 
-  // ===== SESSION =====
-  function startSession() {
-    showTyping();
-    fetch(API + '?action=start&workflow_id=' + WF_ID)
-      .then(function(r) { return r.json(); })
-      .then(function(session) {
-        if (session.error) throw new Error(session.error);
-        runId = session.run_id;
-        hideTyping();
-        if (session.messages && session.messages.length > 0) {
-          renderMessages(session.messages);
-        }
-        setTimeout(showQuick, 500);
-      })
-      .catch(function() {
-        hideTyping();
-        addMsg('bot', 'Sorry, I am having trouble connecting. Please try again in a moment.');
-      });
-  }
-
-  // ===== SEND =====
+  // ===== SEND (streaming — tokens appear as they arrive) =====
   function sendMessage() {
     if (sending) return;
     var text = input.value.trim();
-    if (!text || !runId) return;
+    if (!text) return;
 
     sending = true;
     sendBtn.disabled = true;
@@ -375,40 +340,75 @@
     addMsg('user', text);
     showTyping();
 
-    fetch(API + '?action=send&workflow_id=' + WF_ID + '&run_id=' + runId + '&message=' + encodeURIComponent(text))
-      .then(function(r) { return r.json(); })
-      .then(function(data) {
-        hideTyping();
-        if (data.error) {
-          // Try session recovery
-          if (data.error.indexOf('token') !== -1 || data.error.indexOf('session') !== -1 || data.error.indexOf('expired') !== -1) {
-            return fetch(API + '?action=start&workflow_id=' + WF_ID)
-              .then(function(r) { return r.json(); })
-              .then(function(ns) {
-                if (ns.runId) {
-                  runId = ns.run_id;
-                  return fetch(API + '?action=send&workflow_id=' + WF_ID + '&run_id=' + runId + '&message=' + encodeURIComponent(text))
-                    .then(function(r) { return r.json(); });
-                }
-                throw new Error('Session expired');
-              });
-          }
-          throw new Error(data.error);
-        }
-        return data;
-      })
-      .then(function(data) {
-        if (!data.error) renderMessages(data.messages);
-        setTimeout(showQuick, 1200);
-      })
-      .catch(function() {
-        hideTyping();
-        addMsg('bot', 'Connection issue — please try again.');
-      });
+    // Add user message to history
+    messages.push({ role: 'user', content: text });
 
-    sending = false;
-    sendBtn.disabled = false;
-    setTimeout(function() { input.focus(); }, 100);
+    // Stream response
+    fetch(API, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ messages: messages, workflow_id: WF_ID }),
+    }).then(function(response) {
+      hideTyping();
+
+      // Create bot message element for streaming
+      var botEl = addMsg('bot', '');
+      streamingEl = botEl;
+      var fullText = '';
+
+      if (!response.ok) throw new Error('API error');
+
+      var reader = response.body.getReader();
+      var decoder = new TextDecoder();
+      var buffer = '';
+
+      function readChunk() {
+        return reader.read().then(function(result) {
+          if (result.done) {
+            streamingEl = null;
+            if (fullText) {
+              messages.push({ role: 'assistant', content: fullText });
+            }
+            sending = false; sendBtn.disabled = false;
+            setTimeout(function() { input.focus(); }, 100);
+            return;
+          }
+
+          buffer += decoder.decode(result.value, { stream: true });
+          var lines = buffer.split('\n');
+          buffer = lines.pop() || '';
+
+          for (var i = 0; i < lines.length; i++) {
+            var line = lines[i].trim();
+            if (!line || !line.startsWith('data: ')) continue;
+            var data = line.slice(6);
+            if (data === '[DONE]') continue;
+            try {
+              var parsed = JSON.parse(data);
+              if (parsed.content) {
+                fullText += parsed.content;
+                if (streamingEl) streamingEl.textContent = fullText;
+                chat.scrollTop = chat.scrollHeight;
+              }
+            } catch (_) {}
+          }
+
+          return readChunk();
+        });
+      }
+
+      return readChunk();
+    }).catch(function() {
+      hideTyping();
+      if (!streamingEl || !streamingEl.textContent) {
+        addMsg('bot', 'Connection issue — please try again.');
+      }
+      streamingEl = null;
+      if (messages.length && messages[messages.length - 1].role === 'user') {
+        messages.pop();
+      }
+      sending = false; sendBtn.disabled = false;
+    });
   }
 
   // Mobile viewport handling
