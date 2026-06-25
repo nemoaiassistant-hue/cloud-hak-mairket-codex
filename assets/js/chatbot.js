@@ -277,10 +277,21 @@
   }, 6000);
 
   // ===== MESSAGES =====
-  function addMsg(role, text) {
+  function renderMd(text) {
+    var html = text
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+      .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
+      .replace(/\*(.+?)\*/g, '<em>$1</em>')
+      .replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" style="color:#0a1a3a;text-decoration:underline">$1</a>')
+      .replace(/^- (.+)$/gm, '<span style="display:block;padding-left:12px">• $1</span>')
+      .replace(/\n/g, '<br>');
+    return html;
+  }
+
+  function addMsg(role, text, html) {
     var div = document.createElement('div');
     div.className = 'msg ' + role;
-    div.textContent = text;
+    div.innerHTML = html || renderMd(text || '');
     chat.appendChild(div);
     chat.scrollTop = chat.scrollHeight;
     return div;
@@ -387,7 +398,7 @@
               var parsed = JSON.parse(data);
               if (parsed.content) {
                 fullText += parsed.content;
-                if (streamingEl) streamingEl.textContent = fullText;
+                if (streamingEl) streamingEl.innerHTML = renderMd(fullText);
                 chat.scrollTop = chat.scrollHeight;
               }
             } catch (_) {}
