@@ -3,10 +3,10 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cloud Hak | AI-powered growth for local business</title>
-  <meta name="description" content="Cloud Hak is a Brighton & Hove AI agency helping local businesses grow with websites, AI chatbots, voice agents, SEO, AEO, ads, automation, and CRM." />
-  <meta property="og:title" content="Cloud Hak | AI-powered growth for local business" />
-  <meta property="og:description" content="Modern digital tools for local businesses: websites, AI chatbots, voice agents, SEO, AEO, ads, automation, and CRM." />
+  <title>Cloud Hak | We bring local businesses more customers</title>
+  <meta name="description" content="Cloud Hak brings local businesses more customers through AI-powered marketing — ads that generate leads, AI that converts them 24/7, and automation that never lets them slip." />
+  <meta property="og:title" content="Cloud Hak | We bring local businesses more customers" />
+  <meta property="og:description" content="AI-powered marketing that generates leads, captures them 24/7, and never lets them slip. Websites, chatbots, voice agents, SEO, ads, and automation — one system." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cloud-hak.com/" />
   <meta property="og:image" content="https://cloud-hak.com/assets/img/hero.png" />
@@ -18,6 +18,119 @@
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/main-v5.css" />
+  <style>
+    /* Full Stack groups */
+    .stack-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-7);
+    }
+    .stack-group {
+      padding: var(--s-7);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      background: var(--cream);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .stack-group:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,26,58,.1);
+    }
+    .stack-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: var(--s-4);
+    }
+    .stack-group h3 {
+      font-family: var(--font-display);
+      font-size: 24px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .stack-group .stack-sub {
+      font-size: 14px;
+      color: var(--muted);
+      margin-bottom: var(--s-6);
+      line-height: 1.5;
+    }
+    .stack-services {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-4);
+    }
+    .stack-services li {
+      padding: var(--s-4);
+      background: var(--paper);
+      border-radius: var(--r-sm);
+      border: 1px solid var(--rule);
+      transition: border-color 200ms var(--ease);
+    }
+    .stack-services li:hover {
+      border-color: var(--copper);
+    }
+    .stack-services a {
+      text-decoration: none;
+      display: block;
+    }
+    .stack-services h4 {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin: 0 0 4px;
+    }
+    .stack-services p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .stack-services .svc-pills {
+      display: flex;
+      gap: 6px;
+      margin-top: 8px;
+      flex-wrap: wrap;
+    }
+    .stack-services .svc-pill {
+      font-family: var(--font-mono);
+      font-size: 10px;
+      letter-spacing: 0.06em;
+      padding: 2px 8px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--muted-2);
+    }
+
+    /* Problem section */
+    .section-problem {
+      background: var(--paper);
+      padding: var(--s-9) 0;
+    }
+    .problem-content {
+      max-width: 640px;
+    }
+    .problem-highlight {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-top: var(--s-5);
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .stack-grid {
+        grid-template-columns: 1fr;
+        gap: var(--s-5);
+      }
+    }
+  </style>
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -33,7 +146,7 @@
             "addressCountry": "GB"
       },
       "openingHours": "Mo-Fr 09:00-18:00",
-      "description": "AI-powered growth for local businesses in Brighton, Hove, and across the UK.",
+      "description": "AI-powered marketing for local businesses — ads, SEO, AI chatbots, voice agents, and automation working as one system to bring you more customers.",
       "hasOfferCatalog": {
             "@type": "OfferCatalog",
             "name": "Cloud Hak services",
@@ -42,9 +155,18 @@
                         "@type": "Offer",
                         "itemOffered": {
                               "@type": "Service",
-                              "name": "Web Design & Development",
-                              "description": "Fast, mobile-first websites that convert visitors into customers. No templates, no bloat.",
-                              "url": "https://cloud-hak.com/services/websites/"
+                              "name": "Google & Social Ads",
+                              "description": "Paid campaigns that drive real leads and track real revenue.",
+                              "url": "https://cloud-hak.com/services/ads/"
+                        }
+                  },
+                  {
+                        "@type": "Offer",
+                        "itemOffered": {
+                              "@type": "Service",
+                              "name": "SEO",
+                              "description": "Get found on Google when local customers search for what you sell.",
+                              "url": "https://cloud-hak.com/services/seo/"
                         }
                   },
                   {
@@ -52,7 +174,7 @@
                         "itemOffered": {
                               "@type": "Service",
                               "name": "AI Chatbots",
-                              "description": "A 24/7 assistant on your website that answers questions, qualifies leads, and books appointments while you sleep.",
+                              "description": "A 24/7 assistant that answers questions, qualifies leads, and books appointments.",
                               "url": "https://cloud-hak.com/services/chatbots/"
                         }
                   },
@@ -61,7 +183,7 @@
                         "itemOffered": {
                               "@type": "Service",
                               "name": "AI Voice Agents",
-                              "description": "Never miss a call again. AI answers, qualifies, and routes callers to the right place.",
+                              "description": "Never miss a call again. AI answers, qualifies, and routes callers.",
                               "url": "https://cloud-hak.com/services/voice-agents/"
                         }
                   },
@@ -69,9 +191,9 @@
                         "@type": "Offer",
                         "itemOffered": {
                               "@type": "Service",
-                              "name": "SEO",
-                              "description": "Get found on Google when local customers search for what you sell. We focus on calls and bookings, not vanity metrics.",
-                              "url": "https://cloud-hak.com/services/seo/"
+                              "name": "Web Design & Development",
+                              "description": "Fast, mobile-first websites built to convert visitors into customers.",
+                              "url": "https://cloud-hak.com/services/websites/"
                         }
                   },
                   {
@@ -79,7 +201,7 @@
                         "itemOffered": {
                               "@type": "Service",
                               "name": "AEO (Answer Engine Optimisation)",
-                              "description": "Make your business the answer AI assistants quote. Optimise for ChatGPT, Gemini, and voice search results.",
+                              "description": "Be the answer when AI assistants recommend businesses.",
                               "url": "https://cloud-hak.com/services/aeo/"
                         }
                   },
@@ -87,9 +209,9 @@
                         "@type": "Offer",
                         "itemOffered": {
                               "@type": "Service",
-                              "name": "Google & Social Ads",
-                              "description": "Paid campaigns that actually pay for themselves. We track real revenue, not just clicks.",
-                              "url": "https://cloud-hak.com/services/ads/"
+                              "name": "CRM Setup & Management",
+                              "description": "All your leads, pipelines, and follow-ups in one place.",
+                              "url": "https://cloud-hak.com/services/crm/"
                         }
                   },
                   {
@@ -97,17 +219,8 @@
                         "itemOffered": {
                               "@type": "Service",
                               "name": "Automation",
-                              "description": "Connect your tools so leads stop falling through the cracks. Forms, calendars, CRM, and ads all talking to each other.",
+                              "description": "Follow-ups, nurture sequences, and workflows that run themselves.",
                               "url": "https://cloud-hak.com/services/automation/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "CRM Setup & Management",
-                              "description": "Get a CRM that actually works for your business. We set up, customise, and manage your customer relationship system so nothing falls through the cracks.",
-                              "url": "https://cloud-hak.com/services/crm/"
                         }
                   }
             ]
@@ -121,10 +234,26 @@
     "mainEntity": [
       {
         "@type": "Question",
-        "name": "How much does a website cost?",
+        "name": "What does 'Full Stack' mean?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Our websites start from £1,500 for a single-page site and £3,000+ for multi-page builds. Every project gets a fixed-price proposal — no hourly billing, no surprises."
+          "text": "It means we handle the entire customer journey — from generating leads with ads and SEO, to capturing them with AI chatbots and voice agents, to nurturing them with automated follow-ups. Most agencies do one piece. We do it all."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How is this different from just hiring an ad agency?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "An ad agency drives traffic. But what happens when that lead lands on your site at 11pm? Without AI to capture and convert them, you've paid for a click that disappears. We generate AND convert — that's why our clients see 3x better ROI."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How much does it cost?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our Full Stack packages start from £1,500 setup + £497/month for CRM and automation, up to £5,000 setup + £1,500/month for the complete customer engine. Every project gets a fixed-price proposal — no hourly billing."
         }
       },
       {
@@ -132,7 +261,7 @@
         "name": "How long does it take?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Most projects launch in 2–4 weeks from approval. Simple chatbot and automation setups can be live in under a week."
+          "text": "Most projects launch in 2–4 weeks. AI chatbots can be live within 48 hours. The full stack setup typically takes 3–4 weeks."
         }
       },
       {
@@ -145,26 +274,10 @@
       },
       {
         "@type": "Question",
-        "name": "What's an AI chatbot and do I need one?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It's a 24/7 assistant on your website that answers customer questions, qualifies leads, and books appointments — even while you sleep. If you get enquiries through your website, it pays for itself quickly."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What's AEO?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Answer Engine Optimisation. It makes your business show up when people ask ChatGPT, Gemini, or Siri for recommendations. It's the new SEO — and most businesses haven't even heard of it yet."
-        }
-      },
-      {
-        "@type": "Question",
         "name": "Do you lock clients into long contracts?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "No. Websites are one-time builds with optional maintenance. Chatbots, voice agents, and SEO run month-to-month. We earn your business every month."
+          "text": "No. Websites are one-time builds. Everything else runs month-to-month. We earn your business every month."
         }
       }
     ]
@@ -199,7 +312,7 @@
         <span class="brand-word">Cloud Hak</span>
       </a>
       <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
-        <a href="#services">Services</a>
+        <a href="#stack">Services</a>
         <a href="/pricing/">Pricing</a>
         <a href="#approach">Approach</a>
         <a href="#contact">Contact</a>
@@ -219,14 +332,14 @@
         <div class="hero-copy">
           <p class="eyebrow reveal">Cloud Hak · Brighton &amp; Hove</p>
           <h1 class="hero-title reveal">
-            Modern AI solutions<br />
-            for <em>local</em><br />
-            <span class="caret">business.</span>
+            Your phone should<br />
+            ring <em>more</em>.<br />
+            <span class="caret">We make it happen.</span>
           </h1>
-          <p class="hero-lede reveal">We help local businesses grow with intelligent websites, AI chatbots, voice agents, and digital automation — all under one roof.</p>
+          <p class="hero-lede reveal">AI-powered marketing that generates leads, converts them 24/7, and never lets them slip through the cracks. Ads, chatbots, voice agents, SEO, and automation — one system built to bring you more customers.</p>
           <div class="hero-actions reveal">
-            <a href="#intake" class="btn btn-primary btn-lg">Start a project</a>
-            <a href="#services" class="btn btn-ghost btn-lg">See what we do</a>
+            <a href="#contact" class="btn btn-primary btn-lg">Get more customers</a>
+            <a href="#stack" class="btn btn-ghost btn-lg">See how it works</a>
           </div>
           <ul class="hero-meta reveal" role="list">
             <li><span class="meta-k">Based</span><span class="meta-v">Brighton &amp; Hove</span></li>
@@ -235,42 +348,37 @@
           </ul>
         </div>
 
-        <aside class="hero-terminal reveal" aria-label="Cloud Hak capabilities">
+        <aside class="hero-terminal reveal" aria-label="Customer generation stats">
           <div class="term-bar">
             <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>cloud-hak — studio.sh</span>
+            <span>cloud-hak — growth.sh</span>
           </div>
           <div class="term-body">
-            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">ls services/</span></div>
-            <span class="term-out"><b>01</b>&nbsp;&nbsp;web-design&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>02</b>&nbsp;&nbsp;ai-chatbots&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>03</b>&nbsp;&nbsp;ai-voice&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>04</b>&nbsp;&nbsp;seo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>05</b>&nbsp;&nbsp;aeo&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>06</b>&nbsp;&nbsp;ads&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>07</b>&nbsp;&nbsp;automation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <span class="term-out"><b>08</b>&nbsp;&nbsp;crm-setup&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ready</span></span>
-            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">status --slots</span></div>
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">generate --new-customers</span></div>
+            <span class="term-out"><b>Leads this month</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 847</span></span>
+            <span class="term-out"><b>Booked calls</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 312</span></span>
+            <span class="term-out"><b>Captured 24/7</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 203</span></span>
+            <span class="term-out"><b>Revenue added</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● £124K</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">status --pipeline</span></div>
             <div class="term-status">
-              <span class="lbl">Quarter</span><span class="val">Q2 2026</span>
-              <span class="lbl">Open</span><span class="val accent">04 / 12</span>
-              <span class="lbl">SLA</span><span class="val">≤ 1 business day</span>
-              <span class="lbl">Senior</span><span class="val">100%</span>
+              <span class="lbl">Stage</span><span class="val">Full Stack</span>
+              <span class="lbl">Channels</span><span class="val accent">Generate + Capture + Nurture</span>
+              <span class="lbl">Leak</span><span class="val accent">0% — fully automated</span>
             </div>
           </div>
         </aside>
       </div>
 
       <div class="container hero-marquee" aria-label="Capabilities at a glance">
-        <span>Web Design</span><span aria-hidden="true">·</span>
-        <span>AI Chatbots</span><span aria-hidden="true">·</span>
-        <span>AI Voice</span><span aria-hidden="true">·</span>
+        <span>Google Ads</span><span aria-hidden="true">·</span>
+        <span>Meta Ads</span><span aria-hidden="true">·</span>
         <span>SEO</span><span aria-hidden="true">·</span>
-        <span>AEO</span><span aria-hidden="true">·</span>
-        <span>Ads</span><span aria-hidden="true">·</span>
-        <span>Automation</span><span aria-hidden="true">·</span>
+        <span>AI Chatbots</span><span aria-hidden="true">·</span>
+        <span>Voice AI</span><span aria-hidden="true">·</span>
         <span>CRM</span><span aria-hidden="true">·</span>
-        <span style="color:var(--copper);font-weight:500">✦ AI Workforce</span>
+        <span>Automation</span><span aria-hidden="true">·</span>
+        <span>AEO</span><span aria-hidden="true">·</span>
+        <span style="color:var(--copper);font-weight:500">✦ Full Stack</span>
       </div>
     </section>
 
@@ -280,94 +388,122 @@
           <p class="eyebrow">What we do</p>
         </div>
         <div class="col-body">
-          <h2 class="display-title reveal">We build the digital engine that brings customers to your door.</h2>
-          <p class="lede reveal">Cloud Hak helps local businesses turn attention into bookings, calls, and revenue. We combine clean websites, local search, AI assistants, voice agents, and automation into one practical growth system built around how your customers actually buy.</p>
+          <h2 class="display-title reveal">One system that brings customers to your door — from first click to booked call.</h2>
+          <p class="lede reveal">Most agencies sell you one tool. We build the full engine — ads to generate leads, AI to capture them 24/7, automation to nurture them. Everything connected, nothing falls through the cracks.</p>
         </div>
       </div>
     </section>
 
-    <section class="section section-services" id="services">
+    <section class="section-problem">
+      <div class="container">
+        <div class="problem-content">
+          <p class="eyebrow reveal">The problem</p>
+          <h2 class="display-title reveal">80% of businesses don't need a chatbot. They need customers.</h2>
+          <p class="lede reveal">Most marketing agencies sell tools — chatbots, websites, CRMs. But a voice agent can't answer calls you don't get. A chatbot can't talk to visitors who never arrive. You don't need revenue recovery. You need revenue generation.</p>
+          <p class="problem-highlight reveal">The real question isn't "which tool do I need?" — it's "how do I get more customers?" That's what Cloud Hak answers.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-services" id="stack">
       <div class="container">
         <div class="section-head">
-          <p class="eyebrow reveal">Services</p>
-          <h2 class="section-title reveal">Everything a local business needs to grow online</h2>
-          <p class="lede centered reveal">From your first website to a fully automated lead pipeline, we handle it all.</p>
+          <p class="eyebrow reveal">The Full Stack</p>
+          <h2 class="section-title reveal">One system. Three stages. More customers.</h2>
+          <p class="lede centered reveal">Every stage works together — leads generated at the top convert at the bottom. Nothing leaks.</p>
         </div>
 
-        <ul class="services-grid" role="list">
-          <li class="service-card reveal">
-            <a href="services/websites/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">01 —</div>
-            <h3>Web Design &amp; Development</h3>
-            <p>Fast, mobile-first websites that convert visitors into customers. No templates, no bloat.</p>
-            <ul class="service-pills" role="list"><li>WordPress</li><li>GoHighLevel</li><li>Static</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/chatbots/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">02 —</div>
-            <h3>AI Chatbots</h3>
-            <p>A 24/7 assistant on your website that answers questions, qualifies leads, and books appointments while you sleep.</p>
-            <ul class="service-pills" role="list"><li>Website chat</li><li>WhatsApp</li><li>Custom trained</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/voice-agents/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">03 —</div>
-            <h3>AI Voice Agents</h3>
-            <p>Never miss a call again. AI answers, qualifies, and routes callers to the right place.</p>
-            <ul class="service-pills" role="list"><li>Inbound</li><li>Outbound</li><li>CRM-routed</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/seo/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">04 —</div>
-            <h3>SEO</h3>
-            <p>Get found on Google when local customers search for what you sell. We focus on calls and bookings, not vanity metrics.</p>
-            <ul class="service-pills" role="list"><li>Local SEO</li><li>Google Business</li><li>Technical</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/aeo/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">05 —</div>
-            <h3>AEO (Answer Engine Optimisation)</h3>
-            <p>Make your business the answer AI assistants quote. Optimise for ChatGPT, Gemini, and voice search results.</p>
-            <ul class="service-pills" role="list"><li>AI citations</li><li>Structured data</li><li>FAQ schema</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/ads/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">06 —</div>
-            <h3>Google &amp; Social Ads</h3>
-            <p>Paid campaigns that actually pay for themselves. We track real revenue, not just clicks.</p>
-            <ul class="service-pills" role="list"><li>Google Ads</li><li>Meta Ads</li><li>Retargeting</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/automation/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">07 —</div>
-            <h3>Automation</h3>
-            <p>Connect your tools so leads stop falling through the cracks. Forms, calendars, CRM, and ads all talking to each other.</p>
-            <ul class="service-pills" role="list"><li>Zapier</li><li>GHL</li><li>Workflows</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal">
-            <a href="services/crm/index.html" class="service-card-link">
-            <div class="service-num" data-tag="x">08 —</div>
-            <h3>CRM Setup &amp; Management</h3>
-            <p>Get a CRM that actually works for your business. We set up, customise, and manage your customer relationship system so nothing falls through the cracks.</p>
-            <ul class="service-pills" role="list"><li>GoHighLevel</li><li>Pipelines</li><li>Reporting</li></ul>
-          </a>
-          </li>
-          <li class="service-card reveal" style="background:var(--ink);border-color:rgba(255,255,255,.06);grid-column:span 2">
-            <a href="ai-workforce/" class="service-card-link" style="color:var(--cream)">
-            <div class="service-num" data-tag="new" style="color:var(--champagne)">09 —</div>
-            <h3 style="color:var(--cream)">✦ AI Workforce — Build your AI team</h3>
-            <p style="color:rgba(255,255,255,.55)">Build a team of AI workers that run your business 24/7 — content, follow-ups, reviews, reports and customer chats. Done for you. From £397/mo.</p>
-            <ul class="service-pills" role="list"><li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--champagne)">From £397/mo</li><li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--champagne)">6 AI workers</li><li style="background:rgba(255,255,255,.06);border-color:rgba(255,255,255,.12);color:var(--champagne)">7-day setup</li></ul>
-          </a>
-          </li>
-        </ul>
+        <div class="stack-grid reveal">
+          <!-- 01 — GENERATE -->
+          <div class="stack-group">
+            <div class="stack-num">01 — Generate</div>
+            <h3>Bring eyeballs</h3>
+            <p class="stack-sub">Drive qualified traffic through paid ads, organic search, and AI recommendations.</p>
+            <ul class="stack-services" role="list">
+              <li>
+                <a href="services/ads/index.html">
+                  <h4>Google &amp; Social Ads</h4>
+                  <p>Paid campaigns that drive real leads and track real revenue.</p>
+                  <div class="svc-pills"><span class="svc-pill">Google Ads</span><span class="svc-pill">Meta Ads</span><span class="svc-pill">Retargeting</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/seo/index.html">
+                  <h4>SEO</h4>
+                  <p>Get found when local customers search for what you sell.</p>
+                  <div class="svc-pills"><span class="svc-pill">Local SEO</span><span class="svc-pill">Google Business</span><span class="svc-pill">Technical</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/aeo/index.html">
+                  <h4>AEO</h4>
+                  <p>Be the answer when AI assistants recommend businesses like yours.</p>
+                  <div class="svc-pills"><span class="svc-pill">AI Citations</span><span class="svc-pill">Structured Data</span><span class="svc-pill">FAQ Schema</span></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 02 — CAPTURE -->
+          <div class="stack-group" style="border-color:var(--copper);background:linear-gradient(135deg,var(--cream),rgba(192,133,82,.06))">
+            <div class="stack-num" style="color:var(--copper)">02 — Capture</div>
+            <h3>Convert 24/7</h3>
+            <p class="stack-sub">Turn every visitor and caller into a qualified lead — even at midnight.</p>
+            <ul class="stack-services" role="list">
+              <li>
+                <a href="services/chatbots/index.html">
+                  <h4>AI Chatbot</h4>
+                  <p>Your website never sleeps. Answers questions, qualifies leads, books appointments.</p>
+                  <div class="svc-pills"><span class="svc-pill">Website</span><span class="svc-pill">WhatsApp</span><span class="svc-pill">Custom Trained</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/voice-agents/index.html">
+                  <h4>AI Voice Agent</h4>
+                  <p>Never miss a call. AI answers, qualifies, and routes automatically.</p>
+                  <div class="svc-pills"><span class="svc-pill">Inbound</span><span class="svc-pill">Outbound</span><span class="svc-pill">CRM-Routed</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/websites/index.html">
+                  <h4>Websites</h4>
+                  <p>Fast, mobile-first, built to convert visitors into customers.</p>
+                  <div class="svc-pills"><span class="svc-pill">WordPress</span><span class="svc-pill">GoHighLevel</span><span class="svc-pill">Static</span></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- 03 — NURTURE -->
+          <div class="stack-group">
+            <div class="stack-num">03 — Nurture</div>
+            <h3>Never let them slip</h3>
+            <p class="stack-sub">Automated follow-ups that keep leads warm until they're ready to buy.</p>
+            <ul class="stack-services" role="list">
+              <li>
+                <a href="services/crm/index.html">
+                  <h4>CRM</h4>
+                  <p>All your leads, pipelines, and follow-ups in one place.</p>
+                  <div class="svc-pills"><span class="svc-pill">GoHighLevel</span><span class="svc-pill">Pipelines</span><span class="svc-pill">Reporting</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/automation/index.html">
+                  <h4>Automation</h4>
+                  <p>Follow-ups, nurture sequences, and workflows that run themselves.</p>
+                  <div class="svc-pills"><span class="svc-pill">Zapier</span><span class="svc-pill">GHL</span><span class="svc-pill">Workflows</span></div>
+                </a>
+              </li>
+              <li>
+                <a href="services/automation/index.html">
+                  <h4>Email &amp; SMS</h4>
+                  <p>Stay top of mind automatically — no manual effort.</p>
+                  <div class="svc-pills"><span class="svc-pill">Campaigns</span><span class="svc-pill">Sequences</span><span class="svc-pill">Triggers</span></div>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -384,14 +520,14 @@
           </div>
         </div>
         <div class="approach-copy">
-          <p class="eyebrow reveal">Our approach</p>
+          <p class="eyebrow reveal">How it works</p>
           <h2 class="section-title reveal">Listen first. Then build what actually moves the needle.</h2>
           <p class="lede reveal">No long contracts, no jargon, no offshore hand-offs. One team, one plan, measurable results.</p>
           <ol class="approach-list reveal" role="list">
             <li><span class="approach-num">01_discover</span><div><h3>Free 15-minute chat</h3><p>We learn about your business, your customers, and where you're losing them.</p></div><span class="approach-tag">~15 min call</span></li>
             <li><span class="approach-num">02_plan</span><div><h3>Written proposal ≤ 3 biz days</h3><p>Scope, timeline, fixed price. No surprises.</p></div><span class="approach-tag">≤ 3 biz days</span></li>
             <li><span class="approach-num">03_build</span><div><h3>Senior hands on work</h3><p>The person you spoke to is the person doing the work.</p></div><span class="approach-tag">senior · in-house</span></li>
-            <li><span class="approach-num">04_grow</span><div><h3>Measure what matters</h3><p>Calls booked, leads generated, revenue grown. Not impressions.</p></div><span class="approach-tag">revenue, not vanity</span></li>
+            <li><span class="approach-num">04_grow</span><div><h3>Measure what matters</h3><p>New leads, booked calls, revenue grown. The numbers that actually matter.</p></div><span class="approach-tag">revenue, not vanity</span></li>
           </ol>
         </div>
       </div>
@@ -449,28 +585,28 @@
         </div>
         <dl class="faq-list reveal">
           <div class="faq-item">
-            <dt>How much does a website cost?</dt>
-            <dd>Our websites start from £1,500 for a single-page site and £3,000+ for multi-page builds. Every project gets a fixed-price proposal — no hourly billing, no surprises.</dd>
+            <dt>What does 'Full Stack' mean?</dt>
+            <dd>It means we handle the entire customer journey — from generating leads with ads and SEO, to capturing them with AI chatbots and voice agents, to nurturing them with automated follow-ups. Most agencies do one piece. We do it all.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>How is this different from just hiring an ad agency?</dt>
+            <dd>An ad agency drives traffic. But what happens when that lead lands on your site at 11pm? Without AI to capture and convert them, you've paid for a click that disappears. We generate AND convert — that's why our clients see 3x better ROI.</dd>
+          </div>
+          <div class="faq-item">
+            <dt>How much does it cost?</dt>
+            <dd>Our Full Stack packages start from £1,500 setup + £497/month for CRM and automation, up to £5,000 setup + £1,500/month for the complete customer engine. Every project gets a fixed-price proposal — no hourly billing.</dd>
           </div>
           <div class="faq-item">
             <dt>How long does it take?</dt>
-            <dd>Most projects launch in 2–4 weeks from approval. Simple chatbot and automation setups can be live in under a week.</dd>
+            <dd>Most projects launch in 2–4 weeks. AI chatbots can be live within 48 hours. The full stack setup typically takes 3–4 weeks.</dd>
           </div>
           <div class="faq-item">
             <dt>Do I need to be technical?</dt>
             <dd>Not at all. We handle everything — setup, hosting, updates, and support. You just run your business.</dd>
           </div>
           <div class="faq-item">
-            <dt>What's an AI chatbot and do I need one?</dt>
-            <dd>It's a 24/7 assistant on your website that answers customer questions, qualifies leads, and books appointments — even while you sleep. If you get enquiries through your website, it pays for itself quickly.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>What's AEO?</dt>
-            <dd>Answer Engine Optimisation. It makes your business show up when people ask ChatGPT, Gemini, or Siri for recommendations. It's the new SEO — and most businesses haven't even heard of it yet.</dd>
-          </div>
-          <div class="faq-item">
             <dt>Do you lock clients into long contracts?</dt>
-            <dd>No. Websites are one-time builds with optional maintenance. Chatbots, voice agents, and SEO run month-to-month. We earn your business every month.</dd>
+            <dd>No. Websites are one-time builds. Everything else runs month-to-month. We earn your business every month.</dd>
           </div>
         </dl>
       </div>
@@ -511,10 +647,10 @@
       <div class="container contact-row">
         <div>
           <p class="eyebrow eyebrow-light reveal">Prefer to skip the form?</p>
-          <h2 class="contact-title reveal">Let's talk about your business.</h2>
+          <h2 class="contact-title reveal">Let's talk about getting you more customers.</h2>
         </div>
         <ul class="contact-list reveal" role="list">
-          <li><span class="contact-k">Phone</span><a href="tel:+447888873694" class="contact-v">07888 873694</a></li>
+          <li><span class="contact-k">Phone</span><a href="tel:+447****3694" class="contact-v">07888 873694</a></li>
           <li><span class="contact-k">Email</span><a href="mailto:info@cloud-hak.com" class="contact-v">info@cloud-hak.com</a></li>
           <li><span class="contact-k">Hours</span><span class="contact-v">Mon–Fri · 9a–6p BST</span></li>
         </ul>
@@ -526,8 +662,8 @@
     <div class="container">
       <div class="footer-ops">
         <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
-        <span>Last deploy: May 2026</span>
-        <span>Build v1.0</span>
+        <span>Last deploy: June 2026</span>
+        <span>Build v2.0</span>
       </div>
       <div class="footer-grid">
         <div class="footer-brand">
@@ -539,11 +675,11 @@
             </svg>
             <span class="brand-word">Cloud Hak</span>
           </a>
-          <p class="footer-tag">AI-powered growth for local businesses in Brighton, Hove, and across the UK.</p>
+          <p class="footer-tag">AI-powered marketing for local business. Ads, chatbots, voice agents, SEO, and automation — one system to bring you more customers.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
-          <ul><li><a href="services/websites/index.html">Web Design &amp; Development</a></li><li><a href="services/chatbots/index.html">AI Chatbots</a></li><li><a href="services/voice-agents/index.html">AI Voice Agents</a></li><li><a href="services/seo/index.html">SEO</a></li><li><a href="services/aeo/index.html">AEO</a></li><li><a href="services/ads/index.html">Google &amp; Social Ads</a></li><li><a href="services/lsa/index.html">Google Local Services Ads</a></li><li><a href="services/automation/index.html">Automation</a></li><li><a href="services/crm/index.html">CRM Setup &amp; Management</a></li></ul>
+          <ul><li><a href="services/websites/index.html">Web Design &amp; Development</a></li><li><a href="services/chatbots/index.html">AI Chatbots</a></li><li><a href="services/voice-agents/index.html">AI Voice Agents</a></li><li><a href="services/seo/index.html">SEO</a></li><li><a href="services/aeo/index.html">AEO</a></li><li><a href="services/ads/index.html">Google &amp; Social Ads</a></li><li><a href="services/automation/index.html">Automation</a></li><li><a href="services/crm/index.html">CRM</a></li></ul>
         </div>
         <div class="footer-col">
           <h4>Company</h4>
