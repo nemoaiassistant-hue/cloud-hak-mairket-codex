@@ -4,9 +4,9 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Pricing | Cloud Hak — Full Stack Marketing for Local Business</title>
-  <meta name="description" content="Full-stack pricing for Cloud Hak's customer generation engine — ads, SEO, AI chatbots, voice agents, CRM and automation. Built to bring you more customers." />
+  <meta name="description" content="Two packages, one goal: more customers. Full Stack and Full Stack Pro — every service in the customer journey, from ads to automation, managed by one team." />
   <meta property="og:title" content="Pricing | Cloud Hak" />
-  <meta property="og:description" content="Full-stack pricing for Cloud Hak's customer generation engine — ads, SEO, AI chatbots, voice agents, CRM and automation. Built to bring you more customers." />
+  <meta property="og:description" content="Two packages, one goal: more customers. Full Stack and Full Stack Pro — every service in the customer journey, from ads to automation, managed by one team." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cloud-hak.com/pricing/" />
   <link rel="canonical" href="https://cloud-hak.com/pricing/" />
@@ -22,30 +22,33 @@
     .pricing-hero .section-title { margin-bottom: var(--s-4); }
     .pricing-hero .lede { margin: 0 auto; }
 
-    /* Toggle */
-    .pricing-toggle {
-      display: flex; align-items: center; justify-content: center; gap: var(--s-4);
-      margin-bottom: var(--s-9);
-      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+    /* Journey banner */
+    .journey-banner {
+      background: var(--paper); border: 1px solid var(--rule); border-radius: var(--r);
+      padding: var(--s-6) var(--s-7); margin-bottom: var(--s-9); text-align: center;
     }
-    .toggle-track {
-      width: 52px; height: 28px; background: var(--cream-3); border: 1px solid var(--rule-strong);
-      border-radius: 999px; position: relative; cursor: pointer; transition: background 200ms var(--ease);
+    .journey-steps {
+      display: flex; justify-content: center; align-items: center; gap: var(--s-4);
+      flex-wrap: wrap; margin-top: var(--s-4);
     }
-    .toggle-track.active { background: var(--ink); border-color: var(--ink); }
-    .toggle-knob {
-      position: absolute; top: 3px; left: 3px; width: 20px; height: 20px;
-      background: var(--cream); border-radius: 50%; transition: transform 200ms var(--ease);
+    .journey-step {
+      display: flex; flex-direction: column; align-items: center; gap: var(--s-2); flex: 1; min-width: 140px;
     }
-    .toggle-track.active .toggle-knob { transform: translateX(24px); }
-    .toggle-save {
-      display: inline-block; padding: 2px 8px; background: var(--live-soft); color: var(--live);
-      border-radius: 999px; font-size: 10px; font-weight: 600; letter-spacing: 0.08em;
+    .journey-num {
+      font-family: var(--font-mono); font-size: 11px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--copper);
     }
+    .journey-label {
+      font-family: var(--font-display); font-size: 16px; font-weight: 500; color: var(--ink);
+    }
+    .journey-desc {
+      font-size: 13px; color: var(--muted); line-height: 1.5; max-width: 180px;
+    }
+    .journey-arrow { color: var(--muted-2); font-size: 20px; flex-shrink: 0; }
 
-    /* Plans grid */
+    /* Plans grid — 2 columns */
     .plans-grid {
-      display: grid; grid-template-columns: repeat(3, 1fr); gap: 0;
+      display: grid; grid-template-columns: repeat(2, 1fr); gap: 0;
       border-top: 1px solid var(--rule); border-left: 1px solid var(--rule);
       margin-bottom: var(--s-9);
     }
@@ -95,11 +98,8 @@
     }
     .plan-card.featured .plan-setup { color: rgba(255,255,255,.35); }
 
-    /* Features list */
-    .plan-features {
-      list-style: none; padding: 0; margin: 0;
-      display: flex; flex-direction: column; gap: 10px;
-    }
+    /* Stage groups */
+    .plan-features { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 10px; }
     .plan-features li {
       font-size: 14px; color: var(--ink-2); display: flex; align-items: baseline; gap: 10px;
       line-height: 1.5;
@@ -107,8 +107,16 @@
     .plan-card.featured .plan-features li { color: rgba(255,255,255,.75); }
     .plan-features .check { color: var(--live); flex-shrink: 0; width: 16px; text-align: center; }
     .plan-card.featured .plan-features .check { color: var(--champagne); }
-    .plan-features .feat-note { color: var(--muted-2); font-size: 12px; margin-top: 2px; }
-    .plan-card.featured .plan-features .feat-note { color: rgba(255,255,255,.35); }
+    .stage-label {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--copper); margin-top: var(--s-4); margin-bottom: 2px;
+      display: block;
+    }
+    .plan-card.featured .stage-label { color: var(--champagne); }
+    .stage-divider {
+      border: none; border-top: 1px dashed var(--rule); margin: var(--s-3) 0;
+    }
+    .plan-card.featured .stage-divider { border-color: rgba(255,255,255,.12); }
     .plan-cta { margin-top: var(--s-6); }
     .plan-cta .btn { width: 100%; justify-content: center; }
     .btn-primary-outline {
@@ -116,6 +124,16 @@
     }
     .btn-primary-outline:hover {
       background: rgba(255,255,255,.08); border-color: rgba(255,255,255,.35);
+    }
+
+    /* Pro extras callout */
+    .pro-extras {
+      margin-top: var(--s-5); padding: var(--s-4); border-radius: var(--r-sm);
+      background: rgba(217,185,122,.08); border: 1px solid rgba(217,185,122,.15);
+    }
+    .pro-extras-title {
+      font-family: var(--font-mono); font-size: 10px; font-weight: 600; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--champagne); margin-bottom: var(--s-3);
     }
 
     /* One-off services */
@@ -137,10 +155,6 @@
     .service-price-card .svc-desc {
       font-size: 14px; color: var(--muted); margin: 0 0 var(--s-5); line-height: 1.6;
     }
-    .service-price-card .svc-price {
-      font-family: var(--font-display); font-size: 28px; color: var(--copper);
-      margin-bottom: var(--s-5);
-    }
     .svc-tiers { display: flex; flex-direction: column; gap: 8px; }
     .svc-tier {
       display: flex; justify-content: space-between; align-items: center;
@@ -148,6 +162,14 @@
     }
     .svc-tier-name { color: var(--ink-2); font-weight: 500; }
     .svc-tier-price { font-family: var(--font-mono); font-size: 12px; color: var(--ink); font-weight: 600; }
+
+    /* Comparison note */
+    .comparison-note {
+      text-align: center; padding: var(--s-7) 0; border-top: 1px solid var(--rule);
+      border-bottom: 1px solid var(--rule); margin-bottom: var(--s-9);
+    }
+    .comparison-note p { font-size: 14px; color: var(--muted); line-height: 1.7; max-width: 600px; margin: 0 auto; }
+    .comparison-note strong { color: var(--ink); }
 
     /* FAQ */
     .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: var(--s-7); margin-top: var(--s-7); }
@@ -159,6 +181,8 @@
     @media (max-width: 900px) {
       .plans-grid { grid-template-columns: 1fr; }
       .plan-card.featured { order: -1; }
+      .journey-steps { flex-direction: column; gap: var(--s-3); }
+      .journey-arrow { transform: rotate(90deg); }
       .services-grid-alt { grid-template-columns: 1fr; }
       .faq-grid { grid-template-columns: 1fr; }
       .faq-grid > div { border-top: 1px solid var(--rule); }
@@ -197,92 +221,116 @@
     <div class="container">
       <div class="pricing-hero reveal">
         <div class="eyebrow">pricing</div>
-        <h1 class="section-title">Simple pricing, no surprises.</h1>
-        <p class="lede">Everything a local business needs to grow online. Pick a plan or tell us what you need — we'll build a custom package.</p>
+        <h1 class="section-title">Two packages. One goal: more customers.</h1>
+        <p class="lede">Every service in the customer journey — from ads to automation — managed by one team. No piecing together vendors, no gaps, no excuses.</p>
       </div>
 
-      <!-- Toggle: Monthly / Annual -->
-      <div class="pricing-toggle reveal">
-        <span id="label-monthly">Monthly</span>
-        <div class="toggle-track" id="toggleTrack" onclick="togglePricing()">
-          <div class="toggle-knob"></div>
+      <!-- Customer Journey Banner -->
+      <div class="journey-banner reveal">
+        <p style="font-family:var(--font-mono);font-size:11px;letter-spacing:0.1em;text-transform:uppercase;color:var(--copper);margin:0 0 var(--s-2);">The customer journey</p>
+        <div class="journey-steps">
+          <div class="journey-step">
+            <span class="journey-num">01 — Generate</span>
+            <span class="journey-label">Bring in leads</span>
+            <span class="journey-desc">Ads, SEO, and local search put you in front of people who need you</span>
+          </div>
+          <span class="journey-arrow">→</span>
+          <div class="journey-step">
+            <span class="journey-num">02 — Capture</span>
+            <span class="journey-label">Convert 24/7</span>
+            <span class="journey-desc">Your website, chatbot, and CRM turn visitors into qualified leads</span>
+          </div>
+          <span class="journey-arrow">→</span>
+          <div class="journey-step">
+            <span class="journey-num">03 — Nurture</span>
+            <span class="journey-label">Close the deal</span>
+            <span class="journey-desc">Automations, emails, and follow-ups turn leads into paying customers</span>
+          </div>
         </div>
-        <span id="label-annual">Annual <span class="toggle-save">Save 20%</span></span>
       </div>
 
       <!-- Plans -->
       <div class="plans-grid reveal">
 
-        <!-- Starter -->
+        <!-- Full Stack -->
         <div class="plan-card">
-          <span class="plan-badge">Starter</span>
-          <h2 class="plan-name">CRM + Automations</h2>
-          <p class="plan-desc">Your entire business in one place. Leads, pipelines, emails, SMS — all connected.</p>
+          <span class="plan-badge">Full Stack</span>
+          <h2 class="plan-name">Full Stack</h2>
+          <p class="plan-desc">Your complete customer engine. We build and run the system that brings you more customers.</p>
           <div class="plan-price">
-            <div class="plan-amount"><span class="currency">£</span><span data-monthly="97" data-annual="77">97</span><span class="period"> /month</span></div>
-            <div class="plan-setup">+ £150 one-time setup</div>
+            <div class="plan-amount"><span class="currency">£</span>497<span class="period"> /month</span></div>
+            <div class="plan-setup">+ £997 one-time setup</div>
           </div>
           <ul class="plan-features">
-            <li><span class="check">✓</span> GoHighLevel CRM (white-label)</li>
-            <li><span class="check">✓</span> 1 pipeline + lead capture forms</li>
-            <li><span class="check">✓</span> Email + SMS automations</li>
-            <li><span class="check">✓</span> Calendar booking integration</li>
-            <li><span class="check">✓</span> Review request automation</li>
-            <li><span class="check">✓</span> 3 email templates</li>
-            <li><span class="check">✓</span> Email support</li>
+            <span class="stage-label">Generate — brings in the leads</span>
+            <li><span class="check">✓</span> <strong>Google Ads</strong> — appear when people search for what you sell</li>
+            <li><span class="check">✓</span> <strong>Google Business Profile</strong> — show up in Maps + local search</li>
+            <li><span class="check">✓</span> <strong>SEO + AEO</strong> — organic rankings + AI assistant recommendations</li>
+            <li><span class="check">✓</span> <strong>Reputation Management</strong> — automated review requests, responses, and tracking</li>
+
+            <hr class="stage-divider">
+            <span class="stage-label">Capture — responds to leads instantly</span>
+            <li><span class="check">✓</span> <strong>Website</strong> (up to 5 pages) — digital shop front built to convert</li>
+            <li><span class="check">✓</span> <strong>AI Chatbot</strong> — captures leads 24/7, answers questions, books appointments</li>
+            <li><span class="check">✓</span> <strong>CRM</strong> (GoHighLevel) — all leads tracked in one place</li>
+
+            <hr class="stage-divider">
+            <span class="stage-label">Nurture — converts leads into customers</span>
+            <li><span class="check">✓</span> <strong>Basic automations</strong> — auto-replies, missed-call text-back, form notifications</li>
+            <li><span class="check">✓</span> <strong>Email & SMS campaigns</strong> — stay top of mind with warm leads</li>
           </ul>
           <div class="plan-cta">
-            <a href="/#contact" class="btn btn-ghost">GET STARTED</a>
+            <a href="/#contact" class="btn btn-ghost">GET STARTED →</a>
           </div>
         </div>
 
-        <!-- Growth (Featured) -->
+        <!-- Full Stack Pro (Featured) -->
         <div class="plan-card featured">
           <span class="plan-badge">Most Popular</span>
-          <h2 class="plan-name">Growth</h2>
-          <p class="plan-desc">CRM plus an AI chatbot on your website. Leads come in while you sleep.</p>
+          <h2 class="plan-name">Full Stack Pro</h2>
+          <p class="plan-desc">Your outsourced marketing department. Everything in Full Stack, plus the tools and human touch that drive serious growth.</p>
           <div class="plan-price">
-            <div class="plan-amount"><span class="currency">£</span><span data-monthly="197" data-annual="157">197</span><span class="period"> /month</span></div>
-            <div class="plan-setup">+ £350 one-time setup</div>
+            <div class="plan-amount"><span class="currency">£</span>997<span class="period"> /month</span></div>
+            <div class="plan-setup">+ £2,497 one-time setup</div>
           </div>
           <ul class="plan-features">
-            <li><span class="check">✓</span> Everything in Starter</li>
-            <li><span class="check">✓</span> <strong>AI chatbot</strong> on your website</li>
-            <li><span class="check">✓</span> 2–3 pipelines + multi-channel campaigns</li>
-            <li><span class="check">✓</span> WhatsApp integration</li>
-            <li><span class="check">✓</span> Automated lead follow-up sequences</li>
-            <li><span class="check">✓</span> Monthly performance report</li>
-            <li><span class="check">✓</span> Priority email + phone support</li>
+            <li><span class="check">✓</span> Everything in Full Stack</li>
+
+            <hr class="stage-divider">
+            <span class="stage-label">Generate — more channels, more reach</span>
+            <li><span class="check">✓</span> <strong>Meta Ads</strong> — reach people on Facebook & Instagram who don't know they need you yet</li>
+            <li><span class="check">✓</span> <strong>Monthly reporting</strong> — leads, spend, cost per lead, ROI — see exactly what's working</li>
+
+            <hr class="stage-divider">
+            <span class="stage-label">Capture — never lose a lead</span>
+            <li><span class="check">✓</span> <strong>AI Voice Agent</strong> — never miss a call; answers, qualifies, and books automatically</li>
+            <li><span class="check">✓</span> <strong>Unlimited website pages</strong> — no limits on your site</li>
+
+            <hr class="stage-divider">
+            <div class="pro-extras">
+              <span class="pro-extras-title">Your dedicated team</span>
+            </div>
+            <li><span class="check">✓</span> <strong>Full automation workflows</strong> — nurture sequences, follow-up chains, re-engagement loops</li>
+            <li><span class="check">✓</span> <strong>Dedicated account manager</strong> — one person who owns your results</li>
+            <li><span class="check">✓</span> <strong>Monthly strategy call</strong> — review performance, adjust campaigns, plan next month</li>
+            <li><span class="check">✓</span> <strong>Priority support</strong> — same-day responses when it matters</li>
           </ul>
           <div class="plan-cta">
-            <a href="/#contact" class="btn btn-primary-outline">GET STARTED</a>
+            <a href="/#contact" class="btn btn-primary-outline">GET STARTED →</a>
           </div>
         </div>
 
-        <!-- Scale -->
-        <div class="plan-card">
-          <span class="plan-badge">Scale</span>
-          <h2 class="plan-name">Full AI Team</h2>
-          <p class="plan-desc">Everything automated. Chatbot, voice AI, funnels, campaigns — your AI workforce.</p>
-          <div class="plan-price">
-            <div class="plan-amount"><span class="currency">£</span><span data-monthly="297" data-annual="237">297</span><span class="period"> /month</span></div>
-            <div class="plan-setup">+ £500 one-time setup</div>
-          </div>
-          <ul class="plan-features">
-            <li><span class="check">✓</span> Everything in Growth</li>
-            <li><span class="check">✓</span> <strong>AI voice agent</strong> (inbound calls)</li>
-            <li><span class="check">✓</span> Lead-gen funnels</li>
-            <li><span class="check">✓</span> Full automation management</li>
-            <li><span class="check">✓</span> Social media content drafts</li>
-            <li><span class="check">✓</span> Google review responses</li>
-            <li><span class="check">✓</span> Weekly strategy call</li>
-            <li><span class="check">✓</span> Slack / WhatsApp direct line</li>
-          </ul>
-          <div class="plan-cta">
-            <a href="/#contact" class="btn btn-ghost">GET STARTED</a>
-          </div>
-        </div>
+      </div>
+    </div>
+  </section>
 
+  <!-- Comparison note -->
+  <section class="section">
+    <div class="container">
+      <div class="comparison-note reveal">
+        <p><strong>Why Full Stack instead of picking individual services?</strong><br>
+        A chatbot can't capture leads you don't have. Ads can't convert visitors when your site's closed at 11pm. SEO won't matter if leads fall through the cracks.<br>
+        <strong>Everything is connected. One team. One system. No leaks.</strong></p>
       </div>
     </div>
   </section>
@@ -293,7 +341,7 @@
       <div class="section-head reveal">
         <div class="eyebrow">one-off projects</div>
         <h2 class="section-title">Need something specific?</h2>
-        <p class="lede">One-time projects with fixed pricing. No hourly billing, no surprises.</p>
+        <p class="lede">Not ready for a full package? These one-time projects are available standalone.</p>
       </div>
       <ul class="services-grid-alt reveal">
         <li class="service-price-card">
@@ -342,12 +390,12 @@
           </div>
         </li>
         <li class="service-price-card">
-          <h3>AI Workforce</h3>
-          <p class="svc-desc">A team of AI workers running your business 24/7. Content, follow-ups, reviews, reports.</p>
+          <h3>Google Business Profile</h3>
+          <p class="svc-desc">Full audit, optimisation, and ongoing management of your Google listing.</p>
           <div class="svc-tiers">
-            <div class="svc-tier"><span class="svc-tier-name">Essential (3 workers)</span><span class="svc-tier-price">£397/mo</span></div>
-            <div class="svc-tier"><span class="svc-tier-name">Growth (5 workers)</span><span class="svc-tier-price">£697/mo</span></div>
-            <div class="svc-tier"><span class="svc-tier-name">Scale (8 workers)</span><span class="svc-tier-price">£1,297/mo</span></div>
+            <div class="svc-tier"><span class="svc-tier-name">Audit + Fix</span><span class="svc-tier-price">£200</span></div>
+            <div class="svc-tier"><span class="svc-tier-name">Full Optimisation</span><span class="svc-tier-price">£400</span></div>
+            <div class="svc-tier"><span class="svc-tier-name">Ongoing Management</span><span class="svc-tier-price">£100/mo</span></div>
           </div>
         </li>
       </ul>
@@ -364,16 +412,16 @@
       <div class="faq-grid reveal">
         <div>
           <dl class="faq-list">
+            <div class="faq-item"><dt>What does 'Full Stack' mean?</dt><dd>It means we handle the entire customer journey — from generating leads with ads and SEO, to capturing them with AI chatbots and websites, to nurturing them with automated follow-ups. Most agencies do one piece. We do it all.</dd></div>
+            <div class="faq-item"><dt>What's included in the setup fee?</dt><dd>Full account configuration, website build, chatbot training, ad campaign creation, CRM setup, automation workflows, and a walkthrough call to make sure everything works together.</dd></div>
             <div class="faq-item"><dt>Can I cancel anytime?</dt><dd>Yes. All plans are month-to-month with no long-term contract. Just give us 30 days' notice.</dd></div>
-            <div class="faq-item"><dt>What's included in setup?</dt><dd>Full account configuration, pipeline creation, automation workflows, form embedding on your website, and a walkthrough call.</dd></div>
-            <div class="faq-item"><dt>What CRM do you use?</dt><dd>We're a certified GoHighLevel partner — the #1 marketing platform for local businesses. Your account is set up, managed, and supported by us.</dd></div>
           </dl>
         </div>
         <div>
           <dl class="faq-list">
-            <div class="faq-item"><dt>Do you build my website too?</dt><dd>Yes. Website builds are a one-time project. You can add a website to any plan for a fixed price — see our one-off services above.</dd></div>
-            <div class="faq-item"><dt>How fast can you get me live?</dt><dd>Most setups take 3–7 business days. AI chatbots can be live within 48 hours of content approval.</dd></div>
-            <div class="faq-item"><dt>Is there a discount for paying annually?</dt><dd>Yes — save 20% when you pay annually. That's the toggle at the top of this page.</dd></div>
+            <div class="faq-item"><dt>Why not just hire an ad agency?</dt><dd>An ad agency drives traffic. But what happens when a lead lands on your site at 11pm? Without AI to capture them, you've paid for a click that disappears. We generate AND convert — that's why our clients see better ROI.</dd></div>
+            <div class="faq-item"><dt>What if I already have a website?</dt><dd>No problem. We can work with your existing site and add the AI, ads, and automation on top. Or we'll rebuild it if it's not converting — that's included in the setup.</dd></div>
+            <div class="faq-item"><dt>How fast can I be live?</dt><dd>Most setups take 2–3 weeks. The chatbot and website can be live within a few days. Full setup including ads and automations within 3 weeks of content approval.</dd></div>
           </dl>
         </div>
       </div>
@@ -388,7 +436,7 @@
         <h2 class="section-title contact-title">Not sure which plan fits?</h2>
         <p class="lede" style="color:rgba(255,255,255,.6)">Book a free 15-minute call. We'll learn about your business and recommend the right package — no pressure, no jargon.</p>
         <div class="hero-actions" style="justify-content:center; margin-top:var(--s-7);">
-          <a href="/#contact" class="btn btn-primary">BOOK A FREE CHAT</a>
+          <a href="/#contact" class="btn btn-primary">BOOK A FREE CHAT →</a>
         </div>
       </div>
     </div>
@@ -412,7 +460,7 @@
             </svg>
             <span class="brand-word">Cloud Hak</span>
           </a>
-          <p style="font-size:13px;color:rgba(255,255,255,.5);margin-top:var(--s-4);max-width:280px;line-height:1.6">AI-powered marketing for local business. Websites, chatbots, voice agents, SEO, and automation — all under one roof.</p>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);margin-top:var(--s-4);max-width:280px;line-height:1.6">AI-powered marketing for local business. Ads, chatbots, voice agents, SEO, and automation — one system to bring you more customers.</p>
         </div>
         <div class="footer-col">
           <h4>Services</h4>
@@ -455,18 +503,6 @@
       entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); e.target.style.opacity = 1; e.target.style.transform = 'none'; }});
     }, { threshold: 0.1 });
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-
-    // Pricing toggle
-    let isAnnual = false;
-    function togglePricing() {
-      isAnnual = !isAnnual;
-      document.getElementById('toggleTrack').classList.toggle('active', isAnnual);
-      document.getElementById('label-monthly').style.color = isAnnual ? 'var(--muted-2)' : 'var(--ink)';
-      document.getElementById('label-annual').style.color = isAnnual ? 'var(--ink)' : 'var(--muted-2)';
-      document.querySelectorAll('[data-monthly]').forEach(el => {
-        el.textContent = isAnnual ? el.dataset.annual : el.dataset.monthly;
-      });
-    }
   </script>
   <script src="/assets/js/chatbot.js" defer></script>
 </body>
