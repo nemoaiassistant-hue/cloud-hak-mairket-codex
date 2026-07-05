@@ -49,11 +49,8 @@
                 See how Broadway Dental Boutique engages patients 24/7 with an AI voice receptionist and intelligent chatbot — no staff required.
             </p>
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#try-chat" class="cta-btn px-8 py-4 rounded-xl font-semibold text-lg inline-block">
-                    💬 Try the AI Chatbot
-                </a>
-                <a href="#try-voice" class="border border-slate-600 hover:border-blue-500 px-8 py-4 rounded-xl font-semibold text-lg transition-all inline-block">
-                    📞 Test the AI Voice Agent
+                <a href="#try-widget" class="cta-btn px-8 py-4 rounded-xl font-semibold text-lg inline-block">
+                    💬 Talk to the AI
                 </a>
             </div>
         </div>
@@ -81,91 +78,39 @@
         </div>
     </section>
 
-    <!-- AI Voice Agent Demo - Browser Voice Chat -->
-    <section id="try-voice" class="max-w-4xl mx-auto px-6 py-16">
+    <!-- AI Voice + Chat Widget - GHL Native -->
+    <section id="try-widget" class="max-w-4xl mx-auto px-6 py-16">
         <div class="bg-slate-800/50 rounded-3xl p-8 md:p-12 card-glow border border-slate-700/50">
             <div class="text-center mb-8">
                 <div class="inline-flex items-center gap-2 bg-green-500/20 text-green-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
                     <span class="w-2 h-2 bg-green-400 rounded-full pulse-ring"></span>
-                    Voice Widget Active
+                    GHL Widget Live
                 </div>
-                <h2 class="text-3xl font-bold mb-2">AI Voice Assistant</h2>
-                <p class="text-slate-400">Click the microphone and speak — the AI listens, understands, and responds with voice</p>
+                <h2 class="text-3xl font-bold mb-2">AI Voice & Chat</h2>
+                <p class="text-slate-400">Chat via text or tap the mic to speak — powered by GHL Voice AI. All leads capture straight into the CRM.</p>
             </div>
-            <div class="text-center">
-                <div class="bg-slate-900/80 rounded-2xl p-8 inline-block">
-                    <button id="voice-btn" onclick="toggleVoice()" 
-                        class="w-24 h-24 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mx-auto hover:scale-105 transition-transform active:scale-95 shadow-lg shadow-blue-500/30">
-                        <svg id="mic-icon" class="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11a7 7 0 01-14 0m7 7v4m-4 0h8m-4-16a3 3 0 00-3 3v4a3 3 0 006 0V7a3 3 0 00-3-3z"/>
-                        </svg>
-                        <div id="wave-icon" class="hidden">
-                            <div class="flex items-center gap-1">
-                                <div class="w-1.5 h-4 bg-white rounded-full animate-pulse"></div>
-                                <div class="w-1.5 h-8 bg-white rounded-full animate-pulse" style="animation-delay:0.15s"></div>
-                                <div class="w-1.5 h-6 bg-white rounded-full animate-pulse" style="animation-delay:0.3s"></div>
-                                <div class="w-1.5 h-10 bg-white rounded-full animate-pulse" style="animation-delay:0.1s"></div>
-                                <div class="w-1.5 h-5 bg-white rounded-full animate-pulse" style="animation-delay:0.2s"></div>
-                            </div>
-                        </div>
-                    </button>
-                    <p id="voice-status" class="text-slate-500 text-sm mt-4">Tap to speak</p>
-                </div>
+            <div class="bg-slate-900/80 rounded-2xl p-8 text-center">
+                <p class="text-4xl mb-4">💬 + 🎤</p>
+                <p class="text-slate-400 mb-6">The GHL widget is floating in the bottom-right corner of this page.</p>
+                <p class="text-sm text-slate-500">Click the chat bubble → then use text or voice to talk to the AI receptionist.</p>
             </div>
-            <!-- Voice conversation log -->
-            <div id="voice-log" class="mt-6 max-h-48 overflow-y-auto space-y-3 text-sm"></div>
             <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-sm">
                 <div class="bg-slate-900/50 rounded-xl p-3">
                     <div class="text-blue-400 font-semibold">24/7</div>
                     <div class="text-slate-500">Always Available</div>
                 </div>
                 <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-purple-400 font-semibold">Voice Chat</div>
-                    <div class="text-slate-500">Browser-Based</div>
+                    <div class="text-purple-400 font-semibold">Voice + Text</div>
+                    <div class="text-slate-500">GHL Native</div>
                 </div>
                 <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-green-400 font-semibold">Trained</div>
+                    <div class="text-green-400 font-semibold">Lead Capture</div>
+                    <div class="text-slate-500">Straight to CRM</div>
+                </div>
+                <div class="bg-slate-900/50 rounded-xl p-3">
+                    <div class="text-yellow-400 font-semibold">Trained</div>
                     <div class="text-slate-500">Business Knowledge</div>
                 </div>
-                <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-yellow-400 font-semibold">Capture</div>
-                    <div class="text-slate-500">Lead Details</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Chatbot Demo -->
-    <section id="try-chat" class="max-w-4xl mx-auto px-6 py-16">
-        <div class="bg-slate-800/50 rounded-3xl p-8 md:p-12 card-glow border border-slate-700/50">
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 bg-purple-500/20 text-purple-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
-                    💬 Chatbot Ready
-                </div>
-                <h2 class="text-3xl font-bold mb-2">AI Website Chatbot</h2>
-                <p class="text-slate-400">Try asking about services, opening hours, or booking an appointment</p>
-            </div>
-            <div class="bg-slate-900/80 rounded-2xl p-6 max-h-96 overflow-y-auto" id="chat-container">
-                <div class="flex gap-3 mb-4">
-                    <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm flex-shrink-0">AI</div>
-                    <div class="bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-md">
-                        <p>Hi! 👋 Welcome to Broadway Dental Boutique. I'm your AI assistant. How can I help you today?</p>
-                    </div>
-                </div>
-            </div>
-            <div class="mt-4 flex gap-3">
-                <input type="text" id="chat-input" placeholder="Type a message..." 
-                    class="flex-1 bg-slate-900/80 border border-slate-700 rounded-xl px-4 py-3 text-white placeholder-slate-500 focus:outline-none focus:border-blue-500">
-                <button onclick="sendDemoMessage()" class="cta-btn px-6 py-3 rounded-xl font-medium">
-                    Send
-                </button>
-            </div>
-            <div class="mt-3 flex gap-2 flex-wrap">
-                <button onclick="quickMsg('What are your opening hours?')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors">🕐 Opening hours</button>
-                <button onclick="quickMsg('What services do you offer?')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors">🦷 Services</button>
-                <button onclick="quickMsg('How much does Invisalign cost?')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors">💰 Invisalign pricing</button>
-                <button onclick="quickMsg('I have a dental emergency')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors">🚨 Emergency</button>
-                <button onclick="quickMsg('Where are you located?')" class="text-xs bg-slate-800 hover:bg-slate-700 px-3 py-1.5 rounded-lg transition-colors">📍 Location</button>
             </div>
         </div>
     </section>
@@ -276,223 +221,8 @@
         <p class="mt-1">Built for Broadway Dental Boutique, Crawley</p>
     </footer>
 
-    <!-- Demo Chat Logic -->
-    <script>
-        const responses = {
-            "opening": " Broadway Dental Boutique is open:\n\n• Mon–Wed & Fri: 8:30am – 5:30pm\n• Thursday: 9:30am – 7:30pm\n• Saturday: 9:00am – 2:00pm\n• Sunday: Closed\n\nWould you like to book an appointment?",
-            "services": "We offer a full range of dental services:\n\n🦷 General Dentistry — check-ups, cleanings, fillings\n✨ Cosmetic Dentistry — veneers, whitening, bonding\n🔓 Invisalign — clear teeth straightening\n🔩 Dental Implants — permanent tooth replacement\n💆 Facial Aesthetics — anti-wrinkle treatments\n\nWhich treatment interests you?",
-            "invisalign": "Invisalign pricing varies based on your individual case. We recommend booking a free consultation where our specialists can assess your teeth and provide an accurate treatment plan and quote.\n\nWould you like to book a consultation? Just share your name and preferred date!",
-            "emergency": " dental emergency? We'll do our best to see you today! 🚨\n\nPlease call us immediately on **01293 428342** and we'll fit you in as soon as possible.",
-            "location": "We're located at:\n\n📍 38 The Broadway\n   Crawley, West Sussex\n   RH10 1HG\n\nRight in Crawley town centre. You can find us on Google Maps — just search 'Broadway Dental Boutique Crawley'.",
-            "default": "Thanks for your message! For specific enquiries, you can:\n\n📞 Call us on **01293 428342**\n📧 Email **info@broadwaydentalb.co.uk**\n🌐 Visit **broadwaydentalb.co.uk**\n\nIn a live setup, this chatbot would be powered by your GHL CRM and can capture your details and book appointments automatically."
-        };
-
-        function getResponse(msg) {
-            const lower = msg.toLowerCase();
-            if (lower.includes("hour") || lower.includes("open") || lower.includes("when")) return responses.opening;
-            if (lower.includes("service") || lower.includes("treatment") || lower.includes("offer") || lower.includes("do you do")) return responses.services;
-            if (lower.includes("invisalign") || lower.includes("price") || lower.includes("cost") || lower.includes("how much")) return responses.invisalign;
-            if (lower.includes("emergency") || lower.includes("urgent") || lower.includes("pain") || lower.includes("emergency")) return responses.emergency;
-            if (lower.includes("where") || lower.includes("location") || lower.includes("address") || lower.includes("find")) return responses.location;
-            return responses.default;
-        }
-
-        function addMessage(text, isUser) {
-            const container = document.getElementById('chat-container');
-            const msgDiv = document.createElement('div');
-            msgDiv.className = `flex gap-3 mb-4 ${isUser ? 'justify-end' : ''}`;
-            
-            if (isUser) {
-                msgDiv.innerHTML = `
-                    <div class="bg-blue-600 rounded-2xl rounded-tr-sm px-4 py-3 max-w-md">
-                        <p>${text}</p>
-                    </div>
-                    <div class="w-8 h-8 rounded-full bg-slate-600 flex items-center justify-center text-sm flex-shrink-0">You</div>
-                `;
-            } else {
-                msgDiv.innerHTML = `
-                    <div class="w-8 h-8 rounded-full bg-purple-500 flex items-center justify-center text-sm flex-shrink-0">AI</div>
-                    <div class="bg-slate-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-md">
-                        <p class="whitespace-pre-line">${text}</p>
-                    </div>
-                `;
-            }
-            container.appendChild(msgDiv);
-            container.scrollTop = container.scrollHeight;
-        }
-
-        function sendDemoMessage() {
-            const input = document.getElementById('chat-input');
-            const msg = input.value.trim();
-            if (!msg) return;
-            
-            addMessage(msg, true);
-            input.value = '';
-            
-            setTimeout(() => {
-                addMessage(getResponse(msg), false);
-            }, 600);
-        }
-
-        function quickMsg(msg) {
-            document.getElementById('chat-input').value = msg;
-            sendDemoMessage();
-        }
-
-        document.getElementById('chat-input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendDemoMessage();
-        });
-    </script>
-
-    <!-- Browser Voice Chat Widget -->
-    <script>
-        let voiceActive = false;
-        let recognition = null;
-        let synth = window.speechSynthesis;
-
-        const voiceContext = `You are the AI receptionist for Broadway Dental Boutique, a multi award-winning private dental practice at 38 The Broadway, Crawley, West Sussex, RH10 1HG. Phone: 01293 428342. Email: info@broadwaydentalb.co.uk. Hours: Mon-Wed & Fri 8:30-17:30, Thu 9:30-19:30, Sat 9:00-14:00, Sun Closed. Services: General Dentistry, Invisalign, Dental Implants, Facial Aesthetics, Cosmetic Dentistry. Team: Dr. Amo (Invisalign specialist), Dr. Rushi (Implants), Dr. Aamna (General & cosmetic), Dr. Shalin. Be warm, professional, concise. If asked about pricing, recommend a free consultation. If emergency, tell them to call immediately.`;
-
-        function toggleVoice() {
-            if (voiceActive) {
-                stopVoice();
-            } else {
-                startVoice();
-            }
-        }
-
-        function startVoice() {
-            voiceActive = true;
-            document.getElementById('mic-icon').classList.add('hidden');
-            document.getElementById('wave-icon').classList.remove('hidden');
-            document.getElementById('voice-btn').classList.add('ring-4', 'ring-red-500/50');
-            document.getElementById('voice-status').textContent = 'Listening...';
-            document.getElementById('voice-status').classList.add('text-red-400');
-            document.getElementById('voice-status').classList.remove('text-slate-500');
-
-            const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-            if (!SpeechRecognition) {
-                addVoiceLog('system', 'Voice recognition not supported in this browser. Try Chrome or Edge.');
-                stopVoice();
-                return;
-            }
-
-            recognition = new SpeechRecognition();
-            recognition.lang = 'en-GB';
-            recognition.interimResults = false;
-            recognition.maxAlternatives = 1;
-
-            recognition.onresult = (event) => {
-                const transcript = event.results[0][0].transcript;
-                addVoiceLog('user', transcript);
-                respondToVoice(transcript);
-            };
-
-            recognition.onerror = (event) => {
-                if (event.error !== 'aborted') {
-                    addVoiceLog('system', 'Could not hear you — please try again');
-                }
-                stopVoice();
-            };
-
-            recognition.onend = () => {
-                if (voiceActive) stopVoice();
-            };
-
-            recognition.start();
-        }
-
-        function stopVoice() {
-            voiceActive = false;
-            if (recognition) recognition.abort();
-            document.getElementById('mic-icon').classList.remove('hidden');
-            document.getElementById('wave-icon').classList.add('hidden');
-            document.getElementById('voice-btn').classList.remove('ring-4', 'ring-red-500/50');
-            document.getElementById('voice-status').textContent = 'Tap to speak';
-            document.getElementById('voice-status').classList.remove('text-red-400', 'text-green-400');
-            document.getElementById('voice-status').classList.add('text-slate-500');
-        }
-
-        function addVoiceLog(type, text) {
-            const log = document.getElementById('voice-log');
-            const div = document.createElement('div');
-            div.className = `flex gap-2 items-start ${type === 'user' ? 'justify-end' : ''}`;
-            
-            if (type === 'user') {
-                div.innerHTML = `<span class="bg-blue-600/80 rounded-lg px-3 py-2 max-w-xs">${text}</span>
-                    <span class="text-xs text-blue-400">You</span>`;
-            } else if (type === 'ai') {
-                div.innerHTML = `<span class="text-xs text-purple-400">AI</span>
-                    <span class="bg-slate-700 rounded-lg px-3 py-2 max-w-xs">${text}</span>`;
-            } else {
-                div.innerHTML = `<span class="text-xs text-slate-500 italic">${text}</span>`;
-            }
-            log.appendChild(div);
-            log.scrollTop = log.scrollHeight;
-        }
-
-        async function respondToVoice(userText) {
-            document.getElementById('voice-status').textContent = 'Thinking...';
-            document.getElementById('voice-status').classList.remove('text-red-400');
-            document.getElementById('voice-status').classList.add('text-green-400');
-
-            try {
-                const response = await fetch('https://app.cloud-hak.com/api/demo', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/json' },
-                    body: JSON.stringify({ 
-                        message: userText,
-                        context: voiceContext
-                    })
-                });
-
-                if (!response.ok) throw new Error('API error');
-                
-                const reader = response.body.getReader();
-                const decoder = new TextDecoder();
-                let aiText = '';
-
-                while (true) {
-                    const { done, value } = await reader.read();
-                    if (done) break;
-                    const chunk = decoder.decode(value);
-                    aiText += chunk;
-                }
-
-                aiText = aiText.trim();
-                addVoiceLog('ai', aiText);
-                speakText(aiText);
-            } catch (err) {
-                // Fallback to local responses
-                const fallback = getResponse(userText);
-                addVoiceLog('ai', fallback);
-                speakText(fallback);
-            }
-        }
-
-        function speakText(text) {
-            synth.cancel();
-            const utterance = new SpeechSynthesisUtterance(text);
-            utterance.lang = 'en-GB';
-            utterance.rate = 1;
-            utterance.pitch = 1;
-
-            // Try to find a good UK English voice
-            const voices = synth.getVoices();
-            const ukVoice = voices.find(v => v.lang === 'en-GB' && v.name.includes('Google')) 
-                         || voices.find(v => v.lang === 'en-GB')
-                         || voices.find(v => v.lang.startsWith('en'));
-            if (ukVoice) utterance.voice = ukVoice;
-
-            utterance.onend = () => {
-                document.getElementById('voice-status').textContent = 'Tap to speak';
-                document.getElementById('voice-status').classList.remove('text-green-400');
-                document.getElementById('voice-status').classList.add('text-slate-500');
-            };
-
-            synth.speak(utterance);
-            document.getElementById('voice-status').textContent = 'Speaking...';
-        }
-    </script>
+    <!-- GHL Voice + Chat Widget -->
+    <script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a4ae1a30fa925569750537c"></script>
 
 </body>
 </html>
