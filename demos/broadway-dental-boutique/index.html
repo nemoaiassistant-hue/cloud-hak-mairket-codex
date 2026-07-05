@@ -13,17 +13,6 @@
         .gradient-bg { background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 100%); }
         .card-glow { box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
         .card-glow:hover { box-shadow: 0 0 40px rgba(59, 130, 246, 0.2); }
-        .pulse-ring { animation: pulse-ring 2s cubic-bezier(0.215, 0.61, 0.355, 1) infinite; }
-        @keyframes pulse-ring {
-            0% { transform: scale(0.9); opacity: 0.7; }
-            70% { transform: scale(1.1); opacity: 0.3; }
-            100% { transform: scale(0.9); opacity: 0.7; }
-        }
-        .float { animation: float 6s ease-in-out infinite; }
-        @keyframes float {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-10px); }
-        }
         .badge { background: linear-gradient(135deg, #3b82f6, #8b5cf6); }
         .cta-btn { background: linear-gradient(135deg, #3b82f6, #2563eb); transition: all 0.3s; }
         .cta-btn:hover { transform: translateY(-2px); box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4); }
@@ -45,14 +34,12 @@
             <h1 class="text-4xl md:text-6xl font-bold mb-4 leading-tight">
                 The Future of <span class="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">Dental Patient Experience</span>
             </h1>
-            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-10">
+            <p class="text-lg text-slate-400 max-w-2xl mx-auto mb-8">
                 See how Broadway Dental Boutique engages patients 24/7 with an AI voice receptionist and intelligent chatbot — no staff required.
             </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="#try-widget" class="cta-btn px-8 py-4 rounded-xl font-semibold text-lg inline-block">
-                    💬 Talk to the AI
-                </a>
-            </div>
+            <p class="text-slate-500 text-sm mb-2">
+                👇 Click the chat bubble in the bottom-right corner to try it — use text or tap the mic for voice.
+            </p>
         </div>
     </section>
 
@@ -74,43 +61,6 @@
                 <div class="w-12 h-12 bg-green-500/20 rounded-xl flex items-center justify-center text-2xl mb-4">📊</div>
                 <h3 class="text-lg font-semibold mb-2">Smart CRM Pipeline</h3>
                 <p class="text-slate-400 text-sm">Every lead tracked through a 6-stage pipeline — from first contact to won deal. Automated follow-ups via email and SMS.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Voice + Chat Widget - GHL Native -->
-    <section id="try-widget" class="max-w-4xl mx-auto px-6 py-16">
-        <div class="bg-slate-800/50 rounded-3xl p-8 md:p-12 card-glow border border-slate-700/50">
-            <div class="text-center mb-8">
-                <div class="inline-flex items-center gap-2 bg-green-500/20 text-green-400 text-sm font-medium px-4 py-1.5 rounded-full mb-4">
-                    <span class="w-2 h-2 bg-green-400 rounded-full pulse-ring"></span>
-                    GHL Widget Live
-                </div>
-                <h2 class="text-3xl font-bold mb-2">AI Voice & Chat</h2>
-                <p class="text-slate-400">Chat via text or tap the mic to speak — powered by GHL Voice AI. All leads capture straight into the CRM.</p>
-            </div>
-            <div class="bg-slate-900/80 rounded-2xl p-8 text-center">
-                <p class="text-4xl mb-4">💬 + 🎤</p>
-                <p class="text-slate-400 mb-6">The GHL widget is floating in the bottom-right corner of this page.</p>
-                <p class="text-sm text-slate-500">Click the chat bubble → then use text or voice to talk to the AI receptionist.</p>
-            </div>
-            <div class="mt-6 grid grid-cols-2 md:grid-cols-4 gap-3 text-center text-sm">
-                <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-blue-400 font-semibold">24/7</div>
-                    <div class="text-slate-500">Always Available</div>
-                </div>
-                <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-purple-400 font-semibold">Voice + Text</div>
-                    <div class="text-slate-500">GHL Native</div>
-                </div>
-                <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-green-400 font-semibold">Lead Capture</div>
-                    <div class="text-slate-500">Straight to CRM</div>
-                </div>
-                <div class="bg-slate-900/50 rounded-xl p-3">
-                    <div class="text-yellow-400 font-semibold">Trained</div>
-                    <div class="text-slate-500">Business Knowledge</div>
-                </div>
             </div>
         </div>
     </section>
