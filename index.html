@@ -3,718 +3,578 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Cloud Hak | We bring local businesses more customers</title>
-  <meta name="description" content="Cloud Hak brings local businesses more customers through AI-powered marketing — ads that generate leads, AI that converts them 24/7, and automation that never lets them slip." />
-  <meta property="og:title" content="Cloud Hak | We bring local businesses more customers" />
-  <meta property="og:description" content="AI-powered marketing that generates leads, captures them 24/7, and never lets them slip. Websites, chatbots, voice agents, SEO, ads, and automation — one system." />
+  <title>Cloud Hak | Websites That Make Your Phone Ring</title>
+  <meta name="description" content="We build websites and marketing systems for UK trades. More calls, more reviews, more jobs. One simple price. Done for you." />
+  <meta property="og:title" content="Cloud Hak | Websites That Make Your Phone Ring" />
+  <meta property="og:description" content="Websites, missed call text-back, review funnels, and automations for UK trades. Done for you. £297/month." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://cloud-hak.com/" />
   <meta property="og:image" content="https://cloud-hak.com/assets/img/hero.png" />
   <link rel="canonical" href="https://cloud-hak.com/" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon.png" />
   <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
   <link rel="stylesheet" href="assets/css/main-v5.css" />
   <style>
-    /* Full Stack groups */
-    .stack-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: var(--s-7);
+    /* ===== CLOUD HAK V6 — SIMPLE & BOLD ===== */
+    :root {
+      /* Keep existing tokens but simplify */
+      --ch-dark: #0a1a3a;
+      --ch-accent: #c08552;
+      --ch-green: #2d8a4a;
     }
-    .stack-group {
-      padding: var(--s-7);
-      border: 1px solid var(--rule);
-      border-radius: var(--r);
+
+    /* ===== HERO ===== */
+    .ch-hero {
       background: var(--cream);
+      padding: 60px 0 48px;
+      text-align: center;
+    }
+    .ch-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2.4rem, 6vw, 4.2rem);
+      font-weight: 600;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin: 0 0 20px;
+      color: var(--ink);
+    }
+    .ch-hero h1 .highlight {
+      color: var(--copper);
+      font-style: italic;
+    }
+    .ch-hero p {
+      font-size: clamp(1.05rem, 2.5vw, 1.35rem);
+      color: var(--muted);
+      max-width: 560px;
+      margin: 0 auto 32px;
+      line-height: 1.55;
+    }
+    .ch-hero-price {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 8px 20px;
+      border-radius: 100px;
+      font-family: var(--font-mono);
+      font-size: 13px;
+      letter-spacing: 0.05em;
+      margin-bottom: 28px;
+    }
+    .ch-hero-price .dot {
+      width: 8px; height: 8px;
+      background: var(--live);
+      border-radius: 50%;
+      animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.4; }
+    }
+
+    /* ===== CTA BUTTON ===== */
+    .ch-btn {
+      display: inline-block;
+      background: var(--ink);
+      color: var(--cream);
+      padding: 16px 40px;
+      border-radius: 8px;
+      font-family: var(--font-body);
+      font-weight: 600;
+      font-size: 1.05rem;
+      text-decoration: none;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+      border: none;
+      cursor: pointer;
+    }
+    .ch-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(10,26,58,.2);
+      color: var(--cream);
+    }
+    .ch-btn-outline {
+      background: transparent;
+      color: var(--ink);
+      border: 2px solid var(--ink);
+    }
+    .ch-btn-outline:hover {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .ch-btn-copper {
+      background: var(--copper);
+      color: #fff;
+    }
+    .ch-btn-copper:hover {
+      background: var(--copper-2);
+      color: #fff;
+    }
+
+    /* ===== SECTION ===== */
+    .ch-section {
+      padding: 56px 0;
+    }
+    .ch-section.dark {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .ch-section.dark .ch-feature-box {
+      background: rgba(255,255,255,0.05);
+      border-color: rgba(255,255,255,0.1);
+    }
+    .ch-section h2 {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 600;
+      line-height: 1.1;
+      margin: 0 0 16px;
+      text-align: center;
+      letter-spacing: -0.01em;
+    }
+    .ch-section .subtitle {
+      text-align: center;
+      font-size: 1.15rem;
+      color: var(--muted);
+      max-width: 500px;
+      margin: 0 auto 40px;
+    }
+    .ch-section.dark .subtitle { color: rgba(255,255,255,0.6); }
+
+    /* ===== FEATURE BOXES ===== */
+    .ch-features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ch-feature-box {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 32px 28px;
       transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
     }
-    .stack-group:hover {
+    .ch-feature-box:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 32px rgba(10,26,58,.1);
+      box-shadow: 0 10px 28px rgba(10,26,58,.08);
     }
-    .stack-num {
-      font-family: var(--font-mono);
-      font-size: 11px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--copper);
-      margin-bottom: var(--s-4);
-    }
-    .stack-group h3 {
-      font-family: var(--font-display);
-      font-size: 24px;
-      font-weight: 500;
-      color: var(--ink);
-      margin: 0 0 var(--s-2);
-    }
-    .stack-group .stack-sub {
-      font-size: 14px;
-      color: var(--muted);
-      margin-bottom: var(--s-6);
-      line-height: 1.5;
-    }
-    .stack-services {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      flex-direction: column;
-      gap: var(--s-4);
-    }
-    .stack-services li {
-      padding: var(--s-4);
-      background: var(--paper);
-      border-radius: var(--r-sm);
-      border: 1px solid var(--rule);
-      transition: border-color 200ms var(--ease);
-    }
-    .stack-services li:hover {
-      border-color: var(--copper);
-    }
-    .stack-services a {
-      text-decoration: none;
+    .ch-feature-box .emoji {
+      font-size: 2rem;
+      margin-bottom: 16px;
       display: block;
     }
-    .stack-services h4 {
-      font-size: 15px;
+    .ch-feature-box h3 {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
       font-weight: 600;
-      color: var(--ink);
-      margin: 0 0 4px;
+      margin: 0 0 10px;
+      color: inherit;
     }
-    .stack-services p {
-      font-size: 13px;
+    .ch-feature-box p {
+      font-size: 0.98rem;
+      line-height: 1.55;
+      margin: 0;
+      color: var(--muted);
+    }
+    .ch-section.dark .ch-feature-box p { color: rgba(255,255,255,0.6); }
+    .ch-feature-box ul {
+      list-style: none;
+      padding: 0;
+      margin: 12px 0 0;
+    }
+    .ch-feature-box ul li {
+      font-size: 0.92rem;
+      padding: 4px 0;
+      color: var(--muted);
+    }
+    .ch-feature-box ul li::before {
+      content: "✓ ";
+      color: var(--green);
+      font-weight: 700;
+    }
+    .ch-section.dark .ch-feature-box ul li { color: rgba(255,255,255,0.7); }
+    .ch-section.dark .ch-feature-box ul li::before { color: var(--live); }
+
+    /* ===== PROCESS STEPS ===== */
+    .ch-steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 32px;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+    .ch-step {
+      text-align: center;
+    }
+    .ch-step-num {
+      width: 52px; height: 52px;
+      background: var(--copper);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin: 0 auto 16px;
+    }
+    .ch-step h3 {
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin: 0 0 8px;
+    }
+    .ch-step p {
+      font-size: 0.95rem;
       color: var(--muted);
       margin: 0;
       line-height: 1.5;
     }
-    .stack-services .svc-pills {
+    .ch-section.dark .ch-step p { color: rgba(255,255,255,0.6); }
+
+    /* ===== TESTIMONIAL STRIP ===== */
+    .ch-testimonials {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ch-testimonial {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 12px;
+      padding: 24px;
+    }
+    .ch-stars { font-size: 1.1rem; margin-bottom: 8px; letter-spacing: 2px; }
+    .ch-testimonial p {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      margin: 0 0 12px;
+      color: var(--ink-2);
+    }
+    .ch-testimonial .name {
+      font-weight: 600;
+      font-size: 0.85rem;
+      color: var(--muted);
+    }
+
+    /* ===== CTA SECTION ===== */
+    .ch-cta {
+      background: var(--copper);
+      text-align: center;
+      padding: 64px 0;
+    }
+    .ch-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3rem);
+      color: #fff;
+      margin: 0 0 12px;
+      font-weight: 600;
+    }
+    .ch-cta p {
+      color: rgba(255,255,255,0.9);
+      font-size: 1.15rem;
+      margin: 0 0 32px;
+    }
+    .ch-cta .ch-btn {
+      background: var(--ink);
+    }
+    .ch-cta .ch-btn:hover {
+      background: var(--ink-2);
+    }
+
+    /* ===== STATS BAR ===== */
+    .ch-stats {
       display: flex;
-      gap: 6px;
-      margin-top: 8px;
+      justify-content: center;
+      gap: 48px;
+      padding: 32px 0;
       flex-wrap: wrap;
     }
-    .stack-services .svc-pill {
-      font-family: var(--font-mono);
-      font-size: 10px;
-      letter-spacing: 0.06em;
-      padding: 2px 8px;
-      border: 1px solid var(--rule);
-      border-radius: 999px;
-      color: var(--muted-2);
+    .ch-stat {
+      text-align: center;
     }
-
-    /* Problem section */
-    .section-problem {
-      background: var(--paper);
-      padding: var(--s-9) 0;
-    }
-    .problem-content {
-      max-width: 640px;
-    }
-    .problem-highlight {
+    .ch-stat .num {
       font-family: var(--font-display);
-      font-size: 18px;
-      line-height: 1.7;
-      color: var(--ink-2);
-      margin-top: var(--s-5);
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--copper);
+    }
+    .ch-stat .label {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
     }
 
-    /* Mobile */
-    @media (max-width: 900px) {
-      .stack-grid {
-        grid-template-columns: 1fr;
-        gap: var(--s-5);
-      }
+    /* ===== NAV ===== */
+    .ch-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 16px 0;
+    }
+    .ch-nav .logo {
+      font-family: var(--font-display);
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .ch-nav .logo span { color: var(--copper); }
+    .ch-nav-links {
+      display: flex;
+      gap: 28px;
+      align-items: center;
+    }
+    .ch-nav-links a {
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--ink-2);
+    }
+    .ch-nav-links a:hover { color: var(--copper); }
+    .ch-nav-links .ch-btn {
+      padding: 10px 24px;
+      font-size: 0.9rem;
+    }
+
+    /* ===== FOOTER ===== */
+    .ch-footer {
+      background: var(--ink);
+      color: rgba(255,255,255,0.5);
+      padding: 40px 0 24px;
+      font-size: 0.9rem;
+    }
+    .ch-footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+    .ch-footer .logo {
+      font-family: var(--font-display);
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    .ch-footer .logo span { color: var(--copper); }
+    .ch-footer a { color: rgba(255,255,255,0.5); }
+    .ch-footer a:hover { color: var(--copper); }
+
+    /* ===== MOBILE ===== */
+    @media (max-width: 768px) {
+      .ch-nav-links { display: none; }
+      .ch-steps { grid-template-columns: 1fr; gap: 24px; }
+      .ch-stats { gap: 24px; }
+      .ch-hero { padding: 40px 0 32px; }
+      .ch-section { padding: 40px 0; }
+      .ch-cta { padding: 48px 0; }
     }
   </style>
-  <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "LocalBusiness",
-      "name": "Cloud Hak",
-      "url": "https://cloud-hak.com/",
-      "telephone": "+44 7888873694",
-      "email": "info@cloud-hak.com",
-      "address": {
-            "@type": "PostalAddress",
-            "addressLocality": "Brighton & Hove",
-            "addressRegion": "East Sussex",
-            "addressCountry": "GB"
-      },
-      "openingHours": "Mo-Fr 09:00-18:00",
-      "description": "AI-powered marketing for local businesses — ads, SEO, AI chatbots, voice agents, and automation working as one system to bring you more customers.",
-      "hasOfferCatalog": {
-            "@type": "OfferCatalog",
-            "name": "Cloud Hak services",
-            "itemListElement": [
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Google & Social Ads",
-                              "description": "Paid campaigns that drive real leads and track real revenue.",
-                              "url": "https://cloud-hak.com/services/ads/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "SEO",
-                              "description": "Get found on Google when local customers search for what you sell.",
-                              "url": "https://cloud-hak.com/services/seo/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "AI Chatbots",
-                              "description": "A 24/7 assistant that answers questions, qualifies leads, and books appointments.",
-                              "url": "https://cloud-hak.com/services/chatbots/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "AI Voice Agents",
-                              "description": "Never miss a call again. AI answers, qualifies, and routes callers.",
-                              "url": "https://cloud-hak.com/services/voice-agents/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Web Design & Development",
-                              "description": "Fast, mobile-first websites built to convert visitors into customers.",
-                              "url": "https://cloud-hak.com/services/websites/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "AEO (Answer Engine Optimisation)",
-                              "description": "Be the answer when AI assistants recommend businesses.",
-                              "url": "https://cloud-hak.com/services/aeo/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Google Business Profile Optimisation",
-                              "description": "Rank higher in local search, get more calls, and win more customers.",
-                              "url": "https://cloud-hak.com/services/gmb/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "CRM Setup & Management",
-                              "description": "All your leads, pipelines, and follow-ups in one place.",
-                              "url": "https://cloud-hak.com/services/crm/"
-                        }
-                  },
-                  {
-                        "@type": "Offer",
-                        "itemOffered": {
-                              "@type": "Service",
-                              "name": "Automation",
-                              "description": "Follow-ups, nurture sequences, and workflows that run themselves.",
-                              "url": "https://cloud-hak.com/services/automation/"
-                        }
-                  }
-            ]
-      }
-}
-</script>
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What does 'Full Stack' mean?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "It means we handle the entire customer journey — from generating leads with ads and SEO, to capturing them with AI chatbots and voice agents, to nurturing them with automated follow-ups. Most agencies do one piece. We do it all."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How is this different from just hiring an ad agency?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "An ad agency drives traffic. But what happens when that lead lands on your site at 11pm? Without AI to capture and convert them, you've paid for a click that disappears. We generate AND convert — that's why our clients see 3x better ROI."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How much does it cost?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our Full Stack packages start from £1,500 setup + £497/month for CRM and automation, up to £5,000 setup + £1,500/month for the complete customer engine. Every project gets a fixed-price proposal — no hourly billing."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "How long does it take?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Most projects launch in 2–4 weeks. AI chatbots can be live within 48 hours. The full stack setup typically takes 3–4 weeks."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do I need to be technical?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Not at all. We handle everything — setup, hosting, updates, and support. You just run your business."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Do you lock clients into long contracts?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No. Websites are one-time builds. Everything else runs month-to-month. We earn your business every month."
-        }
-      }
-    ]
-  }
-  </script>
 </head>
 <body>
-  <div class="announce">
-    <div class="container announce-row">
-      <div class="announce-left">
-        <span class="dot" aria-hidden="true"></span>
-        <span>Accepting new clients · Q2 2026</span>
+
+<!-- ===== NAV ===== -->
+<header style="border-bottom: 1px solid var(--rule);">
+  <div class="container">
+    <nav class="ch-nav">
+      <a href="/" class="logo">Cloud<span>Hak</span></a>
+      <div class="ch-nav-links">
+        <a href="/pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a href="#reviews">Reviews</a>
+        <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a Call</a>
       </div>
-      <div class="announce-right">
-        <span><span class="k">Base</span> <span class="v">Brighton &amp; Hove</span></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span><span class="k">Reply</span> <span class="v">≤ 1 biz day</span></span>
-        <span class="sep" aria-hidden="true">·</span>
-        <span><span class="k">Open</span> <span class="v">04 / 12 open</span></span>
+    </nav>
+  </div>
+</header>
+
+<!-- ===== HERO ===== -->
+<section class="ch-hero">
+  <div class="container">
+    <div class="ch-hero-price">
+      <span class="dot"></span>
+      £297/month · No setup fee · 5-star reviews on autopilot
+    </div>
+    <h1>We build websites that make your <span class="highlight">phone ring</span>.</h1>
+    <p>
+      You're a tradesperson, not a tech expert. We'll build you a website that turns
+      leads into text messages, gets you Google reviews, and books more jobs — all on autopilot.
+    </p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn ch-btn-copper">Book a free 20-min call →</a>
+  </div>
+</section>
+
+<!-- ===== WHAT YOU GET ===== -->
+<section class="ch-section">
+  <div class="container">
+    <h2>Simple systems that actually work</h2>
+    <p class="subtitle">No jargon. No degrees required. Just more calls, more reviews, more jobs.</p>
+    <div class="ch-features">
+
+      <div class="ch-feature-box">
+        <span class="emoji">🌐</span>
+        <h3>Website That Works</h3>
+        <p>A proper website that turns visitors into text conversations — sent straight to your phone.</p>
+        <ul>
+          <li>Mobile-friendly (87% of people browse on their phone)</li>
+          <li>Instant SMS alerts when someone fills out a form</li>
+          <li>Found on Google when customers search for you</li>
+        </ul>
+      </div>
+
+      <div class="ch-feature-box">
+        <span class="emoji">📞</span>
+        <h3>Missed Call Text-Back</h3>
+        <p>Everyone misses calls. Not everyone texts back. Be the one who does.</p>
+        <ul>
+          <li>Missed a call? We text them automatically</li>
+          <li>67% of customers go to a competitor if you don't reply fast</li>
+          <li>Available 24/7 — even while you sleep</li>
+        </ul>
+      </div>
+
+      <div class="ch-feature-box">
+        <span class="emoji">⭐</span>
+        <h3>5-Star Review Funnel</h3>
+        <p>Sure, they'll leave a review… but people forget. We'll gently remind them until they do.</p>
+        <ul>
+          <li>Automatically asks customers for reviews</li>
+          <li>Filters out bad reviews before they go public</li>
+          <li>More reviews = higher Google ranking = more calls</li>
+        </ul>
+      </div>
+
+      <div class="ch-feature-box">
+        <span class="emoji">📱</span>
+        <h3>One-Click Marketing</h3>
+        <p>Referrals and repeat customers are the best. Let's get you both — with one click.</p>
+        <ul>
+          <li>Pre-built campaigns for referrals and offers</li>
+          <li>Send promotions to past customers in seconds</li>
+          <li>We set it up — you just press a button</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== HOW IT WORKS ===== -->
+<section class="ch-section dark" id="how">
+  <div class="container">
+    <h2>What working with us looks like…</h2>
+    <p class="subtitle">Three simple steps. No contracts, no jargon, no headaches.</p>
+    <div class="ch-steps">
+
+      <div class="ch-step">
+        <div class="ch-step-num">1</div>
+        <h3>Book a Call</h3>
+        <p>20 minutes. We'll answer your questions, show you live examples, and see if we're a fit. (It's actually a sales call, we just didn't want to scare you.)</p>
+      </div>
+
+      <div class="ch-step">
+        <div class="ch-step-num">2</div>
+        <h3>We Build Your System</h3>
+        <p>Fill out a quick form with your business details. 7-10 days later, your new website and marketing system are ready to go.</p>
+      </div>
+
+      <div class="ch-step">
+        <div class="ch-step-num">3</div>
+        <h3>Launch Call</h3>
+        <p>We walk you through everything. And by "everything" we mean: pressing two buttons. That's it. Your phone starts ringing.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== STATS ===== -->
+<section class="ch-section" style="padding: 32px 0;">
+  <div class="container">
+    <div class="ch-stats">
+      <div class="ch-stat">
+        <div class="num">67%</div>
+        <div class="label">go to competitor<br/>if you don't reply fast</div>
+      </div>
+      <div class="ch-stat">
+        <div class="num">7x</div>
+        <div class="label">more likely to win<br/>the job if you reply in 1hr</div>
+      </div>
+      <div class="ch-stat">
+        <div class="num">87%</div>
+        <div class="label">browse websites<br/>on their phone</div>
       </div>
     </div>
   </div>
+</section>
 
-  <header class="site-header" id="site-header">
-    <div class="container header-row">
-      <a class="brand" href="#top" aria-label="Cloud Hak home">
-        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
-          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-        </svg>
-        <span class="brand-word">Cloud Hak</span>
-      </a>
-      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
-        <a href="#stack">Services</a>
-        <a href="/pricing/">Pricing</a>
-        <a href="#approach">Approach</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <div class="header-actions">
-        <a class="header-phone" href="tel:+447****3694">07888 873694</a>
-        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
-          <span></span><span></span><span></span>
-        </button>
+<!-- ===== REVIEWS ===== -->
+<section class="ch-section" id="reviews" style="background: var(--cream-2);">
+  <div class="container">
+    <h2>The proof is in the pudding…</h2>
+    <p class="subtitle">Here's what our clients have to say.</p>
+    <div class="ch-testimonials">
+
+      <div class="ch-testimonial">
+        <div class="ch-stars">⭐⭐⭐⭐⭐</div>
+        <p>"They built me a new website and within 10 days I got my first unpaid lead. Best money I've ever spent."</p>
+        <div class="name">— Contractor, Brighton</div>
+      </div>
+
+      <div class="ch-testimonial">
+        <div class="ch-stars">⭐⭐⭐⭐⭐</div>
+        <p>"I was paying £1,500/month with another service that wasn't working. Cloud Hak is affordable and they actually deliver."</p>
+        <div class="name">— Plumber, Hove</div>
+      </div>
+
+      <div class="ch-testimonial">
+        <div class="ch-stars">⭐⭐⭐⭐⭐</div>
+        <p>"The missed call text-back alone has won me jobs I would've lost. My phone rings more and I never miss a lead."</p>
+        <div class="name">— Electrician, Crawley</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="ch-cta">
+  <div class="container">
+    <h2>Your competitors are already online.</h2>
+    <p>Don't let them take your jobs. Book a free call today.</p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a free 20-min call →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="ch-footer">
+  <div class="container">
+    <div class="ch-footer-inner">
+      <div>
+        <div class="logo">Cloud<span>Hak</span></div>
+        <p style="margin: 8px 0 0;">Websites & marketing systems for UK trades.<br/>Brighton & Hove 🇬🇧</p>
+      </div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <a href="/pricing">Pricing</a>
+        <a href="#how">How it works</a>
+        <a href="https://calendly.com/cloud-hak">Book a Call</a>
+        <a href="/privacy">Privacy</a>
       </div>
     </div>
-  </header>
-
-  <main id="top">
-    <section class="hero">
-      <div class="container hero-grid">
-        <div class="hero-copy">
-          <p class="eyebrow reveal">Cloud Hak · Brighton &amp; Hove</p>
-          <h1 class="hero-title reveal">
-            Your phone should<br />
-            ring <em>more</em>.<br />
-            <span class="caret">We make it happen.</span>
-          </h1>
-          <p class="hero-lede reveal">AI-powered marketing that generates leads, converts them 24/7, and never lets them slip through the cracks. Ads, chatbots, voice agents, SEO, and automation — one system built to bring you more customers.</p>
-          <div class="hero-actions reveal">
-            <a href="#contact" class="btn btn-primary btn-lg">Get more customers</a>
-            <a href="#stack" class="btn btn-ghost btn-lg">See how it works</a>
-          </div>
-          <ul class="hero-meta reveal" role="list">
-            <li><span class="meta-k">Based</span><span class="meta-v">Brighton &amp; Hove</span></li>
-            <li><span class="meta-k">Working</span><span class="meta-v">UK-wide</span></li>
-            <li><span class="meta-k">Response</span><span class="meta-v">≤ 1 biz day</span></li>
-          </ul>
-        </div>
-
-        <aside class="hero-terminal reveal" aria-label="Customer generation stats">
-          <div class="term-bar">
-            <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
-            <span>cloud-hak — growth.sh</span>
-          </div>
-          <div class="term-body">
-            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">generate --new-customers</span></div>
-            <span class="term-out"><b>Leads this month</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 847</span></span>
-            <span class="term-out"><b>Booked calls</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 312</span></span>
-            <span class="term-out"><b>Captured 24/7</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 203</span></span>
-            <span class="term-out"><b>Revenue added</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● £124K</span></span>
-            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">status --pipeline</span></div>
-            <div class="term-status">
-              <span class="lbl">Stage</span><span class="val">Full Stack</span>
-              <span class="lbl">Channels</span><span class="val accent">Generate + Capture + Nurture</span>
-              <span class="lbl">Leak</span><span class="val accent">0% — fully automated</span>
-            </div>
-          </div>
-        </aside>
-      </div>
-
-      <div class="container hero-marquee" aria-label="Capabilities at a glance">
-        <span>Google Ads</span><span aria-hidden="true">·</span>
-        <span>Meta Ads</span><span aria-hidden="true">·</span>
-        <span>SEO</span><span aria-hidden="true">·</span>
-        <span>Google Business</span><span aria-hidden="true">·</span>
-        <span>AI Chatbots</span><span aria-hidden="true">·</span>
-        <span>Voice AI</span><span aria-hidden="true">·</span>
-        <span>CRM</span><span aria-hidden="true">·</span>
-        <span>Automation</span><span aria-hidden="true">·</span>
-        <span>AEO</span><span aria-hidden="true">·</span>
-        <span style="color:var(--copper);font-weight:500">✦ Full Stack</span>
-      </div>
-    </section>
-
-    <section class="section section-positioning">
-      <div class="container two-col">
-        <div class="col-label">
-          <p class="eyebrow">What we do</p>
-        </div>
-        <div class="col-body">
-          <h2 class="display-title reveal">One system that brings customers to your door — from first click to booked call.</h2>
-          <p class="lede reveal">Most agencies sell you one tool. We build the full engine — ads to generate leads, AI to capture them 24/7, automation to nurture them. Everything connected, nothing falls through the cracks.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section-problem">
-      <div class="container">
-        <div class="problem-content">
-          <p class="eyebrow reveal">The problem</p>
-          <h2 class="display-title reveal">80% of businesses don't need a chatbot. They need customers.</h2>
-          <p class="lede reveal">Most marketing agencies sell tools — chatbots, websites, CRMs. But a voice agent can't answer calls you don't get. A chatbot can't talk to visitors who never arrive. You don't need revenue recovery. You need revenue generation.</p>
-          <p class="problem-highlight reveal">The real question isn't "which tool do I need?" — it's "how do I get more customers?" That's what Cloud Hak answers.</p>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-services" id="stack">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow reveal">The Full Stack</p>
-          <h2 class="section-title reveal">One system. Three stages. More customers.</h2>
-          <p class="lede centered reveal">Every stage works together — leads generated at the top convert at the bottom. Nothing leaks.</p>
-        </div>
-
-        <div class="stack-grid reveal">
-          <!-- 01 — GENERATE -->
-          <div class="stack-group">
-            <div class="stack-num">01 — Generate</div>
-            <h3>Bring eyeballs</h3>
-            <p class="stack-sub">Drive qualified traffic through paid ads, organic search, and AI recommendations.</p>
-            <ul class="stack-services" role="list">
-              <li>
-                <a href="services/ads/index.html">
-                  <h4>Google &amp; Social Ads</h4>
-                  <p>Paid campaigns that drive real leads and track real revenue.</p>
-                  <div class="svc-pills"><span class="svc-pill">Google Ads</span><span class="svc-pill">Meta Ads</span><span class="svc-pill">Retargeting</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/seo/index.html">
-                  <h4>SEO</h4>
-                  <p>Get found when local customers search for what you sell.</p>
-                  <div class="svc-pills"><span class="svc-pill">Local SEO</span><span class="svc-pill">Google Business</span><span class="svc-pill">Technical</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/aeo/index.html">
-                  <h4>AEO</h4>
-                  <p>Be the answer when AI assistants recommend businesses like yours.</p>
-                  <div class="svc-pills"><span class="svc-pill">AI Citations</span><span class="svc-pill">Structured Data</span><span class="svc-pill">FAQ Schema</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/gmb/index.html">
-                  <h4>Google Business Profile</h4>
-                  <p>Rank higher in local search, get more calls, and win more customers.</p>
-                  <div class="svc-pills"><span class="svc-pill">Profile Audit</span><span class="svc-pill">Reviews</span><span class="svc-pill">Google Posts</span></div>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- 02 — CAPTURE -->
-          <div class="stack-group" style="border-color:var(--copper);background:linear-gradient(135deg,var(--cream),rgba(192,133,82,.06))">
-            <div class="stack-num" style="color:var(--copper)">02 — Capture</div>
-            <h3>Convert 24/7</h3>
-            <p class="stack-sub">Turn every visitor and caller into a qualified lead — even at midnight.</p>
-            <ul class="stack-services" role="list">
-              <li>
-                <a href="services/chatbots/index.html">
-                  <h4>AI Chatbot</h4>
-                  <p>Your website never sleeps. Answers questions, qualifies leads, books appointments.</p>
-                  <div class="svc-pills"><span class="svc-pill">Website</span><span class="svc-pill">WhatsApp</span><span class="svc-pill">Custom Trained</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/voice-agents/index.html">
-                  <h4>AI Voice Agent</h4>
-                  <p>Never miss a call. AI answers, qualifies, and routes automatically.</p>
-                  <div class="svc-pills"><span class="svc-pill">Inbound</span><span class="svc-pill">Outbound</span><span class="svc-pill">CRM-Routed</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/websites/index.html">
-                  <h4>Websites</h4>
-                  <p>Fast, mobile-first, built to convert visitors into customers.</p>
-                  <div class="svc-pills"><span class="svc-pill">WordPress</span><span class="svc-pill">GoHighLevel</span><span class="svc-pill">Static</span></div>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- 03 — NURTURE -->
-          <div class="stack-group">
-            <div class="stack-num">03 — Nurture</div>
-            <h3>Never let them slip</h3>
-            <p class="stack-sub">Automated follow-ups that keep leads warm until they're ready to buy.</p>
-            <ul class="stack-services" role="list">
-              <li>
-                <a href="services/crm/index.html">
-                  <h4>CRM</h4>
-                  <p>All your leads, pipelines, and follow-ups in one place.</p>
-                  <div class="svc-pills"><span class="svc-pill">GoHighLevel</span><span class="svc-pill">Pipelines</span><span class="svc-pill">Reporting</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/automation/index.html">
-                  <h4>Automation</h4>
-                  <p>Follow-ups, nurture sequences, and workflows that run themselves.</p>
-                  <div class="svc-pills"><span class="svc-pill">Zapier</span><span class="svc-pill">GHL</span><span class="svc-pill">Workflows</span></div>
-                </a>
-              </li>
-              <li>
-                <a href="services/automation/index.html">
-                  <h4>Email &amp; SMS</h4>
-                  <p>Stay top of mind automatically — no manual effort.</p>
-                  <div class="svc-pills"><span class="svc-pill">Campaigns</span><span class="svc-pill">Sequences</span><span class="svc-pill">Triggers</span></div>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-approach" id="approach">
-      <div class="container approach-grid">
-        <div>
-          <figure class="approach-figure reveal">
-            <img src="assets/img/process_still.png" alt="Quiet workspace still life suggesting careful, considered digital work" />
-          </figure>
-          <div class="approach-meta-bar">
-            <span>Discovery <b>≤ 15 min</b></span>
-            <span>Proposal <b>≤ 3 biz days</b></span>
-            <span>Senior <b>100%</b></span>
-          </div>
-        </div>
-        <div class="approach-copy">
-          <p class="eyebrow reveal">How it works</p>
-          <h2 class="section-title reveal">Listen first. Then build what actually moves the needle.</h2>
-          <p class="lede reveal">No long contracts, no jargon, no offshore hand-offs. One team, one plan, measurable results.</p>
-          <ol class="approach-list reveal" role="list">
-            <li><span class="approach-num">01_discover</span><div><h3>Free 15-minute chat</h3><p>We learn about your business, your customers, and where you're losing them.</p></div><span class="approach-tag">~15 min call</span></li>
-            <li><span class="approach-num">02_plan</span><div><h3>Written proposal ≤ 3 biz days</h3><p>Scope, timeline, fixed price. No surprises.</p></div><span class="approach-tag">≤ 3 biz days</span></li>
-            <li><span class="approach-num">03_build</span><div><h3>Senior hands on work</h3><p>The person you spoke to is the person doing the work.</p></div><span class="approach-tag">senior · in-house</span></li>
-            <li><span class="approach-num">04_grow</span><div><h3>Measure what matters</h3><p>New leads, booked calls, revenue grown. The numbers that actually matter.</p></div><span class="approach-tag">revenue, not vanity</span></li>
-          </ol>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-social-proof" id="results">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow reveal">Results</p>
-          <h2 class="section-title reveal">What our clients say</h2>
-        </div>
-        <ul class="testimonials-grid" role="list">
-          <li class="testimonial-card reveal">
-            <blockquote>
-              <p>"Cloud Hak built our website and set up the chatbot in under two weeks. We started getting qualified leads through the site immediately. Best investment we've made."</p>
-              <footer>
-                <cite>
-                  <strong>Sam D.</strong>
-                  <span>Dental Clinic Owner, Stockholm</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </li>
-          <li class="testimonial-card reveal">
-            <blockquote>
-              <p>"We were invisible on Google. Now we're the top result in our area and the phone actually rings. They handle everything — we just run our business."</p>
-              <footer>
-                <cite>
-                  <strong>James T.</strong>
-                  <span>Home Services, Brighton</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </li>
-          <li class="testimonial-card reveal">
-            <blockquote>
-              <p>"The AI voice agent pays for itself. We stopped missing calls, bookings went up 40%, and our patients love that they can reach us 24/7."</p>
-              <footer>
-                <cite>
-                  <strong>Dr. Sia H.</strong>
-                  <span>Healthcare, London</span>
-                </cite>
-              </footer>
-            </blockquote>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="section section-faq" id="faq">
-      <div class="container">
-        <div class="section-head">
-          <p class="eyebrow reveal">FAQ</p>
-          <h2 class="section-title reveal">Common questions</h2>
-        </div>
-        <dl class="faq-list reveal">
-          <div class="faq-item">
-            <dt>What does 'Full Stack' mean?</dt>
-            <dd>It means we handle the entire customer journey — from generating leads with ads and SEO, to capturing them with AI chatbots and voice agents, to nurturing them with automated follow-ups. Most agencies do one piece. We do it all.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>How is this different from just hiring an ad agency?</dt>
-            <dd>An ad agency drives traffic. But what happens when that lead lands on your site at 11pm? Without AI to capture and convert them, you've paid for a click that disappears. We generate AND convert — that's why our clients see 3x better ROI.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>How much does it cost?</dt>
-            <dd>Our Full Stack packages start from £1,500 setup + £497/month for CRM and automation, up to £5,000 setup + £1,500/month for the complete customer engine. Every project gets a fixed-price proposal — no hourly billing.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>How long does it take?</dt>
-            <dd>Most projects launch in 2–4 weeks. AI chatbots can be live within 48 hours. The full stack setup typically takes 3–4 weeks.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>Do I need to be technical?</dt>
-            <dd>Not at all. We handle everything — setup, hosting, updates, and support. You just run your business.</dd>
-          </div>
-          <div class="faq-item">
-            <dt>Do you lock clients into long contracts?</dt>
-            <dd>No. Websites are one-time builds. Everything else runs month-to-month. We earn your business every month.</dd>
-          </div>
-        </dl>
-      </div>
-    </section>
-
-    <section class="section section-intake" id="intake">
-      <div class="container intake-wrap">
-        <div class="intake-head">
-          <p class="eyebrow reveal">Start a project</p>
-          <h2 class="section-title reveal">Tell us about your business</h2>
-          <p class="lede centered reveal">Fill in the form and we'll respond within one business day with a clear plan.</p>
-        </div>
-
-        <div class="ghl-form-wrap reveal">
-          <iframe
-            src="https://api.leadconnectorhq.com/widget/form/JqG4vKatJkTVuyNQAD4z"
-            style="width:100%;height:1020px;border:none;border-radius:8px"
-            id="inline-JqG4vKatJkTVuyNQAD4z"
-            data-layout="{'id':'INLINE'}"
-            data-trigger-type="alwaysShow"
-            data-trigger-value=""
-            data-activation-type="alwaysActivated"
-            data-activation-value=""
-            data-deactivation-type="neverDeactivate"
-            data-deactivation-value=""
-            data-form-name="Form 6"
-            data-height="1020"
-            data-layout-iframe-id="inline-JqG4vKatJkTVuyNQAD4z"
-            data-form-id="JqG4vKatJkTVuyNQAD4z"
-            title="Contact Form"
-          ></iframe>
-          <script src="https://link.msgsndr.com/js/form_embed.js"></script>
-        </div>
-      </div>
-    </section>
-
-    <section class="section section-contact" id="contact">
-      <div class="container contact-row">
-        <div>
-          <p class="eyebrow eyebrow-light reveal">Prefer to skip the form?</p>
-          <h2 class="contact-title reveal">Let's talk about getting you more customers.</h2>
-        </div>
-        <ul class="contact-list reveal" role="list">
-          <li><span class="contact-k">Phone</span><a href="tel:+447****3694" class="contact-v">07888 873694</a></li>
-          <li><span class="contact-k">Email</span><a href="mailto:info@cloud-hak.com" class="contact-v">info@cloud-hak.com</a></li>
-          <li><span class="contact-k">Hours</span><span class="contact-v">Mon–Fri · 9a–6p BST</span></li>
-        </ul>
-      </div>
-    </section>
-  </main>
-
-  <footer class="site-footer">
-    <div class="container">
-      <div class="footer-ops">
-        <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
-        <span>Last deploy: June 2026</span>
-        <span>Build v2.0</span>
-      </div>
-      <div class="footer-grid">
-        <div class="footer-brand">
-          <a class="brand" href="#top" aria-label="Cloud Hak home">
-            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
-              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
-              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
-            </svg>
-            <span class="brand-word">Cloud Hak</span>
-          </a>
-          <p class="footer-tag">AI-powered marketing for local business. Ads, chatbots, voice agents, SEO, and automation — one system to bring you more customers.</p>
-        </div>
-        <div class="footer-col">
-          <h4>Services</h4>
-          <ul><li><a href="services/websites/index.html">Web Design &amp; Development</a></li><li><a href="services/chatbots/index.html">AI Chatbots</a></li><li><a href="services/voice-agents/index.html">AI Voice Agents</a></li><li><a href="services/seo/index.html">SEO</a></li><li><a href="services/aeo/index.html">AEO</a></li><li><a href="services/gmb/index.html">Google Business Profile</a></li><li><a href="services/ads/index.html">Google &amp; Social Ads</a></li><li><a href="services/automation/index.html">Automation</a></li><li><a href="services/crm/index.html">CRM Setup &amp; Management</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <h4>Company</h4>
-          <ul><li><a href="#top">About</a></li><li><a href="#approach">Approach</a></li><li><a href="#contact">Contact</a></li><li><a href="privacy.html">Privacy</a></li></ul>
-        </div>
-        <div class="footer-col">
-          <h4>Connect</h4>
-          <li><a href="tel:+447****3694">Phone</a></li><li><a href="mailto:info@cloud-hak.com">Email</a></li><li><a href="https://wa.me/447888873694">WhatsApp</a></li></ul>
-        </div>
-      </div>
-      <div class="footer-foot">
-        <p>© 2026 Cloud Hak</p>
-        <p>// Built with AI, delivered by humans.</p>
-      </div>
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.82rem;">
+      © 2026 Cloud Hak. All rights reserved. Built with AI, delivered by humans.
     </div>
-  </footer>
+  </div>
+</footer>
 
-  <script src="assets/js/main.js" defer></script>
-  <script src="assets/js/chatbot.js" defer></script>
 </body>
 </html>
