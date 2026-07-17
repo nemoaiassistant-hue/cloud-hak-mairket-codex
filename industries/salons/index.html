@@ -1,0 +1,854 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Salon & Beauty Marketing — Fill Your Appointment Book | Cloud Hak</title>
+  <meta name="description" content="AI-powered marketing for salons and beauty businesses. Online booking, Instagram DM automation, voice AI, Google Ads, and automated rebook campaigns — one system that fills your chairs." />
+  <meta property="og:title" content="Salon & Beauty Marketing — Fill Your Appointment Book | Cloud Hak" />
+  <meta property="og:description" content="Stop losing clients to missed DMs, empty chairs, and forgotten rebooks. Cloud Hak builds the full system — website, AI chat, voice, ads, CRM, and automations." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.com/industries/salons/" />
+  <link rel="canonical" href="https://cloud-hak.com/industries/salons/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    :root {
+      --ink: #0A1A3A;
+      --ink-2: #1E3A5F;
+      --cream: #FAF7F2;
+      --paper: #FFFFFF;
+      --copper: #C08552;
+      --copper-light: #E8B88A;
+      --muted: #6B7280;
+      --muted-2: #9CA3AF;
+      --rule: #E5E1DA;
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease: cubic-bezier(.4,0,.2,1);
+      --r: 8px;
+      --r-sm: 6px;
+      --s-2: 8px;
+      --s-3: 12px;
+      --s-4: 16px;
+      --s-5: 24px;
+      --s-6: 32px;
+      --s-7: 48px;
+      --s-8: 64px;
+      --s-9: 96px;
+    }
+
+    /* ── Industry Hero ── */
+    .industry-hero {
+      padding: var(--s-9) 0 var(--s-8);
+      background: var(--cream);
+    }
+    .industry-hero .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+    .hero-breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--s-5);
+    }
+    .hero-breadcrumb a {
+      color: var(--copper);
+      text-decoration: none;
+    }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .industry-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.1;
+      margin: 0 0 var(--s-5);
+    }
+    .industry-hero h1 em {
+      font-style: normal;
+      color: var(--copper);
+    }
+    .industry-hero .hero-lede {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: var(--s-6);
+    }
+    .hero-actions {
+      display: flex;
+      gap: var(--s-4);
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(10,26,58,.25);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+    }
+    .btn-ghost:hover {
+      border-color: var(--copper);
+      color: var(--copper);
+    }
+
+    /* ── Terminal (hero right) ── */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-8);
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: var(--s-6); }
+    }
+
+    .term-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding: var(--s-3) var(--s-4);
+      background: #1a1a2e;
+      border-radius: var(--r) var(--r) 0 0;
+    }
+    .term-bar-dots { display: flex; gap: 6px; }
+    .term-bar-dots i {
+      width: 10px; height: 10px; border-radius: 50%;
+      display: block;
+    }
+    .term-bar-dots i:nth-child(1) { background: #ff5f57; }
+    .term-bar-dots i:nth-child(2) { background: #febc2e; }
+    .term-bar-dots i:nth-child(3) { background: #28c840; }
+    .term-body {
+      background: #1a1a2e;
+      padding: var(--s-5);
+      border-radius: 0 0 var(--r) var(--r);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    .term-line { margin-bottom: var(--s-3); }
+    .term-prompt { color: var(--copper); margin-right: 8px; }
+    .term-cmd { color: #fff; }
+    .term-out { display: block; }
+    .term-ok { color: #28c840; }
+    .term-status {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px var(--s-4);
+      margin-top: var(--s-4);
+      padding-top: var(--s-4);
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .lbl { color: var(--copper); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+    .val { color: #ccc; font-size: 12px; }
+
+    /* ── Problem Section ── */
+    .section-problem {
+      background: var(--paper);
+      padding: var(--s-9) 0;
+    }
+    .problem-content {
+      max-width: 640px;
+    }
+    .problem-highlight {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-top: var(--s-5);
+    }
+    .problem-pains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+      margin-top: var(--s-6);
+      list-style: none;
+      padding: 0;
+    }
+    .problem-pains li {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      padding: 8px 16px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--ink-2);
+      background: var(--cream);
+    }
+
+    /* ── How We Help Cards ── */
+    .section-help {
+      background: var(--cream);
+      padding: var(--s-9) 0;
+    }
+    .section-head {
+      max-width: 640px;
+      margin-bottom: var(--s-8);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin: 0 0 var(--s-3);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-4);
+      line-height: 1.2;
+    }
+    .lede {
+      font-size: clamp(15px, 2vw, 17px);
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .centered { text-align: center; margin-left: auto; margin-right: auto; }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-6);
+    }
+    @media (max-width: 768px) {
+      .help-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+    }
+    .help-card {
+      padding: var(--s-7);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      background: var(--paper);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms var(--ease);
+    }
+    .help-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,26,58,.08);
+      border-color: var(--copper);
+    }
+    .help-card-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: var(--s-3);
+    }
+    .help-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .help-card .help-tagline {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: var(--s-5);
+    }
+    .help-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-3);
+    }
+    .help-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-3);
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .help-features li::before {
+      content: '✓';
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--copper);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .help-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--copper);
+      text-decoration: none;
+      margin-top: var(--s-5);
+      transition: gap 200ms var(--ease);
+    }
+    .help-card-link:hover { gap: var(--s-3); }
+    .help-card-link::after { content: '→'; }
+
+    /* ── System Flow ── */
+    .section-flow {
+      background: var(--ink);
+      padding: var(--s-9) 0;
+      color: #fff;
+    }
+    .section-flow .eyebrow { color: var(--copper-light); }
+    .section-flow .section-title { color: #fff; }
+    .section-flow .lede { color: rgba(255,255,255,.7); }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: var(--s-4);
+      margin-top: var(--s-7);
+    }
+    @media (max-width: 768px) {
+      .flow-steps { grid-template-columns: 1fr; }
+    }
+    .flow-step {
+      padding: var(--s-6);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--r);
+      background: rgba(255,255,255,.04);
+    }
+    .flow-step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--copper-light);
+      margin-bottom: var(--s-3);
+    }
+    .flow-step h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 var(--s-2);
+    }
+    .flow-step p {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .flow-arrow {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--copper);
+    }
+    @media (min-width: 769px) {
+      .flow-arrow { display: flex; }
+    }
+
+    /* ── CTA Section ── */
+    .section-cta {
+      background: var(--cream);
+      padding: var(--s-9) 0;
+      text-align: center;
+    }
+    .section-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-4);
+    }
+    .section-cta .lede {
+      max-width: 560px;
+      margin: 0 auto var(--s-6);
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: var(--s-4);
+      flex-wrap: wrap;
+    }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Container utility ── */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+
+    /* ── Section utility ── */
+    .section {
+      padding: var(--s-9) 0;
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Salon & Beauty Marketing",
+      "description": "AI-powered marketing for salons and beauty businesses. Online booking, Instagram DM automation, voice AI, Google Ads, SEO, CRM, and automated rebook campaigns.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Cloud Hak",
+        "url": "https://cloud-hak.com",
+        "telephone": "+44 7800 920042",
+        "email": "info@cloud-hak.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brighton & Hove",
+          "addressRegion": "East Sussex",
+          "addressCountry": "GB"
+        }
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.8225,
+          "longitude": -0.1372
+        },
+        "geoRadius": "50000"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Cloud Hak help salons get more bookings?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build a full marketing system — AI chatbots that respond to Instagram DMs and your website 24/7, voice AI that answers phone calls and books appointments, Google Ads targeting local beauty searches, SEO to rank for treatments near you, and automated rebook campaigns that keep your chairs full."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the AI chatbot respond to Instagram DMs for my salon?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our AI chatbot integrates with Instagram DMs, WhatsApp, and your website chat. It answers treatment questions, gives prices, checks availability, and books appointments — instantly, at any time of day."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What salon services does Cloud Hak specialise in?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with hair salons, barbershops, nail bars, lash & brow studios, beauty therapists, skin clinics, and holistic/wellness practitioners. Any appointment-based beauty business that wants more bookings and fewer no-shows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does salon marketing cost with Cloud Hak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Full Stack for salons starts at £997 setup + £497/month. This includes website, AI chatbot, voice AI, Google Ads, SEO, CRM, and automations. Individual services start from £197. Every salon gets a fixed-price proposal."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="announce">
+    <div class="container announce-row">
+      <div class="announce-left">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Accepting new clients · Q2 2026</span>
+      </div>
+      <div class="announce-right">
+        <span><span class="k">Base</span> <span class="v">Brighton &amp; Hove</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">Reply</span> <span class="v">≤ 1 biz day</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">Open</span> <span class="v">04 / 12 open</span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Cloud Hak home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-word">Cloud Hak</span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="/#stack">SERVICES</a>
+        <a href="/pricing/">PRICING</a>
+        <a href="/#approach">APPROACH</a>
+        <a href="/#contact">CONTACT</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+447800920042">07800 920042</a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ═══ HERO ═══ -->
+    <section class="industry-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-breadcrumb reveal"><a href="/">Home</a> &gt; <a href="/#stack">Industries</a> &gt; Salons &amp; Beauty</p>
+          <h1 class="reveal">Salon &amp; Beauty Marketing — <em>Fill Your Appointment Book</em></h1>
+          <p class="hero-lede reveal">Stop losing clients to missed DMs, empty chairs, and forgotten rebooks. We build the full system — website, AI chat, voice, ads, SEO, and automations — so every enquiry becomes a booked chair.</p>
+          <div class="hero-actions reveal">
+            <a href="/#contact" class="btn btn-primary">Get more bookings</a>
+            <a href="tel:+447800920042" class="btn btn-ghost">Call us</a>
+          </div>
+        </div>
+        <aside class="reveal" aria-label="Salon marketing stats">
+          <div class="term-bar">
+            <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>salon — dashboard.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">cloud-hak salon --status</span></div>
+            <span class="term-out"><b>DMs captured</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 24/7</span></span>
+            <span class="term-out"><b>No-shows reduced</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 62%</span></span>
+            <span class="term-out"><b>Rebooks automated</b>&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 4.2x</span></span>
+            <span class="term-out"><b>Google ranking</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● #1 local</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">channels --active</span></div>
+            <div class="term-status">
+              <span class="lbl">Platform</span><span class="val">GoHighLevel · Generate + Capture + Nurture</span>
+              <span class="lbl">Social</span><span class="val accent">Instagram DMs · WhatsApp · Website Chat</span>
+              <span class="lbl">Bookings</span><span class="val accent">Online · Phone · AI · DM — all channels</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ THE PROBLEM ═══ -->
+    <section class="section-problem">
+      <div class="container">
+        <div class="problem-content">
+          <p class="eyebrow reveal">The problem</p>
+          <h2 class="section-title reveal">You're talented, busy, and tired of losing clients to things you can't control.</h2>
+          <p class="lede reveal">You post gorgeous work on Instagram, but DMs pile up while you're with a client. Someone Googles "balayage near me" and your competitor shows up first. A client no-shows because they forgot — and you couldn't send a reminder in time. Sound familiar?</p>
+          <p class="problem-highlight reveal">Salon owners are creatives, not marketers. You shouldn't have to be everywhere at once. That's what the system is for.</p>
+          <ul class="problem-pains reveal">
+            <li>Missed Instagram DMs</li>
+            <li>Empty chairs</li>
+            <li>No-shows &amp; last-minute cancellations</li>
+            <li>Slow review collection</li>
+            <li>Forgotten rebook prompts</li>
+            <li>Inconsistent online booking</li>
+            <li>Can't answer calls while cutting</li>
+            <li>Zero follow-up after visits</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW WE HELP ═══ -->
+    <section class="section-help">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">How we help</p>
+          <h2 class="section-title reveal">Every Cloud Hak service, mapped to your salon.</h2>
+          <p class="lede reveal">One platform, one system — from first Instagram story to sixth visit rebook. No more juggling apps.</p>
+        </div>
+
+        <div class="help-grid">
+          <!-- 01 — Website -->
+          <div class="help-card reveal">
+            <div class="help-card-num">01 — Website</div>
+            <h3>Your 24/7 Digital Salon</h3>
+            <p class="help-tagline">A beautiful, fast website that does more than look good — it books clients while you sleep.</p>
+            <ul class="help-features">
+              <li>Online booking integrated with your calendar — no back-and-forth</li>
+              <li>Full treatment menu with pricing, durations, and aftercare info</li>
+              <li>Before/after gallery that sells your work for you</li>
+              <li>Stylist profiles so clients pick their favourite</li>
+              <li>Gift card purchasing for birthdays and holidays</li>
+            </ul>
+            <a href="/services/websites/" class="help-card-link">See website service →</a>
+          </div>
+
+          <!-- 02 — AI Chatbot -->
+          <div class="help-card reveal">
+            <div class="help-card-num">02 — AI Chatbot</div>
+            <h3>Never Miss a DM Again</h3>
+            <p class="help-tagline">AI that responds on Instagram, WhatsApp, and your website — instantly, any hour, in your brand voice.</p>
+            <ul class="help-features">
+              <li>Answers "how much is a balayage?" and "do you have availability Saturday?" instantly</li>
+              <li>Books appointments directly into your calendar from the conversation</li>
+              <li>Instagram DM automation — responds while you're with a client</li>
+              <li>WhatsApp integration for clients who prefer texting</li>
+              <li>Sends treatment prep info and aftercare after booking</li>
+            </ul>
+            <a href="/services/chatbots/" class="help-card-link">See chatbot service →</a>
+          </div>
+
+          <!-- 03 — Voice AI -->
+          <div class="help-card reveal">
+            <div class="help-card-num">03 — Voice AI</div>
+            <h3>Your Receptionist That Never Misses a Call</h3>
+            <p class="help-tagline">AI answers your salon phone, handles pricing questions, and books appointments — so you can focus on the client in your chair.</p>
+            <ul class="help-features">
+              <li>Answers every call — even when you're mid-foils or fully booked</li>
+              <li>Gives accurate treatment prices and duration info</li>
+              <li>Checks real-time availability and books the slot</li>
+              <li>Handles cancellation and rescheduling requests</li>
+              <li>Routes complex questions to you via SMS</li>
+            </ul>
+            <a href="/services/voice-agents/" class="help-card-link">See voice AI service →</a>
+          </div>
+
+          <!-- 04 — Google Ads -->
+          <div class="help-card reveal">
+            <div class="help-card-num">04 — Google Ads</div>
+            <h3>New Clients Searching for You Right Now</h3>
+            <p class="help-tagline">Target the exact searches your future clients are typing — and turn clicks into booked chairs.</p>
+            <ul class="help-features">
+              <li>"hair salon [your city]" — capture people actively looking</li>
+              <li>"lash extensions near me" — show up at the top of Google Maps</li>
+              <li>"balayage [your city]" — high-intent beauty searches</li>
+              <li>"nail bar near me" — local treatment-specific targeting</li>
+              <li>Retargeting ads for website visitors who didn't book</li>
+            </ul>
+            <a href="/services/ads/" class="help-card-link">See ads service →</a>
+          </div>
+
+          <!-- 05 — SEO & AEO -->
+          <div class="help-card reveal">
+            <div class="help-card-num">05 — SEO &amp; AEO</div>
+            <h3>Google You, Not Your Competitor</h3>
+            <p class="help-tagline">Rank organically for local beauty searches and become the answer when AI assistants recommend salons.</p>
+            <ul class="help-features">
+              <li>Rank #1 locally for "best hair salon [city]"</li>
+              <li>Featured snippets for "how much does balayage cost?"</li>
+              <li>Local SEO that puts you in the Google Maps 3-pack</li>
+              <li>AEO optimisation so ChatGPT and Gemini recommend you</li>
+              <li>Blog content targeting seasonal treatments and trends</li>
+            </ul>
+            <a href="/services/seo/" class="help-card-link">See SEO service →</a>
+          </div>
+
+          <!-- 06 — Google Business -->
+          <div class="help-card reveal">
+            <div class="help-card-num">06 — Google Business Profile</div>
+            <h3>Your Shop Window on Google</h3>
+            <p class="help-tagline">Optimise your Google Business Profile so locals find you, see your work, and book — all in one tap.</p>
+            <ul class="help-features">
+              <li>Weekly photo posts showing your latest transformations</li>
+              <li>Review reply management — respond to every review, fast</li>
+              <li>Q&amp;A section populated with your most-asked questions</li>
+              <li>Booking link always front and centre</li>
+              <li>Updates for seasonal offers, new treatments, and availability</li>
+            </ul>
+            <a href="/services/gmb/" class="help-card-link">See Google Business service →</a>
+          </div>
+
+          <!-- 07 — CRM & Automations -->
+          <div class="help-card reveal">
+            <div class="help-card-num">07 — CRM &amp; Automations</div>
+            <h3>Automate the Client Journey</h3>
+            <p class="help-tagline">From first enquiry to sixth visit — every touchpoint automated so nothing falls through the cracks.</p>
+            <ul class="help-features">
+              <li>Appointment confirmations sent automatically via SMS &amp; email</li>
+              <li>48-hour cancellation reminders that slash no-shows</li>
+              <li>Rebook prompts sent 2 weeks after each visit</li>
+              <li>Loyalty campaigns — "your 5th treatment is 20% off"</li>
+              <li>Refer-a-friend campaigns that turn happy clients into promoters</li>
+              <li>Birthday &amp; anniversary messages with special offers</li>
+            </ul>
+            <a href="/services/automation/" class="help-card-link">See automation service →</a>
+          </div>
+
+          <!-- 08 — Super Agents -->
+          <div class="help-card reveal">
+            <div class="help-card-num">08 — Super Agents</div>
+            <h3>AI Runs Your Entire Client Journey</h3>
+            <p class="help-tagline">Not just one tool — a full AI workforce that handles the entire funnel from first DM to rebooked appointment.</p>
+            <ul class="help-features">
+              <li>Client sees your Instagram → AI responds to their DM within seconds</li>
+              <li>Website visitor asks about treatments → AI qualifies and books them</li>
+              <li>New client calls → Voice AI answers, consults, and books</li>
+              <li>Post-visit → automated rebook sequence kicks in</li>
+              <li>Full CRM pipeline managed — you see everything in one dashboard</li>
+            </ul>
+            <a href="/ai-workforce/" class="help-card-link">See AI workforce →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT YOU GET — SYSTEM FLOW ═══ -->
+    <section class="section-flow">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">What you get</p>
+          <h2 class="section-title reveal">The full system — Instagram to rebook.</h2>
+          <p class="lede reveal">Every channel connected. Every client captured. Every appointment tracked. Here's how a new client flows through your Cloud Hak system.</p>
+        </div>
+
+        <div class="flow-steps reveal">
+          <div class="flow-step">
+            <div class="flow-step-num">01 — Discover</div>
+            <h3>They find you</h3>
+            <p>A potential client sees your Instagram story, searches "hair salon near me" on Google, or clicks your Google Business Profile. Every channel leads to one place — your booking system.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">02 — Capture</div>
+            <h3>AI responds instantly</h3>
+            <p>They DM you on Instagram at 10pm, visit your website at midnight, or call while you're mid-colour. AI answers questions, gives prices, and books them — no wait, no missed enquiry.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">03 — Book</div>
+            <h3>Appointment locked in</h3>
+            <p>Confirmation SMS sent. Calendar updated. 48-hour reminder queued. If they need to reschedule, AI handles it. No-shows drop. Chairs stay full.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">04 — Rebook</div>
+            <h3>They come back — automatically</h3>
+            <p>Two weeks after their visit, a rebook prompt goes out. Loyalty rewards kick in. Birthday offers arrive. Refer-a-friend campaigns turn them into your best marketers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="section-cta">
+      <div class="container">
+        <p class="eyebrow reveal">Ready to fill your chairs?</p>
+        <h2 class="reveal">Let's talk about your salon.</h2>
+        <p class="lede reveal">Tell us what treatments you offer, where you're based, and what's frustrating you right now. We'll send a clear plan within 3 business days — no jargon, no pressure.</p>
+        <div class="cta-actions reveal">
+          <a href="/#contact" class="btn btn-primary">Start a project</a>
+          <a href="tel:+447800920042" class="btn btn-ghost">Call 07800 920042</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ops">
+        <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
+        <span>Last deploy: June 2026</span>
+        <span>Build v2.0</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Cloud Hak home">
+            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <span class="brand-word">Cloud Hak</span>
+          </a>
+          <p class="footer-tag">GoHighLevel-powered marketing for local business. Ads, AI, CRM, and automation — one platform to bring you more customers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/websites/">Web Design &amp; Development</a></li>
+            <li><a href="/services/chatbots/">AI Chatbots</a></li>
+            <li><a href="/services/voice-agents/">AI Voice Agents</a></li>
+            <li><a href="/services/seo/">SEO</a></li>
+            <li><a href="/services/aeo/">AEO</a></li>
+            <li><a href="/services/gmb/">Google Business Profile</a></li>
+            <li><a href="/services/ads/">Google &amp; Social Ads</a></li>
+            <li><a href="/services/automation/">Automation</a></li>
+            <li><a href="/services/crm/">CRM Setup &amp; Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">About</a></li>
+            <li><a href="/#approach">Approach</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+447800920042">Phone</a></li>
+            <li><a href="mailto:info@cloud-hak.com">Email</a></li>
+            <li><a href="https://wa.me/447800920042">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-foot">
+        <p>&copy; 2026 Cloud Hak</p>
+        <p>// Built with AI, delivered by humans.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/chatbot.js" defer></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); e.target.style.opacity = 1; e.target.style.transform = 'none'; }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Hak | Testimonials — What Our Clients Say</title>
+  <meta name="description" content="Real reviews from UK trades using Cloud Hak. More calls, more reviews, more jobs." />
+  <link rel="canonical" href="https://cloud-hak.com/testimonials" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    .ch-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .ch-nav .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+    .ch-nav .logo span { color: var(--copper); }
+    .ch-nav-links { display: flex; gap: 24px; align-items: center; }
+    .ch-nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+    .ch-nav-links a:hover { color: var(--copper); }
+    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; }
+    .ch-btn { display: inline-block; background: var(--ink); color: var(--cream); padding: 16px 40px; border-radius: 8px; font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease); border: none; cursor: pointer; }
+    .ch-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.2); color: var(--cream); }
+    .ch-btn-copper { background: var(--copper); color: #fff; }
+    .ch-btn-copper:hover { background: var(--copper-2); color: #fff; }
+    .ch-cta { background: var(--copper); text-align: center; padding: 64px 0; }
+    .ch-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin: 0 0 12px; font-weight: 600; }
+    .ch-cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin: 0 0 32px; }
+    .ch-cta .ch-btn { background: var(--ink); }
+    .ch-cta .ch-btn:hover { background: var(--ink-2); }
+    .ch-footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 0.9rem; }
+    .ch-footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .ch-footer .logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--cream); }
+    .ch-footer .logo span { color: var(--copper); }
+    .ch-footer a { color: rgba(255,255,255,0.5); }
+    .ch-footer a:hover { color: var(--copper); }
+
+    /* Page header */
+    .ch-page-head { background: var(--cream); padding: 56px 0 32px; text-align: center; }
+    .ch-page-head h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; margin: 0 0 12px; color: var(--ink); }
+
+    /* Testimonial grid */
+    .ch-reviews { padding: 32px 0 56px; }
+    .ch-reviews-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ch-review {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      padding: 28px;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .ch-review:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.06); }
+    .ch-review .stars { font-size: 1.1rem; margin-bottom: 12px; letter-spacing: 2px; }
+    .ch-review .quote { font-size: 0.98rem; line-height: 1.6; color: var(--ink-2); margin: 0 0 16px; }
+    .ch-review .author { display: flex; align-items: center; gap: 12px; }
+    .ch-review .avatar {
+      width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--copper);
+      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 700; font-size: 1.1rem;
+      flex-shrink: 0;
+    }
+    .ch-review .author-info .name { font-weight: 600; font-size: 0.95rem; color: var(--ink); }
+    .ch-review .author-info .role { font-size: 0.82rem; color: var(--muted); }
+
+    @media (max-width: 768px) {
+      .ch-nav-links { display: none; }
+      .ch-page-head { padding: 40px 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid var(--rule);">
+  <div class="container">
+    <nav class="ch-nav">
+      <a href="/" class="logo">Cloud<span>Hak</span></a>
+      <div class="ch-nav-links">
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a Call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="ch-page-head">
+  <div class="container">
+    <h1>The proof is in the pudding…</h1>
+    <p style="font-size: 1.15rem; color: var(--muted); max-width: 480px; margin: 0 auto;">Here's what our clients have to say.</p>
+  </div>
+</section>
+
+<section class="ch-reviews" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="ch-reviews-grid">
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"They built me a new website and within 10 days I got my first unpaid lead. Best money I've ever spent."</p>
+        <div class="author">
+          <div class="avatar">A</div>
+          <div class="author-info">
+            <div class="name">Armando</div>
+            <div class="role">Contractor, Brighton</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"I was paying £1,500/month with another service that wasn't working. Cloud Hak is affordable and they actually deliver."</p>
+        <div class="author">
+          <div class="avatar">L</div>
+          <div class="author-info">
+            <div class="name">Lopaka</div>
+            <div class="role">Landscaper, Hove</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"The missed call text-back alone has won me jobs I would've lost. My phone rings more and I never miss a lead."</p>
+        <div class="author">
+          <div class="avatar">C</div>
+          <div class="author-info">
+            <div class="name">Cody</div>
+            <div class="role">Electrician, Crawley</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"Getting 5-star reviews always gave me anxiety. Cloud Hak took all that away and I've seen a real increase in business."</p>
+        <div class="author">
+          <div class="avatar">W</div>
+          <div class="author-info">
+            <div class="name">Wendy</div>
+            <div class="role">Salon Owner, Worthing</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"After going through 2-3 other agencies, I finally found someone that told me the truth. Easy to work with and they get results."</p>
+        <div class="author">
+          <div class="avatar">J</div>
+          <div class="author-info">
+            <div class="name">James</div>
+            <div class="role">Builder, London</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"All I needed was one job a month to pay for the service. Since I signed up I've gotten way more than that."</p>
+        <div class="author">
+          <div class="avatar">D</div>
+          <div class="author-info">
+            <div class="name">David</div>
+            <div class="role">Plumber, Brighton</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"They made me a brand new website, super professional. It turned hundreds of viewers into actual customers."</p>
+        <div class="author">
+          <div class="avatar">M</div>
+          <div class="author-info">
+            <div class="name">Mason</div>
+            <div class="role">Roofer, Eastbourne</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"First I thought it was too good to be true, but it turns out they're just a really good company at a really good price."</p>
+        <div class="author">
+          <div class="avatar">M</div>
+          <div class="author-info">
+            <div class="name">Matt</div>
+            <div class="role">Painter, Horsham</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-review">
+        <div class="stars">⭐⭐⭐⭐⭐</div>
+        <p class="quote">"They've made it so easy with all their automations and the awesome website. I can't thank them enough."</p>
+        <div class="author">
+          <div class="avatar">R</div>
+          <div class="author-info">
+            <div class="name">Ryan</div>
+            <div class="role">Gas Engineer, Brighton</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ch-cta">
+  <div class="container">
+    <h2>Ready to be our next success story?</h2>
+    <p>Book a free 20-minute call. No pressure, no jargon.</p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a free call →</a>
+  </div>
+</section>
+
+<footer class="ch-footer">
+  <div class="container">
+    <div class="ch-footer-inner">
+      <div>
+        <div class="logo">Cloud<span>Hak</span></div>
+        <p style="margin: 8px 0 0;">Websites & marketing systems for UK trades.<br/>Brighton & Hove 🇬🇧</p>
+      </div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <a href="/">Home</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="https://calendly.com/cloud-hak">Book a Call</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.82rem;">
+      © 2026 Cloud Hak. All rights reserved. Built with AI, delivered by humans.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mac Studio vs Cloud GPU — Business Case</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e14;
+    color: #c8c8d0;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container { max-width: 700px; margin: 0 auto; }
+h1 { color: #e8c170; font-size: 1.8rem; text-align: center; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 30px; }
+
+.section {
+    background: #121820;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #1e2a3a;
+}
+.section-title {
+    color: #e8c170;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+p { margin-bottom: 10px; font-size: 0.92rem; }
+ul, ol { padding-left: 20px; margin-bottom: 10px; }
+li { margin-bottom: 6px; font-size: 0.9rem; }
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+th { background: #0f4c81; color: white; padding: 10px; text-align: left; font-size: 0.8rem; }
+td { padding: 10px; border-bottom: 1px solid #1e2a3a; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+
+.highlight {
+    background: #0f4c81;
+    color: white;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 16px;
+    text-align: center;
+}
+
+.green-box {
+    background: rgba(34, 160, 107, 0.1);
+    border: 1px solid #22a06b;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 0;
+}
+.green-box h3 { color: #22a06b; font-size: 0.95rem; margin-bottom: 8px; }
+
+.red-box {
+    background: rgba(229, 62, 62, 0.08);
+    border: 1px solid rgba(229, 62, 62, 0.4);
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 0;
+}
+.red-box h3 { color: #e53e3e; font-size: 0.95rem; margin-bottom: 8px; }
+
+.big-number {
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: #22a06b;
+    text-align: center;
+    margin: 10px 0;
+}
+.big-label {
+    text-align: center;
+    color: #888;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.compare-table td:nth-child(2) { color: #22a06b; font-weight: 500; }
+.compare-table td:nth-child(3) { color: #e53e3e; }
+
+.footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.8rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1e2a3a;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Mac Studio vs Cloud GPU</h1>
+    <div class="subtitle">Business Case — Private AI Server Infrastructure | July 2026</div>
+
+    <!-- EXEC SUMMARY -->
+    <div class="highlight">
+        Buy a Mac Studio M4 Max (128GB) instead of renting cloud GPUs. It pays for itself in under 3 months, generates £47k+ over 2 years, and you can sell it when you're done.
+    </div>
+
+    <!-- THE INSIGHT -->
+    <div class="section">
+        <div class="section-title">💡 The Key Insight</div>
+        <p>Apple Silicon uses <strong>unified memory</strong>. The GPU can access nearly all 128GB as VRAM. This is unprecedented — normally VRAM is the most expensive bottleneck in AI, and 112GB of usable VRAM is something you'd need 3× RTX 6000 Adas (£765/mo cloud) to match.</p>
+        <p>One Mac Studio on a desk outperforms cloud hardware costing £765/month.</p>
+    </div>
+
+    <!-- HARDWARE SPECS -->
+    <div class="section">
+        <div class="section-title">🖥️ Hardware Comparison</div>
+        <table>
+            <thead>
+                <tr><th>Spec</th><th>Mac Studio M4 Max</th><th>Cloud RTX 6000 Ada</th><th>Cloud RTX 4000 Ada</th></tr>
+            </thead>
+            <tbody>
+                <tr><td><strong>VRAM available</strong></td><td>~112GB</td><td>48GB</td><td>20GB</td></tr>
+                <tr><td><strong>System RAM</strong></td><td>128GB</td><td>64-128GB</td><td>64-128GB</td></tr>
+                <tr><td><strong>70B model speed</strong></td><td>~20-30 tok/s</td><td>~25-35 tok/s</td><td>Can't fit</td></tr>
+                <tr><td><strong>Largest model</strong></td><td>405B (4-bit)</td><td>70B</td><td>32B</td></tr>
+                <tr><td><strong>Multiple models at once</strong></td><td>✅ Yes</td><td>❌ No</td><td>❌ No</td></tr>
+                <tr><td><strong>Upfront cost</strong></td><td>~£5,200</td><td>£0</td><td>£0</td></tr>
+                <tr><td><strong>Monthly cost</strong></td><td>~£20 (electricity)</td><td>~£255/mo</td><td>~£90/mo</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- MODELS IT CAN RUN -->
+    <div class="section">
+        <div class="section-title">🧠 What It Can Run</div>
+        <table>
+            <thead>
+                <tr><th>Model</th><th>VRAM Needed</th><th>Quality Level</th><th>Mac Studio 128GB</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Qwen 2.5 (7B)</td><td>5GB</td><td>Basic FAQ bot</td><td>✅ Lightning fast</td></tr>
+                <tr><td>Qwen 2.5 (32B)</td><td>18GB</td><td>Near GPT-4</td><td>✅ Very fast</td></tr>
+                <tr><td>Qwen 2.5 (72B)</td><td>42GB</td><td>GPT-4 class</td><td>✅ Fast + room for more</td></tr>
+                <tr><td>Llama 3.1 (405B)</td><td>90GB (4-bit)</td><td>Beyond GPT-4</td><td>✅ <strong>Only this can fit</strong></td></tr>
+                <tr><td><strong>2 models simultaneously</strong></td><td>varies</td><td>Multi-client</td><td>✅ e.g. 72B + 7B at once</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- PAYOFF MATH -->
+    <div class="section">
+        <div class="section-title">💰 Payoff Period — 2 Pro Clients</div>
+
+        <div class="big-number">2.6 months</div>
+        <div class="big-label">Time to pay off the Mac Studio with just 2 Pro tier clients</div>
+
+        <table>
+            <thead>
+                <tr><th>Item</th><th>Amount</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mac Studio M4 Max 128GB</td><td>£5,200 (one-off)</td></tr>
+                <tr><td>Electricity (~200W under load)</td><td>~£20/month</td></tr>
+                <tr><td>Pro client revenue (×2)</td><td>£997 × 2 = £1,994/month</td></tr>
+                <tr><td>Net margin after electricity</td><td><strong>£1,974/month</strong></td></tr>
+                <tr><td><strong>Payoff period</strong></td><td><strong>£5,200 ÷ £1,974 = 2.6 months</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- 2 YEAR COMPARISON -->
+    <div class="section">
+        <div class="section-title">📊 2-Year Comparison</div>
+        <table class="compare-table">
+            <thead>
+                <tr><th></th><th>Mac Studio 🏠</th><th>Cloud ☁️</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Hardware cost</td><td>£5,200 one-off</td><td>£0</td></tr>
+                <tr><td>Monthly infra cost</td><td>£20 (electricity)</td><td>£510/mo (2× GPU)</td></tr>
+                <tr><td>Client revenue</td><td>£1,994/mo</td><td>£1,994/mo</td></tr>
+                <tr><td>Months 1-3</td><td>Paying off Mac</td><td>£4,452 profit</td></tr>
+                <tr><td>Month 4 onwards</td><td>£1,974/mo margin</td><td>£1,484/mo margin</td></tr>
+                <tr><td><strong>Year 1 total</strong></td><td><strong>£18,488 profit</strong></td><td><strong>£17,808 profit</strong></td></tr>
+                <tr><td><strong>Year 2 total</strong></td><td><strong>£23,688 profit</strong></td><td><strong>£17,808 profit</strong></td></tr>
+                <tr><td><strong>2-year total</strong></td><td><strong>£47,376</strong></td><td><strong>£35,616</strong></td></tr>
+                <tr><td><strong>Advantage</strong></td><td><strong>+£11,760</strong></td><td>—</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RESALE VALUE -->
+    <div class="section">
+        <div class="section-title">💸 Resale Value — It's an Asset, Not a Cost</div>
+        <p>Mac Studios hold 60-70% of their value after 2-3 years. Cloud costs are gone forever.</p>
+        <table>
+            <thead>
+                <tr><th>Timeline</th><th>Estimated Resale</th><th>Actual Hardware Cost (amortised)</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Day 1 (new)</td><td>£5,200</td><td>£5,200</td></tr>
+                <tr><td>After 1 year</td><td>£4,000-4,400</td><td>£800-1,200 (£67-100/mo)</td></tr>
+                <tr><td>After 2 years</td><td>£3,200-3,600</td><td>£1,600-2,000 (£67-83/mo)</td></tr>
+                <tr><td>After 3 years</td><td>£2,500-3,000</td><td>£2,200-2,700 (£61-75/mo)</td></tr>
+            </tbody>
+        </table>
+        <p style="margin-top:10px;">The Mac Studio effectively costs <strong>£75/month</strong> over 2 years — and you still own an asset worth £3,400+. Cloud costs <strong>£510/month</strong> and you own nothing.</p>
+    </div>
+
+    <!-- TRUE PROFIT WITH RESALE -->
+    <div class="section">
+        <div class="section-title">🎯 True Profit — Buy, Run 2 Years, Sell</div>
+        <table>
+            <tbody>
+                <tr><td>Purchase price</td><td>£5,200</td></tr>
+                <tr><td>Revenue over 2 years (2 Pro clients)</td><td>+£47,376</td></tr>
+                <tr><td>Electricity over 2 years</td><td>-£480</td></tr>
+                <tr><td>Resale after 2 years</td><td>+£3,400</td></tr>
+                <tr><td><strong>True net profit</strong></td><td><strong>£45,096</strong></td></tr>
+                <tr><td><strong>Equivalent cloud profit (2 years)</strong></td><td><strong>£35,616</strong></td></tr>
+                <tr><td><strong>Mac Studio advantage</strong></td><td><strong style="color:#22a06b">+£9,480</strong></td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- CLIENT CAPACITY -->
+    <div class="section">
+        <div class="section-title">🏢 How Many Clients Can One Mac Studio Serve?</div>
+        <table>
+            <thead>
+                <tr><th>Client Tier</th><th>Model</th><th>VRAM Per Client</th><th>Max Clients (112GB VRAM)</th><th>Monthly Revenue</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Budget (£297/mo)</td><td>Qwen 7B</td><td>5GB</td><td>~15+ (load permitting)</td><td>£4,455+</td></tr>
+                <tr><td>Standard (£497/mo)</td><td>Qwen 32B</td><td>18GB</td><td>~5-6</td><td>£2,485-2,982</td></tr>
+                <tr><td>Pro (£997/mo)</td><td>Qwen 72B</td><td>42GB</td><td>2-3</td><td>£1,994-2,991</td></tr>
+            </tbody>
+        </table>
+        <p style="margin-top:10px;">Realistically: <strong>2 Pro clients + 2 Standard clients</strong> on one Mac Studio = <strong>£2,988/month</strong> revenue on £20/month electricity. That's £35,856/year.</p>
+    </div>
+
+    <!-- RISKS -->
+    <div class="section">
+        <div class="section-title">⚠️ Risks & Mitigations</div>
+        <table>
+            <thead>
+                <tr><th>Risk</th><th>Likelihood</th><th>Mitigation</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Mac dies — all clients go down</td><td>Low</td><td>Keep 1 cloud backup instance (£90/mo) that spins up on failure. AppleCare+ covers hardware.</td></tr>
+                <tr><td>Limited by office internet bandwidth</td><td>Medium</td><td>Business fibre (300Mbps+). AI text responses are small — bandwidth is rarely the bottleneck.</td></tr>
+                <tr><td>Apple releases new model, resale drops</td><td>Low-Medium</td><td>M4 Max is current gen. Next refresh likely 12-18 months out. Historical depreciation is 30-40% over 2 years.</td></tr>
+                <tr><td>Client expects always-on SLA</td><td>Medium</td><td>Offer 99.5% uptime. Use cloud backup as failover. Most small clinics don't need enterprise SLA.</td></tr>
+                <tr><td>Scaling beyond one Mac</td><td>Good problem</td><td>Buy a second Mac Studio. Each one serves ~4 clients. Profitable from client 1.</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- RECOMMENDATION -->
+    <div class="section" style="border-color:#22a06b;">
+        <div class="section-title" style="color:#22a06b;">✅ Recommendation</div>
+        <div class="green-box">
+            <h3>Buy the Mac Studio M4 Max 128GB</h3>
+            <ul>
+                <li>Payoff in under 3 months with just 2 Pro clients</li>
+                <li>£47,000+ profit over 2 years vs £35,600 cloud</li>
+                <li>Still own a £3,400 asset at the end</li>
+                <li>Better hardware than cloud (112GB VRAM vs 48GB)</li>
+                <li>Can run 405B models — cloud can't</li>
+                <li>Use it for demos, business tools, and everything else too</li>
+                <li>Keep one cheap cloud backup (£90/mo) for failover</li>
+            </ul>
+        </div>
+
+        <div class="red-box">
+            <h3>When Cloud Wins Instead</h3>
+            <ul>
+                <li>No upfront capital available</li>
+                <li>Need data centre redundancy for enterprise clients</li>
+                <li>Clients require EU-domiciled servers with audit trails</li>
+                <li>Scaling to 10+ clients quickly (need multiple GPUs)</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- TIMELINE -->
+    <div class="section">
+        <div class="section-title">📅 If We Move Now</div>
+        <table>
+            <thead>
+                <tr><th>Month</th><th>Action</th><th>Revenue</th></tr>
+            </thead>
+            <tbody>
+                <tr><td>Month 0</td><td>Buy Mac Studio (£5,200). Install Ollama + Open WebUI. Deploy Airway Clinic as first client.</td><td>£0</td></tr>
+                <tr><td>Month 1</td><td>Airway Clinic live on Pro tier. Onboard client #2.</td><td>£997</td></tr>
+                <tr><td>Month 2</td><td>Client #2 live. Mac Studio break-even approaching.</td><td>£1,994</td></tr>
+                <tr><td>Month 3 (Week 11)</td><td><strong>🎉 Mac Studio paid off</strong></td><td>£1,994</td></tr>
+                <tr><td>Month 4+</td><td>Pure profit. Start onboarding Standard tier clients.</td><td>£1,974+ /mo</td></tr>
+                <tr><td>Month 6</td><td>2 Pro + 2 Standard clients</td><td>£2,988/mo</td></tr>
+                <tr><td>Month 12</td><td>Year 1 total: <strong>~£18,000 profit</strong></td><td>—</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="footer">
+        Prepared July 2026 — Mac Studio vs Cloud GPU Business Case<br>
+        Cloud Hak · Private AI Server Infrastructure
+    </div>
+
+</div>
+</body>
+</html>

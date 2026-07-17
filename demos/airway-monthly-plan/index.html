@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+<title>Nima Hakimmaani — Operations Plan | Airway Clinic</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#0a0e14;--card:#121820;--border:#1e2a3a;
+  --gold:#e8c170;--blue:#0f4c81;--green:#22a06b;
+  --text:#c8c8d0;--dim:#888;--faint:#555;
+}
+html{scroll-behavior:smooth}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  padding:0;-webkit-text-size-adjust:100%;
+}
+.wrap{max-width:680px;margin:0 auto;padding:12px 14px}
+
+/* Hero */
+.hero{text-align:center;padding:30px 16px 24px;border-bottom:1px solid var(--border)}
+.hero h1{color:var(--gold);font-size:1.5rem;margin-bottom:4px;letter-spacing:-0.5px}
+.hero .sub{color:var(--dim);font-size:0.85rem}
+.hero .badge{display:inline-block;background:var(--blue);color:#fff;padding:4px 12px;border-radius:16px;font-size:0.68rem;font-weight:600;letter-spacing:0.3px;margin-top:10px;line-height:1.5}
+
+/* Section */
+.sec{background:var(--card);border-radius:12px;padding:18px 16px;margin-top:12px;border:1px solid var(--border)}
+.sec-title{color:var(--gold);font-size:1.15rem;font-weight:700;margin-bottom:2px}
+.sec-sub{color:var(--dim);font-size:0.78rem;margin-bottom:14px}
+
+/* Category headers */
+.cat{margin:20px 0 8px;font-size:0.95rem;font-weight:700;color:var(--gold);padding-bottom:4px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:4px}
+.cat-hrs{font-size:0.68rem;font-weight:600;color:#5ec896;background:rgba(34,160,107,0.12);padding:2px 8px;border-radius:10px;white-space:nowrap}
+
+/* Task cards — the key change */
+.task{background:var(--bg);border-radius:10px;padding:14px;margin-bottom:8px;border-left:3px solid var(--blue)}
+.task-name{font-size:0.88rem;font-weight:600;color:#e0e0e8;margin-bottom:6px;line-height:1.35}
+.task-meta{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:8px}
+.pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:0.68rem;font-weight:600}
+.pill-time{background:rgba(15,76,129,0.3);color:#7ab8e8}
+.pill-freq{background:rgba(34,160,107,0.15);color:#5ec896}
+.task-benefit{font-size:0.8rem;color:var(--dim);line-height:1.45}
+
+/* Metric row */
+.metrics{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin:12px 0}
+.metric{text-align:center;background:var(--bg);border-radius:8px;padding:12px 8px;border:1px solid var(--border)}
+.metric .n{font-size:1.4rem;font-weight:700;color:var(--green);display:block}
+.metric .l{font-size:0.68rem;color:var(--dim);margin-top:2px}
+
+/* Table (for schedule only — 3 cols max) */
+.tbl{width:100%;border-collapse:collapse;margin:8px 0;font-size:0.8rem}
+.tbl th{background:var(--blue);color:#fff;padding:8px;text-align:left;font-size:0.72rem}
+.tbl td{padding:8px;border-bottom:1px solid var(--border);vertical-align:top}
+.tbl tr:last-child td{border-bottom:none}
+
+/* Finance meeting agenda */
+.agenda-item{display:flex;gap:8px;padding:8px 0;border-bottom:1px solid var(--border)}
+.agenda-item:last-child{border-bottom:none}
+.agenda-time{font-size:0.72rem;color:var(--gold);font-weight:600;min-width:64px;flex-shrink:0;padding-top:1px}
+.agenda-body{font-size:0.8rem}
+.agenda-body strong{color:#e0e0e8}
+.agenda-body span{color:var(--dim)}
+
+/* Highlight */
+.hl{background:var(--blue);color:#fff;padding:14px 16px;border-radius:10px;font-weight:600;font-size:0.85rem;margin:14px 0;text-align:center;line-height:1.5}
+.hl small{font-size:0.75rem;font-weight:400;display:block;margin-top:4px;opacity:0.85}
+
+/* Info box */
+.info{background:rgba(34,160,107,0.06);border:1px solid rgba(34,160,107,0.25);border-radius:10px;padding:14px;margin:10px 0;font-size:0.8rem;color:var(--dim);line-height:1.5}
+.info strong{color:var(--green)}
+
+/* Callout */
+.callout{background:rgba(232,193,112,0.06);border:1px solid rgba(232,193,112,0.2);border-radius:10px;padding:14px;margin:10px 0}
+.callout strong{color:var(--gold)}
+
+/* Skills list */
+.skills{list-style:none}
+.skills li{padding:7px 0;border-bottom:1px solid var(--border);font-size:0.82rem;display:flex;gap:6px;align-items:flex-start}
+.skills li:last-child{border-bottom:none}
+.skills .ck{color:var(--green);font-weight:bold;flex-shrink:0}
+
+/* Value cards */
+.vgrid{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:12px}
+.vcard{background:var(--bg);border-radius:10px;padding:14px;border-left:3px solid var(--green)}
+.vcard .ic{font-size:1.3rem;margin-bottom:4px}
+.vcard h4{color:var(--gold);font-size:0.85rem;margin-bottom:3px}
+.vcard p{font-size:0.76rem;color:var(--dim);line-height:1.35}
+
+/* Principle box */
+.principle{text-align:center;padding:16px;background:rgba(34,160,107,0.06);border:1px solid rgba(34,160,107,0.2);border-radius:10px;margin-top:12px}
+.principle .big{font-size:0.95rem;color:var(--gold);font-weight:700;margin-bottom:6px}
+.principle .small{font-size:0.78rem;color:var(--dim)}
+
+/* Footer */
+.foot{text-align:center;color:var(--faint);font-size:0.72rem;margin-top:24px;padding:16px 0;border-top:1px solid var(--border)}
+
+/* Day badge */
+.day-badge{display:inline-block;background:var(--blue);color:#fff;font-size:0.68rem;font-weight:700;padding:2px 8px;border-radius:8px;margin-bottom:4px}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<!-- HERO -->
+<div class="hero">
+    <h1>Operations Plan</h1>
+    <div class="sub">Airway Clinic · Nima Hakimmaani</div>
+    <div class="badge">1 WEEK ON-SITE STOCKHOLM · 3 WEEKS REMOTE BRIGHTON</div>
+</div>
+
+<!-- CAPABILITIES -->
+<div class="sec">
+    <div class="sec-title">What I Bring — Full Breakdown</div>
+    <div class="sec-sub">Every task, the time it takes, and direct benefit to the clinic</div>
+
+    <!-- FINANCE -->
+    <div class="cat">📊 Finance & Bookkeeping <span class="cat-hrs">~5 hrs/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Bank reconciliation</div>
+        <div class="task-meta"><span class="pill pill-time">3-4 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Match every transaction to records. Always knows exact cash position. Catches errors, duplicate charges, missed payments.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Invoicing — patient & supplier</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Faster payment collection. Professional image. No invoices forgotten or delayed.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Credit control — chase overdue payments</div>
+        <div class="task-meta"><span class="pill pill-time">1 hr</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Recovers lost revenue. One overdue MARPE case = £7,500 recovered.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Receipt sorting & filing</div>
+        <div class="task-meta"><span class="pill pill-time">1 hr</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Tax-deductible expenses captured. Skatteverket compliant. Clean audit trail.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Supplier cost review</div>
+        <div class="task-meta"><span class="pill pill-time">1 hr</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Identifies over-ordering, negotiates better rates. Typical savings: 10-15% on supplies.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Monthly P&L report</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Dr. Sia sees exactly where money comes from and goes. No guessing.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Quarterly tax prep</div>
+        <div class="task-meta"><span class="pill pill-time">3-4 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Skatteverket filings ready on time. No penalties. No stress.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Cash flow forecasting</div>
+        <div class="task-meta"><span class="pill pill-time">1 hr</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Predicts cash crunches before they happen. Plans equipment purchases with confidence.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Investor-ready financials</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Clean, professional documentation if investor or partner opportunities arise.</div>
+    </div>
+
+    <!-- CRM -->
+    <div class="cat">🎯 CRM & Lead Conversion <span class="cat-hrs">~11 hrs/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Daily CRM — leads, tagging, pipeline, comms</div>
+        <div class="task-meta"><span class="pill pill-time">2 hrs</span><span class="pill pill-freq">Every morning</span></div>
+        <div class="task-benefit">Check overnight leads, respond within 24h, tag/categorise, move through pipeline, handle patient comms. <strong style="color:#e8c170">Worth £336k/year in recovered conversions.</strong></div>
+    </div>
+    <div class="task">
+        <div class="task-name">Follow-up sequences (automated)</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs setup</span><span class="pill pill-freq">One-time</span></div>
+        <div class="task-benefit">Every patient gets consistent follow-up without manual effort. Recovers "on the fence" patients.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Consultation booking</div>
+        <div class="task-meta"><span class="pill pill-time">30 min</span><span class="pill pill-freq">As needed</span></div>
+        <div class="task-benefit">Patient gets a booking link or direct call. Reduces drop-off between enquiry and appointment.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Reactivation campaigns</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Resurrect leads who went quiet. 4 unresponded leads identified = £15-20k potential.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Patient intake forms</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">One-time setup</span></div>
+        <div class="task-benefit">Jessica gets clean, structured info before the patient arrives. Faster, more accurate intakes.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Review collection (automated)</div>
+        <div class="task-meta"><span class="pill pill-time">1 hr setup</span><span class="pill pill-freq">Automated</span></div>
+        <div class="task-benefit">More 5-star Google reviews = higher ranking = more organic leads. Compounding effect.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Weekly conversion report</div>
+        <div class="task-meta"><span class="pill pill-time">30 min</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">How many leads came in, how many converted, what stage each is at. Data-driven decisions.</div>
+    </div>
+
+    <!-- MARKETING -->
+    <div class="cat">🚀 Marketing, SEO & Content <span class="cat-hrs">~7 hrs/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Website updates</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Pricing, treatments, team, photos. New treatments added. Patient questions answered before they call.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">SEO content writing (Swedish + English)</div>
+        <div class="task-meta"><span class="pill pill-time">4-5 hrs/article</span><span class="pill pill-freq">1-2/month</span></div>
+        <div class="task-benefit">Blog posts from real patient questions. Written in Swedish AND English. Rank for "MARPE Sverige", "munandning barn Stockholm". Patients find the clinic organically.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Google Business Profile</div>
+        <div class="task-meta"><span class="pill pill-time">30 min</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Google Maps local results. Photos, posts, Q&A. Free patient acquisition.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Google Ads management</div>
+        <div class="task-meta"><span class="pill pill-time">2 hrs</span><span class="pill pill-freq">Weekly (if running)</span></div>
+        <div class="task-benefit">Targeted patient acquisition. Control spend, track ROI, scale what works.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Social media scheduling</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Instagram, Facebook. Consistent presence. Before/after photos. Educational content builds trust.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Email marketing</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Newsletter, patient education. Keeps clinic top-of-mind. Drives referrals and reactivations.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Website technical SEO</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Speed, schema, meta tags. Faster site, better rankings, more organic traffic. Zero-cost acquisition.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Lead magnet creation</div>
+        <div class="task-meta"><span class="pill pill-time">3-4 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Downloadable guides. "Free guide: Mouth breathing in children" captures emails and generates leads.</div>
+    </div>
+
+    <!-- SYSTEMS -->
+    <div class="cat">⚙️ Systems & Automation <span class="cat-hrs">~1.5 hrs/week ongoing</span></div>
+
+    <div class="task">
+        <div class="task-name">CRM workflow design</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">One-time</span></div>
+        <div class="task-benefit">Automated lead routing: new lead → auto-tagged → auto-assigned → auto-responded to. Zero manual delay.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Automated appointment reminders</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">One-time</span></div>
+        <div class="task-benefit">Reduces no-shows by 50-70%. Each saved appointment = recovered revenue.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Email/SMS template library</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">One-time</span></div>
+        <div class="task-benefit">Consistent, professional communication. Swedish, English, and Farsi templates ready.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Triage framework deployment</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">One-time training</span></div>
+        <div class="task-benefit">Jessica handles GREEN tier patients independently. Frees 10+ hours/month of Dr. Sia's time.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Process documentation (SOPs)</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Anyone can step in. Clinic doesn't depend on one person's knowledge.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Data backup & security</div>
+        <div class="task-meta"><span class="pill pill-time">30 min</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Patient data protected. GDPR compliant. Peace of mind.</div>
+    </div>
+
+    <!-- APP DEVELOPMENT -->
+    <div class="cat">💻 App & Tool Development <span class="cat-hrs">~10 hrs/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Patient training apps</div>
+        <div class="task-meta"><span class="pill pill-time">8-10 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Myofunctional exercise trackers, reflex integration guides. Improves compliance and outcomes. Differentiates clinic from competitors.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Patient education tools</div>
+        <div class="task-meta"><span class="pill pill-time">6-8 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Interactive guides on mouth breathing, jaw development, TMJ. Parents understand treatment before consultation. Higher conversion.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Internal clinic tools</div>
+        <div class="task-meta"><span class="pill pill-time">6-8 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Triage dashboards, patient tracking, staff workflows. Jessica and Dr. Sia save time on admin.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Lead magnet apps</div>
+        <div class="task-meta"><span class="pill pill-time">4-6 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Free self-assessment tools ("Is my child mouth breathing?"). Generates qualified leads automatically.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Progress tracking apps</div>
+        <div class="task-meta"><span class="pill pill-time">6-8 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Photo journals, symptom diaries, milestone trackers. Before/after evidence for marketing. Treatment outcome data.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Clinic website features</div>
+        <div class="task-meta"><span class="pill pill-time">4-6 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Online booking, payment portals, patient login area. Reduces phone calls. Professional image.</div>
+    </div>
+
+    <div class="info">
+        <strong>Already built:</strong> Myofunctional training app, carnivore health tracker, patient triage framework, lead analysis pipeline, automated security suite.<br>
+        <strong style="color:#e8c170">Pipeline:</strong> Patient self-assessment tool, Swedish exercise library, parent education portal, post-treatment progress tracker.
+    </div>
+
+    <!-- OPERATIONS -->
+    <div class="cat">🤝 Operations & Relationships <span class="cat-hrs">~3 hrs/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Supplier management</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Orders, pricing, relationships. Better rates, reliable supply, fewer stock-outs.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Partner/referral network</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">Monthly (on-site)</span></div>
+        <div class="task-benefit">GPs, ENTs, sleep clinics. Builds referral pipeline. ENTs who see airway issues send patients to you.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Team coordination</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Weekly</span></div>
+        <div class="task-benefit">Jessica, any future staff. Everyone aligned. Jessica knows what to handle vs escalate.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Stock control audit</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly (on-site)</span></div>
+        <div class="task-benefit">Identify expired, over-stocked, or running-low items. Prevent waste and shortages.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Patient experience mapping</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Walk through the entire patient journey. Find friction points. Improve experience.</div>
+    </div>
+
+    <!-- STRATEGY -->
+    <div class="cat">📈 Strategy & Growth <span class="cat-hrs">~1 hr/week</span></div>
+
+    <div class="task">
+        <div class="task-name">Revenue forecasting</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Monthly projections. Plan hiring, equipment, and expansion with confidence.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Capacity planning</div>
+        <div class="task-meta"><span class="pill pill-time">30-60 min</span><span class="pill pill-freq">Monthly</span></div>
+        <div class="task-benefit">Dr. Sia's clinical hours vs demand. Identify when another dentist or hygienist is needed.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Pricing strategy review</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">Ensure pricing reflects value. Identify underpriced services. Maximise margin.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Market analysis</div>
+        <div class="task-meta"><span class="pill pill-time">1-2 hrs</span><span class="pill pill-freq">Quarterly</span></div>
+        <div class="task-benefit">What competitors charge and offer. Position clinic competitively. Spot gaps in the market.</div>
+    </div>
+    <div class="task">
+        <div class="task-name">Expansion planning</div>
+        <div class="task-meta"><span class="pill pill-time">2-3 hrs</span><span class="pill pill-freq">As needed</span></div>
+        <div class="task-benefit">New services, second location. Structured roadmap for growth without overextending.</div>
+    </div>
+
+    <!-- TOTAL SUMMARY -->
+    <div class="hl" style="margin-top:20px;">
+        Total ongoing commitment: ~37 hours/week
+        <small>+ one-time setup tasks (systems, automations, templates, triage training)</small>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:10px;font-size:0.78rem;">
+        <div style="background:var(--bg);padding:10px;border-radius:8px;text-align:center;border:1px solid var(--border)">
+            <span style="color:var(--gold);font-weight:700;font-size:1.1rem;">~30 hrs</span><br>
+            <span style="color:var(--dim)">Remote weeks (Brighton)</span>
+        </div>
+        <div style="background:var(--bg);padding:10px;border-radius:8px;text-align:center;border:1px solid var(--border)">
+            <span style="color:var(--gold);font-weight:700;font-size:1.1rem;">~50+ hrs</span><br>
+            <span style="color:var(--dim)">On-site week (Stockholm)</span>
+        </div>
+    </div>
+</div>
+
+<!-- EXPERIENCE -->
+<div class="sec">
+    <div class="sec-title">Proven Experience</div>
+    <ul class="skills">
+        <li><span class="ck">✓</span> <span><strong>4 years managing Dr. Sia's previous dental practice</strong> — bookkeeping, patient coordination, operations</span></li>
+        <li><span class="ck">✓</span> <span><strong>Current role: Patient Growth Coordinator</strong> — lead conversion, patient journey, CRM</span></li>
+        <li><span class="ck">✓</span> <span><strong>Web development & SEO</strong> — built airwayclinic.se, cloud-hak.com, multiple client sites</span></li>
+        <li><span class="ck">✓</span> <span><strong>Automation specialist</strong> — GHL CRM expert, API integrations, workflow design</span></li>
+        <li><span class="ck">✓</span> <span><strong>Bookkeeping & credit control</strong> — bank reconciliation, invoicing, financial reporting</span></li>
+        <li><span class="ck">✓</span> <span><strong>Trilingual: English + Swedish + Farsi</strong></span></li>
+    </ul>
+</div>
+
+<!-- THE NUMBERS -->
+<div class="sec">
+    <div class="sec-title">The Opportunity in the CRM</div>
+    <div class="sec-sub">Based on analysis of all 201 leads (Feb–Jul 2026)</div>
+
+    <div class="metrics">
+        <div class="metric"><span class="n">201</span><span class="l">Leads</span></div>
+        <div class="metric"><span class="n">212</span><span class="l">Patients</span></div>
+        <div class="metric"><span class="n">£840k</span><span class="l">Pipeline</span></div>
+    </div>
+
+    <table class="tbl">
+        <thead><tr><th>Conversion</th><th>Revenue</th><th>Annualised</th></tr></thead>
+        <tbody>
+            <tr><td>90% (historical)</td><td><strong>£756k</strong></td><td><strong>£1.68M</strong></td></tr>
+            <tr><td>75% (realistic)</td><td>£630k</td><td>£1.4M</td></tr>
+            <tr><td>50% (conservative)</td><td>£420k</td><td>£933k</td></tr>
+        </tbody>
+    </table>
+
+    <div class="hl">
+        Every unresponded lead costs up to £10,000.
+        <small>My daily 2-hour CRM block = £336k/year in recovered conversions.</small>
+    </div>
+</div>
+
+<!-- ON-SITE WEEK -->
+<div class="sec">
+    <div class="sec-title">Week 1 — On-Site (Stockholm)</div>
+    <div class="sec-sub">7 days focused on what can only be done in person</div>
+
+    <div class="cat">Block 1: Finance & Systems</div>
+    <table class="tbl">
+        <thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+        <tbody>
+            <tr><td><strong>D1</strong></td><td>Arrive. Settle in.</td><td>Dinner + catch-up with Dr. Sia</td></tr>
+            <tr><td><strong>D2</strong></td><td>Bank reconciliation + invoices</td><td>Receipts + supplier review + stock</td></tr>
+            <tr><td><strong>D3</strong></td><td>Patient invoicing + credit control</td><td>CRM setup, automations, IT systems</td></tr>
+        </tbody>
+    </table>
+
+    <div class="cat">Block 2: Clinic & Relationships</div>
+    <table class="tbl">
+        <thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+        <tbody>
+            <tr><td><strong>D4</strong></td><td>Patient observation, shadow Jessica</td><td>Partner visits (GPs, ENTs, sleep clinics)</td></tr>
+            <tr><td><strong>D5</strong></td><td>Team alignment, triage training</td><td><strong>Monthly Finance Meeting</strong> ↓</td></tr>
+        </tbody>
+    </table>
+
+    <div class="cat">Block 3: Build & Plan</div>
+    <table class="tbl">
+        <thead><tr><th>Day</th><th>Morning</th><th>Afternoon</th></tr></thead>
+        <tbody>
+            <tr><td><strong>D6</strong></td><td>P&L + tax prep + investor financials</td><td>Website, SEO, content, marketing</td></tr>
+            <tr><td><strong>D7</strong></td><td>Analytics + plan remote weeks</td><td>Travel home</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- FINANCE MEETING -->
+<div class="sec">
+    <div class="sec-title">Monthly Finance Meeting</div>
+    <div class="sec-sub">Day 5 on-site · with Dr. Sia · 60 minutes · structured</div>
+
+    <div class="callout">
+        <div class="agenda-item">
+            <div class="agenda-time">0-10 min</div>
+            <div class="agenda-body"><strong>Revenue Review</strong><br><span>Income by treatment type. New patients, case values, deposits collected.</span></div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">10-20 min</div>
+            <div class="agenda-body"><strong>Expense Review</strong><br><span>Expenses by category. Supplier costs. Anomalies flagged. Month-over-month comparison.</span></div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">20-30 min</div>
+            <div class="agenda-body"><strong>Outstanding Receivables</strong><br><span>Who hasn't paid. Overdue invoices. Payment plans. Collection actions.</span></div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">30-40 min</div>
+            <div class="agenda-body"><strong>Pipeline Report</strong><br><span>New leads. Conversion rate. Where patients sit. Bottlenecks identified.</span></div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">40-50 min</div>
+            <div class="agenda-body"><strong>Capacity Planning</strong><br><span>Dr. Sia's clinical hours vs demand. Booking lead time. Urgent cases.</span></div>
+        </div>
+        <div class="agenda-item">
+            <div class="agenda-time">50-60 min</div>
+            <div class="agenda-body"><strong>Decisions & Next Steps</strong><br><span>Financial decisions. Next month's budget. Action items assigned.</span></div>
+        </div>
+    </div>
+
+    <div style="font-size:0.8rem;color:var(--dim);margin-top:8px;">
+        <strong style="color:#e0e0e8">I prepare:</strong> P&L statement, revenue breakdown, conversion report, invoice list, projections.<br>
+        <strong style="color:#e0e0e8">Dr. Sia reviews:</strong> Clinical priorities, capacity, staffing/equipment, strategy.
+    </div>
+</div>
+
+<!-- REMOTE WEEKS -->
+<div class="sec">
+    <div class="sec-title">Weeks 2–4 — Remote (Brighton)</div>
+    <div class="sec-sub">Daily CRM + structured focus blocks</div>
+
+    <div class="cat">Every Morning (2 hours)</div>
+    <ul class="skills">
+        <li><span class="ck">→</span> Check overnight leads (Swedish time ahead of UK)</li>
+        <li><span class="ck">→</span> Respond to every lead within 24 hours</li>
+        <li><span class="ck">→</span> Tag, categorise, route in CRM</li>
+        <li><span class="ck">→</span> Move patients through pipeline stages</li>
+        <li><span class="ck">→</span> Patient communications (email, SMS)</li>
+        <li><span class="ck">→</span> Follow up on pending consultations and outstanding replies</li>
+    </ul>
+
+    <div class="cat">Weekly Focus Blocks (in addition to daily 2hr CRM)</div>
+    <table class="tbl">
+        <thead><tr><th>Day</th><th>CRM Admin</th><th>Focus Block</th></tr></thead>
+        <tbody>
+            <tr><td><strong>Mon</strong></td><td>Follow-ups, appointments</td><td>3hrs: Sequences + review collection</td></tr>
+            <tr><td><strong>Tue</strong></td><td>Pipeline audit</td><td>3hrs: SEO + content writing</td></tr>
+            <tr><td><strong>Wed</strong></td><td>Bookings, new leads</td><td>3hrs: Marketing + Google Business</td></tr>
+            <tr><td><strong>Thu</strong></td><td>Patient comms</td><td>3hrs: Social media + outreach</td></tr>
+            <tr><td><strong>Fri</strong></td><td>Conversion report</td><td>3hrs: Financial analysis + admin</td></tr>
+            <tr><td><strong>Sat</strong></td><td>—</td><td>4-6hrs: Deep work — apps, content, systems</td></tr>
+            <tr><td><strong>Sun</strong></td><td>—</td><td>1-2hrs: Planning. Rest.</td></tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- WHAT SIA GETS -->
+<div class="sec">
+    <div class="sec-title">What Dr. Sia Gets</div>
+    <div class="vgrid">
+        <div class="vcard">
+            <div class="ic">🩺</div>
+            <h4>More Clinical Time</h4>
+            <p>All non-clinical work handled. Dr. Sia treats patients — nothing else.</p>
+        </div>
+        <div class="vcard">
+            <div class="ic">📊</div>
+            <h4>Clear Numbers</h4>
+            <p>Monthly P&L, forecasts, pipeline reports. Always knows where the business stands.</p>
+        </div>
+        <div class="vcard">
+            <div class="ic">⚡</div>
+            <h4>Faster Response</h4>
+            <p>Every lead answered within 24h. No more "is this clinic still open?" messages.</p>
+        </div>
+        <div class="vcard">
+            <div class="ic">🔧</div>
+            <h4>Systems That Scale</h4>
+            <p>CRM, automations, triage — the business runs even when no one's watching.</p>
+        </div>
+    </div>
+
+    <div class="hl" style="margin-top:16px;">
+        This reduces Dr. Sia's non-clinical workload and frees him to focus entirely on treating patients.
+    </div>
+</div>
+
+<!-- TRAVEL -->
+<div class="sec">
+    <div class="sec-title">Travel Logistics</div>
+    <table class="tbl">
+        <thead><tr><th>Detail</th><th>Info</th></tr></thead>
+        <tbody>
+            <tr><td>Route</td><td>Brighton → Gatwick → Stockholm Arlanda</td></tr>
+            <tr><td>Airlines</td><td>Norwegian, easyJet, SAS</td></tr>
+            <tr><td>Flight cost</td><td>£50–120 return</td></tr>
+            <tr><td>Flight time</td><td>~2.5 hours</td></tr>
+            <tr><td>Monthly cost</td><td>~£100</td></tr>
+        </tbody>
+    </table>
+    <div style="font-size:0.82rem;color:var(--green);text-align:center;margin-top:8px;">
+        One patient at £2,500 covers 2+ years of flights.
+    </div>
+</div>
+
+<!-- PRINCIPLE -->
+<div class="principle">
+    <div class="big">If it can be done from Brighton, it doesn't get done in Stockholm.</div>
+    <div class="small">On-site time is for physical documents, face-to-face relationships, patient observation, and the monthly finance meeting.</div>
+</div>
+
+<div class="foot">
+    Prepared for Dr. Sia Hakimmaani · Airway Clinic Stockholm<br>
+    Operations Plan · July 2026
+</div>
+
+</div>
+</body>
+</html>

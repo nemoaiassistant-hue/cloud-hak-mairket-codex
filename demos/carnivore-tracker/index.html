@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0f4c81">
+<title>Carnivore Reset</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== HOME / DASHBOARD ========== -->
+<div id="view-home" class="view active">
+    <div class="header">
+        <div class="header-title">Carnivore Reset</div>
+    </div>
+    <div class="content">
+
+        <!-- Day Counter Hero -->
+        <div class="hero-card">
+            <div class="hero-label">DAY</div>
+            <div class="hero-number" id="dayNumber">1</div>
+            <div class="hero-sub" id="daySub">of 30</div>
+            <div id="dayProgress" class="progress-bar"><div class="progress-fill"></div></div>
+        </div>
+
+        <!-- Streak + Quick Stats -->
+        <div class="stats-row">
+            <div class="stat-box">
+                <div class="stat-num" id="streakNum">0</div>
+                <div class="stat-label">Day Streak</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="weightDiff">--</div>
+                <div class="stat-label">Weight Chg</div>
+            </div>
+            <div class="stat-box">
+                <div class="stat-num" id="checkinCount">0</div>
+                <div class="stat-label">Check-ins</div>
+            </div>
+        </div>
+
+        <!-- Daily Tip -->
+        <div class="tip-card" id="dailyTip">
+            <div class="tip-icon">💡</div>
+            <div class="tip-text">Tap here to begin your journey</div>
+        </div>
+
+        <!-- Quick Check-in CTA -->
+        <button class="cta-btn" onclick="navTo('checkin')">
+            <span>📝</span> Daily Check-In
+        </button>
+
+        <!-- Photo Progress -->
+        <button class="cta-btn photo-cta" onclick="navTo('photos')">
+            <span>📷</span> Progress Photos
+        </button>
+
+        <!-- Supplements + Shopping List -->
+        <div class="quick-links">
+            <button class="link-btn" onclick="navTo('supplements')">💊 Supplements</button>
+            <button class="link-btn" onclick="navTo('shopping')">🛒 Shopping List</button>
+        </div>
+
+        <!-- Water Tracker -->
+        <div class="water-card">
+            <div class="water-header">
+                <span class="water-title">💧 Water Intake</span>
+                <span class="water-count"><span id="waterCount">0</span> / 8 glasses</span>
+            </div>
+            <div class="water-glasses" id="waterGlasses"></div>
+            <button class="water-add" onclick="addWater()">+ Add Glass</button>
+        </div>
+
+        <!-- Start Date Display -->
+        <div class="info-line" id="startDateInfo"></div>
+
+        <!-- Reset Button -->
+        <button class="reset-btn" onclick="resetApp()">Reset App</button>
+
+    </div>
+</div>
+
+<!-- ========== CHECK-IN ========== -->
+<div id="view-checkin" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Daily Check-In</div>
+    </div>
+    <div class="content">
+
+        <div class="checkin-day" id="checkinDayLabel">Day 1</div>
+
+        <div class="form-section">
+            <label class="form-label">Weight (kg)</label>
+            <input type="number" class="form-input" id="inputWeight" step="0.1" placeholder="e.g. 85.5">
+        </div>
+
+        <div class="form-section">
+            <label class="form-label">Energy Level</label>
+            <div class="rating-row" id="ratingEnergy">
+                <button class="rate-btn" data-val="1">1</button>
+                <button class="rate-btn" data-val="2">2</button>
+                <button class="rate-btn" data-val="3">3</button>
+                <button class="rate-btn" data-val="4">4</button>
+                <button class="rate-btn" data-val="5">5</button>
+                <button class="rate-btn" data-val="6">6</button>
+                <button class="rate-btn" data-val="7">7</button>
+                <button class="rate-btn" data-val="8">8</button>
+                <button class="rate-btn" data-val="9">9</button>
+                <button class="rate-btn" data-val="10">10</button>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label class="form-label">Mood</label>
+            <div class="rating-row" id="ratingMood">
+                <button class="rate-btn" data-val="1">1</button>
+                <button class="rate-btn" data-val="2">2</button>
+                <button class="rate-btn" data-val="3">3</button>
+                <button class="rate-btn" data-val="4">4</button>
+                <button class="rate-btn" data-val="5">5</button>
+                <button class="rate-btn" data-val="6">6</button>
+                <button class="rate-btn" data-val="7">7</button>
+                <button class="rate-btn" data-val="8">8</button>
+                <button class="rate-btn" data-val="9">9</button>
+                <button class="rate-btn" data-val="10">10</button>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <label class="form-label">Meals Eaten Today</label>
+            <textarea class="form-textarea" id="inputMeals" rows="3" placeholder="e.g. 3 eggs + bacon + cheese for breakfast, ribeye for dinner"></textarea>
+        </div>
+
+        <div class="form-section">
+            <label class="form-label">Notes</label>
+            <textarea class="form-textarea" id="inputNotes" rows="3" placeholder="How do you feel? Any cravings? Headaches? Energy changes?"></textarea>
+        </div>
+
+        <button class="cta-btn" onclick="saveCheckin()">Save Check-In</button>
+        <div class="save-msg" id="saveMsg"></div>
+
+    </div>
+</div>
+
+<!-- ========== PROGRESS / CHARTS ========== -->
+<div id="view-progress" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Your Progress</div>
+    </div>
+    <div class="content">
+
+        <div class="chart-card">
+            <div class="chart-title">⚖️ Weight Trend</div>
+            <canvas id="weightChart" width="340" height="180"></canvas>
+            <div class="chart-empty" id="weightEmpty">Log your weight daily to see your trend</div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title">⚡ Energy Level</div>
+            <canvas id="energyChart" width="340" height="150"></canvas>
+            <div class="chart-empty" id="energyEmpty">Check in daily to track your energy</div>
+        </div>
+
+        <div class="chart-card">
+            <div class="chart-title">😊 Mood Level</div>
+            <canvas id="moodChart" width="340" height="150"></canvas>
+            <div class="chart-empty" id="moodEmpty">Check in daily to track your mood</div>
+        </div>
+
+        <button class="cta-btn" onclick="exportProgress()">📸 Export Progress</button>
+        <div class="export-msg" id="exportMsg"></div>
+
+    </div>
+</div>
+
+<!-- ========== MEALS ========== -->
+<div id="view-meals" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Meal Plan</div>
+    </div>
+    <div class="content">
+
+        <div class="meal-intro">
+            Repeat this 7-day rotation 4 times = 30 days. Eat until you are FULL. Do not count calories.
+        </div>
+
+        <div id="mealContainer"></div>
+
+    </div>
+</div>
+
+<!-- ========== RULES ========== -->
+<div id="view-rules" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Food Rules</div>
+    </div>
+    <div class="content">
+
+        <div class="rules-section">
+            <div class="rules-header can">✅ CAN EAT</div>
+            <div id="canEatList"></div>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-header cant">❌ CANNOT EAT</div>
+            <div id="cannotEatList"></div>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-header drink">💧 DRINK</div>
+            <div id="drinkList"></div>
+        </div>
+
+        <div class="rules-section survival">
+            <div class="rules-header survival-title">⚠️ Days 2-5 Survival</div>
+            <div class="survival-body">
+                <p>Headaches, fatigue and cravings are NORMAL. Your body is switching from carbs to fat-burning.</p>
+                <p><strong>Fix:</strong> Eat MORE fat (butter on everything), add salt to food, drink more water, go to bed early.</p>
+                <p>Do NOT cheat — even one carb meal resets adaptation.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========== PHOTOS ========== -->
+<div id="view-photos" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Photo Progress</div>
+    </div>
+    <div class="content">
+
+        <div class="photo-intro">
+            Take a photo each week to see your transformation. Photos are stored on your device only.
+        </div>
+
+        <div id="photoGrid"></div>
+
+        <button class="cta-btn photo-cta" onclick="addPhoto()">📷 Add Photo</button>
+        <input type="file" id="photoInput" accept="image/*" style="display:none">
+
+    </div>
+</div>
+
+<!-- ========== REFLECTION ========== -->
+<div id="view-reflection" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Weekly Reflection</div>
+    </div>
+    <div class="content">
+
+        <div id="reflectionContainer"></div>
+
+    </div>
+</div>
+
+<!-- ========== SUPPLEMENTS ========== -->
+<div id="view-supplements" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Supplements</div>
+    </div>
+    <div class="content">
+
+        <div class="supp-intro">
+            Essential supplements for the carnivore diet. Days 2-5 will be brutal without electrolytes.
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-header can">💊 ESSENTIAL (Daily)</div>
+            <div id="suppEssential"></div>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-header drink">🧈 RECOMMENDED</div>
+            <div id="suppRecommended"></div>
+        </div>
+
+        <div class="rules-section">
+            <div class="rules-header cant">🚫 YOU DON'T NEED</div>
+            <div id="suppDontNeed"></div>
+        </div>
+
+        <div class="rules-section survival">
+            <div class="rules-header survival-title">⚡ Pro Tip</div>
+            <div class="survival-body">
+                <p>Search for <strong>"electrolyte powder"</strong> or <strong>"LMNT"</strong> on Amazon. Or use <strong>Lo-Salt</strong> from the supermarket (half sodium, half potassium) — cheap and effective.</p>
+                <p>Take magnesium <strong>before bed</strong> for better sleep. Take everything else with food.</p>
+                <p>Get a blood test before starting and after 30 days to compare. This shows you exactly what your body needs.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<!-- ========== SHOPPING LIST ========== -->
+<div id="view-shopping" class="view">
+    <div class="header">
+        <button class="back-btn" onclick="navTo('home')">←</button>
+        <div class="header-title">Shopping List</div>
+    </div>
+    <div class="content">
+
+        <div class="supp-intro">
+            Tap items to check them off. Your progress saves automatically.
+        </div>
+
+        <button class="reset-shop-btn" onclick="resetShopping()">🔄 Start New Shop</button>
+
+        <div id="shoppingContainer"></div>
+
+    </div>
+</div>
+
+<!-- ========== BOTTOM NAV ========== -->
+<div class="bottom-nav">
+    <button class="nav-btn active" onclick="navTo('home')">
+        <span class="nav-icon">🏠</span>
+        <span class="nav-label">Home</span>
+    </button>
+    <button class="nav-btn" onclick="navTo('checkin')">
+        <span class="nav-icon">📝</span>
+        <span class="nav-label">Check-In</span>
+    </button>
+    <button class="nav-btn" onclick="navTo('progress')">
+        <span class="nav-icon">📊</span>
+        <span class="nav-label">Progress</span>
+    </button>
+    <button class="nav-btn" onclick="navTo('meals')">
+        <span class="nav-icon">🥩</span>
+        <span class="nav-label">Meals</span>
+    </button>
+    <button class="nav-btn" onclick="navTo('rules')">
+        <span class="nav-icon">📋</span>
+        <span class="nav-label">Rules</span>
+    </button>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>

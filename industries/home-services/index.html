@@ -1,0 +1,870 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Home Services Marketing — Plumbers, Electricians, Roofers | Cloud Hak</title>
+  <meta name="description" content="AI-powered marketing for plumbers, electricians, roofers, and home service businesses. Never miss an emergency call again. Voice AI, instant quote qualification, Google Ads, and automated follow-ups — one system that wins you the job." />
+  <meta property="og:title" content="Home Services Marketing — Plumbers, Electricians, Roofers | Cloud Hak" />
+  <meta property="og:description" content="First to answer wins the job. Cloud Hak builds the full system — voice AI for emergency calls, instant quote bots, Google Ads for urgent searches, and CRM automations that close the loop on every lead." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.com/industries/home-services/" />
+  <link rel="canonical" href="https://cloud-hak.com/industries/home-services/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    :root {
+      --ink: #0A1A3A;
+      --ink-2: #1E3A5F;
+      --cream: #FAF7F2;
+      --paper: #FFFFFF;
+      --copper: #C08552;
+      --copper-light: #E8B88A;
+      --muted: #6B7280;
+      --muted-2: #9CA3AF;
+      --rule: #E5E1DA;
+      --font-display: 'Fraunces', serif;
+      --font-body: 'Inter', sans-serif;
+      --font-mono: 'JetBrains Mono', monospace;
+      --ease: cubic-bezier(.4,0,.2,1);
+      --r: 8px;
+      --r-sm: 6px;
+      --s-2: 8px;
+      --s-3: 12px;
+      --s-4: 16px;
+      --s-5: 24px;
+      --s-6: 32px;
+      --s-7: 48px;
+      --s-8: 64px;
+      --s-9: 96px;
+    }
+
+    /* ── Industry Hero ── */
+    .industry-hero {
+      padding: var(--s-9) 0 var(--s-8);
+      background: var(--cream);
+    }
+    .industry-hero .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+    .hero-breadcrumb {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: var(--s-5);
+    }
+    .hero-breadcrumb a {
+      color: var(--copper);
+      text-decoration: none;
+    }
+    .hero-breadcrumb a:hover { text-decoration: underline; }
+    .industry-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 6vw, 56px);
+      font-weight: 500;
+      color: var(--ink);
+      line-height: 1.1;
+      margin: 0 0 var(--s-5);
+    }
+    .industry-hero h1 em {
+      font-style: normal;
+      color: var(--copper);
+    }
+    .industry-hero .hero-lede {
+      font-family: var(--font-body);
+      font-size: clamp(16px, 2.5vw, 20px);
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 640px;
+      margin-bottom: var(--s-6);
+    }
+    .hero-actions {
+      display: flex;
+      gap: var(--s-4);
+      flex-wrap: wrap;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 14px 28px;
+      border-radius: var(--r);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .btn-primary {
+      background: var(--ink);
+      color: #fff;
+    }
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(10,26,58,.25);
+    }
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink);
+      border: 1px solid var(--rule);
+    }
+    .btn-ghost:hover {
+      border-color: var(--copper);
+      color: var(--copper);
+    }
+
+    /* ── Terminal (hero right) ── */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-8);
+      align-items: center;
+    }
+    @media (max-width: 768px) {
+      .hero-grid { grid-template-columns: 1fr; gap: var(--s-6); }
+    }
+
+    .term-bar {
+      display: flex;
+      align-items: center;
+      gap: var(--s-3);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--muted);
+      padding: var(--s-3) var(--s-4);
+      background: #1a1a2e;
+      border-radius: var(--r) var(--r) 0 0;
+    }
+    .term-bar-dots { display: flex; gap: 6px; }
+    .term-bar-dots i {
+      width: 10px; height: 10px; border-radius: 50%;
+      display: block;
+    }
+    .term-bar-dots i:nth-child(1) { background: #ff5f57; }
+    .term-bar-dots i:nth-child(2) { background: #febc2e; }
+    .term-bar-dots i:nth-child(3) { background: #28c840; }
+    .term-body {
+      background: #1a1a2e;
+      padding: var(--s-5);
+      border-radius: 0 0 var(--r) var(--r);
+      font-family: var(--font-mono);
+      font-size: 13px;
+      color: #e0e0e0;
+      line-height: 1.7;
+    }
+    .term-line { margin-bottom: var(--s-3); }
+    .term-prompt { color: var(--copper); margin-right: 8px; }
+    .term-cmd { color: #fff; }
+    .term-out { display: block; }
+    .term-ok { color: #28c840; }
+    .term-status {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      gap: 4px var(--s-4);
+      margin-top: var(--s-4);
+      padding-top: var(--s-4);
+      border-top: 1px solid rgba(255,255,255,.1);
+    }
+    .lbl { color: var(--copper); font-size: 11px; text-transform: uppercase; letter-spacing: .08em; }
+    .val { color: #ccc; font-size: 12px; }
+
+    /* ── Problem Section ── */
+    .section-problem {
+      background: var(--paper);
+      padding: var(--s-9) 0;
+    }
+    .problem-content {
+      max-width: 640px;
+    }
+    .problem-highlight {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-top: var(--s-5);
+    }
+    .problem-pains {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--s-3);
+      margin-top: var(--s-6);
+      list-style: none;
+      padding: 0;
+    }
+    .problem-pains li {
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+      padding: 8px 16px;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      color: var(--ink-2);
+      background: var(--cream);
+    }
+
+    /* ── How We Help Cards ── */
+    .section-help {
+      background: var(--cream);
+      padding: var(--s-9) 0;
+    }
+    .section-head {
+      max-width: 640px;
+      margin-bottom: var(--s-8);
+    }
+    .eyebrow {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin: 0 0 var(--s-3);
+    }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(24px, 4vw, 36px);
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-4);
+      line-height: 1.2;
+    }
+    .lede {
+      font-size: clamp(15px, 2vw, 17px);
+      color: var(--ink-2);
+      line-height: 1.65;
+      margin: 0;
+    }
+    .centered { text-align: center; margin-left: auto; margin-right: auto; }
+
+    .help-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-6);
+    }
+    @media (max-width: 768px) {
+      .help-grid { grid-template-columns: 1fr; gap: var(--s-5); }
+    }
+    .help-card {
+      padding: var(--s-7);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      background: var(--paper);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease), border-color 200ms var(--ease);
+    }
+    .help-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,26,58,.08);
+      border-color: var(--copper);
+    }
+    .help-card-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: var(--s-3);
+    }
+    .help-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .help-card .help-tagline {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+      margin-bottom: var(--s-5);
+    }
+    .help-features {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-3);
+    }
+    .help-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: var(--s-3);
+      font-size: 14px;
+      color: var(--ink-2);
+      line-height: 1.5;
+    }
+    .help-features li::before {
+      content: '✓';
+      font-family: var(--font-mono);
+      font-size: 12px;
+      color: var(--copper);
+      flex-shrink: 0;
+      margin-top: 2px;
+    }
+    .help-card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--s-2);
+      font-family: var(--font-mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--copper);
+      text-decoration: none;
+      margin-top: var(--s-5);
+      transition: gap 200ms var(--ease);
+    }
+    .help-card-link:hover { gap: var(--s-3); }
+    .help-card-link::after { content: '→'; }
+
+    /* ── System Flow ── */
+    .section-flow {
+      background: var(--ink);
+      padding: var(--s-9) 0;
+      color: #fff;
+    }
+    .section-flow .eyebrow { color: var(--copper-light); }
+    .section-flow .section-title { color: #fff; }
+    .section-flow .lede { color: rgba(255,255,255,.7); }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: var(--s-4);
+      margin-top: var(--s-7);
+    }
+    @media (max-width: 900px) {
+      .flow-steps { grid-template-columns: repeat(3, 1fr); }
+    }
+    @media (max-width: 600px) {
+      .flow-steps { grid-template-columns: 1fr; }
+    }
+    .flow-step {
+      padding: var(--s-6);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--r);
+      background: rgba(255,255,255,.04);
+    }
+    .flow-step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--copper-light);
+      margin-bottom: var(--s-3);
+    }
+    .flow-step h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: #fff;
+      margin: 0 0 var(--s-2);
+    }
+    .flow-step p {
+      font-size: 14px;
+      color: rgba(255,255,255,.6);
+      line-height: 1.55;
+      margin: 0;
+    }
+    .flow-arrow {
+      display: none;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: var(--copper);
+    }
+    @media (min-width: 769px) {
+      .flow-arrow { display: flex; }
+    }
+
+    /* ── CTA Section ── */
+    .section-cta {
+      background: var(--cream);
+      padding: var(--s-9) 0;
+      text-align: center;
+    }
+    .section-cta h2 {
+      font-family: var(--font-display);
+      font-size: clamp(28px, 4.5vw, 40px);
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-4);
+    }
+    .section-cta .lede {
+      max-width: 560px;
+      margin: 0 auto var(--s-6);
+    }
+    .cta-actions {
+      display: flex;
+      justify-content: center;
+      gap: var(--s-4);
+      flex-wrap: wrap;
+    }
+
+    /* ── Reveal animation ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(16px);
+      transition: opacity 0.5s var(--ease), transform 0.5s var(--ease);
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── Container utility ── */
+    .container {
+      max-width: 1080px;
+      margin: 0 auto;
+      padding: 0 var(--s-5);
+    }
+
+    /* ── Section utility ── */
+    .section {
+      padding: var(--s-9) 0;
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "name": "Home Services Marketing",
+      "description": "AI-powered marketing for plumbers, electricians, roofers, and home service businesses. Voice AI for emergency calls, instant quote qualification, Google Ads, and automated follow-ups.",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Cloud Hak",
+        "url": "https://cloud-hak.com",
+        "telephone": "+44 7800 920042",
+        "email": "info@cloud-hak.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brighton & Hove",
+          "addressRegion": "East Sussex",
+          "addressCountry": "GB"
+        }
+      },
+      "areaServed": {
+        "@type": "GeoCircle",
+        "geoMidpoint": {
+          "@type": "GeoCoordinates",
+          "latitude": 50.8225,
+          "longitude": -0.1372
+        },
+        "geoRadius": "50000"
+      }
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Cloud Hak help trades businesses get more jobs?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build a full marketing system — voice AI that answers emergency calls 24/7, AI chatbots that qualify leads and provide instant quotes, Google Ads targeting urgent local searches like 'emergency plumber near me', automated quote follow-ups, and review collection after every job completion."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the voice AI answer emergency calls for my plumbing business?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our voice AI answers every call instantly — day or night. It qualifies the job type (burst pipe, blocked drain, boiler breakdown), checks the customer's location against your service areas, assesses urgency, and either books the call-out immediately or queues it in your CRM. The customer never goes to voicemail."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What trades does Cloud Hak work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Plumbers, electricians, roofers, HVAC engineers, locksmiths, painters, decorators, landscapers, builders, handymen, drainage specialists, and boiler engineers. Any home service business where speed of response wins the job."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does home services marketing cost with Cloud Hak?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Full Stack for home services starts at £997 setup + £497/month. This includes website, AI chatbot, voice AI, Google Ads, SEO, CRM, and automations. Individual services start from £197. Every business gets a fixed-price proposal."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="announce">
+    <div class="container announce-row">
+      <div class="announce-left">
+        <span class="dot" aria-hidden="true"></span>
+        <span>Accepting new clients · Q2 2026</span>
+      </div>
+      <div class="announce-right">
+        <span><span class="k">Base</span> <span class="v">Brighton &amp; Hove</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">Reply</span> <span class="v">≤ 1 biz day</span></span>
+        <span class="sep" aria-hidden="true">·</span>
+        <span><span class="k">Open</span> <span class="v">04 / 12 open</span></span>
+      </div>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Cloud Hak home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-word">Cloud Hak</span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="/#stack">SERVICES</a>
+        <a href="/pricing/">PRICING</a>
+        <a href="/#approach">APPROACH</a>
+        <a href="/#contact">CONTACT</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+447800920042">07800 920042</a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- ═══ HERO ═══ -->
+    <section class="industry-hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="hero-breadcrumb reveal"><a href="/">Home</a> &gt; <a href="/#stack">Industries</a> &gt; Home Services</p>
+          <h1 class="reveal">Home Services Marketing — <em>When Someone Needs a Plumber, They Call the First One Who Answers</em></h1>
+          <p class="hero-lede reveal">Every missed call is a job your competitor just took. We build the system that answers instantly, qualifies the lead, books the call-out, and follows up until the job's done and the review's in. Speed wins. We make you first.</p>
+          <div class="hero-actions reveal">
+            <a href="/#contact" class="btn btn-primary">Get more call-outs</a>
+            <a href="tel:+447800920042" class="btn btn-ghost">Call us</a>
+          </div>
+        </div>
+        <aside class="reveal" aria-label="Home services marketing stats">
+          <div class="term-bar">
+            <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>home-services — dashboard.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">cloud-hak trades --status</span></div>
+            <span class="term-out"><b>Emergency calls answered</b>  <span class="term-ok">● 24/7</span></span>
+            <span class="term-out"><b>Average response time</b>&nbsp;&nbsp; <span class="term-ok">● &lt;3 sec</span></span>
+            <span class="term-out"><b>Quotes sent automatically</b>&nbsp; <span class="term-ok">● 94%</span></span>
+            <span class="term-out"><b>Jobs won from missed calls</b>&nbsp; <span class="term-ok">● +38%</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">channels --active</span></div>
+            <div class="term-status">
+              <span class="lbl">Platform</span><span class="val">GoHighLevel · Generate + Capture + Nurture</span>
+              <span class="lbl">Phone</span><span class="val accent">Voice AI — never goes to voicemail</span>
+              <span class="lbl">Lead capture</span><span class="val accent">Website · Chat · Phone · Google Ads — all synced</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══ THE PROBLEM ═══ -->
+    <section class="section-problem">
+      <div class="container">
+        <div class="problem-content">
+          <p class="eyebrow reveal">The problem</p>
+          <h2 class="section-title reveal">You're on site, under a sink, or up a ladder — and your phone rings. You miss it. That's the job gone.</h2>
+          <p class="lede reveal">Someone's got a burst pipe at midnight. They Google "emergency plumber near me" and call the first number that picks up. If that's not you, it's the other bloke. In home services, speed of response is the single biggest driver of winning jobs — and most trades businesses are set up to lose.</p>
+          <p class="problem-highlight reveal">Trades business owners are problem-solvers, not marketers. You shouldn't have to choose between answering the phone and finishing the job. That's what the system is for.</p>
+          <ul class="problem-pains reveal">
+            <li>Missed calls = lost jobs</li>
+            <li>Slow response = customer calls the next listing</li>
+            <li>No follow-up on quotes sent</li>
+            <li>Can't track which lead source wins jobs</li>
+            <li>Seasonal feast or famine</li>
+            <li>Voicemail instead of a booking</li>
+            <li>Zero review collection after completions</li>
+            <li>Quoting takes hours, not minutes</li>
+            <li>Emergency callouts go to competitors</li>
+            <li>No system for repeat maintenance work</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ HOW WE HELP ═══ -->
+    <section class="section-help">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">How we help</p>
+          <h2 class="section-title reveal">Every Cloud Hak service, mapped to your trade.</h2>
+          <p class="lede reveal">One platform, one system — from emergency search to completed job and five-star review. First to answer wins. We make sure that's always you.</p>
+        </div>
+
+        <div class="help-grid">
+          <!-- 01 — Website -->
+          <div class="help-card reveal">
+            <div class="help-card-num">01 — Website</div>
+            <h3>Your Digital Shop Front — Built to Win Call-Outs</h3>
+            <p class="help-tagline">A fast, trust-building website that converts visitors into call-outs. Not a brochure — a lead machine.</p>
+            <ul class="help-features">
+              <li>Emergency CTAs plastered everywhere — "Call now" button, tap-to-call on mobile, always visible</li>
+              <li>Service areas clearly listed — every postcode and town you cover</li>
+              <li>Trust signals front and centre — Gas Safe, NICEIC, CSCS badges, insurance docs, trade body logos</li>
+              <li>Instant quote form — "What's the problem? Where are you? When do you need us?"</li>
+              <li>Photo gallery of completed work — before/after shots that prove you're the real deal</li>
+              <li>Reviews embedded from Google — social proof that closes the deal before they even call</li>
+            </ul>
+            <a href="/services/websites/" class="help-card-link">See website service →</a>
+          </div>
+
+          <!-- 02 — AI Chatbot -->
+          <div class="help-card reveal">
+            <div class="help-card-num">02 — AI Chatbot</div>
+            <h3>Instant Quote Qualification — While You're on Site</h3>
+            <p class="help-tagline">AI that qualifies every lead on your website 24/7 — asking the right questions, giving rough estimates, booking the visit.</p>
+            <ul class="help-features">
+              <li>Qualifies every enquiry: "What's the issue? Where are you? When do you need it done?"</li>
+              <li>Provides instant rough estimates based on common job types — sets expectations, wins trust</li>
+              <li>Books emergency visits directly into your calendar while you're mid-job</li>
+              <li>Handles after-hours enquiries — 11pm burst pipe? The bot answers, qualifies, and queues it</li>
+              <li>Sends auto-confirmations with ETA, what to expect, and your contact details</li>
+              <li>Routes urgent jobs to you instantly via SMS alert — "Emergency call-out just booked in Brighton"</li>
+            </ul>
+            <a href="/services/chatbots/" class="help-card-link">See chatbot service →</a>
+          </div>
+
+          <!-- 03 — Voice AI -->
+          <div class="help-card reveal">
+            <div class="help-card-num">03 — Voice AI</div>
+            <h3>NEVER Miss an Emergency Call Again</h3>
+            <p class="help-tagline">AI answers your business phone, qualifies the job, and books the call-out — before your competitor even hears it ring.</p>
+            <ul class="help-features">
+              <li>Answers every single call — no voicemail, no missed opportunity, ever</li>
+              <li>Qualifies the job in seconds: type (plumbing/electrical/roofing), location, urgency level</li>
+              <li>Checks if the postcode is in your service area — no wasted call-outs to jobs you can't take</li>
+              <li>Books emergency visits immediately or queues them for first available slot</li>
+              <li>Transfers to you mid-call for complex jobs that need human judgement</li>
+              <li>Works 24/7 — 2am Sunday, Boxing Day bank holiday, doesn't matter</li>
+            </ul>
+            <a href="/services/voice-agents/" class="help-card-link">See voice AI service →</a>
+          </div>
+
+          <!-- 04 — Google Ads -->
+          <div class="help-card reveal">
+            <div class="help-card-num">04 — Google Ads</div>
+            <h3>Win the Searches That Mean "I Need Someone NOW"</h3>
+            <p class="help-tagline">Intent-rich, high-urgency keywords — the searches where someone has a problem and needs it fixed today.</p>
+            <ul class="help-features">
+              <li>"emergency plumber [city]" — someone's kitchen is flooding, they need you now</li>
+              <li>"roofer near me" — storm damage, slipped tile, leaking roof — urgent</li>
+              <li>"electrician [area]" — sockets not working, fuse tripped, rewiring needed</li>
+              <li>"boiler repair near me" — no heating, no hot water — they'll call the first result</li>
+              <li>"blocked drain [city]" — high-intent, ready to pay, wants someone today</li>
+              <li>Call-only ads with tap-to-call — skip the website, go straight to your Voice AI</li>
+            </ul>
+            <a href="/services/ads/" class="help-card-link">See ads service →</a>
+          </div>
+
+          <!-- 05 — SEO & AEO -->
+          <div class="help-card reveal">
+            <div class="help-card-num">05 — SEO &amp; AEO</div>
+            <h3>Rank for "How to Fix…" — and Become the Answer</h3>
+            <p class="help-tagline">Organic rankings that bring in jobs daily, plus AI-optimised content so ChatGPT recommends you when someone asks.</p>
+            <ul class="help-features">
+              <li>Rank for "how to fix a leaking tap" — they read your article, see you're local, call you</li>
+              <li>Featured snippets for "how much does a new boiler cost?" — you own the answer box</li>
+              <li>Local service-area pages — "plumber in Brighton", "electrician in Hove", "roofer in Lewes"</li>
+              <li>AEO optimisation — when AI assistants recommend trades, your name comes up</li>
+              <li>Blog content targeting seasonal searches — "boiler servicing before winter", "roof inspection after storms"</li>
+              <li>Google Maps 3-pack domination — the top 3 local results get 60% of all clicks</li>
+            </ul>
+            <a href="/services/seo/" class="help-card-link">See SEO service →</a>
+          </div>
+
+          <!-- 06 — Google Business -->
+          <div class="help-card reveal">
+            <div class="help-card-num">06 — Google Business Profile</div>
+            <h3>Your Reviews Are Your Best Sales Tool — We Manage Them</h3>
+            <p class="help-tagline">In the trades, reviews are everything. We optimise your profile so you look like the obvious choice before they even call.</p>
+            <ul class="help-features">
+              <li>Review generation — automated SMS after every job completion asking for a Google review</li>
+              <li>Review replies — respond to every review, positive and negative, fast and professionally</li>
+              <li>Q&amp;A section populated with the questions customers actually ask — and your answers</li>
+              <li>Emergency hours and availability clearly displayed — "24/7 emergency call-outs"</li>
+              <li>Weekly photo updates — completed jobs, team photos, van shots, before/after work</li>
+              <li>Service areas and categories fully optimised for Google Maps ranking</li>
+            </ul>
+            <a href="/services/gmb/" class="help-card-link">See Google Business service →</a>
+          </div>
+
+          <!-- 07 — CRM & Automations -->
+          <div class="help-card reveal">
+            <div class="help-card-num">07 — CRM &amp; Automations</div>
+            <h3>Every Lead Tracked, Every Quote Followed Up, Every Job Closed</h3>
+            <p class="help-tagline">From first enquiry to completed job — automated follow-ups that turn maybes into booked call-outs.</p>
+            <ul class="help-features">
+              <li>Quote follow-ups — automatic chase sequence if they don't respond within 24 hours</li>
+              <li>Job completion SMS — "Job done — satisfied with the work? Leave us a review here: [link]"</li>
+              <li>Seasonal maintenance reminders — "Your boiler service is due in October, book now"</li>
+              <li>Referral campaigns — "Know someone who needs a plumber? Refer them and get £20 off your next job"</li>
+              <li>Lead source tracking — know exactly which ads, searches, and channels bring in the best jobs</li>
+              <li>Unanswered quote alerts — if a quote sits for 48 hours, you get a nudge</li>
+            </ul>
+            <a href="/services/automation/" class="help-card-link">See automation service →</a>
+          </div>
+
+          <!-- 08 — Super Agents -->
+          <div class="help-card reveal">
+            <div class="help-card-num">08 — Super Agents</div>
+            <h3>AI Receptionist That Handles the Entire Job Pipeline</h3>
+            <p class="help-tagline">Not one tool — a full AI workforce that handles every emergency enquiry, routes jobs, follows up on quotes, and collects reviews.</p>
+            <ul class="help-features">
+              <li>Customer searches "emergency plumber" → clicks your ad → Voice AI answers, qualifies, books</li>
+              <li>Website enquiry at midnight → AI chatbot captures details, provides estimate, queues the job</li>
+              <li>Quote sent 3 days ago → AI follows up automatically, handles objections, re-books if needed</li>
+              <li>Job completed → automated review request, seasonal reminder queued, referral prompt sent</li>
+              <li>Full CRM pipeline managed — you see every lead, quote, and job in one dashboard</li>
+            </ul>
+            <a href="/ai-workforce/" class="help-card-link">See AI workforce →</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ WHAT YOU GET — SYSTEM FLOW ═══ -->
+    <section class="section-flow">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">What you get</p>
+          <h2 class="section-title reveal">The full system — emergency search to next-season reminder.</h2>
+          <p class="lede reveal">Every channel connected. Every call answered. Every lead tracked. Here's how a customer flows through your Cloud Hak system from the moment their pipe bursts.</p>
+        </div>
+
+        <div class="flow-steps reveal">
+          <div class="flow-step">
+            <div class="flow-step-num">01 — Search</div>
+            <h3>They need help NOW</h3>
+            <p>Burst pipe, blown fuse, leaking roof — they Google "emergency plumber near me" or "roofer [city]". Your Google Ad shows up first, or they find your Google Business Profile. They call or click.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">02 — Answer</div>
+            <h3>AI answers in seconds</h3>
+            <p>Voice AI picks up the phone instantly — no ring, no voicemail. It qualifies the job: type, location, urgency. If it's a web enquiry, the chatbot captures details and gives a rough estimate on the spot.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">03 — Book</div>
+            <h3>Call-out booked</h3>
+            <p>Job booked into your calendar. Confirmation SMS sent to the customer with your number and ETA. You get an alert — "Emergency plumbing job booked in Brighton, ETA needed within 2 hours."</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">04 — Complete</div>
+            <h3>Job done, review collected</h3>
+            <p>Work completed. Automated SMS goes out: "Job done — happy with the work? Leave us a review: [link]." Review appears on Google. Your profile strength climbs. Next customer sees five stars and calls.</p>
+          </div>
+          <div class="flow-step">
+            <div class="flow-step-num">05 — Retain</div>
+            <h3>Next season, they call you</h3>
+            <p>Boiler service reminder hits their phone in October. Gutter check reminder before winter. Roof inspection after storm season. Referral prompt: "Know someone who needs work? We'll sort them out." One job becomes ten.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══ CTA ═══ -->
+    <section class="section-cta">
+      <div class="container">
+        <p class="eyebrow reveal">Ready to stop losing jobs to missed calls?</p>
+        <h2 class="reveal">Let's talk about your trade.</h2>
+        <p class="lede reveal">Tell us what you do, where you work, and what's leaking through the cracks right now. We'll send a clear plan within 3 business days — no jargon, no bull.</p>
+        <div class="cta-actions reveal">
+          <a href="/#contact" class="btn btn-primary">Start a project</a>
+          <a href="tel:+447800920042" class="btn btn-ghost">Call 07800 920042</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ops">
+        <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
+        <span>Last deploy: June 2026</span>
+        <span>Build v2.0</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Cloud Hak home">
+            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <span class="brand-word">Cloud Hak</span>
+          </a>
+          <p class="footer-tag">GoHighLevel-powered marketing for local business. Ads, AI, CRM, and automation — one platform to bring you more customers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/websites/">Web Design &amp; Development</a></li>
+            <li><a href="/services/chatbots/">AI Chatbots</a></li>
+            <li><a href="/services/voice-agents/">AI Voice Agents</a></li>
+            <li><a href="/services/seo/">SEO</a></li>
+            <li><a href="/services/aeo/">AEO</a></li>
+            <li><a href="/services/gmb/">Google Business Profile</a></li>
+            <li><a href="/services/ads/">Google &amp; Social Ads</a></li>
+            <li><a href="/services/automation/">Automation</a></li>
+            <li><a href="/services/crm/">CRM Setup &amp; Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/">About</a></li>
+            <li><a href="/#approach">Approach</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+447800920042">Phone</a></li>
+            <li><a href="mailto:info@cloud-hak.com">Email</a></li>
+            <li><a href="https://wa.me/447800920042">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-foot">
+        <p>&copy; 2026 Cloud Hak</p>
+        <p>// Built with AI, delivered by humans.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/chatbot.js" defer></script>
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); e.target.style.opacity = 1; e.target.style.transform = 'none'; }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+</body>
+</html>

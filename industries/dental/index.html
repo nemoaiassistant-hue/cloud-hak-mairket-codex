@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Hak | Dental Practice Marketing — AI-Powered Patient Acquisition</title>
+  <meta name="description" content="Fill your chairs with AI-powered marketing for dental practices. Websites, chatbots, voice agents, Google Ads, SEO, and CRM — one system built to bring you more patients." />
+  <meta property="og:title" content="Cloud Hak | Dental Practice Marketing — AI-Powered Patient Acquisition" />
+  <meta property="og:description" content="Fill your chairs with AI-powered marketing. Websites, chatbots, voice AI, Google Ads, SEO, and CRM — one system for dental practices." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.com/industries/dental/" />
+  <link rel="canonical" href="https://cloud-hak.com/industries/dental/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    /* ---------- DENTAL INDUSTRY PAGE ---------- */
+    .hero-dental { position: relative; }
+    .hero-dental::after {
+      content: "";
+      position: absolute;
+      top: -40px; right: -40px;
+      width: 280px; height: 280px;
+      background: radial-gradient(circle, rgba(192,133,82,0.08) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+
+    .section-problem { background: var(--paper); padding: var(--s-9) 0; }
+    .problem-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-5);
+      margin-top: var(--s-7);
+    }
+    .problem-item {
+      padding: var(--s-6);
+      background: var(--cream);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      border-left: 3px solid var(--copper-2);
+    }
+    .problem-item h3 {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-3);
+      line-height: 1.3;
+    }
+    .problem-item p {
+      font-size: 14px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0;
+    }
+
+    .dental-cards {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: var(--s-5);
+    }
+    .dental-card {
+      padding: var(--s-7) var(--s-6) var(--s-6);
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      position: relative;
+      transition: transform 240ms var(--ease), box-shadow 240ms var(--ease), border-color 240ms var(--ease);
+    }
+    .dental-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 36px -22px rgba(10,26,58,0.18);
+      border-color: var(--copper);
+    }
+    .dental-card-num {
+      font-family: var(--font-mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin: 0 0 var(--s-3);
+    }
+    .dental-card h3 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 22px;
+      letter-spacing: -0.01em;
+      margin: 0 0 var(--s-3);
+      color: var(--ink);
+      line-height: 1.22;
+    }
+    .dental-card h3 a {
+      color: var(--ink);
+      text-decoration: none;
+      transition: color 200ms var(--ease);
+    }
+    .dental-card h3 a:hover { color: var(--copper); }
+    .dental-card p {
+      font-size: 14.5px;
+      line-height: 1.6;
+      color: var(--muted);
+      margin: 0 0 var(--s-5);
+    }
+    .dental-card-benefit {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.06em;
+      color: var(--live);
+      background: var(--live-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 12px;
+      border-radius: 999px;
+    }
+    .dental-card-benefit::before { content: "✓"; font-weight: 600; }
+
+    .pipeline-flow {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0;
+      margin: var(--s-8) auto 0;
+      max-width: 800px;
+      flex-wrap: wrap;
+    }
+    .pipeline-step {
+      text-align: center;
+      padding: var(--s-5) var(--s-4);
+      flex: 1;
+      min-width: 140px;
+    }
+    .pipeline-step-icon {
+      font-size: 32px;
+      margin-bottom: var(--s-3);
+      display: block;
+    }
+    .pipeline-step h4 {
+      font-family: var(--font-display);
+      font-weight: 500;
+      font-size: 18px;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .pipeline-step p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0;
+      line-height: 1.5;
+    }
+    .pipeline-arrow {
+      font-family: var(--font-mono);
+      font-size: 20px;
+      color: var(--copper);
+      flex-shrink: 0;
+      padding-top: var(--s-4);
+    }
+
+    .section-cta-band {
+      background: var(--ink);
+      color: var(--cream);
+      padding: var(--s-9) 0;
+      text-align: center;
+    }
+    .section-cta-band .eyebrow { color: var(--champagne); justify-content: center; }
+    .section-cta-band .eyebrow::before { color: rgba(255,255,255,0.35); }
+    .section-cta-band h2 {
+      font-family: var(--font-display);
+      font-size: clamp(30px, 4.2vw, 48px);
+      font-weight: 400;
+      color: var(--cream);
+      margin: var(--s-4) 0 var(--s-6);
+      letter-spacing: -0.02em;
+    }
+    .section-cta-band .cta-actions {
+      display: flex;
+      gap: var(--s-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+    .btn-copper { background: var(--copper); color: var(--cream); border-color: var(--copper); }
+    .btn-copper:hover { background: var(--copper-2); border-color: var(--copper-2); }
+
+    .dental-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--s-5);
+      margin-top: var(--s-7);
+    }
+    .dental-stat {
+      text-align: center;
+      padding: var(--s-5);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      background: var(--cream);
+    }
+    .dental-stat-num {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4vw, 48px);
+      font-weight: 500;
+      color: var(--copper);
+      display: block;
+      line-height: 1.1;
+    }
+    .dental-stat-label {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: var(--s-2);
+      display: block;
+    }
+
+    .dental-faq-list {
+      max-width: 720px;
+      margin: var(--s-7) auto 0;
+      padding: 0;
+    }
+    .dental-faq-item {
+      border-bottom: 1px solid var(--rule);
+      padding: var(--s-5) 0;
+    }
+    .dental-faq-item:first-child { border-top: 1px solid var(--rule); }
+    .dental-faq-item summary {
+      font-family: var(--font-display);
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--ink);
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--s-4);
+    }
+    .dental-faq-item summary::-webkit-details-marker { display: none; }
+    .dental-faq-item summary::after {
+      content: "+";
+      font-family: var(--font-mono);
+      font-size: 18px;
+      color: var(--copper);
+      flex-shrink: 0;
+    }
+    .dental-faq-item[open] summary::after { content: "−"; }
+    .dental-faq-item p {
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--muted);
+      margin: var(--s-4) 0 0;
+      max-width: 640px;
+    }
+
+    @media (max-width: 1024px) {
+      .dental-cards { grid-template-columns: 1fr; }
+      .problem-grid { grid-template-columns: 1fr; }
+      .dental-stats { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 720px) {
+      .pipeline-flow { flex-direction: column; gap: 0; }
+      .pipeline-arrow { transform: rotate(90deg); padding: 0; }
+      .pipeline-step {
+        min-width: auto;
+        border-bottom: 1px solid var(--rule);
+        padding-bottom: var(--s-6);
+      }
+      .pipeline-step:last-child { border-bottom: 0; }
+      .hero-dental::after { display: none; }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Cloud Hak — Dental Practice Marketing",
+      "description": "AI-powered marketing for dental practices. Websites, chatbots, voice agents, Google Ads, SEO, CRM, and automation — one system to fill your chairs with new patients.",
+      "url": "https://cloud-hak.com/industries/dental/",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Cloud Hak",
+        "url": "https://cloud-hak.com",
+        "telephone": "+44 7800 920042",
+        "email": "info@cloud-hak.com",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Brighton & Hove",
+          "addressRegion": "East Sussex",
+          "addressCountry": "GB"
+        }
+      },
+      "medicalSpecialty": "Dentistry",
+      "serviceType": ["Dental Marketing", "Patient Acquisition", "Practice Growth"]
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Cloud Hak help dental practices get more patients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build a complete patient acquisition system — Google Ads targeting dental searches in your area, a website that converts visitors into booked appointments, AI chatbots and voice agents that handle enquiries 24/7, SEO so you rank for treatments like teeth whitening and Invisalign, and automated recall campaigns to bring patients back."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can AI really handle dental patient calls?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Our AI voice agent answers calls 24/7, recognises dental emergencies vs. routine enquiries, answers common questions about treatments and pricing, and books appointments directly into your calendar. It hands complex cases to your team seamlessly."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How much does dental practice marketing cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Full Stack for dental practices starts at £997 setup + £497/month. This includes website, chatbot, voice AI, Google Ads, SEO, CRM, and automation. Every project gets a fixed-price proposal — no hourly billing."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly will I see new patients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Google Ads can start driving patient enquiries within days of launch. SEO typically shows results in 4–8 weeks. The AI chatbot and voice agent can capture leads from day one. Most dental practices see a measurable increase in booked appointments within the first 60 days."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="announce">
+    <div class="container announce-row">
+      <div class="announce-left"><span class="dot" aria-hidden="true"></span><span>Accepting new clients · Q2 2026</span></div>
+      <div class="announce-right"><span><span class="k">Base</span> <span class="v">Brighton &amp; Hove</span></span><span class="sep" aria-hidden="true">·</span><span><span class="k">Reply</span> <span class="v">≤ 1 biz day</span></span><span class="sep" aria-hidden="true">·</span><span><span class="k">Open</span> <span class="v">04 / 12 open</span></span></div>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Cloud Hak home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-word">Cloud Hak</span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="/#stack">SERVICES</a>
+        <a href="/pricing/">PRICING</a>
+        <a href="/#approach">APPROACH</a>
+        <a href="/#contact">CONTACT</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+447800920042">07800 920042</a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero hero-dental">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><a href="/">Home</a> &gt; Industries &gt; Dental Practices</p>
+          <h1 class="hero-title reveal">
+            Fill your chairs.<br />
+            Keep them full.<br />
+            <span class="caret">Let AI do the work.</span>
+          </h1>
+          <p class="hero-lede reveal">Dental practice marketing that actually works. AI-powered patient acquisition — from Google search to booked appointment — running 24/7 so you can focus on clinical care.</p>
+          <div class="hero-actions reveal">
+            <a href="#contact" class="btn btn-primary btn-lg">Get a free growth plan</a>
+            <a href="tel:+447800920042" class="btn btn-ghost btn-lg">Call us now</a>
+          </div>
+          <ul class="hero-meta reveal" role="list">
+            <li><span class="meta-k">Built for</span><span class="meta-v">Dental practices</span></li>
+            <li><span class="meta-k">Platform</span><span class="meta-v">GoHighLevel</span></li>
+            <li><span class="meta-k">Response</span><span class="meta-v">≤ 1 biz day</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-terminal reveal" aria-label="Dental practice marketing snapshot">
+          <div class="term-bar"><span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span><span>dental — growth.sh</span></div>
+          <div class="term-body">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">cloud-hak dental --dashboard</span></div>
+            <span class="term-out"><b>New patient enquiries</b>&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 67 this month</span></span>
+            <span class="term-out"><b>Calls answered by AI</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 43 (after hours)</span></span>
+            <span class="term-out"><b>No-shows reduced</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 62% fewer</span></span>
+            <span class="term-out"><b>5-star reviews earned</b>&nbsp;&nbsp;&nbsp; <span class="term-ok">● 18 new</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">status --pipeline</span></div>
+            <div class="term-status">
+              <span class="lbl">Stack</span><span class="val">Full Stack — Dental</span>
+              <span class="lbl">Channels</span><span class="val accent">Ads + Chat + Voice + SEO + CRM</span>
+              <span class="lbl">Uptime</span><span class="val accent">24/7 — never misses a lead</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============ THE PROBLEM ============ -->
+    <section class="section-problem">
+      <div class="container">
+        <p class="eyebrow reveal">The problem</p>
+        <h2 class="display-title reveal">Dental practices leak patients at every stage. Here's where it happens.</h2>
+        <p class="lede reveal">You've invested years in clinical skills. But marketing your practice feels like a second job — and you're probably doing it alone. Here's what we see most often.</p>
+        <div class="problem-grid">
+          <div class="problem-item reveal">
+            <h3>Missed calls after hours</h3>
+            <p>Patients search for a dentist at 9pm after a filling falls out. If nobody answers, they call the next practice. Every missed call is a patient lost to a competitor.</p>
+          </div>
+          <div class="problem-item reveal">
+            <h3>Empty chairs, booked hours</h3>
+            <p>Your hygiene schedule has gaps. Your associate's chair sits idle on Tuesdays. Meanwhile, you're turning away NHS patients and wondering where the private enquiries went.</p>
+          </div>
+          <div class="problem-item reveal">
+            <h3>No patient recall system</h3>
+            <p>Patients who completed treatment six months ago have heard nothing from you. No check-up reminder. No hygiene recall. They've already found another practice — you just don't know it yet.</p>
+          </div>
+          <div class="problem-item reveal">
+            <h3>Invisible on Google</h3>
+            <p>Someone searches "Invisalign near me" or "emergency dentist [your town]" — and your practice doesn't show up. That patient booked with the practice that did.</p>
+          </div>
+          <div class="problem-item reveal">
+            <h3>No-shows eating your day</h3>
+            <p>A patient no-shows a 45-minute appointment slot. That's revenue gone, and you can't fill it at short notice. No automated reminders, no rebooking workflow.</p>
+          </div>
+          <div class="problem-item reveal">
+            <h3>Few Google reviews</h3>
+            <p>Your competitors have 200+ five-star reviews. You have 23 — and half are from 2019. New patients check reviews before booking. Your score is costing you patients.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW WE HELP — SERVICE CARDS ============ -->
+    <section class="section section-work" id="services">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">How we help</p>
+          <h2 class="section-title reveal">Every Cloud Hak service, mapped to your dental practice.</h2>
+          <p class="lede centered reveal">Not generic marketing — every service configured specifically for patient acquisition, chair filling, and practice growth.</p>
+        </div>
+
+        <ul class="dental-cards" role="list">
+          <!-- 01 Website -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">01 — Generate</span>
+            <h3><a href="/services/websites/">Practice Website</a></h3>
+            <p>A fast, mobile-first website that showcases your treatments, team, and before-and-after results. Online booking built in. Pages optimised for "dentist near me", "teeth whitening [your town]", and "Invisalign cost" — so searchers find you, not your competitor.</p>
+            <span class="dental-card-benefit">Online booking + treatment pages</span>
+          </li>
+
+          <!-- 02 Chatbot -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">02 — Capture</span>
+            <h3><a href="/services/chatbots/">AI Chatbot</a></h3>
+            <p>A 24/7 patient assistant on your website. Answers questions about treatments (whitening, implants, braces), explains pricing ranges, checks appointment availability, and books directly into your calendar — even at 11pm on a Sunday. Trained on your practice information.</p>
+            <span class="dental-card-benefit">Booked patients while you sleep</span>
+          </li>
+
+          <!-- 03 Voice AI -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">03 — Capture</span>
+            <h3><a href="/services/voice-agents/">Voice AI</a></h3>
+            <p>Never miss an emergency call again. AI answers phone calls 24/7, recognises dental emergencies vs. routine enquiries, answers common questions about availability and treatments, and books appointments instantly. Complex cases are transferred to your team seamlessly.</p>
+            <span class="dental-card-benefit">Zero missed calls — even emergencies</span>
+          </li>
+
+          <!-- 04 Google Ads -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">04 — Generate</span>
+            <h3><a href="/services/ads/">Google Ads</a></h3>
+            <p>Paid campaigns targeting high-intent dental searches: "dentist near me", "emergency dentist [city]", "teeth whitening cost", "Invisalign [area]", "dental implants near me". Every click tracked, every lead captured. You only pay for clicks from people actively looking for a dentist.</p>
+            <span class="dental-card-benefit">High-intent patient enquiries</span>
+          </li>
+
+          <!-- 05 SEO/AEO -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">05 — Generate</span>
+            <h3><a href="/services/seo/">SEO &amp; AEO</a></h3>
+            <p>Rank organically for the treatments your patients search for. Local SEO so you appear in the Google 3-pack for "dentist [your area]". AEO (Answer Engine Optimisation) so when someone asks ChatGPT "what's the best dentist in [town]", your practice is the answer.</p>
+            <span class="dental-card-benefit">Found on Google + AI assistants</span>
+          </li>
+
+          <!-- 06 Google Business -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">06 — Generate</span>
+            <h3><a href="/services/gmb/">Google Business Profile</a></h3>
+            <p>Your Google Business Profile is the first thing patients see when they search for a dentist. We optimise your listing, post treatment updates, manage photos of your practice and team, respond to reviews, and answer Q&A — so your profile converts searchers into callers.</p>
+            <span class="dental-card-benefit">First impression = booked appointment</span>
+          </li>
+
+          <!-- 07 CRM & Automations -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">07 — Nurture</span>
+            <h3><a href="/services/crm/">CRM &amp; Automations</a></h3>
+            <p>Automated appointment reminders (SMS + email) that cut no-shows. Patient recall campaigns that bring people back for hygiene visits and check-ups. Treatment follow-ups that turn "interested" into "booked". All running in the background, personalised, and on schedule.</p>
+            <span class="dental-card-benefit">Automated recalls + fewer no-shows</span>
+          </li>
+
+          <!-- 08 Super Agents -->
+          <li class="dental-card reveal">
+            <span class="dental-card-num">08 — All stages</span>
+            <h3><a href="/#stack">Super Agents</a></h3>
+            <p>An AI workforce that handles the entire patient journey end-to-end. From first enquiry to booked appointment to post-treatment follow-up. Super Agents manage lead qualification, appointment scheduling, recall campaigns, review requests, and treatment plan follow-ups — all without manual input from your team.</p>
+            <span class="dental-card-benefit">AI workforce for your practice</span>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WHAT YOU GET — FULL SYSTEM ============ -->
+    <section class="section section-positioning">
+      <div class="container">
+        <div class="two-col">
+          <div class="col-label">
+            <p class="eyebrow">What you get</p>
+          </div>
+          <div class="col-body">
+            <h2 class="display-title reveal">The full system: leads → capture → nurture → booked patient.</h2>
+            <p class="lede reveal">Not eight disconnected tools. One integrated system that moves a patient from "searching Google" to "sat in your chair" without anything falling through the cracks.</p>
+
+            <div class="pipeline-flow">
+              <div class="pipeline-step reveal">
+                <span class="pipeline-step-icon">🔍</span>
+                <h4>Leads</h4>
+                <p>Patient finds you on Google, Google Ads, or social</p>
+              </div>
+              <span class="pipeline-arrow reveal">→</span>
+              <div class="pipeline-step reveal">
+                <span class="pipeline-step-icon">🤖</span>
+                <h4>Capture</h4>
+                <p>AI chatbot or voice agent engages and qualifies instantly</p>
+              </div>
+              <span class="pipeline-arrow reveal">→</span>
+              <div class="pipeline-step reveal">
+                <span class="pipeline-step-icon">📋</span>
+                <h4>Book</h4>
+                <p>Appointment booked into your calendar automatically</p>
+              </div>
+              <span class="pipeline-arrow reveal">→</span>
+              <div class="pipeline-step reveal">
+                <span class="pipeline-step-icon">🔄</span>
+                <h4>Nurture</h4>
+                <p>Reminders, recalls, and follow-ups keep them coming back</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="section" style="background:var(--cream-2);">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">The impact</p>
+          <h2 class="section-title reveal">What a well-marketed dental practice looks like.</h2>
+        </div>
+        <div class="dental-stats">
+          <div class="dental-stat reveal">
+            <span class="dental-stat-num">62%</span>
+            <span class="dental-stat-label">Reduction in no-shows</span>
+          </div>
+          <div class="dental-stat reveal">
+            <span class="dental-stat-num">3×</span>
+            <span class="dental-stat-label">More patient enquiries</span>
+          </div>
+          <div class="dental-stat reveal">
+            <span class="dental-stat-num">24/7</span>
+            <span class="dental-stat-label">Lead capture — day and night</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section section-positioning">
+      <div class="container">
+        <div class="two-col">
+          <div class="col-label">
+            <p class="eyebrow">FAQ</p>
+          </div>
+          <div class="col-body">
+            <h2 class="display-title reveal">Common questions from dental practices</h2>
+            <div class="dental-faq-list">
+              <details class="dental-faq-item reveal">
+                <summary>How does Cloud Hak help dental practices get more patients?</summary>
+                <p>We build a complete patient acquisition system — Google Ads targeting dental searches in your area, a website that converts visitors into booked appointments, AI chatbots and voice agents that handle enquiries 24/7, SEO so you rank for treatments like teeth whitening and Invisalign, and automated recall campaigns to bring patients back.</p>
+              </details>
+              <details class="dental-faq-item reveal">
+                <summary>Can AI really handle dental patient calls?</summary>
+                <p>Yes. Our AI voice agent answers calls 24/7, recognises dental emergencies vs. routine enquiries, answers common questions about treatments and pricing, and books appointments directly into your calendar. It hands complex cases to your team seamlessly.</p>
+              </details>
+              <details class="dental-faq-item reveal">
+                <summary>How much does dental practice marketing cost?</summary>
+                <p>Full Stack for dental practices starts at £997 setup + £497/month. This includes website, chatbot, voice AI, Google Ads, SEO, CRM, and automation. Every project gets a fixed-price proposal — no hourly billing.</p>
+              </details>
+              <details class="dental-faq-item reveal">
+                <summary>How quickly will I see new patients?</summary>
+                <p>Google Ads can start driving patient enquiries within days of launch. SEO typically shows results in 4–8 weeks. The AI chatbot and voice agent can capture leads from day one. Most dental practices see a measurable increase in booked appointments within the first 60 days.</p>
+              </details>
+              <details class="dental-faq-item reveal">
+                <summary>Do you work with NHS practices, private practices, or both?</summary>
+                <p>Both. We tailor the strategy — NHS practices often need high volume at lower acquisition cost, while private practices focus on high-value treatments like implants, Invisalign, and cosmetic work. The system adapts to your model.</p>
+              </details>
+              <details class="dental-faq-item reveal">
+                <summary>Will this work alongside my existing practice management software?</summary>
+                <p>Yes. Cloud Hak's system integrates with your calendar and practice management tools. We set it up so bookings flow into your existing schedule without disruption.</p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ CTA ============ -->
+    <section class="section-cta-band" id="contact">
+      <div class="container">
+        <p class="eyebrow reveal">Ready to fill your chairs?</p>
+        <h2 class="reveal">Get a free practice growth plan.</h2>
+        <p class="lede centered reveal" style="color:rgba(255,255,255,0.7);margin:0 auto var(--s-7);">Tell us about your practice — we'll send a clear, specific plan for getting you more patients. No jargon, no obligation, no hard sell.</p>
+        <div class="cta-actions reveal">
+          <a href="/#contact" class="btn btn-primary btn-lg btn-copper">Get your free plan</a>
+          <a href="tel:+447800920042" class="btn btn-ghost btn-lg" style="color:var(--cream);border-color:rgba(255,255,255,0.3);">Call 07800 920042</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ops">
+        <span class="ops-cell"><span class="live-dot" aria-hidden="true"></span><b>All systems operational</b></span>
+        <span>Last deploy: June 2026</span>
+        <span>Build v2.0</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="brand" href="/" aria-label="Cloud Hak home">
+            <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <span class="brand-word">Cloud Hak</span>
+          </a>
+          <p class="footer-tag">GoHighLevel-powered marketing for local business. Ads, AI, CRM, and automation — one platform to bring you more customers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul>
+            <li><a href="/services/websites/">Web Design &amp; Development</a></li>
+            <li><a href="/services/chatbots/">AI Chatbots</a></li>
+            <li><a href="/services/voice-agents/">AI Voice Agents</a></li>
+            <li><a href="/services/seo/">SEO</a></li>
+            <li><a href="/services/aeo/">AEO</a></li>
+            <li><a href="/services/gmb/">Google Business Profile</a></li>
+            <li><a href="/services/ads/">Google &amp; Social Ads</a></li>
+            <li><a href="/services/automation/">Automation</a></li>
+            <li><a href="/services/crm/">CRM Setup &amp; Management</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul>
+            <li><a href="/industries/dental/" style="color:var(--champagne);">Dental Practices</a></li>
+          </ul>
+          <h4 style="margin-top:var(--s-6);">Company</h4>
+          <ul>
+            <li><a href="/#approach">Approach</a></li>
+            <li><a href="/#contact">Contact</a></li>
+            <li><a href="/privacy.html">Privacy</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <ul>
+            <li><a href="tel:+447800920042">Phone</a></li>
+            <li><a href="mailto:info@cloud-hak.com">Email</a></li>
+            <li><a href="https://wa.me/447800920042">WhatsApp</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-foot">
+        <p>© 2026 Cloud Hak</p>
+        <p>// Built with AI, delivered by humans.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); e.target.style.opacity = 1; e.target.style.transform = 'none'; }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="/assets/js/chatbot.js" defer></script>
+</body>
+</html>

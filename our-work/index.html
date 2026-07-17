@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Hak | Our Work — See What We've Built</title>
+  <meta name="description" content="See examples of websites and marketing systems Cloud Hak has built for UK trades." />
+  <link rel="canonical" href="https://cloud-hak.com/our-work" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    .ch-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .ch-nav .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+    .ch-nav .logo span { color: var(--copper); }
+    .ch-nav-links { display: flex; gap: 24px; align-items: center; }
+    .ch-nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+    .ch-nav-links a:hover { color: var(--copper); }
+    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; }
+    .ch-btn { display: inline-block; background: var(--ink); color: var(--cream); padding: 16px 40px; border-radius: 8px; font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease); border: none; cursor: pointer; }
+    .ch-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.2); color: var(--cream); }
+    .ch-btn-copper { background: var(--copper); color: #fff; }
+    .ch-btn-copper:hover { background: var(--copper-2); color: #fff; }
+    .ch-cta { background: var(--copper); text-align: center; padding: 64px 0; }
+    .ch-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin: 0 0 12px; font-weight: 600; }
+    .ch-cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin: 0 0 32px; }
+    .ch-cta .ch-btn { background: var(--ink); }
+    .ch-cta .ch-btn:hover { background: var(--ink-2); }
+    .ch-footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 0.9rem; }
+    .ch-footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .ch-footer .logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--cream); }
+    .ch-footer .logo span { color: var(--copper); }
+    .ch-footer a { color: rgba(255,255,255,0.5); }
+    .ch-footer a:hover { color: var(--copper); }
+
+    .ch-page-head { background: var(--cream); padding: 56px 0 32px; text-align: center; }
+    .ch-page-head h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; margin: 0 0 12px; color: var(--ink); }
+
+    /* Work gallery */
+    .ch-work { padding: 32px 0 56px; }
+    .ch-work-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 24px;
+      max-width: 1040px;
+      margin: 0 auto;
+    }
+    .ch-work-card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .ch-work-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,26,58,.1); }
+    .ch-work-screenshot {
+      width: 100%;
+      aspect-ratio: 16/10;
+      object-fit: cover;
+      background: var(--cream-2);
+      display: block;
+    }
+    .ch-work-body { padding: 20px; }
+    .ch-work-body h3 { font-family: var(--font-display); font-size: 1.2rem; font-weight: 600; margin: 0 0 6px; }
+    .ch-work-body p { font-size: 0.9rem; color: var(--muted); margin: 0 0 12px; }
+    .ch-work-tags { display: flex; gap: 8px; flex-wrap: wrap; }
+    .ch-work-tag {
+      font-size: 0.75rem;
+      background: var(--cream-2);
+      padding: 4px 12px;
+      border-radius: 100px;
+      color: var(--muted);
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+      .ch-nav-links { display: none; }
+      .ch-page-head { padding: 40px 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid var(--rule);">
+  <div class="container">
+    <nav class="ch-nav">
+      <a href="/" class="logo">Cloud<span>Hak</span></a>
+      <div class="ch-nav-links">
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a Call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="ch-page-head">
+  <div class="container">
+    <h1>Look at what we've built for our clients</h1>
+    <p style="font-size: 1.15rem; color: var(--muted); max-width: 480px; margin: 0 auto;">Real websites, real results. Here's a sample of what we can do for your business.</p>
+  </div>
+</section>
+
+<section class="ch-work" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="ch-work-grid">
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #0a1a3a 0%, #1a3a5d 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; color: var(--copper); font-weight: 600;">Plumbing Co.</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>Emergency Plumber — Brighton</h3>
+          <p>Website + missed call text-back + review funnel. 40+ new reviews in 3 months.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">SMS Automation</span>
+            <span class="ch-work-tag">Reviews</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #1a3a1a 0%, #2d5a2d 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; #d9b97a; color: #d9b97a; font-weight: 600;">Electrical Services</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>NICEIC Electrician — Hove</h3>
+          <p>Full website rebuild + lead capture forms + automated follow-up campaigns.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">Lead Capture</span>
+            <span class="ch-work-tag">SEO</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #3a1a0a 0%, #5d3a1a 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; color: var(--champagne); font-weight: 600;">Roofing Ltd</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>Roofing Contractor — Crawley</h3>
+          <p>Website + review funnel + one-click referral campaigns. Phone hasn't stopped ringing.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">Review Funnel</span>
+            <span class="ch-work-tag">Referrals</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #0a1a3a 0%, #2a3a5d 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; color: var(--copper); font-weight: 600;">Landscaping</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>Landscaping & Garden Design — Eastbourne</h3>
+          <p>Full website + gallery + automated quote form with SMS notifications.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">Gallery</span>
+            <span class="ch-work-tag">Quote Forms</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #3a0a2a 0%, #5d2a4d 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; color: var(--champagne); font-weight: 600;">Dental Clinic</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>Specialist Dental Practice — Stockholm</h3>
+          <p>Full website + AI chatbot + voice agent + automated patient intake system.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">AI Chatbot</span>
+            <span class="ch-work-tag">Voice AI</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="ch-work-card">
+        <div class="ch-work-screenshot" style="background: linear-gradient(135deg, #1a1a3a 0%, #3a3a5d 100%); display: flex; align-items: center; justify-content: center;">
+          <span style="font-family: var(--font-display); font-size: 1.8rem; color: var(--copper); font-weight: 600;">Building Ltd</span>
+        </div>
+        <div class="ch-work-body">
+          <h3>Building & Renovation — London</h3>
+          <p>Website + project portfolio + automated lead qualification + GMB optimization.</p>
+          <div class="ch-work-tags">
+            <span class="ch-work-tag">Website</span>
+            <span class="ch-work-tag">GMB</span>
+            <span class="ch-work-tag">Lead Qualification</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<section class="ch-cta">
+  <div class="container">
+    <h2>Want your website to look this good?</h2>
+    <p>Book a free call. We'll show you exactly how it works.</p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a free 20-min call →</a>
+  </div>
+</section>
+
+<footer class="ch-footer">
+  <div class="container">
+    <div class="ch-footer-inner">
+      <div>
+        <div class="logo">Cloud<span>Hak</span></div>
+        <p style="margin: 8px 0 0;">Websites & marketing systems for UK trades.<br/>Brighton & Hove 🇬🇧</p>
+      </div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <a href="/">Home</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="https://calendly.com/cloud-hak">Book a Call</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.82rem;">
+      © 2026 Cloud Hak. All rights reserved. Built with AI, delivered by humans.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

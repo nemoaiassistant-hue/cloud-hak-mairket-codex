@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airway Clinic — Patient Triage Framework</title>
+<style>
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background: #0a0e14;
+    color: #c8c8d0;
+    line-height: 1.6;
+    padding: 20px;
+}
+.container { max-width: 700px; margin: 0 auto; }
+h1 { color: #e8c170; font-size: 1.8rem; text-align: center; margin-bottom: 8px; }
+.subtitle { text-align: center; color: #888; font-size: 0.9rem; margin-bottom: 30px; }
+
+.section {
+    background: #121820;
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid #1e2a3a;
+}
+.section-title {
+    color: #e8c170;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+p { margin-bottom: 10px; font-size: 0.92rem; }
+ul, ol { padding-left: 20px; margin-bottom: 10px; }
+li { margin-bottom: 6px; font-size: 0.9rem; }
+
+.flow-box {
+    background: #0a1520;
+    border: 1px solid #1e2a3a;
+    border-radius: 10px;
+    padding: 16px;
+    margin: 12px 0;
+    text-align: center;
+}
+.flow-arrow {
+    text-align: center;
+    font-size: 1.5rem;
+    color: #e8c170;
+    margin: 4px 0;
+}
+.flow-step {
+    font-weight: 600;
+    color: #c8c8d0;
+    font-size: 0.95rem;
+}
+.flow-person {
+    font-size: 0.8rem;
+    color: #888;
+    margin-top: 2px;
+}
+
+table { width: 100%; border-collapse: collapse; margin: 12px 0; font-size: 0.85rem; }
+th { background: #0f4c81; color: white; padding: 10px; text-align: left; font-size: 0.8rem; }
+td { padding: 10px; border-bottom: 1px solid #1e2a3a; vertical-align: top; }
+tr:last-child td { border-bottom: none; }
+
+.green-banner {
+    background: rgba(34, 160, 107, 0.15);
+    border: 1px solid #22a06b;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0;
+}
+.blue-banner {
+    background: rgba(15, 76, 129, 0.15);
+    border: 1px solid #0f4c81;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0;
+}
+.red-banner {
+    background: rgba(229, 62, 62, 0.1);
+    border: 1px solid #e53e3e;
+    border-radius: 10px;
+    padding: 14px 18px;
+    margin: 12px 0;
+}
+
+.green-banner h3 { color: #22a06b; font-size: 0.95rem; margin-bottom: 6px; }
+.blue-banner h3 { color: #4a9fdb; font-size: 0.95rem; margin-bottom: 6px; }
+.red-banner h3 { color: #e53e3e; font-size: 0.95rem; margin-bottom: 6px; }
+
+.checklist {
+    list-style: none;
+    padding-left: 0;
+}
+.checklist li {
+    padding-left: 24px;
+    position: relative;
+    margin-bottom: 8px;
+}
+.checklist li:before {
+    content: "☐";
+    position: absolute;
+    left: 0;
+    color: #e8c170;
+    font-size: 1.1rem;
+}
+
+.tag-green {
+    display: inline-block;
+    background: rgba(34, 160, 107, 0.2);
+    color: #22a06b;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.tag-blue {
+    display: inline-block;
+    background: rgba(15, 76, 129, 0.2);
+    color: #4a9fdb;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+.tag-red {
+    display: inline-block;
+    background: rgba(229, 62, 62, 0.15);
+    color: #e53e3e;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.footer {
+    text-align: center;
+    color: #555;
+    font-size: 0.8rem;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #1e2a3a;
+}
+</style>
+</head>
+<body>
+<div class="container">
+
+    <h1>Patient Triage Framework</h1>
+    <div class="subtitle">How to route every lead efficiently — Jessica handles intake, Dr. Sia handles treatment</div>
+
+    <!-- THE PROBLEM -->
+    <div class="section">
+        <div class="section-title">⚡ The Problem</div>
+        <p>Every lead currently goes straight to Dr. Sia. With 30-40 leads/month growing to 60+, he becomes the bottleneck. His time should be spent <strong>treating patients</strong>, not doing initial data collection that someone else can handle.</p>
+        <p>The fix: a simple triage system where Jessica collects all the information first, categorises the case, and Dr. Sia only gets involved when clinical expertise is actually needed.</p>
+    </div>
+
+    <!-- THE FLOW -->
+    <div class="section">
+        <div class="section-title">🔄 The Flow</div>
+        <div class="flow-box">
+            <div class="flow-step">1. Lead arrives (website / phone / email)</div>
+            <div class="flow-person">Nima's CRM — logged & acknowledged within 1 hour</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+            <div class="flow-step">2. Jessica calls patient for intake</div>
+            <div class="flow-person">Jessica — 15-20 min call, fills out intake form</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box">
+            <div class="flow-step">3. Triage decision — 3 colour categories</div>
+            <div class="flow-person">Jessica — follows the framework below</div>
+        </div>
+        <div class="flow-arrow">↓</div>
+        <div class="flow-box" style="display:flex; justify-content:space-around; gap:8px; flex-wrap:wrap;">
+            <div><span class="tag-green">GREEN → Jessica</span><br><span style="font-size:0.75rem;color:#888">Handles fully</span></div>
+            <div><span class="tag-blue">BLUE → Jessica books with Dr. Sia</span><br><span style="font-size:0.75rem;color:#888">Prepares file, he reviews</span></div>
+            <div><span class="tag-red">RED → Dr. Sia urgently</span><br><span style="font-size:0.75rem;color:#888">Same-day contact</span></div>
+        </div>
+    </div>
+
+    <!-- GREEN - Jessica handles -->
+    <div class="green-banner">
+        <h3>🟢 GREEN — Jessica Handles Fully</h3>
+        <p style="font-size:0.85rem; margin-bottom:8px;">Jessica does the full intake, books the appointment, and manages the patient. Dr. Sia is not involved until treatment day.</p>
+        <table>
+            <thead>
+                <tr><th>Lead Type</th><th>Examples</th><th>What Jessica Does</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>General enquiries</strong></td>
+                    <td>Pricing questions, opening hours, location, what treatments are offered</td>
+                    <td>Answer questions, provide info, book consultation if interested</td>
+                </tr>
+                <tr>
+                    <td><strong>Simple bookings</strong></td>
+                    <td>Returning patients booking follow-ups, routine check-ups</td>
+                    <td>Schedule directly, confirm appointment</td>
+                </tr>
+                <tr>
+                    <td><strong>Referrals from other dentists</strong></td>
+                    <td>Dentist refers patient with a clear treatment need already identified</td>
+                    <td>Collect referral letter, book consultation with Dr. Sia, prepare file</td>
+                </tr>
+                <tr>
+                    <td><strong>Post-treatment follow-ups</strong></td>
+                    <td>Existing patients checking in, reporting minor issues, appliance adjustments</td>
+                    <td>Triage the issue, book adjustment if needed, escalate to Dr. Sia if serious</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- BLUE - Jessica preps, Dr Sia treats -->
+    <div class="blue-banner">
+        <h3>🔵 BLUE — Jessica Preps, Dr. Sia Treats</h3>
+        <p style="font-size:0.85rem; margin-bottom:8px;">Jessica does the full intake, gathers all clinical information, prepares a summary, and books the patient with Dr. Sia. Dr. Sia reviews the summary <strong>before</strong> the appointment so no time is wasted.</p>
+        <table>
+            <thead>
+                <tr><th>Lead Type</th><th>Examples</th><th>What Jessica Gathers Before Dr. Sia</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>TMJ / jaw pain</strong></td>
+                    <td>Grinding, clenching, jaw tension, clicking</td>
+                    <td>Pain duration, severity (1-10), triggers (morning/night), previous treatments, stress levels</td>
+                </tr>
+                <tr>
+                    <td><strong>Sleep apnea / snoring</strong></td>
+                    <td>Adult breathing issues during sleep, fatigue</td>
+                    <td>Sleep study results if any, partner observations, BMI, fatigue level, previous diagnosis</td>
+                </tr>
+                <tr>
+                    <td><strong>Children — growth & airway</strong></td>
+                    <td>Mouth breathing, crowding, dummy use, bite issues</td>
+                    <td>Child's age, specific symptoms, duration, ENT history (tonsils/adenoids), dummy/thumb habits</td>
+                </tr>
+                <tr>
+                    <td><strong>Orthodontic relapse</strong></td>
+                    <td>Previous braces, teeth moved back</td>
+                    <td>When braces were worn, what was treated, current concerns, retainers used</td>
+                </tr>
+                <tr>
+                    <td><strong>Cosmetic / aesthetic</strong></td>
+                    <td>Teeth appearance, gaps, discolouration</td>
+                    <td>Specific concern photos, timeline expectations, budget</td>
+                </tr>
+                <tr>
+                    <td><strong>Adult airway / breathing</strong></td>
+                    <td>Narrow jaw, nasal breathing difficulty</td>
+                    <td>Breathing symptoms, sleep quality, previous ortho/extractions, ENT history</td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="font-size:0.85rem; margin-top:8px; color:#888;"><strong>Key:</strong> Dr. Sia receives a 1-page summary before every BLUE appointment — symptoms, history, and Jessica's intake notes. He walks in already knowing the case.</p>
+    </div>
+
+    <!-- RED - Dr Sia urgently -->
+    <div class="red-banner">
+        <h3>🔴 RED — Dr. Sia Same-Day</h3>
+        <p style="font-size:0.85rem; margin-bottom:8px;">These need Dr. Sia's attention immediately. Jessica contacts him directly (not next available appointment).</p>
+        <table>
+            <thead>
+                <tr><th>Red Flag</th><th>Why</th><th>Action</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Severe acute pain</td>
+                    <td>Possible infection, fracture, or acute TMJ episode</td>
+                    <td>Same-day emergency slot</td>
+                </tr>
+                <tr>
+                    <td>Child with severe breathing issues / possible sleep apnea</td>
+                    <td>Airway compromise in children is urgent — affects brain development</td>
+                    <td>Priority booking within 48 hours</td>
+                </tr>
+                <tr>
+                    <td>Post-treatment complication</td>
+                    <td>Appliance broken, severe pain after procedure, infection signs</td>
+                    <td>Same-day, Dr. Sia assesses directly</td>
+                </tr>
+                <tr>
+                    <td>Dental trauma</td>
+                    <td>Accident, injury to teeth or jaw</td>
+                    <td>Same-day emergency</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <!-- INTAKE SCRIPT -->
+    <div class="section">
+        <div class="section-title">📋 Jessica's Intake Script</div>
+        <p style="font-size:0.85rem; margin-bottom:10px; color:#888;">Jessica asks these questions on the first call. Takes 15-20 minutes. The answers determine the triage colour.</p>
+
+        <p style="color:#e8c170; font-weight:600; margin-top:14px;">For all patients:</p>
+        <ul class="checklist">
+            <li>Full name, date of birth (or child's DOB if parent calling)</li>
+            <li>Phone number and email</li>
+            <li>How did you hear about us? (referral source tracking)</li>
+            <li>What is the main reason you're contacting us?</li>
+            <li>How long has this been an issue?</li>
+            <li>Have you seen another dentist or doctor about this? What did they say?</li>
+            <li>Are you currently in any pain? (Rate 1-10)</li>
+            <li>Any previous dental treatments, braces, or extractions?</li>
+            <li>Any medical conditions or medications we should know about?</li>
+            <li>Do you have dental insurance?</li>
+        </ul>
+
+        <p style="color:#e8c170; font-weight:600; margin-top:14px;">For children specifically:</p>
+        <ul class="checklist">
+            <li>Does your child breathe through their mouth or nose?</li>
+            <li>Does your child snore at night?</li>
+            <li>Has your child used a dummy / thumb-sucks? Until what age?</li>
+            <li>Has your child had their tonsils or adenoids checked?</li>
+            <li>Any feeding difficulties as a baby? (tongue tie, breastfeeding issues)</li>
+            <li>Has your child had any speech issues?</li>
+        </ul>
+
+        <p style="color:#e8c170; font-weight:600; margin-top:14px;">For TMJ / grinding specifically:</p>
+        <ul class="checklist">
+            <li>When did the pain/tension start?</li>
+            <li>Is it worse in the morning (night grinding) or during the day?</li>
+            <li>Does your partner notice you grinding at night?</li>
+            <li>Any clicking, popping, or locking of the jaw?</li>
+            <li>Have you used a night guard before? Did it help?</li>
+            <li>Are you under significant stress currently?</li>
+        </ul>
+    </div>
+
+    <!-- JESSICA SUMMARY TEMPLATE -->
+    <div class="section">
+        <div class="section-title">📝 Dr. Sia's Pre-Appointment Summary</div>
+        <p style="font-size:0.85rem; margin-bottom:10px; color:#888;">Jessica fills this in for every BLUE patient. Dr. Sia reads it before walking into the appointment. Takes 2 minutes to review instead of 20 minutes discovering from scratch.</p>
+
+        <div style="background:#0a1520; border-radius:10px; padding:16px; font-family:monospace; font-size:0.85rem; line-height:1.8;">
+            <strong>Patient:</strong> _______________________ <strong>Age:</strong> ______<br>
+            <strong>Date:</strong> ____________ <strong>Appt time:</strong> ________<br>
+            <strong>Triage:</strong> <span class="tag-blue">BLUE</span> / <span class="tag-red">RED</span><br><br>
+
+            <strong>Chief complaint:</strong><br>
+            _____________________________________________<br><br>
+
+            <strong>Duration:</strong> _____ <strong>Pain level:</strong> ___/10<br><br>
+
+            <strong>Relevant history:</strong><br>
+            _____________________________________________<br><br>
+
+            <strong>Red flags noted:</strong> ☐ Yes ☐ No<br><br>
+
+            <strong>Suggested focus for consultation:</strong><br>
+            _____________________________________________<br><br>
+
+            <strong>Jessica's notes:</strong><br>
+            _____________________________________________
+        </div>
+    </div>
+
+    <!-- TIME SAVED -->
+    <div class="section" style="border-color:#22a06b;">
+        <div class="section-title">⏱️ Time Impact</div>
+        <table>
+            <thead>
+                <tr><th></th><th>Current (No Triage)</th><th>With Triage</th></tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Initial consultation</td>
+                    <td>Dr. Sia spends 30-40 min discovering the case</td>
+                    <td>Dr. Sia spends 10-15 min (summary already read)</td>
+                </tr>
+                <tr>
+                    <td>Phone enquiries</td>
+                    <td>Dr. Sia handles many directly</td>
+                    <td>Jessica handles 100% of initial calls</td>
+                </tr>
+                <tr>
+                    <td>Scheduling</td>
+                    <td>Ad-hoc, reactive</td>
+                    <td>Systematic — Jessica books based on triage category</td>
+                </tr>
+                <tr>
+                    <td>Time saved per patient</td>
+                    <td>—</td>
+                    <td><strong>~20-25 minutes</strong></td>
+                </tr>
+                <tr>
+                    <td>30 patients/month × 20 min saved</td>
+                    <td>—</td>
+                    <td><strong>= 10+ hours/month freed for Dr. Sia</strong></td>
+                </tr>
+            </tbody>
+        </table>
+        <p style="margin-top:10px;">That's <strong>10+ hours per month</strong> Dr. Sia gets back — equivalent to seeing 15-20 more patients without working a single extra hour.</p>
+    </div>
+
+    <div class="footer">
+        Prepared July 2026 — Airway Clinic Triage Framework<br>
+        For implementation with Dr. Sia and Jessica
+    </div>
+
+</div>
+</body>
+</html>

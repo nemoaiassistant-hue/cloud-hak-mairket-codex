@@ -1,0 +1,644 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Hak | Medical Clinic Marketing — AI-Powered Patient Acquisition</title>
+  <meta name="description" content="AI-powered marketing for medical clinics. Patient acquisition, 24/7 appointment booking, consultation reminders, and GDPR-compliant automations — one system built on GoHighLevel." />
+  <meta property="og:title" content="Cloud Hak | Medical Clinic Marketing — AI-Powered Patient Acquisition" />
+  <meta property="og:description" content="AI-powered marketing for medical clinics. Patient acquisition, 24/7 appointment booking, consultation reminders, and GDPR-compliant automations — one system built on GoHighLevel." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.com/industries/medical/" />
+  <meta property="og:image" content="https://cloud-hak.com/assets/img/hero.png" />
+  <link rel="canonical" href="https://cloud-hak.com/industries/medical/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT,WONK@9..144,400..600,0,0..1&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    /* Medical industry page — service cards */
+    .med-grid {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: var(--s-7);
+    }
+    .med-card {
+      padding: var(--s-7);
+      border: 1px solid var(--rule);
+      border-radius: var(--r);
+      background: var(--cream);
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+    }
+    .med-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 32px rgba(10,26,58,.1);
+    }
+    .med-card-icon {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      margin-bottom: var(--s-4);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .med-card h3 {
+      font-family: var(--font-display);
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .med-card p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0 0 var(--s-5);
+    }
+    .med-card ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: var(--s-3);
+    }
+    .med-card ul li {
+      font-size: 13px;
+      color: var(--ink-2);
+      padding-left: 20px;
+      position: relative;
+      line-height: 1.5;
+    }
+    .med-card ul li::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 7px;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      border: 1.5px solid var(--copper);
+    }
+
+    /* Problem section */
+    .section-med-problem {
+      background: var(--paper);
+      padding: var(--s-9) 0;
+    }
+    .problem-content {
+      max-width: 640px;
+    }
+    .problem-highlight {
+      font-family: var(--font-display);
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--ink-2);
+      margin-top: var(--s-5);
+    }
+
+    /* System flow section */
+    .flow-steps {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .flow-step {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: var(--s-6);
+      padding: var(--s-6) 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .flow-step:first-child {
+      border-top: 1px solid var(--rule);
+    }
+    .flow-step-num {
+      font-family: var(--font-mono);
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--copper);
+      padding-top: 3px;
+    }
+    .flow-step h3 {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--ink);
+      margin: 0 0 var(--s-2);
+    }
+    .flow-step p {
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* Credibility strip */
+    .cred-strip {
+      background: linear-gradient(135deg, var(--ink), var(--ink-2));
+      color: var(--cream);
+      padding: var(--s-6) 0;
+    }
+    .cred-strip p {
+      margin: 0;
+      font-size: 14px;
+      line-height: 1.6;
+      color: rgba(255,255,255,.7);
+      text-align: center;
+    }
+    .cred-strip strong {
+      color: var(--champagne);
+      font-weight: 600;
+    }
+
+    /* Mobile */
+    @media (max-width: 900px) {
+      .med-grid {
+        grid-template-columns: 1fr;
+        gap: var(--s-5);
+      }
+      .flow-step {
+        grid-template-columns: 80px 1fr;
+        gap: var(--s-4);
+      }
+    }
+    @media (max-width: 600px) {
+      .flow-step {
+        grid-template-columns: 1fr;
+        gap: var(--s-2);
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "MedicalBusiness",
+      "name": "Cloud Hak — Medical Clinic Marketing",
+      "url": "https://cloud-hak.com/industries/medical/",
+      "telephone": "+44 7800 920042",
+      "email": "info@cloud-hak.com",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Brighton & Hove",
+        "addressRegion": "East Sussex",
+        "addressCountry": "GB"
+      },
+      "description": "AI-powered patient acquisition for medical clinics. Google Ads, SEO, AI chatbots, voice agents, CRM automation, and GDPR-compliant systems — one platform on GoHighLevel.",
+      "medicalSpecialty": "Private Healthcare Marketing"
+    }
+  </script>
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How does Cloud Hak help medical clinics get more patients?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build a full patient acquisition system on GoHighLevel — Google Ads targeting condition-specific searches, SEO to rank for medical queries, an AI chatbot that answers patient FAQs and books consultations 24/7, voice AI for after-hours call handling, and CRM automations for consultation reminders, no-show rebooking, and recall campaigns. All GDPR-compliant."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is your marketing system GDPR-compliant for medical data?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. We design every touchpoint with GDPR and healthcare data sensitivity in mind. Cookie consent, data minimisation, UK-hosted infrastructure, consent-based communication, and audit-ready logging are built into every system we deploy. We work with regulated practices and understand the requirements around patient data."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can the AI chatbot handle medical triage?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our AI chatbot is trained on your clinic's services, FAQs, and booking protocols — not on diagnostic criteria. It can answer questions about treatments offered, consultation availability, pricing, location, and referral processes. For clinical triage, it routes inquiries to your clinical team. It does not provide medical advice."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What types of medical clinics do you work with?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We work with private clinics, specialist practices, dental clinics, sleep medicine clinics, dermatology, physiotherapy, aesthetic medicine, and other private healthcare providers. Any clinic that needs a steady flow of new patient consultations benefits from our system."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does the CRM automation reduce no-shows?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We build automated sequences: SMS consultation reminders at 48 hours and 24 hours before appointments, easy one-tap rescheduling links, post-visit follow-up messages, and recall campaigns for patients due for follow-up consultations. The system also auto-rebooks cancelled slots and sends follow-up sequences to patients who initially enquire but don't book."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How quickly can a medical clinic marketing system be live?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "The AI chatbot can be live within 48 hours. A full system including website, Google Ads, SEO, voice AI, chatbot, and CRM automation typically launches in 3-4 weeks. We provide a clear timeline before work starts."
+          }
+        }
+      ]
+    }
+  </script>
+</head>
+<body>
+  <div class="announce">
+    <div class="container announce-row">
+      <div class="announce-left"><span class="dot" aria-hidden="true"></span><span>Accepting new clients · Q2 2026</span></div>
+      <div class="announce-right"><span><span class="k">Base</span> <span class="v">Brighton &amp; Hove</span></span><span class="sep" aria-hidden="true">·</span><span><span class="k">Reply</span> <span class="v">≤ 1 biz day</span></span><span class="sep" aria-hidden="true">·</span><span><span class="k">Open</span> <span class="v">04 / 12 open</span></span></div>
+    </div>
+  </div>
+
+  <header class="site-header" id="site-header">
+    <div class="container header-row">
+      <a class="brand" href="/" aria-label="Cloud Hak home">
+        <svg class="brand-mark" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+          <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+          <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+        </svg>
+        <span class="brand-word">Cloud Hak</span>
+      </a>
+      <nav class="primary-nav" id="primaryNav" aria-label="Primary navigation">
+        <a href="/#stack">Services</a>
+        <a href="/pricing/">Pricing</a>
+        <a href="/#approach">Approach</a>
+        <a href="/#contact">Contact</a>
+      </nav>
+      <div class="header-actions">
+        <a class="header-phone" href="tel:+447800920042">07800 920042</a>
+        <button class="burger" id="burgerBtn" aria-label="Toggle menu" onclick="document.getElementById('primaryNav').classList.toggle('open');this.classList.toggle('open')">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal"><a href="/">Home</a> &gt; Industries &gt; Medical Clinics</p>
+          <h1 class="hero-title reveal">
+            Medical Clinic<br />
+            Marketing.<br />
+            <span class="caret">AI-Powered Patient Acquisition.</span>
+          </h1>
+          <p class="hero-lede reveal">A complete system to bring patients to your clinic — from condition-specific Google Ads and medical SEO, to 24/7 AI consultation booking, voice answering, and GDPR-compliant CRM automations. All on one platform.</p>
+          <div class="hero-actions reveal">
+            <a href="/#contact" class="btn btn-primary btn-lg">Get more patients</a>
+            <a href="#how-we-help" class="btn btn-ghost btn-lg">See how it works</a>
+          </div>
+          <ul class="hero-meta reveal" role="list">
+            <li><span class="meta-k">Specialism</span><span class="meta-v">Healthcare</span></li>
+            <li><span class="meta-k">Compliance</span><span class="meta-v">GDPR-first</span></li>
+            <li><span class="meta-k">Response</span><span class="meta-v">≤ 1 biz day</span></li>
+          </ul>
+        </div>
+
+        <aside class="hero-terminal reveal" aria-label="Medical clinic marketing stats">
+          <div class="term-bar">
+            <span class="term-bar-dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span>cloud-hak — medical.sh</span>
+          </div>
+          <div class="term-body">
+            <div class="term-line"><span class="term-prompt">$</span><span class="term-cmd">generate --patients --clinic</span></div>
+            <span class="term-out"><b>Patient enquiries</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● +340/mo</span></span>
+            <span class="term-out"><b>Consultations booked</b>&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 142</span></span>
+            <span class="term-out"><b>No-show rate</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● ↓ 62%</span></span>
+            <span class="term-out"><b>After-hours captured</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="term-ok">● 89</span></span>
+            <div class="term-line" style="margin-top:10px;"><span class="term-prompt">$</span><span class="term-cmd">status --compliance</span></div>
+            <div class="term-status">
+              <span class="lbl">GDPR</span><span class="val accent">Compliant</span>
+              <span class="lbl">Hosting</span><span class="val accent">UK-based</span>
+              <span class="lbl">Data</span><span class="val accent">Encrypted · Audit-ready</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="container hero-marquee" aria-label="Capabilities for medical clinics">
+        <span>Google Ads</span><span aria-hidden="true">·</span>
+        <span>Medical SEO</span><span aria-hidden="true">·</span>
+        <span>AEO</span><span aria-hidden="true">·</span>
+        <span>AI Chatbot</span><span aria-hidden="true">·</span>
+        <span>Voice AI</span><span aria-hidden="true">·</span>
+        <span>CRM</span><span aria-hidden="true">·</span>
+        <span>Automations</span><span aria-hidden="true">·</span>
+        <span>Super Agents</span><span aria-hidden="true">·</span>
+        <span>GDPR</span><span aria-hidden="true">·</span>
+        <span style="color:var(--copper);font-weight:500">✦ Full Patient Stack</span>
+      </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="section-med-problem">
+      <div class="container">
+        <div class="problem-content">
+          <p class="eyebrow reveal">The problem</p>
+          <h2 class="display-title reveal">Patients are searching for your treatment. They can't find you — or they give up before booking.</h2>
+          <p class="lede reveal">Medical clinics lose patients at every stage: Google Ads that don't target the right conditions, websites that don't explain treatments clearly, calls that go to voicemail after hours, enquiry forms that get answered days later, and no automated follow-up for patients who showed interest but didn't book.</p>
+          <p class="problem-highlight reveal">A 20% no-show rate is normal. A missed after-hours call is normal. A patient who enquires and hears nothing for 3 days is normal. None of this should be acceptable — and with the right system, none of it has to be.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Credibility Strip -->
+    <section class="cred-strip">
+      <div class="container">
+        <p class="reveal">Trusted by healthcare providers across Europe — including <strong>Airway Clinic</strong> (airwayclinic.se), a specialist sleep apnea clinic in Sweden. We understand the sensitivity of healthcare marketing and the standards your patients expect.</p>
+      </div>
+    </section>
+
+    <!-- How We Help — Service Cards -->
+    <section class="section section-services" id="how-we-help">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">How we help</p>
+          <h2 class="section-title reveal">Every Cloud Hak service — mapped to medical clinic use cases.</h2>
+          <p class="lede centered reveal">One platform, one patient journey. From first search to booked consultation to recall campaign — fully connected, fully automated, fully compliant.</p>
+        </div>
+
+        <div class="med-grid reveal">
+          <!-- 01 — Website -->
+          <div class="med-card">
+            <div class="med-card-icon">// 01 — Website</div>
+            <h3>Patient-Facing Website</h3>
+            <p>Your clinic's digital front door. Designed to build trust, explain treatments, and convert visitors into booked consultations.</p>
+            <ul>
+              <li>Treatment pages with clear clinical descriptions and outcomes</li>
+              <li>Online consultation booking with calendar integration</li>
+              <li>Clinician profiles, credentials, and regulatory registrations</li>
+              <li>Patient testimonials and before/after outcomes (where appropriate)</li>
+              <li>Referral pathway information for GPs and specialists</li>
+            </ul>
+          </div>
+
+          <!-- 02 — AI Chatbot -->
+          <div class="med-card">
+            <div class="med-card-icon">// 02 — AI Chatbot</div>
+            <h3>24/7 Patient Inquiry Assistant</h3>
+            <p>An AI chatbot trained on your clinic's services, protocols, and booking system — answering patient questions and booking consultations around the clock.</p>
+            <ul>
+              <li>Answer FAQs about treatments, pricing, and consultation process</li>
+              <li>Book consultations directly into your calendar</li>
+              <li>Pre-qualify inquiries (condition type, urgency, location)</li>
+              <li>Route clinical questions to your team — never provides medical advice</li>
+              <li>GDPR-compliant data handling with consent capture</li>
+            </ul>
+          </div>
+
+          <!-- 03 — Voice AI -->
+          <div class="med-card">
+            <div class="med-card-icon">// 03 — Voice AI</div>
+            <h3>AI Call Handling &amp; Reception</h3>
+            <p>Never miss a patient call again. Our AI voice agent answers inbound calls, handles appointment requests, and provides after-hours coverage.</p>
+            <ul>
+              <li>Answer calls instantly — no hold queues, no voicemail</li>
+              <li>Book, reschedule, and cancel appointments by voice</li>
+              <li>After-hours answering with next-day callback booking</li>
+              <li>Route urgent clinical inquiries to on-call staff</li>
+              <li>Multi-language support for international patient bases</li>
+            </ul>
+          </div>
+
+          <!-- 04 — Google Ads -->
+          <div class="med-card">
+            <div class="med-card-icon">// 04 — Google Ads</div>
+            <h3>Condition-Specific Paid Acquisition</h3>
+            <p>Target patients actively searching for your treatments — not just "clinic near me" but condition-specific, high-intent queries.</p>
+            <ul>
+              <li>"sleep apnea treatment [city]" — specialist condition targeting</li>
+              <li>"private dermatology consultation [city]" — service-specific ads</li>
+              <li>Google Local Services Ads where available for medical categories</li>
+              <li>Retargeting for patients who visited your site but didn't book</li>
+              <li>Call-only campaigns for high-intent mobile searches</li>
+            </ul>
+          </div>
+
+          <!-- 05 — SEO/AEO -->
+          <div class="med-card">
+            <div class="med-card-icon">// 05 — SEO &amp; AEO</div>
+            <h3>Medical Search Visibility</h3>
+            <p>Rank for the medical queries your patients are asking — on Google and in AI assistants like ChatGPT and Gemini.</p>
+            <ul>
+              <li>Local SEO for "[treatment] near me" and "[clinic type] [city]"</li>
+              <li>Featured snippets for health questions ("what is sleep apnea?")</li>
+              <li>AEO: get your clinic cited when AI assistants recommend providers</li>
+              <li>Medical schema markup (MedicalBusiness, Physician, MedicalCondition)</li>
+              <li>Content strategy around patient education and treatment awareness</li>
+            </ul>
+          </div>
+
+          <!-- 06 — Google Business -->
+          <div class="med-card">
+            <div class="med-card-icon">// 06 — Google Business Profile</div>
+            <h3>Local Pack &amp; Trust Presence</h3>
+            <p>Dominate the Google Local Pack for medical searches in your area. Reviews, Q&amp;A, and posts that build patient confidence.</p>
+            <ul>
+              <li>Profile optimised for medical categories and treatments</li>
+              <li>Automated review generation after every patient visit</li>
+              <li>Q&amp;A management — answer common patient questions publicly</li>
+              <li>Google Posts for new treatments, clinic updates, and availability</li>
+              <li>Booking link integration with Google's appointment system</li>
+            </ul>
+          </div>
+
+          <!-- 07 — CRM & Automations -->
+          <div class="med-card">
+            <div class="med-card-icon">// 07 — CRM &amp; Automations</div>
+            <h3>Patient Lifecycle Automation</h3>
+            <p>Automated workflows that manage the entire patient journey — from first enquiry to recall campaign — without manual admin.</p>
+            <ul>
+              <li>Consultation reminders via SMS (48h and 24h before)</li>
+              <li>No-show rebooking automation with one-tap reschedule links</li>
+              <li>Post-visit follow-up: satisfaction check, next steps, referrals</li>
+              <li>Recall campaigns for patients due for follow-up consultations</li>
+              <li>Lead nurture for enquiries that didn't convert — automatic follow-up sequences</li>
+            </ul>
+          </div>
+
+          <!-- 08 — Super Agents -->
+          <div class="med-card">
+            <div class="med-card-icon">// 08 — Super Agents</div>
+            <h3>AI Patient Journey Manager</h3>
+            <p>An AI-powered receptionist that orchestrates the entire patient journey — from first inquiry through consultation to follow-up.</p>
+            <ul>
+              <li>Manages inbound inquiries across web, phone, and messaging</li>
+              <li>Books consultations, sends confirmations, and triggers reminders</li>
+              <li>Routes clinical escalations to your team in real time</li>
+              <li>Coordinates with CRM to maintain full patient history</li>
+              <li>Handles multi-channel patient communication — SMS, email, WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- What You Get — System Flow -->
+    <section class="section section-work">
+      <div class="container">
+        <div class="section-head">
+          <p class="eyebrow reveal">What you get</p>
+          <h2 class="section-title reveal">The full patient acquisition system — from search to consultation chair.</h2>
+          <p class="lede centered reveal">Every stage connected. No patient falls through the cracks.</p>
+        </div>
+
+        <ol class="flow-steps reveal">
+          <li class="flow-step">
+            <span class="flow-step-num">01_generate</span>
+            <div>
+              <h3>Patient finds your clinic</h3>
+              <p>Google Ads target condition-specific searches. SEO ranks your treatment pages. AEO gets your clinic recommended by AI assistants. Google Business dominates the local pack. Every channel feeds your pipeline.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-step-num">02_capture</span>
+            <div>
+              <h3>Patient books a consultation</h3>
+              <p>Your website presents treatments, credentials, and outcomes clearly. The AI chatbot answers questions 24/7 and books directly into your calendar. Voice AI handles phone calls — including evenings and weekends. No enquiry goes unanswered.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-step-num">03_confirm</span>
+            <div>
+              <h3>System confirms and reminds</h3>
+              <p>Automated SMS confirmations go out immediately. Reminders at 48 hours and 24 hours reduce no-shows. One-tap reschedule links make it easy for patients to adjust — instead of simply not showing up.</p>
+            </div>
+          </li>
+          <li class="flow-step">
+            <span class="flow-step-num">04_nurture</span>
+            <div>
+              <h3>Post-visit follow-up and recall</h3>
+              <p>Post-visit satisfaction messages. Treatment summary reminders. Referral requests to happy patients. Recall campaigns for patients due for follow-up. Lead re-engagement for enquiries that never booked. The system keeps working long after the consultation ends.</p>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- Compliance Section -->
+    <section class="section section-positioning">
+      <div class="container two-col">
+        <div class="col-label">
+          <p class="eyebrow">Compliance</p>
+        </div>
+        <div class="col-body">
+          <h2 class="display-title reveal">Healthcare marketing demands a higher standard. We meet it.</h2>
+          <p class="lede reveal">Medical data is sensitive. Patient trust is everything. We build every system with GDPR compliance, data minimisation, and healthcare-appropriate communication standards baked in from day one — not bolted on after.</p>
+          <p class="lede reveal">Our infrastructure is UK-hosted. All patient data flows through encrypted channels. Consent is captured and logged. Communication preferences are respected. Audit trails are maintained. This isn't optional for healthcare — it's the foundation.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-positioning">
+      <div class="container two-col">
+        <div class="col-label">
+          <p class="eyebrow">FAQ</p>
+        </div>
+        <div class="col-body">
+          <h2 class="display-title reveal">Common questions from medical clinics</h2>
+          <details class="form-section reveal"><summary class="form-legend">How does Cloud Hak help medical clinics get more patients?</summary><p class="lede">We build a full patient acquisition system on GoHighLevel — Google Ads targeting condition-specific searches, SEO to rank for medical queries, an AI chatbot that answers patient FAQs and books consultations 24/7, voice AI for after-hours call handling, and CRM automations for consultation reminders, no-show rebooking, and recall campaigns. All GDPR-compliant.</p></details>
+          <details class="form-section reveal"><summary class="form-legend">Is your marketing system GDPR-compliant for medical data?</summary><p class="lede">Yes. We design every touchpoint with GDPR and healthcare data sensitivity in mind. Cookie consent, data minimisation, UK-hosted infrastructure, consent-based communication, and audit-ready logging are built into every system we deploy. We work with regulated practices and understand the requirements around patient data.</p></details>
+          <details class="form-section reveal"><summary class="form-legend">Can the AI chatbot handle medical triage?</summary><p class="lede">Our AI chatbot is trained on your clinic's services, FAQs, and booking protocols — not on diagnostic criteria. It can answer questions about treatments offered, consultation availability, pricing, location, and referral processes. For clinical triage, it routes inquiries to your clinical team. It does not provide medical advice.</p></details>
+          <details class="form-section reveal"><summary class="form-legend">What types of medical clinics do you work with?</summary><p class="lede">We work with private clinics, specialist practices, dental clinics, sleep medicine clinics, dermatology, physiotherapy, aesthetic medicine, and other private healthcare providers. Any clinic that needs a steady flow of new patient consultations benefits from our system.</p></details>
+          <details class="form-section reveal"><summary class="form-legend">How does the CRM automation reduce no-shows?</summary><p class="lede">We build automated sequences: SMS consultation reminders at 48 hours and 24 hours before appointments, easy one-tap rescheduling links, post-visit follow-up messages, and recall campaigns for patients due for follow-up consultations. The system also auto-rebooks cancelled slots and sends follow-up sequences to patients who initially enquire but don't book.</p></details>
+          <details class="form-section reveal"><summary class="form-legend">How quickly can a medical clinic marketing system be live?</summary><p class="lede">The AI chatbot can be live within 48 hours. A full system including website, Google Ads, SEO, voice AI, chatbot, and CRM automation typically launches in 3-4 weeks. We provide a clear timeline before work starts.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-contact" id="contact">
+      <div class="container contact-row">
+        <div>
+          <p class="eyebrow eyebrow-light reveal">Ready to fill your consultation slots?</p>
+          <h2 class="contact-title reveal">Get a patient acquisition system built for your clinic.</h2>
+        </div>
+        <ul class="contact-list reveal" role="list">
+          <li><span class="contact-k">Start</span><a href="/#contact" class="contact-v">Project form</a></li>
+          <li><span class="contact-k">Phone</span><a href="tel:+447800920042" class="contact-v">+44 7800 920042</a></li>
+          <li><span class="contact-k">Email</span><a href="mailto:info@cloud-hak.com" class="contact-v">info@cloud-hak.com</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-ops">
+        <span>Cloud Hak — Brighton &amp; Hove</span>
+        <span><b>Q2 2026</b></span>
+        <span style="display:flex;align-items:center;gap:6px"><span class="live-dot"></span> Accepting new projects</span>
+      </div>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="brand">
+            <svg class="brand-mark" width="28" height="28" viewBox="0 0 34 34" aria-hidden="true">
+              <rect x="1" y="1" width="32" height="32" rx="4" fill="none" stroke="currentColor" stroke-width="1.5" />
+              <path d="M10 22.5c-2.1-1.2-3.4-3.2-3.4-5.5 0-3.8 3.2-6.6 7.1-6.6 2.2 0 4 .8 5.2 2.1" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+              <path d="M21 10.2v13.6M27 10.2v13.6M21 17h6" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" />
+            </svg>
+            <span class="brand-word">Cloud Hak</span>
+          </a>
+          <p style="font-size:13px;color:rgba(255,255,255,.5);margin-top:var(--s-4);max-width:280px;line-height:1.6">AI-powered marketing for local business. Ads, chatbots, voice agents, SEO, and automation — one system to bring you more customers.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Services</h4>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:var(--s-2)">
+            <li><a href="/services/websites/" style="color:rgba(255,255,255,.6);font-size:13px">Websites</a></li>
+            <li><a href="/services/chatbots/" style="color:rgba(255,255,255,.6);font-size:13px">AI Chatbots</a></li>
+            <li><a href="/services/voice-agents/" style="color:rgba(255,255,255,.6);font-size:13px">Voice AI</a></li>
+            <li><a href="/services/crm/" style="color:rgba(255,255,255,.6);font-size:13px">CRM</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:var(--s-2)">
+            <li><a href="/services/seo/" style="color:rgba(255,255,255,.6);font-size:13px">SEO</a></li>
+            <li><a href="/services/aeo/" style="color:rgba(255,255,255,.6);font-size:13px">AEO</a></li>
+            <li><a href="/services/automation/" style="color:rgba(255,255,255,.6);font-size:13px">Automation</a></li>
+            <li><a href="/services/ads/" style="color:rgba(255,255,255,.6);font-size:13px">Ads</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul style="list-style:none;padding:0;display:flex;flex-direction:column;gap:var(--s-2)">
+            <li><a href="/pricing/" style="color:rgba(255,255,255,.6);font-size:13px">Pricing</a></li>
+            <li><a href="/#approach" style="color:rgba(255,255,255,.6);font-size:13px">Approach</a></li>
+            <li><a href="/privacy.html" style="color:rgba(255,255,255,.6);font-size:13px">Privacy</a></li>
+            <li><a href="/#contact" style="color:rgba(255,255,255,.6);font-size:13px">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-foot">
+        <span>&copy; 2026 Cloud Hak. All rights reserved.</span>
+        <span>Brighton &amp; Hove, UK</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('revealed'); e.target.style.opacity = 1; e.target.style.transform = 'none'; }});
+    }, { threshold: 0.1 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+  <script src="/assets/js/chatbot.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Cloud Hak | Blog — Tips for UK Trades</title>
+  <meta name="description" content="Practical tips on getting more customers, more reviews, and more jobs — written for UK trades." />
+  <link rel="canonical" href="https://cloud-hak.com/blog" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/favicon.png" />
+  <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    .ch-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .ch-nav .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+    .ch-nav .logo span { color: var(--copper); }
+    .ch-nav-links { display: flex; gap: 24px; align-items: center; }
+    .ch-nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+    .ch-nav-links a:hover { color: var(--copper); }
+    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; }
+    .ch-btn { display: inline-block; background: var(--ink); color: var(--cream); padding: 16px 40px; border-radius: 8px; font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease); border: none; cursor: pointer; }
+    .ch-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.2); color: var(--cream); }
+    .ch-btn-copper { background: var(--copper); color: #fff; }
+    .ch-btn-copper:hover { background: var(--copper-2); color: #fff; }
+    .ch-cta { background: var(--copper); text-align: center; padding: 64px 0; }
+    .ch-cta h2 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3rem); color: #fff; margin: 0 0 12px; font-weight: 600; }
+    .ch-cta p { color: rgba(255,255,255,0.9); font-size: 1.15rem; margin: 0 0 32px; }
+    .ch-cta .ch-btn { background: var(--ink); }
+    .ch-cta .ch-btn:hover { background: var(--ink-2); }
+    .ch-footer { background: var(--ink); color: rgba(255,255,255,0.5); padding: 40px 0 24px; font-size: 0.9rem; }
+    .ch-footer-inner { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .ch-footer .logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--cream); }
+    .ch-footer .logo span { color: var(--copper); }
+    .ch-footer a { color: rgba(255,255,255,0.5); }
+    .ch-footer a:hover { color: var(--copper); }
+    .ch-page-head { background: var(--cream); padding: 56px 0 32px; text-align: center; }
+    .ch-page-head h1 { font-family: var(--font-display); font-size: clamp(2rem, 5vw, 3.2rem); font-weight: 600; margin: 0 0 12px; color: var(--ink); }
+
+    .ch-blog { padding: 32px 0 56px; }
+    .ch-blog-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 24px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+    .ch-blog-card {
+      background: var(--paper);
+      border: 1px solid var(--rule);
+      border-radius: 14px;
+      overflow: hidden;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+      text-decoration: none;
+      color: inherit;
+    }
+    .ch-blog-card:hover { transform: translateY(-3px); box-shadow: 0 12px 32px rgba(10,26,58,.1); }
+    .ch-blog-banner {
+      width: 100%;
+      aspect-ratio: 16/9;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2.5rem;
+    }
+    .ch-blog-body { padding: 24px; }
+    .ch-blog-body .date { font-family: var(--font-mono); font-size: 0.75rem; color: var(--copper); letter-spacing: 0.05em; margin-bottom: 8px; }
+    .ch-blog-body h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin: 0 0 8px; }
+    .ch-blog-body p { font-size: 0.92rem; color: var(--muted); margin: 0; line-height: 1.5; }
+
+    .ch-blog-soon {
+      text-align: center;
+      padding: 48px 20px;
+      max-width: 500px;
+      margin: 0 auto;
+    }
+    .ch-blog-soon .emoji { font-size: 3rem; display: block; margin-bottom: 16px; }
+    .ch-blog-soon h2 { font-family: var(--font-display); font-size: 1.6rem; margin: 0 0 8px; }
+    .ch-blog-soon p { color: var(--muted); font-size: 1rem; }
+
+    @media (max-width: 768px) {
+      .ch-nav-links { display: none; }
+      .ch-page-head { padding: 40px 0 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<header style="border-bottom: 1px solid var(--rule);">
+  <div class="container">
+    <nav class="ch-nav">
+      <a href="/" class="logo">Cloud<span>Hak</span></a>
+      <div class="ch-nav-links">
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="/blog">Blog</a>
+        <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a Call</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<section class="ch-page-head">
+  <div class="container">
+    <h1>Tips that actually help you get more jobs</h1>
+    <p style="font-size: 1.15rem; color: var(--muted); max-width: 480px; margin: 0 auto;">No fluff. Just practical advice for UK trades.</p>
+  </div>
+</section>
+
+<section class="ch-blog" style="background: var(--cream-2);">
+  <div class="container">
+    <div class="ch-blog-soon">
+      <span class="emoji">📝</span>
+      <h2>We're writing our first posts</h2>
+      <p>Coming soon: "Why 67% of your potential customers are calling someone else" and other things your competitors don't want you to know.</p>
+    </div>
+  </div>
+</section>
+
+<section class="ch-cta">
+  <div class="container">
+    <h2>Don't wait for our blog. Get more calls now.</h2>
+    <p>Book a free call and we'll show you how to get more jobs this month.</p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a free 20-min call →</a>
+  </div>
+</section>
+
+<footer class="ch-footer">
+  <div class="container">
+    <div class="ch-footer-inner">
+      <div>
+        <div class="logo">Cloud<span>Hak</span></div>
+        <p style="margin: 8px 0 0;">Websites & marketing systems for UK trades.<br/>Brighton & Hove 🇬🇧</p>
+      </div>
+      <div style="display: flex; gap: 24px; flex-wrap: wrap;">
+        <a href="/">Home</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="/testimonials">Reviews</a>
+        <a href="https://calendly.com/cloud-hak">Book a Call</a>
+        <a href="/privacy">Privacy</a>
+      </div>
+    </div>
+    <div style="margin-top: 24px; padding-top: 16px; border-top: 1px solid rgba(255,255,255,0.1); font-size: 0.82rem;">
+      © 2026 Cloud Hak. All rights reserved. Built with AI, delivered by humans.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
