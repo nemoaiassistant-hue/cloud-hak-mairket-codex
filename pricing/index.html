@@ -129,8 +129,68 @@
       font-weight: 500;
     }
 
+
+    /* ===== MOBILE MENU ===== */
+    .ch-burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 44px; height: 44px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      z-index: 101;
+    }
+    .ch-burger span {
+      display: block;
+      width: 26px; height: 3px;
+      background: var(--ink);
+      border-radius: 2px;
+      transition: all 250ms var(--ease);
+    }
+    .ch-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .ch-burger.open span:nth-child(2) { opacity: 0; }
+    .ch-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+
+    .ch-mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      background: var(--cream);
+      padding: 80px 24px 32px;
+      z-index: 100;
+      flex-direction: column;
+      gap: 0;
+      transform: translateY(-100%);
+      transition: transform 300ms var(--ease);
+      box-shadow: 0 8px 32px rgba(10,26,58,.15);
+      overflow-y: auto;
+      max-height: 100vh;
+    }
+    .ch-mobile-menu.open { transform: translateY(0); }
+    .ch-mobile-menu a {
+      display: block;
+      padding: 18px 0;
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--ink);
+      border-bottom: 1px solid var(--rule);
+    }
+    .ch-mobile-menu a:hover { color: var(--copper); }
+    .ch-mobile-menu .ch-btn {
+      margin-top: 20px;
+      text-align: center;
+      border-bottom: none;
+      padding: 16px;
+      font-size: 1.05rem;
+    }
+
     @media (max-width: 768px) {
       .ch-nav-links { display: none; }
+      .ch-burger { display: flex; }
+      .ch-mobile-menu { display: flex; }
       .ch-price-card { padding: 32px 24px; }
       .ch-price-card .price { font-size: 2.8rem; }
       .ch-section { padding: 40px 0; }
