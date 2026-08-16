@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AI Check Demo — See What AI Says About Local Businesses | Cloud Hak</title>
+  <meta name="description" content="A live look at how the Cloud Hak free AI check works: real sources, real gaps, and what it means when AI doesn't mention your business." />
+  <meta property="og:title" content="AI Check Demo | Cloud Hak" />
+  <meta property="og:description" content="See what AI assistants read about local businesses — and why most never make the shortlist." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://cloud-hak.com/demos/ai-check-demo/" />
+  <link rel="canonical" href="https://cloud-hak.com/demos/ai-check-demo/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="stylesheet" href="/assets/css/main-v5.css" />
+  <style>
+    :root {
+      --ch-dark: #0a1a3a;
+      --ch-accent: #c08552;
+      --ch-green: #2d8a4a;
+    }
+    .ch-demo { max-width: 860px; margin: 0 auto; }
+
+    .ch-hero { background: var(--cream); padding: 56px 0 44px; text-align: center; }
+    .ch-hero h1 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.4rem);
+      font-weight: 600; line-height: 1.1; letter-spacing: -0.02em;
+      margin: 0 0 18px; color: var(--ink);
+      max-width: 760px; margin-left: auto; margin-right: auto;
+    }
+    .ch-hero h1 .highlight { color: var(--copper); font-style: italic; }
+    .ch-hero p {
+      font-size: clamp(1.05rem, 2.5vw, 1.25rem); color: var(--muted);
+      max-width: 600px; margin: 0 auto 30px; line-height: 1.55;
+    }
+    .ch-hero-pill {
+      display: inline-flex; align-items: center; gap: 10px;
+      background: var(--ink); color: var(--cream);
+      padding: 8px 20px; border-radius: 100px;
+      font-family: var(--font-mono); font-size: 13px; letter-spacing: 0.05em;
+      margin-bottom: 24px;
+    }
+    .ch-hero-pill .dot {
+      width: 8px; height: 8px; background: var(--live);
+      border-radius: 50%; animation: pulse-dot 2s infinite;
+    }
+    @keyframes pulse-dot { 0%,100%{opacity:1} 50%{opacity:.4} }
+
+    .ch-btn {
+      display: inline-block; background: var(--ink); color: var(--cream);
+      padding: 15px 36px; border-radius: 8px; font-family: var(--font-body);
+      font-weight: 600; font-size: 1.02rem; text-decoration: none;
+      transition: transform 200ms var(--ease), box-shadow 200ms var(--ease);
+      border: none; cursor: pointer;
+    }
+    .ch-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.2); color: var(--cream); }
+    .ch-btn-copper { background: var(--copper); color: #fff; }
+    .ch-btn-copper:hover { background: var(--copper-2); color: #fff; }
+
+    .ch-section { padding: 52px 0; }
+    .ch-section.dark { background: var(--ink); color: var(--cream); }
+    .ch-section h2 {
+      font-family: var(--font-display); font-size: clamp(1.7rem, 4vw, 2.5rem);
+      font-weight: 600; line-height: 1.15; margin: 0 0 14px;
+      text-align: center; letter-spacing: -0.01em;
+    }
+    .ch-section .subtitle {
+      text-align: center; font-size: 1.1rem; color: var(--muted);
+      max-width: 560px; margin: 0 auto 36px;
+    }
+    .ch-section.dark .subtitle { color: rgba(255,255,255,.6); }
+
+    /* Evidence table */
+    .evidence {
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 16px; overflow: hidden; margin: 0 auto;
+    }
+    .evidence-head {
+      padding: 14px 20px; border-bottom: 1px solid var(--rule);
+      font-family: var(--font-mono); font-size: 12px; letter-spacing: 0.06em;
+      text-transform: uppercase; color: var(--muted);
+      display: flex; justify-content: space-between; align-items: center;
+    }
+    .evidence-row {
+      display: flex; gap: 14px; padding: 16px 20px;
+      border-bottom: 1px solid var(--rule); align-items: flex-start;
+    }
+    .evidence-row:last-child { border-bottom: none; }
+    .evidence-row .src {
+      flex: 0 0 130px; font-weight: 600; font-size: 0.9rem; color: var(--ink);
+    }
+    .evidence-row .src small { display: block; font-weight: 400; color: var(--muted); font-size: 0.78rem; margin-top: 2px; }
+    .evidence-row .what { font-size: 0.93rem; color: var(--muted); line-height: 1.5; }
+    .evidence-row .what strong { color: var(--ink-2); }
+
+    /* Chat mock */
+    .chat {
+      max-width: 560px; margin: 0 auto;
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 16px; padding: 24px;
+      box-shadow: 0 12px 36px rgba(10,26,58,.1);
+    }
+    .chat .bubble-user {
+      background: var(--ink); color: var(--cream);
+      border-radius: 16px 16px 4px 16px; padding: 12px 16px;
+      font-size: 0.95rem; margin-left: auto; max-width: 85%;
+      width: fit-content; margin-bottom: 14px;
+    }
+    .chat .ai-label {
+      font-family: var(--font-mono); font-size: 11px; letter-spacing: 0.08em;
+      text-transform: uppercase; color: var(--muted); margin-bottom: 6px;
+    }
+    .chat .bubble-ai {
+      background: var(--cream-2, #f4f0e8); border: 1px solid var(--rule);
+      border-radius: 16px 16px 16px 4px; padding: 14px 16px;
+      font-size: 0.95rem; max-width: 100%; line-height: 1.65; color: var(--ink-2);
+    }
+    .chat .bubble-ai strong { color: var(--ink); }
+    .chat .your-spot {
+      border: 2px dashed var(--copper); border-radius: 10px;
+      padding: 12px 14px; margin-top: 14px; font-size: 0.93rem;
+      color: var(--muted); background: rgba(192,133,82,.06);
+    }
+    .chat .your-spot .q { font-size: 1.4rem; }
+    .disclaimer {
+      text-align: center; font-size: 0.8rem; color: var(--muted);
+      margin-top: 14px; font-style: italic;
+    }
+
+    /* Interactive widget */
+    .try-box {
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 16px; padding: 28px; max-width: 640px; margin: 0 auto;
+    }
+    .try-box label {
+      display: block; font-weight: 600; font-size: 0.9rem;
+      margin-bottom: 6px; color: var(--ink);
+    }
+    .try-box input, .try-box select {
+      width: 100%; padding: 12px 14px; border: 1px solid var(--rule);
+      border-radius: 8px; font-family: var(--font-body); font-size: 0.98rem;
+      background: #fff; color: var(--ink); margin-bottom: 16px;
+    }
+    .try-box input:focus, .try-box select:focus { outline: 2px solid var(--copper); border-color: var(--copper); }
+    .try-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    @media (max-width: 640px) { .try-cols { grid-template-columns: 1fr; } }
+    #tryResult { margin-top: 20px; display: none; }
+    #tryResult .chat { box-shadow: none; margin-top: 0; }
+    .typing {
+      display: inline-block; color: #999; font-style: italic; font-size: 0.9rem;
+    }
+    .typing .d {
+      display: inline-block; animation: blink 1.2s infinite;
+    }
+    .typing .d:nth-child(2) { animation-delay: .2s; }
+    .typing .d:nth-child(3) { animation-delay: .4s; }
+    @keyframes blink { 0%,80%,100%{opacity:.2} 40%{opacity:1} }
+
+    /* Verdict cards */
+    .verdicts { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px; max-width: 900px; margin: 0 auto; }
+    .verdict {
+      background: var(--paper); border: 1px solid var(--rule);
+      border-radius: 14px; padding: 26px 22px;
+    }
+    .verdict .emoji { font-size: 1.9rem; display: block; margin-bottom: 12px; }
+    .verdict h3 { font-family: var(--font-display); font-size: 1.25rem; font-weight: 600; margin: 0 0 8px; color: inherit; }
+    .verdict p { font-size: 0.93rem; line-height: 1.55; margin: 0; color: var(--muted); }
+    .ch-section.dark .verdict { background: rgba(255,255,255,.05); border-color: rgba(255,255,255,.1); }
+    .ch-section.dark .verdict p { color: rgba(255,255,255,.6); }
+
+    /* Nav/footer */
+    .ch-nav { display: flex; align-items: center; justify-content: space-between; padding: 16px 0; }
+    .ch-nav .logo { font-family: var(--font-display); font-size: 1.4rem; font-weight: 700; color: var(--ink); }
+    .ch-nav .logo span { color: var(--copper); }
+    .ch-nav-links { display: flex; gap: 28px; align-items: center; }
+    .ch-nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
+    .ch-nav-links a:hover { color: var(--copper); }
+    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; }
+    .ch-footer { background: var(--ink); color: rgba(255,255,255,.5); padding: 36px 0 22px; font-size: 0.9rem; text-align: center; }
+    .ch-footer .logo { font-family: var(--font-display); font-size: 1.2rem; font-weight: 700; color: var(--cream); }
+    .ch-footer .logo span { color: var(--copper); }
+    .ch-footer a { color: rgba(255,255,255,.5); }
+    .ch-footer a:hover { color: var(--copper); }
+
+    .ch-burger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 44px; height: 44px; cursor: pointer; background: none; border: none; padding: 0; z-index: 101; }
+    .ch-burger span { display: block; width: 26px; height: 3px; background: var(--ink); border-radius: 2px; transition: all 250ms var(--ease); }
+    .ch-burger.open span:nth-child(1) { transform: translateY(8px) rotate(45deg); }
+    .ch-burger.open span:nth-child(2) { opacity: 0; }
+    .ch-burger.open span:nth-child(3) { transform: translateY(-8px) rotate(-45deg); }
+    .ch-mobile-menu {
+      display: none; position: fixed; top: 0; left: 0; right: 0; background: var(--cream);
+      padding: 80px 24px 32px; z-index: 100; flex-direction: column;
+      transform: translateY(-100%); transition: transform 300ms var(--ease);
+      box-shadow: 0 8px 32px rgba(10,26,58,.15); overflow-y: auto; max-height: 100vh;
+    }
+    .ch-mobile-menu.open { transform: translateY(0); }
+    .ch-mobile-menu a { display: block; padding: 18px 0; font-size: 1.15rem; font-weight: 500; color: var(--ink); border-bottom: 1px solid var(--rule); }
+    .ch-mobile-menu a:hover { color: var(--copper); }
+    .ch-mobile-menu .ch-btn { margin-top: 20px; text-align: center; border-bottom: none; padding: 16px; font-size: 1.05rem; }
+
+    .ch-cta { background: var(--copper); text-align: center; padding: 56px 0; }
+    .ch-cta h2 { font-family: var(--font-display); font-size: clamp(1.9rem, 5vw, 2.8rem); color: #fff; margin: 0 0 12px; font-weight: 600; }
+    .ch-cta p { color: rgba(255,255,255,.9); font-size: 1.12rem; margin: 0 0 28px; }
+    .ch-cta .ch-btn { background: var(--ink); }
+    .ch-cta .ch-btn:hover { background: var(--ink-2); }
+
+    @media (max-width: 768px) {
+      .ch-nav-links { display: none; }
+      .ch-burger { display: flex; }
+      .ch-mobile-menu { display: flex; }
+      .ch-hero { padding: 40px 0 32px; }
+      .ch-section { padding: 40px 0; }
+      .ch-cta { padding: 44px 0; }
+      .evidence-row { flex-direction: column; gap: 4px; }
+      .evidence-row .src { flex-basis: auto; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ===== NAV ===== -->
+<header style="border-bottom: 1px solid var(--rule); position: relative; z-index: 102;">
+  <div class="container">
+    <nav class="ch-nav">
+      <a href="/" class="logo">Cloud<span>Hak</span></a>
+      <div class="ch-nav-links">
+        <a href="/ai-visibility/">AI Visibility</a>
+        <a href="/pricing">Pricing</a>
+        <a href="/our-work">Our Work</a>
+        <a href="https://calendly.com/cloud-hak" class="ch-btn">Book a Call</a>
+      </div>
+      <button class="ch-burger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mobile menu -->
+<div class="ch-mobile-menu" id="mobileMenu">
+  <a href="/ai-visibility/">AI Visibility</a>
+  <a href="/pricing">Pricing</a>
+  <a href="/our-work">Our Work</a>
+  <a href="https://calendly.com/cloud-hak" class="ch-btn ch-btn-copper">Book a Call</a>
+</div>
+<script>
+function toggleMenu() {
+  var m = document.getElementById('mobileMenu');
+  var b = document.querySelector('.ch-burger');
+  m.classList.toggle('open');
+  b.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+document.querySelectorAll('.ch-mobile-menu a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.querySelector('.ch-burger').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
+
+<!-- ===== HERO ===== -->
+<section class="ch-hero">
+  <div class="container">
+    <div class="ch-hero-pill">
+      <span class="dot"></span> Interactive demo · 2 minutes · No signup
+    </div>
+    <h1>What does AI say about <span class="highlight">your business</span>?</h1>
+    <p>
+      We ran a real visibility check on a typical Brighton trade business.
+      Here's what we found — then try it with your own trade and town below.
+    </p>
+    <a href="#try" class="ch-btn ch-btn-copper">Try it with your business ↓</a>
+  </div>
+</section>
+
+<!-- ===== THE EVIDENCE ===== -->
+<section class="ch-section">
+  <div class="container ch-demo">
+    <h2>What AI actually reads about your town</h2>
+    <p class="subtitle">
+      AI assistants build their recommendations from public sources. We checked what's out there
+      for one competitive local trade — <strong>plumbers in Brighton &amp; Hove</strong>. This is real, publicly available data.
+    </p>
+
+    <div class="evidence">
+      <div class="evidence-head">
+        <span>sources checked · brighton plumbers</span>
+        <span>found: 3 strong sources</span>
+      </div>
+      <div class="evidence-row">
+        <div class="src">Checkatrade<small>directory</small></div>
+        <div class="what"><strong>71 plumbing businesses listed</strong> for Brighton &amp; Hove, each with review scores — e.g. top entries rated 9.8/10. AIs love this: clean, structured, comparable data.</div>
+      </div>
+      <div class="evidence-row">
+        <div class="src">TrustATrader<small>directory</small></div>
+        <div class="what"><strong>Vetted plumbers with photos and reviews</strong>, browsable by town. Another structured list AI can quote from.</div>
+      </div>
+      <div class="evidence-row">
+        <div class="src">Reddit<small>r/brighton</small></div>
+        <div class="what">Locals asking "decent, fair-priced plumbers?" — answers name <strong>specific businesses by word of mouth</strong>. AIs increasingly cite these threads as "what locals recommend".</div>
+      </div>
+    </div>
+
+    <p class="disclaimer" style="margin-top:16px;">
+      Notice what's missing? Independent websites. With 71 businesses on directories alone,
+      a website that isn't AI-readable simply doesn't get read.
+    </p>
+  </div>
+</section>
+
+<!-- ===== THE ANSWER ===== -->
+<section class="ch-section" style="background: var(--cream-2, #f4f0e8);">
+  <div class="container ch-demo">
+    <h2>So the AI's answer looks like this</h2>
+    <p class="subtitle">Built from the sources above. Two or three names — everyone else is invisible.</p>
+    <div class="chat">
+      <div class="bubble-user">best plumber in brighton? boiler leaking</div>
+      <div class="ai-label">AI assistant answers:</div>
+      <div class="bubble-ai">
+        For an emergency boiler repair in Brighton, I'd suggest <strong>EVO Plumbing, Heating &amp; Drainage</strong>
+        (9.8 on Checkatrade), a vetted plumber from <strong>TrustATrader's Brighton list</strong>,
+        or the local firms <strong>Reddit users recommend</strong> in r/brighton threads.
+        All offer emergency call-outs with strong reviews.
+      </div>
+      <div class="your-spot">
+        <span class="q">👉</span> If you're one of the other ~68 plumbers in Brighton — including ones with
+        better work, fairer prices, and 20 years of experience — you weren't mentioned.
+        The customer never even knew you existed.
+      </div>
+    </div>
+    <p class="disclaimer">Illustrative answer based on real, current sources. Your free check uses live AI answers and real screenshots.</p>
+  </div>
+</section>
+
+<!-- ===== TRY IT ===== -->
+<section class="ch-section dark" id="try">
+  <div class="container ch-demo">
+    <h2>Now try your business</h2>
+    <p class="subtitle">Type your trade and town. See how the shortlist gets built — and where you stand.</p>
+
+    <div class="try-box">
+      <div class="try-cols">
+        <div>
+          <label for="trade">Your trade</label>
+          <select id="trade">
+            <option value="plumber">Plumber</option>
+            <option value="electrician">Electrician</option>
+            <option value="roofer">Roofer</option>
+            <option value="builder">Builder</option>
+            <option value="landscaper">Landscaper / Gardener</option>
+            <option value="plasterer">Plasterer</option>
+            <option value="cleaner">Cleaner</option>
+            <option value="hairdresser">Hairdresser</option>
+          </select>
+        </div>
+        <div>
+          <label for="town">Your town</label>
+          <input id="town" type="text" placeholder="e.g. Hove, Crawley, Worthing…" />
+        </div>
+      </div>
+      <button class="ch-btn ch-btn-copper" style="width:100%;" onclick="runCheck()">Run my mini AI check</button>
+      <div id="tryResult"></div>
+    </div>
+
+    <p class="disclaimer" style="margin-top:18px; color: rgba(255,255,255,.4);">
+      This demo shows the mechanism. Your real free check runs against live AI assistants, your actual competitors, with screenshots.
+    </p>
+  </div>
+</section>
+
+<!-- ===== THE FIX ===== -->
+<section class="ch-section">
+  <div class="container ch-demo">
+    <h2>The good news: it's fixable</h2>
+    <p class="subtitle">The businesses AI recommends aren't the best — they're the easiest to understand and trust.</p>
+    <div class="verdicts">
+      <div class="verdict">
+        <span class="emoji">🧹</span>
+        <h3>Be consistent everywhere</h3>
+        <p>Same name, same services, same areas on your site, Google profile, and directories. AIs cross-check — mismatches make them skip you.</p>
+      </div>
+      <div class="verdict">
+        <span class="emoji">💬</span>
+        <h3>Answer real questions</h3>
+        <p>"Do you do emergency call-outs?" "What areas do you cover?" AIs quote clear answers. If yours aren't written down, someone else's are.</p>
+      </div>
+      <div class="verdict">
+        <span class="emoji">⭐</span>
+        <h3>Stack the trust signals</h3>
+        <p>Reviews, ratings, and the technical files AIs read. Not tricks — just making your reputation machine-readable.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== CTA ===== -->
+<section class="ch-cta">
+  <div class="container">
+    <h2>Want the real thing?</h2>
+    <p>We'll run the actual check on your business — live AIs, real screenshots, competitors included.</p>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn">Claim your free AI check →</a>
+  </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="ch-footer">
+  <div class="container">
+    <div class="logo">Cloud<span>Hak</span></div>
+    <p style="margin: 8px 0 16px;">Websites &amp; marketing systems for UK trades.<br/>Brighton &amp; Hove 🇬🇧</p>
+    <div style="display:flex; gap:20px; justify-content:center; flex-wrap:wrap;">
+      <a href="/ai-visibility/">AI Visibility</a>
+      <a href="/pricing">Pricing</a>
+      <a href="/our-work">Our Work</a>
+      <a href="https://calendly.com/cloud-hak">Book a Call</a>
+    </div>
+    <div style="margin-top: 20px; padding-top: 14px; border-top: 1px solid rgba(255,255,255,.1); font-size: 0.8rem;">
+      © 2026 Cloud Hak. Demo data from public sources (Checkatrade, TrustATrader, Reddit). All rights reserved.
+    </div>
+  </div>
+</footer>
+
+<script>
+function runCheck() {
+  var trade = document.getElementById('trade').value;
+  var town = document.getElementById('town').value.trim() || 'your town';
+  var result = document.getElementById('tryResult');
+  var tradeCap = trade.charAt(0).toUpperCase() + trade.slice(1);
+
+  result.style.display = 'block';
+  result.innerHTML = '<div class="chat" style="background: var(--ink); border-color: rgba(255,255,255,.15);">' +
+    '<div class="typing">Checking sources for ' + escapeHtml(trade) + 's in ' + escapeHtml(town) +
+    '<span class="d">.</span><span class="d">.</span><span class="d">.</span></div></div>';
+
+  setTimeout(function() {
+    result.innerHTML =
+      '<div class="chat">' +
+        '<div class="bubble-user">best ' + escapeHtml(trade) + ' in ' + escapeHtml(town) + '?</div>' +
+        '<div class="ai-label">AI assistant answers:</div>' +
+        '<div class="bubble-ai">' +
+          'Based on local directories and reviews, I\u2019d suggest the top-rated ' + escapeHtml(trade) +
+          's on <strong>Checkatrade</strong> and <strong>TrustATrader</strong> for ' + escapeHtml(town) +
+          ', plus the firms <strong>locals recommend</strong> in community forums. ' +
+          'Look for 9+ review scores and emergency availability.' +
+        '</div>' +
+        '<div class="your-spot"><span class="q">👉</span> That\u2019s the shape of every AI answer: ' +
+          'a shortlist built from directories and reviews. <strong>Is your business on it?</strong> ' +
+          'If your website isn\u2019t AI-readable and your profiles don\u2019t match, you\u2019re not.' +
+        '</div>' +
+      '</div>' +
+      '<p style="text-align:center; margin-top:14px;">' +
+        '<a href="https://calendly.com/cloud-hak" class="ch-btn ch-btn-copper" style="font-size:.95rem; padding:12px 28px;">Get my free real check →</a>' +
+      '</p>';
+  }, 1400);
+}
+function escapeHtml(s) {
+  return s.replace(/[&<>"']/g, function(c) {
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];
+  });
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "AI Check Demo — Cloud Hak",
+  "description": "Interactive demo of the Cloud Hak free AI check: see how AI assistants build business recommendations and where local trades get left out.",
+  "url": "https://cloud-hak.com/demos/ai-check-demo/"
+}
+</script>
+
+</body>
+</html>
