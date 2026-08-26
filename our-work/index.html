@@ -20,7 +20,8 @@
     .ch-nav-links { display: flex; gap: 24px; align-items: center; }
     .ch-nav-links a { font-size: 0.95rem; font-weight: 500; color: var(--ink-2); }
     .ch-nav-links a:hover { color: var(--copper); }
-    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; }
+    .ch-nav-links .ch-btn { padding: 10px 24px; font-size: 0.9rem; color: var(--cream); }
+    .ch-nav-links .ch-btn:hover { color: var(--cream); }
     .ch-btn { display: inline-block; background: var(--ink); color: var(--cream); padding: 16px 40px; border-radius: 8px; font-family: var(--font-body); font-weight: 600; font-size: 1.05rem; text-decoration: none; transition: transform 200ms var(--ease), box-shadow 200ms var(--ease); border: none; cursor: pointer; }
     .ch-btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(10,26,58,.2); color: var(--cream); }
     .ch-btn-copper { background: var(--copper); color: #fff; }
@@ -133,7 +134,9 @@
       border-bottom: none;
       padding: 16px;
       font-size: 1.05rem;
+      color: var(--cream);
     }
+    .ch-mobile-menu .ch-btn:hover { color: var(--cream); }
 
     @media (max-width: 768px) {
       .ch-nav-links { display: none; }
