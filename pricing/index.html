@@ -225,14 +225,16 @@
       </button>
     </nav>
   </div>
-
-  <a href="/services/seo/">Services</a>
-  <a href="/industries/dental/">Industries</a><a href="/pricing">Pricing</a>
-  <a href="/our-work">Our Work</a>
-  <a href="/testimonials">Reviews</a>
-  <a href="/blog">Blog</a>
-  <a href="https://calendly.com/cloud-hak" class="ch-btn ch-btn-copper">Book a Call</a>
-</div>
+  <div class="ch-mobile-menu" id="mobileMenu">
+    <a href="/">Home</a>
+    <a href="/services/seo/">Services</a>
+    <a href="/industries/dental/">Industries</a>
+    <a href="/pricing">Pricing</a>
+    <a href="/our-work">Our Work</a>
+    <a href="/testimonials">Reviews</a>
+    <a href="/blog">Blog</a>
+    <a href="https://calendly.com/cloud-hak" class="ch-btn ch-btn-copper">Book a Call</a>
+  </div>
 </header>
 
 <!-- ===== PRICE ===== -->
@@ -364,6 +366,24 @@
     </div>
   </div>
 </footer>
+
+<script>
+function toggleMenu() {
+  var m = document.getElementById('mobileMenu');
+  var b = document.querySelector('.ch-burger');
+  m.classList.toggle('open');
+  b.classList.toggle('open');
+  document.body.style.overflow = m.classList.contains('open') ? 'hidden' : '';
+}
+// Close menu when clicking a link
+document.querySelectorAll('.ch-mobile-menu a').forEach(function(a) {
+  a.addEventListener('click', function() {
+    document.getElementById('mobileMenu').classList.remove('open');
+    document.querySelector('.ch-burger').classList.remove('open');
+    document.body.style.overflow = '';
+  });
+});
+</script>
 
 </body>
 </html>
